@@ -1,4 +1,4 @@
-# CrashTime SEO Audit — Texas Total Loss Focus
+# Totaled Texas SEO Audit — Texas Total Loss Focus
 
 **Date:** July 14, 2026
 **Goal:** Rank for searches by people in major Texas cities who want more money
@@ -49,7 +49,7 @@ intent, highest-value first:
 shows invoking appraisal raises total loss settlements by roughly $3,600–$5,800
 per claim on average — and Texas just made the appraisal clause universal
 (SB 458). "Texas + appraisal clause + total loss" is a rising-tide keyword
-cluster CrashTime should own early.
+cluster Totaled Texas should own early.
 
 ---
 
@@ -59,7 +59,7 @@ cluster CrashTime should own early.
 |---|---------|----------|
 | 1 | **No geographic signals anywhere.** No page mentioned Texas or any city; impossible to rank for "…in Houston/Dallas" queries. | Critical |
 | 2 | **No city landing pages** — the primary battleground where all competitors rank. | Critical |
-| 3 | Titles/descriptions were brand-led ("CrashTime — Independent Auto Claims Advocacy") instead of keyword-led; "total loss" appeared in no title. | High |
+| 3 | Titles/descriptions were brand-led ("Totaled Texas — Independent Auto Claims Advocacy") instead of keyword-led; "total loss" appeared in no title. | High |
 | 4 | No structured data (Organization/Service/FAQ schema) — no eligibility for rich results. | High |
 | 5 | No `sitemap.xml` or `robots.txt`. | High |
 | 6 | No canonical URLs, no Open Graph/Twitter metadata. | Medium |
@@ -72,7 +72,7 @@ cluster CrashTime should own early.
 
 ### Sitewide
 - **Keyword-led titles & meta descriptions** on every indexable page
-  (e.g. homepage: "Total Loss & Diminished Value Appraisals in Texas | CrashTime").
+  (e.g. homepage: "Total Loss & Diminished Value Appraisals in Texas | Totaled Texas").
 - **Canonical URLs + Open Graph/Twitter tags** on every indexable page.
 - **`ProfessionalService` JSON-LD** on the homepage with `areaServed` for Texas
   and the six target cities.
@@ -102,8 +102,8 @@ The hub↔city↔home linking forms a proper topical cluster.
 ## 4. Before you launch (required)
 
 1. **Replace the placeholder domain.** Canonicals, `og:url`, JSON-LD, `robots.txt`
-   and `sitemap.xml` all use `https://www.crashtime.example.com` — swap in the
-   real domain (grep for `crashtime.example.com`).
+   and `sitemap.xml` all use `https://www.totaledtexas.example.com` — swap in the
+   real domain (grep for `totaledtexas.example.com`).
 2. **Google Business Profile.** For "near me"/map-pack visibility in each metro
    you'll eventually want a verified GBP with a real Texas address; at minimum
    create one for the home base city.
@@ -153,7 +153,7 @@ adjuster license and sank Stonewater Roofing at the Texas Supreme Court.
 ### Schema
 - Replaced deprecated `ProfessionalService` with `LocalBusiness` (homepage
   entity + `provider` on the hub and all six city pages); brand `name` is now
-  "CrashTime" with `legalName` "CrashTime Claims Advocacy, LLC".
+  "Totaled Texas" with `legalName` "Totaled Texas".
 - Homepage `areaServed` expanded to the six target cities; added `founder`
   Person and `knowsAbout`; priceRange updated to $195–$445.
 - About page: new `AboutPage` + `Person` schema for the founder (jobTitle,

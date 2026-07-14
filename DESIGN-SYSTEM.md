@@ -1,6 +1,6 @@
-# CrashTime — Design System Specification
+# Totaled Texas — Design System Specification
 
-This document defines the core styling rules, contrast standards, and component layouts for the CrashTime website. All developers and AI coding assistants must adhere to these guidelines to ensure visual consistency and high contrast.
+This document defines the core styling rules, contrast standards, and component layouts for the Totaled Texas website. All developers and AI coding assistants must adhere to these guidelines to ensure visual consistency and high contrast.
 
 ---
 

@@ -1,4 +1,4 @@
-# CrashTime — Business Plan
+# Totaled Texas — Business Plan
 
 **Independent Auto Claims Advocacy · Certified Vehicle Valuations for Consumers**
 
@@ -9,7 +9,7 @@
 
 ## 1. Executive Summary
 
-CrashTime is a founder-led, expert-driven service that helps car accident victims
+Totaled Texas is a founder-led, expert-driven service that helps car accident victims
 challenge lowball insurance settlements. The core product is an **independent,
 certified vehicle valuation report** — professionally documented evidence a consumer
 can present to their insurer to negotiate a fair total-loss payout or recover
@@ -77,7 +77,7 @@ a success guarantee (refunded if we don't recover at least the service fee in ad
 
 ## 5. Competition & Positioning
 
-| Alternative | Weakness CrashTime exploits |
+| Alternative | Weakness Totaled Texas exploits |
 |---|---|
 | Accepting the insurer's offer | No advocacy at all; our free tier makes checking costless |
 | DIY negotiation with internet printouts | No credentials, no methodology; adjusters dismiss it |

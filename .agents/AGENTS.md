@@ -1,6 +1,6 @@
-# CrashTime — Design System Rules for AI Coding Assistants
+# Totaled Texas - Design System Rules for AI Coding Assistants
 
-This file contains strict design rules and behavioral constraints for all AI coding assistants (LLMs) working on the CrashTime website. Please review and adhere to these guidelines to maintain visual excellence, consistency, and proper contrast.
+This file contains strict design rules and behavioral constraints for all AI coding assistants (LLMs) working on the Totaled Texas website. Please review and adhere to these guidelines to maintain visual excellence, consistency, and proper contrast.
 
 ---
 
@@ -58,4 +58,3 @@ This file contains strict design rules and behavioral constraints for all AI cod
 * **Do NOT Use Em Dashes (`—` or `&mdash;`)**:
   - Do NOT use em dashes (`—`) anywhere in titles, metadata, headers, paragraphs, or alt text.
   - Instead, use a spaced hyphen (` - `) or appropriate alternative punctuation (such as commas, colons, or parentheses) to separate clauses or titles.
-

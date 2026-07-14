@@ -1,4 +1,4 @@
-# CrashTime — Independent Auto Claims Advocacy
+# Totaled Texas — Independent Auto Claims Advocacy
 
 A complete website + business plan for a niche independent claims advocacy
 service: certified vehicle valuation reports that help car accident victims
