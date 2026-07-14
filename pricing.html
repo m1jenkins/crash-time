@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="data:,">
 </head>
-<body class="site-redesign">
+<body class="site-redesign pricing-page">
 
   <header class="site-header">
     <div class="container nav">
@@ -35,168 +35,228 @@
     </div>
   </header>
 
-  <section class="hero">
+  <section class="hero pricing-hero">
     <div class="container">
-      <span class="eyebrow">Pricing</span>
-      <h1>Transparent pricing. <em>No surprises.</em></h1>
+      <h1>Clear help for a <em>fairer settlement.</em></h1>
       <p class="lede">
-        A fraction of what a lowball settlement costs you - and if your certified
-        report doesn't find more value than your insurer's offer, you get your
-        money back.
+        Start with a free expert review. If your offer looks low, choose the one-time
+        report that matches your claim.
       </p>
+      <div class="pricing-hero-footer">
+        <div class="pricing-hero-points" role="list" aria-label="Pricing assurances">
+          <span role="listitem">Upfront one-time prices</span>
+          <span role="listitem">Certified independent reports</span>
+          <span role="listitem">Money-back guarantee</span>
+        </div>
+        <a href="free-review.html" class="btn btn-primary pricing-hero-cta">Start Free Claim Review</a>
+      </div>
     </div>
   </section>
 
   <!-- ================= PRICING TIERS ================= -->
-  <section class="section pricing-section">
+  <section class="section pricing-section" id="plans">
     <div class="container">
       <div class="pricing-intro reveal-on-scroll">
-        <h2>Choose the right level of help.</h2>
-        <p>Every claim starts with a free expert review. If the numbers are off, choose the report that fits your situation.</p>
+        <h2>Choose by claim type.</h2>
+        <p>Three clear options, ordered from free review to complete certified reports.</p>
       </div>
 
       <div class="pricing-layout reveal-on-scroll">
-
-        <!-- FREE TIER / LEAD MAGNET -->
         <article class="price-card price-card-entry">
-          <span class="tier-kicker">Start here &mdash; it&rsquo;s free</span>
-          <div class="tier-name">Free Claim<br>Snapshot</div>
-          <div class="price"><sup>$</sup>0</div>
+          <span class="tier-kicker">Start here - it&rsquo;s free</span>
+          <h3 class="tier-name">Free Claim Snapshot</h3>
+          <div class="price"><sup>$</sup>0 <small>Free</small></div>
           <p class="tagline">Find out if your offer is worth challenging - no obligation.</p>
           <ul>
             <li>Expert review of your settlement offer</li>
             <li>Plain-English opinion: fair, borderline, or low</li>
             <li>Estimated range of what may be recoverable</li>
             <li>Delivered by email within 2 business days</li>
-            <li>No payment info required, ever</li>
           </ul>
           <a href="free-review.html" class="btn btn-outline btn-block">Get My Free Snapshot</a>
         </article>
 
-        <div class="pricing-reports">
-          <!-- TOTAL LOSS TIER (FEATURED) -->
-          <article class="price-card featured">
-            <span class="badge">Recommended</span>
-            <span class="tier-kicker">For totaled vehicles</span>
-            <div class="tier-name">Total Loss<br>Challenge</div>
-            <div class="price"><sup>$</sup>99</div>
-            <p class="tagline">When the payout won't replace your car.</p>
-            <ul>
-              <li>Certified independent appraisal report</li>
-              <li>Full 3-chapter format: audit, valuation, evidence pack</li>
-              <li>Line-by-line rebuttal of the insurer's valuation report</li>
-              <li>Verified replacement-market comparable listings</li>
-              <li>Options, trim &amp; condition corrections documented</li>
-              <li>Appraisal-clause preparation guidance</li>
-              <li>Ready-to-send demand letter &amp; response templates</li>
-              <li><strong>48-hour turnaround</strong>, guaranteed</li>
-              <li><strong>Money-back guarantee</strong></li>
-            </ul>
+        <article class="price-card featured">
+          <span class="badge">Recommended</span>
+          <span class="tier-kicker">For totaled vehicles</span>
+          <h3 class="tier-name">Total Loss Challenge</h3>
+          <div class="price"><sup>$</sup>99 <small>One time</small></div>
+          <p class="tagline">When the insurer&rsquo;s payout will not replace your car.</p>
+          <ul>
+            <li>Certified independent appraisal</li>
+            <li>Line-by-line valuation audit and market comparables</li>
+            <li>Trim, options, mileage, and condition corrections</li>
+            <li>Demand letter and response templates</li>
+            <li><strong>48-hour turnaround</strong> with money-back guarantee</li>
+          </ul>
+          <a href="https://buy.stripe.com/5kQ5kC6fU4U8cQ89zp9MY00" class="btn btn-primary btn-block">Purchase Total Loss Report - $99</a>
+        </article>
+
+        <article class="price-card">
+          <span class="tier-kicker">For repaired vehicles</span>
+          <h3 class="tier-name">Diminished Value Report</h3>
+          <div class="price"><sup>$</sup>295 <small>One time</small></div>
+          <p class="tagline">When accident history has lowered your repaired car&rsquo;s value.</p>
+          <ul>
+            <li>Certified independent appraisal</li>
+            <li>Documented diminished value calculation</li>
+            <li>Market evidence and complete evidence pack</li>
+            <li>Demand letter and response templates</li>
+            <li><strong>48-hour turnaround</strong> with money-back guarantee</li>
+          </ul>
+          <a href="https://buy.stripe.com/fZu9AS5bQdqEcQ87rh9MY01" class="btn btn-outline btn-block" data-stripe-price="price_1Tt7AICs8iJ7qwYb9RxCC0Ok">Purchase Diminished Value Report - $295</a>
+        </article>
+      </div>
+
+      <ul class="pricing-proof-bar reveal-on-scroll" aria-label="Service assurances">
+        <li><strong>No hidden fees</strong><span>Every price is shown upfront.</span></li>
+        <li><strong>Independent and certified</strong><span>Evidence built for your claim.</span></li>
+        <li><strong>48-hour delivery</strong><span>For both paid report options.</span></li>
+        <li><strong>Money-back guarantee</strong><span>If the report does not support a higher value.</span></li>
+      </ul>
+
+      <section class="comparison-section" aria-labelledby="compare-heading">
+        <div class="comparison-heading reveal-on-scroll">
+          <div>
+            <span class="eyebrow">Full comparison</span>
+            <h2 id="compare-heading">Compare every option at a glance.</h2>
+          </div>
+          <details class="comparison-help">
+            <summary>What is a valuation audit?</summary>
+            <p>We check the insurer&rsquo;s vehicle details, comparables, adjustments, and math to document where the offer may be understated.</p>
+          </details>
+        </div>
+
+        <div class="comparison-table-wrap reveal-on-scroll">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th scope="col">What you get</th>
+                <th scope="col"><span>Free Claim Snapshot</span><strong>$0</strong><a href="free-review.html">Start free</a></th>
+                <th scope="col" class="is-recommended"><span>Total Loss Challenge</span><strong>$99</strong><a href="https://buy.stripe.com/5kQ5kC6fU4U8cQ89zp9MY00">Purchase report</a></th>
+                <th scope="col"><span>Diminished Value</span><strong>$295</strong><a href="https://buy.stripe.com/fZu9AS5bQdqEcQ87rh9MY01">Purchase report</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Best for</th><td>Checking whether an offer looks low</td><td>A vehicle declared a total loss</td><td>A repaired vehicle worth less after an accident</td></tr>
+              <tr><th scope="row">Expert offer review</th><td><span class="included">Included</span></td><td><span class="included">Included</span></td><td><span class="included">Included</span></td></tr>
+              <tr><th scope="row">Certified appraisal report</th><td><span class="not-included">Not included</span></td><td><span class="included">Included</span></td><td><span class="included">Included</span></td></tr>
+              <tr><th scope="row">Insurer valuation audit</th><td>High-level check</td><td>Line-by-line audit</td><td>Relevant claim-data review</td></tr>
+              <tr><th scope="row">Market evidence</th><td>Estimated recovery range</td><td>Verified replacement comparables</td><td>Documented diminished value calculation</td></tr>
+              <tr><th scope="row">Demand and response templates</th><td><span class="not-included">Not included</span></td><td><span class="included">Included</span></td><td><span class="included">Included</span></td></tr>
+              <tr><th scope="row">Delivery</th><td>2 business days</td><td>48 hours</td><td>48 hours</td></tr>
+              <tr><th scope="row">Money-back guarantee</th><td>No payment required</td><td><span class="included">Included</span></td><td><span class="included">Included</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="comparison-mobile reveal-on-scroll" aria-label="Mobile plan details">
+          <details class="comparison-mobile-item">
+            <summary><span>Free Claim Snapshot</span><strong>$0</strong></summary>
+            <dl>
+              <div><dt>Best for</dt><dd>Checking whether an offer looks low</dd></div>
+              <div><dt>What you receive</dt><dd>Expert review, plain-English verdict, and estimated recovery range</dd></div>
+              <div><dt>Delivery</dt><dd>2 business days</dd></div>
+            </dl>
+            <a href="free-review.html" class="btn btn-outline btn-block">Start Free Review</a>
+          </details>
+          <details class="comparison-mobile-item">
+            <summary><span>Total Loss Challenge</span><strong>$99</strong></summary>
+            <dl>
+              <div><dt>Best for</dt><dd>A vehicle declared a total loss</dd></div>
+              <div><dt>What you receive</dt><dd>Certified report, line-by-line audit, verified comparables, and response templates</dd></div>
+              <div><dt>Delivery</dt><dd>48 hours</dd></div>
+              <div><dt>Guarantee</dt><dd>Money back if the report does not support a higher value</dd></div>
+            </dl>
             <a href="https://buy.stripe.com/5kQ5kC6fU4U8cQ89zp9MY00" class="btn btn-primary btn-block">Purchase Report - $99</a>
-          </article>
-
-          <!-- DIMINISHED VALUE TIER (SECONDARY) -->
-          <article class="price-card">
-            <span class="tier-kicker">For repaired vehicles</span>
-            <div class="tier-name">Diminished Value<br>Report</div>
-            <div class="price"><sup>$</sup>295</div>
-            <p class="tagline">When accident history has lowered your car's value.</p>
-            <ul>
-              <li>Certified independent appraisal report</li>
-              <li>Full 3-chapter format: audit, valuation, evidence pack</li>
-              <li>Documented diminished value calculation</li>
-              <li>Ready-to-send demand letter &amp; response templates</li>
-              <li><strong>48-hour turnaround</strong>, guaranteed</li>
-              <li><strong>Money-back guarantee</strong></li>
-            </ul>
-            <a href="https://buy.stripe.com/fZu9AS5bQdqEcQ87rh9MY01" class="btn btn-outline btn-block" data-stripe-price="price_1Tt7AICs8iJ7qwYb9RxCC0Ok">Purchase Report - $295</a>
-          </article>
+          </details>
+          <details class="comparison-mobile-item">
+            <summary><span>Diminished Value Report</span><strong>$295</strong></summary>
+            <dl>
+              <div><dt>Best for</dt><dd>A repaired vehicle worth less after an accident</dd></div>
+              <div><dt>What you receive</dt><dd>Certified report, diminished value calculation, evidence pack, and response templates</dd></div>
+              <div><dt>Delivery</dt><dd>48 hours</dd></div>
+              <div><dt>Guarantee</dt><dd>Money back if the report does not support a higher value</dd></div>
+            </dl>
+            <a href="https://buy.stripe.com/fZu9AS5bQdqEcQ87rh9MY01" class="btn btn-outline btn-block">Purchase Report - $295</a>
+          </details>
         </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section alt pricing-extras-section">
+    <div class="container">
+      <div class="pricing-extras-heading reveal-on-scroll">
+        <span class="eyebrow">More ways to work with us</span>
+        <h2>Support beyond the report.</h2>
       </div>
-
-      <!-- GUARANTEE -->
-      <div class="guarantee-strip reveal-on-scroll">
-        <div class="shield" aria-hidden="true">
-          <svg viewBox="0 0 48 48"><path d="M24 4 8 11v11c0 10.5 6.4 18.9 16 22 9.6-3.1 16-11.5 16-22V11L24 4Z"/><path d="m17 24 5 5 10-11"/></svg>
-        </div>
-        <p>
-          <strong>Our money-back guarantee:</strong> if our independent appraisal doesn't
-          support a value higher than your insurer's offer, we refund your report fee in
-          full. You risk nothing to find out what your claim is really worth.
-        </p>
+      <div class="pricing-extras reveal-on-scroll">
+        <article>
+          <span>Optional add-on</span>
+          <h3>Negotiation coaching - $195 flat fee</h3>
+          <p>We prepare your demand package, draft responses to adjuster pushback, and coach you before calls. You stay in control, and the fee is never a percentage of your settlement.</p>
+          <p class="extra-note"><strong>Risk-free promise:</strong> if your settlement does not improve by at least $195 over the original offer, the coaching fee is refunded.</p>
+          <a href="free-review.html">Ask about coaching in your free review</a>
+        </article>
+        <article>
+          <span>For professionals</span>
+          <h3>White-label and volume pricing</h3>
+          <p>Body shops, attorneys, credit unions, and fleet managers can order certified reports under your brand or ours, with volume rates starting at five reports per month.</p>
+          <p class="extra-note">Referral arrangements and dedicated turnaround terms are also available.</p>
+          <a href="mailto:partners@totaledtexas.example.com">Contact us about partnership</a>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ================= COACHING ADD-ON ================= -->
-  <section class="section alt">
-    <div class="container">
+  <section class="section pricing-faq-section" aria-labelledby="pricing-faq-heading">
+    <div class="container pricing-faq-layout">
       <div class="section-head reveal-on-scroll">
-        <span class="eyebrow">Optional add-on</span>
-        <h2>Negotiation coaching &amp; settlement support</h2>
-        <p>Would you rather not face the adjuster alone? We'll be in your corner for every step.</p>
+        <span class="eyebrow">Pricing questions</span>
+        <h2 id="pricing-faq-heading">Know what happens next.</h2>
+        <p>Direct answers to the questions that matter before you choose a report.</p>
       </div>
-      <div class="grid-2 reveal-on-scroll">
-        <div class="card">
-          <h3>Flat-Fee Negotiation Coaching - $195</h3>
-          <p>
-            We prepare your formal demand package, draft a response to every adjuster
-            pushback, and coach you before each call - you send the letters, you make
-            the calls, and your claim stays entirely in your control. One flat fee,
-            never a percentage of your settlement.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Risk-Free Guarantee</h3>
-          <p>
-            Our coaching service is backed by a simple promise: if your final settlement
-            doesn't improve by at least the cost of the service ($195) over the insurer's
-            original offer, you get a full refund.
-          </p>
-        </div>
+      <div class="faq-list reveal-on-scroll">
+        <details class="faq-item">
+          <summary>Which option is right for my claim?</summary>
+          <div class="faq-answer"><p>Start free if you are unsure. Choose Total Loss Challenge when the insurer has declared your vehicle a total loss, or Diminished Value when a repaired vehicle is worth less because of its accident history.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Are the report prices one-time fees?</summary>
+          <div class="faq-answer"><p>Yes. The $99 and $295 prices are one-time report fees with no subscription or percentage of your settlement. Optional negotiation coaching is a separate $195 flat fee.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How quickly will I receive my report?</summary>
+          <div class="faq-answer"><p>Paid certified reports are delivered by email within 48 hours. The free claim snapshot arrives within two business days.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Do you need to inspect my vehicle in person?</summary>
+          <div class="faq-answer"><p>No. The process is remote and document-based, using your photos, VIN, insurer valuation report, repair estimates, and market data.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How does the money-back guarantee work?</summary>
+          <div class="faq-answer"><p>If our independent appraisal does not support a value higher than your insurer&rsquo;s offer, we refund the paid report fee in full.</p></div>
+        </details>
       </div>
-    </div>
-  </section>
-
-  <!-- ================= B2B ================= -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head reveal-on-scroll">
-        <span class="eyebrow">For partners</span>
-        <h2>White-label &amp; bulk reports for professionals</h2>
-        <p>
-          Body shops, personal injury attorneys, credit unions, and fleet managers:
-          give your clients certified valuations under your brand or ours.
-        </p>
-      </div>
-      <div class="grid-3 reveal-on-scroll">
-        <div class="card">
-          <h3>White-label reports</h3>
-          <p>Certified appraisals delivered under your firm's branding, with your team as the client-facing point of contact.</p>
-        </div>
-        <div class="card">
-          <h3>Volume pricing</h3>
-          <p>Tiered per-report rates starting at 5 reports/month, with dedicated turnaround SLAs and a priority queue.</p>
-        </div>
-        <div class="card">
-          <h3>Referral program</h3>
-          <p>Prefer to simply refer clients? Earn a per-case referral fee and give your clients a trusted next step.</p>
-        </div>
-      </div>
-      <p style="text-align:center; margin-top:2rem;">
-        <!-- Replace with your real partner contact address -->
-        <a href="mailto:partners@totaledtexas.example.com" class="btn btn-outline">Contact Us About Partnership</a>
-      </p>
     </div>
   </section>
 
   <section class="cta-band">
     <div class="container">
-      <h2>Start with the free tier. Decide from there.</h2>
-      <p>Your Free Claim Snapshot tells you honestly whether a paid report is worth it. If your offer is already fair, we'll say so.</p>
+      <h2>Not sure which report you need?</h2>
+      <p>Start free. We will tell you honestly whether a paid report is worth it.</p>
       <a href="free-review.html" class="btn btn-primary">Get My Free Claim Snapshot</a>
     </div>
   </section>
+
+  <div class="pricing-mobile-cta" aria-label="Start a free claim review">
+    <div>
+      <strong>Not sure yet?</strong>
+      <span>Start with the free review.</span>
+    </div>
+    <a href="free-review.html" class="btn btn-primary">Start Free</a>
+  </div>
 
   <footer class="site-footer">
     <div class="container">

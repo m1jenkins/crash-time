@@ -3748,6 +3748,794 @@ a:hover {
   line-height: 1.85;
 }
 
+/* ============================================================
+   Pricing decision page
+   ============================================================ */
+.site-redesign.pricing-page .pricing-hero {
+  min-height: 330px;
+  padding: 3.75rem 0 3.25rem;
+  background: linear-gradient(100deg, #fff 0 76%, var(--home-sage-light) 76% 100%);
+}
+
+.site-redesign.pricing-page .pricing-hero::before {
+  display: none;
+}
+
+.site-redesign.pricing-page .pricing-hero .container {
+  width: min(1200px, calc(100% - 64px));
+}
+
+.site-redesign.pricing-page .pricing-hero .container::before {
+  width: 64px;
+  margin-bottom: 1.25rem;
+}
+
+.site-redesign.pricing-page .pricing-hero h1 {
+  max-width: 980px;
+  margin-bottom: 1rem;
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 0.98;
+}
+
+.site-redesign.pricing-page .pricing-hero .lede {
+  max-width: 760px;
+  margin-bottom: 1.4rem;
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+.pricing-hero-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.5rem;
+  color: var(--home-ink);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.pricing-hero-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.pricing-hero-cta {
+  flex: 0 0 auto;
+  min-height: 48px;
+  padding: 0.72rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+}
+
+.pricing-hero-points span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.pricing-hero-points span::before {
+  content: "✓";
+  display: grid;
+  width: 19px;
+  height: 19px;
+  place-items: center;
+  color: #fff;
+  background: var(--home-sage-dark);
+  border-radius: 50%;
+  font-size: 0.68rem;
+}
+
+.site-redesign.pricing-page .pricing-section {
+  padding: 3.5rem 0 6rem;
+}
+
+.site-redesign.pricing-page .pricing-intro {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.site-redesign.pricing-page .pricing-intro h2 {
+  font-size: clamp(2.25rem, 4vw, 3.75rem);
+  line-height: 1;
+}
+
+.site-redesign.pricing-page .pricing-intro p {
+  max-width: 490px;
+  color: var(--home-ink-soft);
+  font-size: 0.98rem;
+}
+
+.site-redesign.pricing-page .pricing-layout {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 1.8vw, 1.5rem);
+  align-items: stretch;
+}
+
+.site-redesign.pricing-page .price-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.65rem 1.65rem;
+  border-radius: 8px;
+}
+
+.site-redesign.pricing-page .price-card.featured {
+  margin-top: 0;
+  padding-top: 2rem;
+  border-radius: 8px;
+}
+
+.site-redesign.pricing-page .price-card .badge {
+  top: 0;
+  right: 1.25rem;
+  left: auto;
+  width: auto;
+  transform: translateY(-50%);
+  padding: 0.45rem 0.7rem;
+  border-radius: 4px;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.site-redesign.pricing-page .price-card .tier-kicker {
+  margin-bottom: 0.85rem;
+}
+
+.site-redesign.pricing-page .price-card .tier-name {
+  min-height: 2.05em;
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 2.6vw, 2.85rem);
+  line-height: 1.02;
+}
+
+.site-redesign.pricing-page .price-card .price {
+  display: flex;
+  align-items: flex-end;
+  min-height: 92px;
+  padding: 1rem 0;
+  font-size: clamp(3.5rem, 5vw, 4.8rem);
+}
+
+.site-redesign.pricing-page .price-card .price small {
+  margin: 0 0 0.45rem 0.75rem;
+  color: var(--home-ink-soft);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.site-redesign.pricing-page .price-card .tagline {
+  min-height: 3.4em;
+  margin: 0.9rem 0 1rem;
+  font-size: 0.92rem;
+}
+
+.site-redesign.pricing-page .price-card ul {
+  flex: 1;
+  margin-bottom: 1.4rem;
+}
+
+.site-redesign.pricing-page .price-card ul li {
+  padding: 0.57rem 0 0.57rem 1.45rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.site-redesign.pricing-page .price-card ul li::before {
+  top: 0.62rem;
+  width: 15px;
+  height: 15px;
+  font-size: 0.61rem;
+  line-height: 15px;
+}
+
+.site-redesign.pricing-page .price-card .btn {
+  min-height: 50px;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.84rem;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.pricing-proof-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 2.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--home-line);
+  border-bottom: 1px solid var(--home-line);
+}
+
+.pricing-proof-bar li {
+  padding: 1.25rem 1.4rem 1.25rem 1.75rem;
+  border-right: 1px solid var(--home-line);
+}
+
+.pricing-proof-bar li:first-child {
+  padding-left: 0;
+}
+
+.pricing-proof-bar li:last-child {
+  border-right: 0;
+}
+
+.pricing-proof-bar strong,
+.pricing-proof-bar span {
+  display: block;
+}
+
+.pricing-proof-bar strong {
+  margin-bottom: 0.2rem;
+  color: var(--home-ink);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+}
+
+.pricing-proof-bar span {
+  color: var(--home-ink-soft);
+  font-size: 0.74rem;
+  line-height: 1.45;
+}
+
+.comparison-section {
+  margin-top: 5.5rem;
+}
+
+.comparison-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.48fr);
+  gap: clamp(2rem, 7vw, 7rem);
+  align-items: end;
+  margin-bottom: 2rem;
+}
+
+.site-redesign.pricing-page .comparison-heading h2 {
+  max-width: 800px;
+  font-size: clamp(2.5rem, 5vw, 4.7rem);
+  line-height: 1;
+}
+
+.comparison-help {
+  border-top: 1px solid var(--home-line);
+  border-bottom: 1px solid var(--home-line);
+}
+
+.comparison-help summary {
+  position: relative;
+  padding: 1rem 2rem 1rem 0;
+  color: var(--home-ink);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 800;
+  list-style: none;
+}
+
+.comparison-help summary::-webkit-details-marker,
+.comparison-mobile-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.comparison-help summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  color: var(--home-accent);
+  font-size: 1.25rem;
+  transform: translateY(-50%);
+}
+
+.comparison-help[open] summary::after {
+  content: "−";
+}
+
+.comparison-help p {
+  margin: 0;
+  padding: 0 0 1rem;
+  color: var(--home-ink-soft);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.comparison-table-wrap {
+  overflow: visible;
+  border: 1px solid var(--home-line);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem 1.15rem;
+  border-right: 1px solid var(--home-line);
+  border-bottom: 1px solid var(--home-line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.comparison-table tr > *:last-child {
+  border-right: 0;
+}
+
+.comparison-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.comparison-table thead th {
+  position: sticky;
+  top: 72px;
+  z-index: 2;
+  color: var(--home-ink);
+  background: #fff;
+  box-shadow: 0 1px 0 var(--home-line);
+}
+
+.comparison-table thead th:first-child {
+  width: 23%;
+  color: var(--home-ink-soft);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.comparison-table thead th.is-recommended {
+  background: #fbf1ee;
+  box-shadow: inset 0 4px 0 var(--home-accent), 0 1px 0 var(--home-line);
+}
+
+.comparison-table thead span,
+.comparison-table thead strong,
+.comparison-table thead a {
+  display: block;
+}
+
+.comparison-table thead span {
+  min-height: 2.8em;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.comparison-table thead strong {
+  margin: 0.25rem 0;
+  font-family: var(--home-serif);
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.comparison-table thead a {
+  width: fit-content;
+  color: var(--home-accent-dark);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.comparison-table thead a:hover {
+  color: var(--home-ink);
+}
+
+.comparison-table tbody th {
+  color: var(--home-ink);
+  background: var(--home-paper);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.comparison-table tbody td {
+  color: var(--home-ink-soft);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.included,
+.not-included {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+}
+
+.included {
+  color: var(--home-sage-dark);
+}
+
+.included::before {
+  content: "✓";
+  font-size: 0.75rem;
+}
+
+.not-included {
+  color: var(--home-ink-soft);
+  font-weight: 500;
+}
+
+.comparison-mobile {
+  display: none;
+}
+
+.site-redesign.pricing-page .pricing-extras-section {
+  padding: 5rem 0;
+}
+
+.pricing-extras-heading {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: 2.25rem;
+}
+
+.pricing-extras-heading .eyebrow {
+  margin: 0;
+}
+
+.site-redesign.pricing-page .pricing-extras-heading h2 {
+  font-size: clamp(2.5rem, 5vw, 4.6rem);
+  line-height: 1;
+}
+
+.pricing-extras {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--home-line);
+  border-bottom: 1px solid var(--home-line);
+}
+
+.pricing-extras article {
+  padding: 2rem 3rem 2rem 0;
+}
+
+.pricing-extras article + article {
+  padding-left: 3rem;
+  border-left: 1px solid var(--home-line);
+}
+
+.pricing-extras article > span {
+  display: block;
+  margin-bottom: 0.7rem;
+  color: var(--home-accent);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pricing-extras h3 {
+  margin-bottom: 0.85rem;
+  font-size: 1.45rem;
+}
+
+.pricing-extras p {
+  max-width: 540px;
+  margin-bottom: 0.8rem;
+  color: var(--home-ink-soft);
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+.pricing-extras .extra-note {
+  color: var(--home-ink);
+}
+
+.pricing-extras a {
+  display: inline-block;
+  margin-top: 0.3rem;
+  color: var(--home-accent-dark);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-redesign.pricing-page .pricing-faq-section {
+  padding: 5.5rem 0;
+}
+
+.pricing-faq-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.7fr) minmax(0, 1.3fr);
+  gap: clamp(3rem, 8vw, 8rem);
+  align-items: start;
+}
+
+.site-redesign.pricing-page .pricing-faq-layout .section-head {
+  margin: 0;
+}
+
+.site-redesign.pricing-page .pricing-faq-layout .section-head h2 {
+  font-size: clamp(2.65rem, 4.8vw, 4.7rem);
+}
+
+.pricing-mobile-cta {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .site-redesign.pricing-page .pricing-hero .container {
+    width: min(100% - 48px, 1100px);
+  }
+
+  .pricing-proof-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-proof-bar li:nth-child(2) {
+    border-right: 0;
+  }
+
+  .pricing-proof-bar li:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--home-line);
+  }
+
+  .pricing-proof-bar li:nth-child(3) {
+    padding-left: 0;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.85rem;
+  }
+
+  .pricing-faq-layout {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 880px) {
+  .site-redesign.pricing-page .pricing-layout {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+
+  .site-redesign.pricing-page .price-card .tier-name,
+  .site-redesign.pricing-page .price-card .tagline {
+    min-height: 0;
+  }
+
+  .comparison-table-wrap {
+    display: none;
+  }
+
+  .comparison-mobile {
+    display: block;
+    border-top: 1px solid var(--home-line);
+  }
+
+  .comparison-mobile-item {
+    border-bottom: 1px solid var(--home-line);
+  }
+
+  .comparison-mobile-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem 2.25rem 1.25rem 0;
+    color: var(--home-ink);
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-weight: 800;
+    list-style: none;
+  }
+
+  .comparison-mobile-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    color: var(--home-accent);
+    font-size: 1.35rem;
+    font-weight: 400;
+  }
+
+  .comparison-mobile-item[open] summary::after {
+    content: "−";
+  }
+
+  .comparison-mobile-item summary strong {
+    margin-left: auto;
+    font-family: var(--home-serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .comparison-mobile-item dl {
+    margin-bottom: 1.2rem;
+  }
+
+  .comparison-mobile-item dl div {
+    display: grid;
+    grid-template-columns: minmax(110px, 0.45fr) minmax(0, 1fr);
+    gap: 1rem;
+    padding: 0.8rem 0;
+    border-top: 1px solid var(--home-line);
+  }
+
+  .comparison-mobile-item dt {
+    color: var(--home-ink);
+    font-size: 0.78rem;
+    font-weight: 800;
+  }
+
+  .comparison-mobile-item dd {
+    color: var(--home-ink-soft);
+    font-size: 0.78rem;
+    line-height: 1.55;
+  }
+
+  .comparison-mobile-item .btn {
+    width: fit-content;
+    margin: 0 0 1.5rem;
+    border-radius: 6px;
+    font-size: 0.82rem;
+  }
+
+  .pricing-faq-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-redesign.pricing-page {
+    padding-bottom: 78px;
+  }
+
+  .site-redesign.pricing-page .pricing-hero {
+    min-height: 0;
+    padding: 3.15rem 0 2.75rem;
+    background: #fff;
+  }
+
+  .site-redesign.pricing-page .pricing-hero .container {
+    width: min(100% - 32px, 680px);
+  }
+
+  .site-redesign.pricing-page .pricing-hero h1 {
+    font-size: clamp(2.85rem, 13vw, 4.2rem);
+  }
+
+  .pricing-hero-points {
+    display: grid;
+    gap: 0.55rem;
+  }
+
+  .pricing-hero-footer {
+    display: block;
+  }
+
+  .pricing-hero-cta {
+    display: none;
+  }
+
+  .site-redesign.pricing-page .pricing-section {
+    padding: 3.25rem 0 4.5rem;
+  }
+
+  .site-redesign.pricing-page .pricing-intro {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .site-redesign.pricing-page .price-card {
+    padding: 1.75rem 1.25rem 1.25rem;
+  }
+
+  .site-redesign.pricing-page .price-card .price {
+    min-height: 82px;
+  }
+
+  .pricing-proof-bar {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+
+  .pricing-proof-bar li,
+  .pricing-proof-bar li:first-child,
+  .pricing-proof-bar li:nth-child(3) {
+    padding: 0.9rem 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--home-line);
+  }
+
+  .pricing-proof-bar li:last-child {
+    border-bottom: 0;
+  }
+
+  .comparison-section {
+    margin-top: 4.5rem;
+  }
+
+  .comparison-heading {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .site-redesign.pricing-page .comparison-heading h2 {
+    font-size: clamp(2.55rem, 12vw, 4rem);
+  }
+
+  .pricing-extras-heading,
+  .pricing-extras {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-extras-heading {
+    gap: 0.7rem;
+  }
+
+  .pricing-extras article,
+  .pricing-extras article + article {
+    padding: 1.65rem 0;
+    border-left: 0;
+  }
+
+  .pricing-extras article + article {
+    border-top: 1px solid var(--home-line);
+  }
+
+  .site-redesign.pricing-page .pricing-extras-section,
+  .site-redesign.pricing-page .pricing-faq-section {
+    padding: 4.25rem 0;
+  }
+
+  .pricing-mobile-cta {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 120;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.7rem 1rem;
+    background: rgba(255, 255, 255, 0.97);
+    border-top: 1px solid var(--home-line);
+    box-shadow: 0 -10px 30px rgba(13, 27, 51, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .pricing-mobile-cta strong,
+  .pricing-mobile-cta span {
+    display: block;
+  }
+
+  .pricing-mobile-cta strong {
+    color: var(--home-ink);
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+  }
+
+  .pricing-mobile-cta span {
+    color: var(--home-ink-soft);
+    font-size: 0.68rem;
+  }
+
+  .pricing-mobile-cta .btn {
+    min-height: 46px;
+    padding: 0.65rem 1.15rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+}
+
 .site-redesign .legal-page > ul li,
 .site-redesign .legal-page > ol li {
   margin-bottom: 0.5rem;
