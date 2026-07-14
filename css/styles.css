@@ -393,6 +393,56 @@ a { color: var(--navy-soft); }
   color: var(--amber);
 }
 
+/* ---------- FAQ ---------- */
+.faq-list { max-width: 760px; margin: 0 auto; }
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+.faq-item summary {
+  cursor: pointer;
+  padding: 1.1rem 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  list-style: none;
+  position: relative;
+  padding-right: 2.6rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 1.3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--amber-dark);
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.faq-item[open] summary::after { content: "–"; }
+.faq-item .faq-answer { padding: 0 1.4rem 1.2rem; color: var(--ink-soft); }
+.faq-item .faq-answer p:last-child { margin-bottom: 0; }
+
+/* ---------- City / service-area links ---------- */
+.city-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.city-links a {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.3rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.city-links a:hover { border-color: var(--amber); transform: translateY(-2px); }
+.city-links a span { display: block; font-weight: 400; font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.2rem; }
+@media (max-width: 900px) { .city-links { grid-template-columns: 1fr; } }
+
 /* ---------- CTA band ---------- */
 .cta-band {
   background: linear-gradient(135deg, var(--navy-deep), var(--navy-soft));
@@ -412,7 +462,7 @@ a { color: var(--navy-soft); }
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   gap: 2rem;
   margin-bottom: 2.5rem;
 }
