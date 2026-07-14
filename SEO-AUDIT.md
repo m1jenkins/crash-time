@@ -125,3 +125,66 @@ The hub↔city↔home linking forms a proper topical cluster.
 - **Backlinks:** the local angles built into each page (Houston flood claims,
   DFW hail, Austin EVs) are pitchable to local TV consumer desks and Texas
   personal-finance blogs — the same outlets in the homepage trust bar.
+
+---
+
+## 6. Best-practices review pass (July 14, 2026)
+
+Changes applied after reviewing the regional SEO & AI-search strategy document
+(Texas total-loss market):
+
+### Compliance language scrub (TX Ins. Code Ch. 4102 / *Stonewater*)
+The strategy doc's #1 finding: marketing that says we "negotiate/settle/handle
+your claim" is the exact conduct that requires a Texas public insurance
+adjuster license and sank Stonewater Roofing at the Texas Supreme Court.
+- The "$195 Flat-Fee Negotiation" add-on ("we handle the adjuster calls…
+  complete representation through resolution") is now **Flat-Fee Negotiation
+  Coaching**: we prepare the demand package and script every response; the
+  client sends the letters and makes the calls, and the claim stays in their
+  control. Flat fee, "never a percentage" stated explicitly (contingency fees
+  are a PA hallmark).
+- Same reframe applied on how-it-works, homepage step 3, all six city pages,
+  terms placeholder, and the sample "advocacy took over" testimonial.
+- Sitewide footer disclaimer now states we are **not a public insurance
+  adjuster** and do not negotiate or settle claims on anyone's behalf.
+- ⚠️ Still confirm the final service design and contract language with a Texas
+  insurance attorney before launch (the doc flags coaching as a gray zone).
+
+### Schema
+- Replaced deprecated `ProfessionalService` with `LocalBusiness` (homepage
+  entity + `provider` on the hub and all six city pages); brand `name` is now
+  "CrashTime" with `legalName` "CrashTime Claims Advocacy, LLC".
+- Homepage `areaServed` expanded to the six target cities; added `founder`
+  Person and `knowsAbout`; priceRange updated to $195–$445.
+- About page: new `AboutPage` + `Person` schema for the founder (jobTitle,
+  worksFor, knowsAbout, `sameAs` — **replace the LinkedIn placeholder URL**).
+
+### E-E-A-T / fact density
+- Texas hub now cites Transportation Code Ch. 501 (100% threshold) and TDI
+  Bulletin B-0027-00 (third-party diminished value), in visible copy and FAQ
+  JSON-LD alike.
+- USPAP added to the (placeholder-flagged) credential list — verify before
+  launch; the doc treats USPAP/ASCAA credentials as the core trust signal.
+- Sample testimonials/locales localized to Texas metros (still sample-flagged).
+
+### Internal linking
+- Homepage footer now links all six city pages + the Texas hub (Fort Worth,
+  El Paso, and the hub link were missing).
+
+### Deliberately NOT done (per the doc)
+- `llms.txt` — Google/OpenAI/Anthropic/Perplexity confirm it's unused; skipped.
+- URL restructure to `/texas/houston/` — the flat `total-loss-appraisal-{city}.html`
+  URLs are keyword-rich and already interlinked hub↔spoke; churning URLs on an
+  unlaunched site adds no ranking value and risks broken links.
+
+### Off-site actions the doc calls for (can't be done in code)
+1. Google Business Profile (SAB, hidden address, up to 20 service areas) +
+   **Bing Webmaster Tools** (feeds ChatGPT) + Search Console + GA4.
+2. Content cluster build-out: 1–2 articles/week across the four pillars
+   (total loss, ACV, appraisal clause, diminished value), front-loaded answers,
+   question-based H2s.
+3. Digital PR (Qwoted, Source of Sources, Featured.com, #JournoRequest),
+   Texas citations/directories (ASCAA etc.), authentic Reddit presence in
+   Texas car/insurance communities.
+4. Review-generation flow; add Review/AggregateRating markup only once real
+   reviews exist.
