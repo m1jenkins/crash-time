@@ -1,5 +1,5 @@
 /* ============================================================
-   CrashTime — Independent Auto Claims Advocacy
+   CrashTime - Independent Auto Claims Advocacy
    Premium design system and stylesheet
    ============================================================ */
 
@@ -133,10 +133,6 @@ a:hover {
   font-weight: 800;
   color: var(--amber-dark);
   margin-bottom: 0.8rem;
-  background: var(--amber-light);
-  padding: 0.25rem 0.75rem;
-  border-radius: 999px;
-  border: 1px solid rgba(240, 169, 45, 0.15);
 }
 
 .section {
@@ -187,6 +183,7 @@ a:hover {
 }
 .btn-primary:hover {
   background: linear-gradient(135deg, var(--amber-dark), var(--amber));
+  color: var(--navy-deep);
   box-shadow: 0 6px 20px rgba(240, 169, 45, 0.45);
 }
 .btn-secondary {
@@ -382,6 +379,181 @@ a:hover {
 .hero-note {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.65);
+}
+
+/* ---------- Hero Grid and Layout overrides ---------- */
+.hero-home .container {
+  max-width: 1200px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4rem;
+  align-items: center;
+}
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+}
+.hero .eyebrow {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: var(--amber);
+  margin-bottom: 1rem;
+}
+.hero-founder {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+  margin-top: 2.2rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.hero-founder p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+.hero-founder cite {
+  display: block;
+  font-style: normal;
+  font-size: 0.78rem;
+  color: var(--amber);
+  margin-top: 0.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.founder-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--amber), var(--amber-dark));
+  color: var(--navy-deep);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ---------- Offer Card (Before/After visual) ---------- */
+.offer-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 2.2rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(16, 36, 62, 0.05);
+  color: var(--navy);
+}
+.offer-card-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  color: var(--amber-dark);
+  margin-bottom: 1.2rem;
+}
+.offer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 0;
+}
+.offer-before {
+  border-bottom: 1px solid var(--line);
+}
+.offer-before span {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+.offer-before strong {
+  color: #d94040;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.offer-after {
+  margin-top: 0.3rem;
+}
+.offer-after span {
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.offer-after strong {
+  color: var(--green);
+  font-size: 1.45rem;
+  font-weight: 800;
+  font-family: var(--font-display);
+}
+.offer-delta {
+  background: var(--green-light);
+  color: var(--green);
+  font-weight: 800;
+  font-size: 1.05rem;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin: 1.2rem 0;
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+.offer-note {
+  font-size: 0.76rem;
+  color: var(--ink-soft) !important;
+  margin-bottom: 0;
+  line-height: 1.45;
+  text-align: center;
+}
+
+/* ---------- Assurance Bar ---------- */
+.assurance-bar {
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--line);
+  padding: 1.1rem 0;
+}
+.assurance-bar .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.assurance-bar span {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--navy-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.assurance-bar span::before {
+  content: "✓";
+  color: var(--green);
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .offer-card {
+    max-width: 480px;
+    margin: 0 auto;
+  }
 }
 
 /* ---------- Trust bar ---------- */

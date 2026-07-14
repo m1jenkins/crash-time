@@ -1,4 +1,4 @@
-# CrashTime — robots.txt
+# CrashTime - robots.txt
 # TODO: replace crashtime.example.com with the real production domain before launch.
 
 User-agent: *
