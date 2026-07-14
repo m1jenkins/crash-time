@@ -12,6 +12,9 @@
   <meta property="og:description" content="Get a free, no-obligation expert review of your insurance settlement offer within 2 business days.">
   <meta property="og:url" content="https://www.crashtime.example.com/free-review.html">
   <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -52,7 +55,7 @@
       <!-- Wire the action attribute to your form backend (Formspree, Netlify Forms,
            HubSpot, or your own endpoint). While action="#", js/main.js shows the
            success message locally for demo purposes. -->
-      <form id="free-review-form" class="form-card" action="#" method="post">
+      <form id="free-review-form" class="form-card reveal-on-scroll" action="#" method="post">
         <h2 style="margin-bottom:0.4rem;">Start your free review</h2>
         <p style="color:var(--ink-soft); font-size:0.95rem; margin-bottom:1.5rem;">
           Takes about 2 minutes. The more you can tell us, the sharper our answer.
@@ -145,7 +148,7 @@
       </div>
 
       <!-- What they get -->
-      <div class="grid-3" style="margin-top:3rem;">
+      <div class="grid-3 reveal-on-scroll" style="margin-top:3rem;">
         <div class="card">
           <h3>An honest verdict</h3>
           <p>Fair, borderline, or low — we tell you straight, even when the answer is "your offer looks reasonable."</p>
