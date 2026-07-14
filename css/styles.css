@@ -2168,7 +2168,7 @@ a:hover {
 
 .footer-nav-group {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
 
@@ -3445,7 +3445,7 @@ a:hover {
 }
 
 .site-redesign .footer-grid {
-  grid-template-columns: 1.8fr repeat(4, 1fr);
+  grid-template-columns: 1.8fr repeat(5, 1fr);
   gap: clamp(1.5rem, 4vw, 4rem);
   padding-bottom: 3rem;
   margin-bottom: 1.6rem;
@@ -3672,4 +3672,23 @@ a:hover {
   .site-redesign .footer-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Guide articles */
+.site-redesign .legal-page > ul,
+.site-redesign .legal-page > ol {
+  margin: 0 0 1.5rem 1.4rem;
+  line-height: 1.85;
+}
+
+.site-redesign .legal-page > ul li,
+.site-redesign .legal-page > ol li {
+  margin-bottom: 0.5rem;
+}
+
+.site-redesign .guide-sources {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--home-line, #e3e0da);
+  font-size: 0.9rem;
 }

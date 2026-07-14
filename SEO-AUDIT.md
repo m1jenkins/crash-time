@@ -188,3 +188,48 @@ adjuster license and sank Stonewater Roofing at the Texas Supreme Court.
    Texas car/insurance communities.
 4. Review-generation flow; add Review/AggregateRating markup only once real
    reviews exist.
+
+---
+
+## 7. Guide cluster build-out (July 14, 2026)
+
+Implemented the "blog/guide cluster" from §5 — five long-tail guides targeting
+the research-phase and situational queries in §1C/§1D:
+
+| Page | Primary query targets |
+|---|---|
+| `what-to-do-car-totaled-texas.html` | car totaled in texas what to do, dispute total loss claim, totaled car offer too low |
+| `texas-appraisal-clause-sb458.html` | texas right to appraisal, appraisal clause texas, SB 458 |
+| `totaled-car-sales-tax-texas.html` | does insurance pay sales tax on totaled car in texas |
+| `hail-totaled-car-texas.html` | hail totaled my car (DFW "hail alley" angle) |
+| `diminished-value-claim-texas.html` | diminished value claim texas, TDI B-0027-00, 2-year deadline |
+
+Each guide follows the AI-search (GEO) playbook from the strategy doc:
+- **Front-loaded direct answer** in the lede (~60 words), question-based H2s.
+- **Article + BreadcrumbList + FAQPage JSON-LD**, named author (`Person` →
+  Mark West → about.html), `datePublished`/`dateModified`, visible byline
+  with "Last reviewed" date.
+- **Fact-dense**: Transportation Code Ch. 501 (100% threshold), Ins. Code
+  Ch. 542 prompt-payment deadlines (15 days / 15 business days / 5 business
+  days, 18% interest), Ch. 1813 / SB 458, TDI Bulletin B-0027-00, 6.25%
+  motor vehicle sales tax, $20,000 justice-court limit, 2-year limitations
+  period. SB 458 procedural deadlines deliberately NOT stated (TDI
+  rulemaking pending, per the doc's caveat).
+- **Compliance-safe language throughout** (consumer sends letters; coaching
+  framing; "not legal advice" fine print).
+
+Supporting changes:
+- "Free Guides" column added to every page footer (interior grid now
+  `1.8fr repeat(5, 1fr)`, homepage nav-group now 4 columns); guides section
+  added to the `texas.html` hub; contextual hail-guide links on the Dallas
+  and Fort Worth pages; all five added to `sitemap.xml`.
+- **Editorial standards section** on about.html (named reviewer, sourced
+  statutes, last-reviewed dates, corrections policy) — E-E-A-T requirement
+  from the strategy doc.
+- `og:image`/`twitter:image` added to the homepage (uses the hero webp;
+  consider a dedicated 1200×630 og-image before launch).
+- New CSS: guide list styling under `.legal-page`.
+
+Remaining content roadmap (unbuilt): flooded-car guide (Houston angle),
+ACV-vs-market-value explainer, "what happens if I don't accept the offer",
+second-ring city pages — publish 1–2/week per the strategy doc's cadence.
