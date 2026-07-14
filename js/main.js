@@ -7,13 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (toggle && links) {
     toggle.addEventListener("click", function () {
       links.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", links.classList.contains("open"));
-      // Change burger menu icon between ☰ and ✕
-      if (links.classList.contains("open")) {
-        toggle.textContent = "✕";
-      } else {
-        toggle.textContent = "☰";
-      }
+      var isOpen = links.classList.contains("open");
+      toggle.setAttribute("aria-expanded", isOpen);
+      toggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
     });
   }
 
