@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Claim Review — CrashTime Independent Auto Claims Advocacy</title>
+  <meta name="description" content="Get a free, no-obligation expert review of your insurance settlement offer. Find out within 2 business days whether your claim is worth challenging.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">Crash<span>Time</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="results.html">Results</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="free-review.html" class="btn btn-primary">Free Claim Review</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Free Claim Snapshot</span>
+      <h1>Is your settlement offer <em>fair?</em> Find out free.</h1>
+      <p class="lede">
+        Tell us about your claim and a certified appraiser — not a bot — will review it
+        and email you an honest opinion within 2 business days. No cost, no obligation,
+        no payment information required.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- ================= LEAD CAPTURE FORM ================= -->
+      <!-- Wire the action attribute to your form backend (Formspree, Netlify Forms,
+           HubSpot, or your own endpoint). While action="#", js/main.js shows the
+           success message locally for demo purposes. -->
+      <form id="free-review-form" class="form-card" action="#" method="post">
+        <h2 style="margin-bottom:0.4rem;">Start your free review</h2>
+        <p style="color:var(--ink-soft); font-size:0.95rem; margin-bottom:1.5rem;">
+          Takes about 2 minutes. The more you can tell us, the sharper our answer.
+        </p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First name *</label>
+            <input type="text" id="first-name" name="first_name" autocomplete="given-name" required>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last name *</label>
+            <input type="text" id="last-name" name="last_name" autocomplete="family-name" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email address *</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="Optional">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="claim-type">What kind of claim is this? *</label>
+          <select id="claim-type" name="claim_type" required>
+            <option value="" selected disabled>Select your claim type…</option>
+            <option value="total-loss">My car was totaled — the offer seems low</option>
+            <option value="diminished-value">My car was repaired — I want diminished value</option>
+            <option value="repair-dispute">I'm disputing the repair estimate or repair quality</option>
+            <option value="no-offer-yet">I haven't received an offer yet</option>
+            <option value="not-sure">I'm not sure — help me figure it out</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="city">City *</label>
+            <input type="text" id="city" name="city" autocomplete="address-level2" required>
+          </div>
+          <div class="form-group">
+            <label for="state">State *</label>
+            <select id="state" name="state" autocomplete="address-level1" required>
+              <option value="" selected disabled>Select state…</option>
+              <option>AL</option><option>AK</option><option>AZ</option><option>AR</option>
+              <option>CA</option><option>CO</option><option>CT</option><option>DE</option>
+              <option>FL</option><option>GA</option><option>HI</option><option>ID</option>
+              <option>IL</option><option>IN</option><option>IA</option><option>KS</option>
+              <option>KY</option><option>LA</option><option>ME</option><option>MD</option>
+              <option>MA</option><option>MI</option><option>MN</option><option>MS</option>
+              <option>MO</option><option>MT</option><option>NE</option><option>NV</option>
+              <option>NH</option><option>NJ</option><option>NM</option><option>NY</option>
+              <option>NC</option><option>ND</option><option>OH</option><option>OK</option>
+              <option>OR</option><option>PA</option><option>RI</option><option>SC</option>
+              <option>SD</option><option>TN</option><option>TX</option><option>UT</option>
+              <option>VT</option><option>VA</option><option>WA</option><option>WV</option>
+              <option>WI</option><option>WY</option><option>DC</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="details">Tell us about your claim (optional)</label>
+          <textarea id="details" name="details" rows="4"
+            placeholder="Vehicle year/make/model, the insurer's offer amount, and anything that feels off about it…"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Send My Free Claim Snapshot Request</button>
+
+        <p class="form-privacy">
+          🔒 We'll only use your details to prepare and deliver your free review.
+          No spam, no selling your data, and your phone number is only used if you
+          ask us to call. See our <a href="privacy.html">Privacy Policy</a>.
+        </p>
+      </form>
+
+      <!-- Success message shown by js/main.js while the form is in demo mode -->
+      <div id="form-success" class="form-card" hidden style="text-align:center;">
+        <h2>✅ Request received!</h2>
+        <p style="color:var(--ink-soft);">
+          Thank you — a certified appraiser will review your claim details and email
+          your Free Claim Snapshot within 2 business days. Keep an eye on your inbox
+          (and your spam folder, just in case).
+        </p>
+        <a href="how-it-works.html" class="btn btn-outline">See What Happens Next</a>
+      </div>
+
+      <!-- What they get -->
+      <div class="grid-3" style="margin-top:3rem;">
+        <div class="card">
+          <h3>An honest verdict</h3>
+          <p>Fair, borderline, or low — we tell you straight, even when the answer is "your offer looks reasonable."</p>
+        </div>
+        <div class="card">
+          <h3>A recovery estimate</h3>
+          <p>If your offer looks short, we'll estimate the range a full certified report may be able to document.</p>
+        </div>
+        <div class="card">
+          <h3>Zero pressure</h3>
+          <p>Delivered by email, on your schedule. If you want the full report afterward, it's ready in 48 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Crash<span>Time</span></a>
+          <p>
+            Independent vehicle valuation and claims advocacy for people who deserve
+            a fair settlement — not a fast one.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="X (Twitter)">𝕏</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="free-review.html">Free Claim Review</a></li>
+            <li><a href="pricing.html">Diminished Value Report</a></li>
+            <li><a href="pricing.html">Total Loss Challenge</a></li>
+            <li><a href="pricing.html">Partner Program</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-disclaimer">
+        <p>
+          CrashTime Claims Advocacy, LLC is an independent vehicle appraisal and consumer
+          advocacy firm. We are not a law firm, we do not provide legal advice, and we are
+          not affiliated with or endorsed by any insurance company. Appraisal reports
+          represent our independent professional opinion of value; settlement outcomes
+          depend on your policy, the facts of your claim, and applicable state law.
+          Results described on this site are examples only and are not a guarantee of
+          any particular outcome.
+        </p>
+        <p>© 2026 CrashTime Claims Advocacy, LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,1 +1,47 @@
-# crash-time
+# CrashTime — Independent Auto Claims Advocacy
+
+A complete website + business plan for a niche independent claims advocacy
+service: certified vehicle valuation reports that help car accident victims
+challenge lowball insurance settlements (total loss and diminished value).
+
+## What's here
+
+| Path | Purpose |
+|---|---|
+| `index.html` | Homepage — fairness-led hero, founder intro, trust bar, stats, CTAs |
+| `how-it-works.html` | 3-step customer process + the 3-chapter report structure |
+| `pricing.html` | Free tier, $295/$445 report tiers, fee-capped advocacy, B2B program |
+| `results.html` | Before/after case results, stats bar, testimonials |
+| `about.html` | Founder story, credentials, values, giving-back program |
+| `free-review.html` | Lead-capture form for the free tier |
+| `privacy.html` / `terms.html` / `disclaimer.html` | Legal page placeholders |
+| `css/styles.css` | Shared stylesheet (no frameworks, fully responsive) |
+| `js/main.js` | Mobile nav + demo form handler |
+| `BUSINESS-PLAN.md` | Full business plan: market, pricing, unit economics, GTM, risks |
+
+## Running locally
+
+It's a static site — open `index.html` in a browser, or:
+
+```bash
+python3 -m http.server 8000
+# then visit http://localhost:8000
+```
+
+## Before launch — replace the placeholders
+
+Sample/placeholder content is marked with HTML comments in the source. At minimum:
+
+1. **Trust bar** (`index.html`) — replace bracketed outlets with *real* media
+   features only.
+2. **Stats & testimonials** (`index.html`, `results.html`) — replace illustrative
+   figures and sample quotes with documented results and client-permissioned quotes.
+3. **Credentials** (`about.html`) — replace with the founder's actual, verifiable
+   certifications and license numbers.
+4. **Legal pages** — have an attorney draft the real privacy policy, terms, and
+   disclaimer for your state and business structure.
+5. **Lead form** (`free-review.html`) — point the form `action` at a real backend
+   (Formspree, Netlify Forms, or your own endpoint) and remove the demo handler
+   in `js/main.js`.
+6. **Contact addresses & social links** — swap `*.example.com` emails and `#`
+   social links for real ones.
