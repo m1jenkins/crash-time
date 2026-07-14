@@ -125,3 +125,111 @@ The hub↔city↔home linking forms a proper topical cluster.
 - **Backlinks:** the local angles built into each page (Houston flood claims,
   DFW hail, Austin EVs) are pitchable to local TV consumer desks and Texas
   personal-finance blogs — the same outlets in the homepage trust bar.
+
+---
+
+## 6. Best-practices review pass (July 14, 2026)
+
+Changes applied after reviewing the regional SEO & AI-search strategy document
+(Texas total-loss market):
+
+### Compliance language scrub (TX Ins. Code Ch. 4102 / *Stonewater*)
+The strategy doc's #1 finding: marketing that says we "negotiate/settle/handle
+your claim" is the exact conduct that requires a Texas public insurance
+adjuster license and sank Stonewater Roofing at the Texas Supreme Court.
+- The "$195 Flat-Fee Negotiation" add-on ("we handle the adjuster calls…
+  complete representation through resolution") is now **Flat-Fee Negotiation
+  Coaching**: we prepare the demand package and script every response; the
+  client sends the letters and makes the calls, and the claim stays in their
+  control. Flat fee, "never a percentage" stated explicitly (contingency fees
+  are a PA hallmark).
+- Same reframe applied on how-it-works, homepage step 3, all six city pages,
+  terms placeholder, and the sample "advocacy took over" testimonial.
+- Sitewide footer disclaimer now states we are **not a public insurance
+  adjuster** and do not negotiate or settle claims on anyone's behalf.
+- ⚠️ Still confirm the final service design and contract language with a Texas
+  insurance attorney before launch (the doc flags coaching as a gray zone).
+
+### Schema
+- Replaced deprecated `ProfessionalService` with `LocalBusiness` (homepage
+  entity + `provider` on the hub and all six city pages); brand `name` is now
+  "CrashTime" with `legalName` "CrashTime Claims Advocacy, LLC".
+- Homepage `areaServed` expanded to the six target cities; added `founder`
+  Person and `knowsAbout`; priceRange updated to $195–$445.
+- About page: new `AboutPage` + `Person` schema for the founder (jobTitle,
+  worksFor, knowsAbout, `sameAs` — **replace the LinkedIn placeholder URL**).
+
+### E-E-A-T / fact density
+- Texas hub now cites Transportation Code Ch. 501 (100% threshold) and TDI
+  Bulletin B-0027-00 (third-party diminished value), in visible copy and FAQ
+  JSON-LD alike.
+- USPAP added to the (placeholder-flagged) credential list — verify before
+  launch; the doc treats USPAP/ASCAA credentials as the core trust signal.
+- Sample testimonials/locales localized to Texas metros (still sample-flagged).
+
+### Internal linking
+- Homepage footer now links all six city pages + the Texas hub (Fort Worth,
+  El Paso, and the hub link were missing).
+
+### Deliberately NOT done (per the doc)
+- `llms.txt` — Google/OpenAI/Anthropic/Perplexity confirm it's unused; skipped.
+- URL restructure to `/texas/houston/` — the flat `total-loss-appraisal-{city}.html`
+  URLs are keyword-rich and already interlinked hub↔spoke; churning URLs on an
+  unlaunched site adds no ranking value and risks broken links.
+
+### Off-site actions the doc calls for (can't be done in code)
+1. Google Business Profile (SAB, hidden address, up to 20 service areas) +
+   **Bing Webmaster Tools** (feeds ChatGPT) + Search Console + GA4.
+2. Content cluster build-out: 1–2 articles/week across the four pillars
+   (total loss, ACV, appraisal clause, diminished value), front-loaded answers,
+   question-based H2s.
+3. Digital PR (Qwoted, Source of Sources, Featured.com, #JournoRequest),
+   Texas citations/directories (ASCAA etc.), authentic Reddit presence in
+   Texas car/insurance communities.
+4. Review-generation flow; add Review/AggregateRating markup only once real
+   reviews exist.
+
+---
+
+## 7. Guide cluster build-out (July 14, 2026)
+
+Implemented the "blog/guide cluster" from §5 — five long-tail guides targeting
+the research-phase and situational queries in §1C/§1D:
+
+| Page | Primary query targets |
+|---|---|
+| `what-to-do-car-totaled-texas.html` | car totaled in texas what to do, dispute total loss claim, totaled car offer too low |
+| `texas-appraisal-clause-sb458.html` | texas right to appraisal, appraisal clause texas, SB 458 |
+| `totaled-car-sales-tax-texas.html` | does insurance pay sales tax on totaled car in texas |
+| `hail-totaled-car-texas.html` | hail totaled my car (DFW "hail alley" angle) |
+| `diminished-value-claim-texas.html` | diminished value claim texas, TDI B-0027-00, 2-year deadline |
+
+Each guide follows the AI-search (GEO) playbook from the strategy doc:
+- **Front-loaded direct answer** in the lede (~60 words), question-based H2s.
+- **Article + BreadcrumbList + FAQPage JSON-LD**, named author (`Person` →
+  Mark West → about.html), `datePublished`/`dateModified`, visible byline
+  with "Last reviewed" date.
+- **Fact-dense**: Transportation Code Ch. 501 (100% threshold), Ins. Code
+  Ch. 542 prompt-payment deadlines (15 days / 15 business days / 5 business
+  days, 18% interest), Ch. 1813 / SB 458, TDI Bulletin B-0027-00, 6.25%
+  motor vehicle sales tax, $20,000 justice-court limit, 2-year limitations
+  period. SB 458 procedural deadlines deliberately NOT stated (TDI
+  rulemaking pending, per the doc's caveat).
+- **Compliance-safe language throughout** (consumer sends letters; coaching
+  framing; "not legal advice" fine print).
+
+Supporting changes:
+- "Free Guides" column added to every page footer (interior grid now
+  `1.8fr repeat(5, 1fr)`, homepage nav-group now 4 columns); guides section
+  added to the `texas.html` hub; contextual hail-guide links on the Dallas
+  and Fort Worth pages; all five added to `sitemap.xml`.
+- **Editorial standards section** on about.html (named reviewer, sourced
+  statutes, last-reviewed dates, corrections policy) — E-E-A-T requirement
+  from the strategy doc.
+- `og:image`/`twitter:image` added to the homepage (uses the hero webp;
+  consider a dedicated 1200×630 og-image before launch).
+- New CSS: guide list styling under `.legal-page`.
+
+Remaining content roadmap (unbuilt): flooded-car guide (Houston angle),
+ACV-vs-market-value explainer, "what happens if I don't accept the offer",
+second-ring city pages — publish 1–2/week per the strategy doc's cadence.
