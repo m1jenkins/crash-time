@@ -101,20 +101,38 @@
         </div>
       </div>
 
-      <!-- Before/after settlement example -->
+      <!-- Contact submission info box -->
       <div class="hero-visual">
         <div class="offer-card">
-          <span class="offer-card-label">What pushing back looks like</span>
-          <div class="offer-row offer-before">
-            <span>Insurer's first offer</span>
-            <strong><s>$12,400</s></strong>
+          <form id="hero-contact-form" action="#" method="POST">
+            <span class="offer-card-label" style="margin-bottom: 0.4rem;">Get a Free Review</span>
+            <h2>Let's check your claim</h2>
+            <p class="card-subtitle">Enter details below to see how much more your claim could be worth.</p>
+            
+            <div class="form-group">
+              <label for="hero-name">Full name *</label>
+              <input type="text" id="hero-name" name="name" autocomplete="name" required placeholder="Your full name">
+            </div>
+            
+            <div class="form-group">
+              <label for="hero-email">Email address *</label>
+              <input type="email" id="hero-email" name="email" autocomplete="email" required placeholder="your.name@email.com">
+            </div>
+            
+            <div class="form-group">
+              <label for="hero-phone">Phone number</label>
+              <input type="tel" id="hero-phone" name="phone" autocomplete="tel" placeholder="Phone number (optional)">
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">Get My Free Review</button>
+            <p class="form-privacy">🔒 Safe &amp; confidential. No spam, ever.</p>
+          </form>
+          
+          <div id="hero-success-message" class="offer-card-success" hidden>
+            <div class="success-icon">✓</div>
+            <h3>Request Received!</h3>
+            <p>A certified appraiser will review your details and email your Free Claim Snapshot within 48 hours.</p>
           </div>
-          <div class="offer-row offer-after">
-            <span>Settlement with a CrashTime appraisal</span>
-            <strong>$16,250</strong>
-          </div>
-          <div class="offer-delta">+$3,850 more in your pocket</div>
-          <p class="offer-note">Illustrative example. Individual results vary based on policy, vehicle, and state law.</p>
         </div>
       </div>
     </div>

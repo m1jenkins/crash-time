@@ -22,7 +22,7 @@ report — priced at $295–$445, delivered in 48 hours, and backed by a money-b
 guarantee — routinely changes settlement outcomes by thousands of dollars.
 
 **Model in one line:** free expert claim review (lead magnet) → paid certified
-report (core revenue) → hourly advocacy capped at 10% of value recovered (upsell)
+report (core revenue) → flat-fee negotiation service with success guarantee (upsell)
 → white-label/bulk reports for body shops, attorneys, and credit unions (B2B).
 
 ## 2. The Problem
@@ -53,9 +53,9 @@ appraiser in 48 hours:
    state claim-handling references, and an escalation checklist (supervisor →
    appraisal clause → department of insurance complaint).
 
-Optional hands-on advocacy: we run the negotiation for $95/hour, with total fees
-capped at 10% of the additional value recovered — aligning our incentive with the
-client's outcome and making the service safe to try.
+Optional hands-on advocacy: we run the negotiation for a flat fee of $195, backed by
+a success guarantee (refunded if we don't recover at least the service fee in additional value)
+— aligning our incentive with the client's outcome and making the service risk-free.
 
 ## 4. Market
 
@@ -99,7 +99,7 @@ tell you" honesty promise that converts trust into referrals.
 | **Free Claim Snapshot** | $0 | Lead magnet. Expert opinion (fair / borderline / low) + recoverable range, by email in 2 business days. No payment info collected. |
 | **Diminished Value Report** | $295 | Core product for repaired vehicles. Full 3-chapter report, 48-hour turnaround, money-back guarantee. |
 | **Total Loss Challenge** | $445 | Premium product for totaled vehicles. Adds line-by-line rebuttal of the insurer's valuation and verified replacement comparables. |
-| **Advocacy & Negotiation** | $95/hr, capped at 10% of additional recovery | Upsell for clients who don't want to negotiate themselves. Cap keeps incentives aligned and removes fee risk. |
+| **Advocacy & Negotiation** | $195 flat fee, with success guarantee | Upsell for clients who don't want to negotiate themselves. Guarantee keeps incentives aligned and removes fee risk. |
 | **Partner Program (B2B)** | Volume pricing from 5 reports/mo | White-label reports, priority SLAs, or per-case referral fees for shops, attorneys, credit unions, fleets. |
 
 **Guarantee mechanics:** if the independent appraisal does not support a value above
@@ -113,7 +113,7 @@ Planning assumptions to validate in the first 6 months:
 
 - Free Snapshot → paid report conversion: **25–35%** (pre-qualified, high-intent leads).
 - Paid report mix: ~60% DV ($295) / 40% Total Loss ($445) → **blended ~$355/report**.
-- Advocacy attach rate: **20%** of report clients, averaging 3 billed hours (~$285).
+- Advocacy attach rate: **20%** of report clients, at a flat fee of $195.
 - Variable cost per report: appraiser time (2.5–3.5 hrs), market data subscriptions,
   payment processing — target **60%+ gross margin** at founder-does-the-work stage.
 - Refund rate under guarantee: target **<5%** (Snapshot filtering is the control).
@@ -125,9 +125,9 @@ Monthly steady-state sketch (founder + 1 part-time appraiser):
 | Free Snapshots delivered | 120 |
 | Paid reports (30% conv.) | 36 |
 | Report revenue (× $355) | $12,780 |
-| Advocacy revenue (7 clients × $285) | ~$2,000 |
+| Advocacy revenue (7 clients × $195) | ~$1,365 |
 | B2B/white-label (10 reports × $250) | $2,500 |
-| **Monthly revenue** | **~$17,300** |
+| **Monthly revenue** | **~$16,665** |
 
 Scale levers: additional certified appraisers (capacity), state expansion (market),
 B2B pipeline (volume without CAC), and productized templates (margin).
@@ -160,7 +160,7 @@ B2B pipeline (volume without CAC), and productized templates (margin).
   from complete-documents receipt.
 - **Delivery:** PDF report + evidence pack by email; 15-minute walkthrough call
   offered on premium tier.
-- **Advocacy:** time-tracked engagements, weekly client updates, fee-cap
+- **Advocacy:** case management, updates through key negotiation steps, guarantee
   reconciliation at settlement.
 - **Tooling:** CRM (pipeline + email sequences), market data subscriptions
   (comparable listings, auction data, valuation guides), e-sign, payment processor,
@@ -226,7 +226,7 @@ disputes, equipment valuations), swap:
 - the **report chapters** (audit → independent valuation → correspondence pack
   generalize cleanly),
 - the **free lead magnet** (offer/bill snapshot review), and
-- the **fee-capped advocacy** mechanic (cap as % of value recovered),
+- the **guaranteed flat-fee advocacy** mechanic,
 
 while keeping the same page architecture: fairness-led hero, founder story,
 3-step process, tiered pricing with guarantee, results page with before/after

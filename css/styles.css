@@ -465,56 +465,77 @@ a:hover {
   color: var(--amber-dark);
   margin-bottom: 1.2rem;
 }
-.offer-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.85rem 0;
-}
-.offer-before {
-  border-bottom: 1px solid var(--line);
-}
-.offer-before span {
-  color: var(--ink-soft);
-  font-size: 0.95rem;
-}
-.offer-before strong {
-  color: #d94040;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-.offer-after {
-  margin-top: 0.3rem;
-}
-.offer-after span {
-  color: var(--navy);
-  font-weight: 700;
-  font-size: 1rem;
-}
-.offer-after strong {
-  color: var(--green);
+.offer-card h2 {
   font-size: 1.45rem;
-  font-weight: 800;
+  color: var(--navy-deep);
+  margin-bottom: 0.4rem;
   font-family: var(--font-display);
+  font-weight: 800;
 }
-.offer-delta {
+.offer-card .card-subtitle {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin-bottom: 1.4rem;
+  line-height: 1.45;
+}
+.offer-card .form-group {
+  margin-bottom: 1.1rem;
+  text-align: left;
+}
+.offer-card .form-group label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  color: var(--navy-soft);
+}
+.offer-card .form-group input,
+.offer-card .form-group select {
+  padding: 0.75rem 0.95rem;
+  font-size: 0.94rem;
+  border-radius: var(--radius-sm);
+}
+.offer-card .btn-primary {
+  margin-top: 0.6rem;
+  padding: 0.85rem 1rem;
+  font-size: 0.96rem;
+  font-weight: 700;
+}
+.offer-card .form-privacy {
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+  margin-top: 0.8rem;
+  text-align: center;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+.offer-card-success {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+.offer-card-success .success-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
   background: var(--green-light);
   color: var(--green);
-  font-weight: 800;
-  font-size: 1.05rem;
-  padding: 0.8rem 1rem;
-  border-radius: 10px;
-  text-align: center;
-  margin: 1.2rem 0;
-  font-family: var(--font-display);
-  letter-spacing: -0.01em;
+  font-size: 1.4rem;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
 }
-.offer-note {
-  font-size: 0.76rem;
-  color: var(--ink-soft) !important;
+.offer-card-success h3 {
+  font-size: 1.3rem;
+  color: var(--navy-deep);
+  margin-bottom: 0.6rem;
+  font-family: var(--font-display);
+}
+.offer-card-success p {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
   margin-bottom: 0;
-  line-height: 1.45;
-  text-align: center;
 }
 
 /* ---------- Assurance Bar ---------- */

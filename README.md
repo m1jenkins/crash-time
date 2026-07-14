@@ -10,7 +10,7 @@ challenge lowball insurance settlements (total loss and diminished value).
 |---|---|
 | `index.html` | Homepage — fairness-led hero, founder intro, trust bar, stats, CTAs |
 | `how-it-works.html` | 3-step customer process + the 3-chapter report structure |
-| `pricing.html` | Free tier, $295/$445 report tiers, fee-capped advocacy, B2B program |
+| `pricing.html` | Free tier, $295/$445 report tiers, flat-fee advocacy, B2B program |
 | `results.html` | Before/after case results, stats bar, testimonials |
 | `about.html` | Founder story, credentials, values, giving-back program |
 | `free-review.html` | Lead-capture form for the free tier |
