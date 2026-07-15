@@ -137,25 +137,25 @@ Changes applied after reviewing the regional SEO & AI-search strategy document
 The strategy doc's #1 finding: marketing that says we "negotiate/settle/handle
 your claim" is the exact conduct that requires a Texas public insurance
 adjuster license and sank Stonewater Roofing at the Texas Supreme Court.
-- The "$195 Flat-Fee Negotiation" add-on ("we handle the adjuster calls…
-  complete representation through resolution") is now **Flat-Fee Negotiation
-  Coaching**: we prepare the demand package and script every response; the
-  client sends the letters and makes the calls, and the claim stays in their
-  control. Flat fee, "never a percentage" stated explicitly (contingency fees
-  are a PA hallmark).
-- Same reframe applied on how-it-works, homepage step 3, all six city pages,
-  terms placeholder, and the sample "advocacy took over" testimonial.
+- Negotiation services were removed entirely. The Guided package is limited to
+  claim-specific document preparation, an evidence index, a report walkthrough,
+  and one factual addendum; it excludes negotiation, response analysis, ongoing
+  Q&A, representation, and scripts.
+- The same boundary is stated on pricing, how-it-works, all six city pages, the
+  terms placeholder, and educational guides. Service-specific sample content
+  was removed.
 - Sitewide footer disclaimer now states we are **not a public insurance
   adjuster** and do not negotiate or settle claims on anyone's behalf.
-- ⚠️ Still confirm the final service design and contract language with a Texas
-  insurance attorney before launch (the doc flags coaching as a gray zone).
+- ⚠️ Still confirm final package and contract language with a Texas insurance
+  attorney before launch.
 
 ### Schema
 - Replaced deprecated `ProfessionalService` with `LocalBusiness` (homepage
   entity + `provider` on the hub and all six city pages); brand `name` is now
   "Totaled Texas" with `legalName` "Totaled Texas".
 - Homepage `areaServed` expanded to the six target cities; added `founder`
-  Person and `knowsAbout`; priceRange updated to $195–$445.
+  Person and `knowsAbout`; priceRange updated to $0–$449 with Essential,
+  Guided, Specialty, and Specialty + Guided offers.
 - About page: new `AboutPage` + `Person` schema for the founder (jobTitle,
   worksFor, knowsAbout, `sameAs` — **replace the LinkedIn placeholder URL**).
 
@@ -215,7 +215,7 @@ Each guide follows the AI-search (GEO) playbook from the strategy doc:
   motor vehicle sales tax, $20,000 justice-court limit, 2-year limitations
   period. SB 458 procedural deadlines deliberately NOT stated (TDI
   rulemaking pending, per the doc's caveat).
-- **Compliance-safe language throughout** (consumer sends letters; coaching
+- **Compliance-safe language throughout** (consumer sends letters; document-support
   framing; "not legal advice" fine print).
 
 Supporting changes:

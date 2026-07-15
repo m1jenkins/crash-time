@@ -1,8 +1,8 @@
-# Totaled Texas — Independent Auto Claims Advocacy
+# Totaled Texas — Independent Total-Loss Appraisals
 
-A complete website + business plan for a niche independent claims advocacy
-service: certified vehicle valuation reports that help car accident victims
-challenge lowball insurance settlements (total loss and diminished value).
+A complete website + business plan for a niche independent appraisal service:
+certified total-loss vehicle valuation reports that help consumers challenge
+low insurance settlements.
 
 ## What's here
 
@@ -10,7 +10,7 @@ challenge lowball insurance settlements (total loss and diminished value).
 |---|---|
 | `index.html` | Homepage — fairness-led hero, founder intro, trust bar, stats, CTAs |
 | `how-it-works.html` | 3-step customer process + the 3-chapter report structure |
-| `pricing.html` | Free tier, $295/$445 report tiers, flat-fee advocacy, B2B program |
+| `pricing.html` | $99 Essential, $299 Guided, $299 Specialty, $449 combined package, priority delivery, and B2B program |
 | `results.html` | Before/after case results, stats bar, testimonials |
 | `about.html` | Founder story, credentials, values, giving-back program |
 | `free-review.html` | Lead-capture form for the free tier |
