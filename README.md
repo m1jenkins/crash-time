@@ -40,7 +40,7 @@ Sample/placeholder content is marked with HTML comments in the source. At minimu
    certifications and license numbers.
 4. **Legal pages** — have an attorney draft the real privacy policy, terms, and
    disclaimer for your state and business structure.
-5. **Lead form** (`free-review.html`) — connected to Web3Forms; replace the
-   access key if you create a different Web3Forms project.
+5. **Lead forms** (`index.html`, `free-review.html`) — connected to Web3Forms;
+   replace the access key if you create a different Web3Forms project.
 6. **Contact addresses & social links** — swap `*.example.com` emails and `#`
    social links for real ones.

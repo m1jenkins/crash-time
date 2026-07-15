@@ -68,21 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- Hero Contact Form Handler ---
-  var heroForm = document.querySelector("#hero-contact-form");
-  if (heroForm) {
-    heroForm.addEventListener("submit", function (e) {
-      if (heroForm.getAttribute("action") === "#") {
-        e.preventDefault();
-        var heroMsg = document.querySelector("#hero-success-message");
-        if (heroMsg) {
-          heroForm.hidden = true;
-          heroMsg.hidden = false;
-        }
-      }
-    });
-  }
-
   // --- PROGRESSIVE ENHANCEMENT: Scroll-Driven Animation Fallbacks ---
 
   // 1. Fallback for shrinking header on scroll (e.g., Firefox, older Safari)
