@@ -53,7 +53,21 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // --- Lead Form Demo Handler ---
+  // Send every review CTA directly to the short form, skipping the former landing-page hero.
+  document.querySelectorAll('a[href="free-review.html"]').forEach(function (link) {
+    link.href = "free-review.html#free-review-form";
+  });
+
   var form = document.querySelector("#free-review-form");
+  if (form && window.location.hash === "#free-review-form") {
+    window.requestAnimationFrame(function () {
+      var header = document.querySelector(".site-header");
+      window.scrollBy(0, -(header ? header.offsetHeight + 24 : 0));
+      var nameInput = document.querySelector("#name");
+      if (nameInput) nameInput.focus({ preventScroll: true });
+    });
+  }
+
   if (form) {
     form.addEventListener("submit", function (e) {
       if (form.getAttribute("action") === "#") {

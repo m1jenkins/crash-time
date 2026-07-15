@@ -3371,6 +3371,28 @@ a:hover {
   line-height: 1;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.site-redesign .review-form-section {
+  min-height: calc(100vh - 88px);
+  display: flex;
+  align-items: center;
+}
+
+.site-redesign .review-form-section .container {
+  width: 100%;
+}
+
 .site-redesign .form-group label {
   color: var(--home-ink);
   font-size: 0.83rem;
