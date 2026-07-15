@@ -17,11 +17,9 @@
   <meta name="twitter:image" content="https://www.totaledtexas.com/assets/images/vehicle-claim-hero.webp">
   <meta name="twitter:title" content="Get More for Your Totaled Car | $99 Appraisal | Totaled Texas">
   <meta name="twitter:description" content="A free claim review and complete $99 independent total-loss appraisal report for Texas drivers.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/dm-serif-display-latin-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="css/styles.css?v=20260715a">
+  <link rel="stylesheet" href="css/home.20260715.min.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -94,7 +92,14 @@
         <p class="home-hero-note">Free review <span>·</span> $99 flat fee <span>·</span> Texas-wide</p>
       </div>
       <div class="home-hero-media">
-        <img src="assets/images/vehicle-claim-hero.webp" alt="Vehicle valuation documents and car keys in front of a dark crossover" width="1402" height="1122">
+        <img src="assets/images/vehicle-claim-hero-768.webp"
+             srcset="assets/images/vehicle-claim-hero-480.webp 480w,
+                     assets/images/vehicle-claim-hero-768.webp 768w,
+                     assets/images/vehicle-claim-hero-1024.webp 1024w,
+                     assets/images/vehicle-claim-hero.webp 1402w"
+             sizes="(max-width: 960px) 100vw, 52vw"
+             alt="Vehicle valuation documents and car keys in front of a dark crossover"
+             width="1402" height="1122" fetchpriority="high" decoding="async">
         <div class="claim-card" id="claim-check">
           <form id="hero-contact-form" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="439014c3-679c-4545-8d4d-a5934e20f632">
@@ -138,7 +143,14 @@
           <div class="accent-rule" aria-hidden="true"></div>
           <h2>We find the value insurance reports <em>miss.</em></h2>
           <p>Insurance valuations can miss the details that make your vehicle worth more. We check the parts that automated reports often overlook.</p>
-          <img src="assets/images/comparable-review.webp" alt="An appraiser comparing vehicle listings and valuation details" width="2048" height="768" loading="lazy">
+          <img src="assets/images/comparable-review-768.webp"
+               srcset="assets/images/comparable-review-480.webp 480w,
+                       assets/images/comparable-review-768.webp 768w,
+                       assets/images/comparable-review-1200.webp 1200w,
+                       assets/images/comparable-review.webp 2048w"
+               sizes="(max-width: 960px) calc(100vw - 32px), (max-width: 1450px) calc(50vw - 64px), 620px"
+               alt="An appraiser comparing vehicle listings and valuation details"
+               width="2048" height="768" loading="lazy" decoding="async">
         </div>
         <div class="evidence-list">
           <article>
@@ -296,6 +308,6 @@
       <p class="home-disclaimer">Totaled Texas is an independent vehicle appraisal firm. We are not a public insurance adjuster and we do not negotiate or settle insurance claims on anyone's behalf - every decision about your claim remains yours. We are not a law firm, do not provide legal advice, and are not affiliated with any insurance company. Outcomes depend on your policy, vehicle, and applicable law.</p>
     </div>
   </footer>
-  <script src="js/main.js?v=20260715"></script>
+  <script src="js/main.20260715.js" defer></script>
 </body>
 </html>
