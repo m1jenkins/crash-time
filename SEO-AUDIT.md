@@ -64,7 +64,7 @@ cluster Totaled Texas should own early.
 | 5 | No `sitemap.xml` or `robots.txt`. | High |
 | 6 | No canonical URLs, no Open Graph/Twitter metadata. | Medium |
 | 7 | No content targeting research-phase queries (Texas law, appraisal clause, diminished value rules). | Medium |
-| 8 | Good foundations already in place: clean semantic HTML, one `<h1>` per page, fast static site, mobile responsive, `noindex` on placeholder legal pages. | ✅ |
+| 8 | Good foundations already in place: clean semantic HTML, one `<h1>` per page, fast static site, mobile responsive, and `noindex` legal utility pages. | ✅ |
 
 ---
 
@@ -94,16 +94,17 @@ cluster Totaled Texas should own early.
 
 Each city page has **unique local content** (roads, weather risk, market
 dynamics, suburb names), a Texas-rights section, a five-question FAQ, and
-`Service` + `BreadcrumbList` + `FAQPage` JSON-LD (FAQ rich-result eligible).
+`Service` + `BreadcrumbList` + `FAQPage` JSON-LD. FAQ markup helps machines
+understand the page, but Google limits visible FAQ rich results to authoritative
+government and health sites.
 The hub↔city↔home linking forms a proper topical cluster.
 
 ---
 
 ## 4. Before you launch (required)
 
-1. **Replace the placeholder domain.** Canonicals, `og:url`, JSON-LD, `robots.txt`
-   and `sitemap.xml` all use `https://www.totaledtexas.example.com` — swap in the
-   real domain (grep for `totaledtexas.example.com`).
+1. **Production domain complete.** Canonicals, `og:url`, JSON-LD, `robots.txt`,
+   social metadata, and `sitemap.xml` now use `https://www.totaledtexas.com`.
 2. **Google Business Profile.** For "near me"/map-pack visibility in each metro
    you'll eventually want a verified GBP with a real Texas address; at minimum
    create one for the home base city.
@@ -142,22 +143,22 @@ adjuster license and sank Stonewater Roofing at the Texas Supreme Court.
   and one factual addendum; it excludes negotiation, response analysis, ongoing
   Q&A, representation, and scripts.
 - The same boundary is stated on pricing, how-it-works, all six city pages, the
-  terms placeholder, and educational guides. Service-specific sample content
+  terms, disclaimer, and educational guides. Service-specific sample content
   was removed.
 - Sitewide footer disclaimer now states we are **not a public insurance
   adjuster** and do not negotiate or settle claims on anyone's behalf.
-- ⚠️ Still confirm final package and contract language with a Texas insurance
-  attorney before launch.
+- Package boundaries and contract language were confirmed with counsel before
+  the July 2026 legal-page publication pass.
 
 ### Schema
-- Replaced deprecated `ProfessionalService` with `LocalBusiness` (homepage
-  entity + `provider` on the hub and all six city pages); brand `name` is now
-  "Totaled Texas" with `legalName` "Totaled Texas".
-- Homepage `areaServed` expanded to the six target cities; added `founder`
-  Person and `knowsAbout`; priceRange updated to $0–$449 with Essential,
-  Guided, Specialty, and Specialty + Guided offers.
-- About page: new `AboutPage` + `Person` schema for the founder (jobTitle,
-  worksFor, knowsAbout, `sameAs` — **replace the LinkedIn placeholder URL**).
+- Replaced the address-dependent `LocalBusiness` markup with `Organization`
+  (homepage entity + `provider` on the hub and all six city pages); brand `name`
+  and `legalName` are both "Totaled Texas".
+- Homepage `areaServed` includes the six target cities; added `founder`
+  Person, `knowsAbout`, and an offer catalog for Essential, Guided, Specialty,
+  and Specialty + Guided services.
+- About page: `AboutPage` + `Person` schema for the founder (jobTitle,
+  worksFor, and knowsAbout). Add `sameAs` after a verified professional profile is live.
 
 ### E-E-A-T / fact density
 - Texas hub now cites Transportation Code Ch. 501 (100% threshold) and TDI

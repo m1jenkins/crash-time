@@ -1,110 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: replace totaledtexas.example.com with the real production domain before launch. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.totaledtexas.example.com/</loc>
+    <loc>https://www.totaledtexas.com/</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.totaledtexas.example.com/texas.html</loc>
+    <loc>https://www.totaledtexas.com/texas.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.totaledtexas.example.com/total-loss-appraisal-houston.html</loc>
+    <loc>https://www.totaledtexas.com/total-loss-appraisal-houston.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.totaledtexas.example.com/total-loss-appraisal-dallas.html</loc>
+    <loc>https://www.totaledtexas.com/total-loss-appraisal-dallas.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.totaledtexas.example.com/total-loss-appraisal-fort-worth.html</loc>
+    <loc>https://www.totaledtexas.com/total-loss-appraisal-fort-worth.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.totaledtexas.example.com/total-loss-appraisal-san-antonio.html</loc>
+    <loc>https://www.totaledtexas.com/total-loss-appraisal-san-antonio.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.totaledtexas.example.com/total-loss-appraisal-austin.html</loc>
+    <loc>https://www.totaledtexas.com/total-loss-appraisal-austin.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.totaledtexas.example.com/total-loss-appraisal-el-paso.html</loc>
+    <loc>https://www.totaledtexas.com/total-loss-appraisal-el-paso.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.totaledtexas.example.com/what-to-do-car-totaled-texas.html</loc>
+    <loc>https://www.totaledtexas.com/what-to-do-car-totaled-texas.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.totaledtexas.example.com/texas-appraisal-clause-sb458.html</loc>
+    <loc>https://www.totaledtexas.com/texas-appraisal-clause-sb458.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.totaledtexas.example.com/totaled-car-sales-tax-texas.html</loc>
+    <loc>https://www.totaledtexas.com/totaled-car-sales-tax-texas.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.totaledtexas.example.com/hail-totaled-car-texas.html</loc>
+    <loc>https://www.totaledtexas.com/hail-totaled-car-texas.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.totaledtexas.example.com/diminished-value-claim-texas.html</loc>
+    <loc>https://www.totaledtexas.com/diminished-value-claim-texas.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.totaledtexas.example.com/how-it-works.html</loc>
+    <loc>https://www.totaledtexas.com/how-it-works.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.totaledtexas.example.com/pricing.html</loc>
+    <loc>https://www.totaledtexas.com/pricing.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.totaledtexas.example.com/free-review.html</loc>
+    <loc>https://www.totaledtexas.com/free-review.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.totaledtexas.example.com/results.html</loc>
+    <loc>https://www.totaledtexas.com/results.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.totaledtexas.example.com/about.html</loc>
+    <loc>https://www.totaledtexas.com/about.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>

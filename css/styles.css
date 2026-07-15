@@ -3,8 +3,6 @@
    Premium design system and stylesheet
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
-
 :root {
   /* HSL Color Palette */
   --navy: hsl(215, 58%, 15%);
@@ -730,7 +728,7 @@ a:hover {
   align-items: stretch;
 }
 .price-card {
-  background: #bg;
+  background: var(--bg);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 2.8rem 2.2rem;
@@ -1090,7 +1088,7 @@ a:hover {
   gap: 3rem;
   margin-bottom: 3.5rem;
 }
-.site-footer h4 {
+.site-footer h3 {
   color: #fff;
   font-size: 1.05rem;
   margin-bottom: 1.2rem;
@@ -1275,7 +1273,7 @@ a:hover {
 .home-redesign {
   --home-ink: #0d1b33;
   --home-ink-soft: #536071;
-  --home-accent: #d04f2f;
+  --home-accent: #c84a2b;
   --home-accent-dark: #b83e21;
   --home-sage: #7d9278;
   --home-sage-dark: #31583b;
@@ -2223,7 +2221,7 @@ a:hover {
   gap: 2rem;
 }
 
-.home-footer h4 {
+.home-footer h3 {
   margin-bottom: 1rem;
   color: var(--home-ink);
   font-family: var(--font-body);
@@ -2254,7 +2252,7 @@ a:hover {
 .home-footer-bottom p,
 .home-disclaimer {
   margin: 0;
-  color: #747e89;
+  color: #66717d;
   font-size: 0.75rem;
 }
 
@@ -2713,7 +2711,7 @@ a:hover {
 .site-redesign {
   --home-ink: #0d1b33;
   --home-ink-soft: #536071;
-  --home-accent: #d04f2f;
+  --home-accent: #c84a2b;
   --home-accent-dark: #b83e21;
   --home-sage: #7d9278;
   --home-sage-dark: #31583b;
@@ -3541,7 +3539,7 @@ a:hover {
   border-bottom: 1px solid var(--home-line);
 }
 
-.site-redesign .site-footer h4 {
+.site-redesign .site-footer h3 {
   margin-bottom: 1rem;
   color: var(--home-ink);
   font-family: var(--font-body);
@@ -3566,7 +3564,7 @@ a:hover {
 .site-redesign .footer-brand p,
 .site-redesign .footer-disclaimer,
 .site-redesign .footer-disclaimer p {
-  color: #747e89;
+  color: #66717d;
 }
 
 .site-redesign .social-links a {

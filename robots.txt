@@ -1,7 +1,6 @@
 # Totaled Texas - robots.txt
-# TODO: replace totaledtexas.example.com with the real production domain before launch.
 
 User-agent: *
 Allow: /
 
-Sitemap: https://www.totaledtexas.example.com/sitemap.xml
+Sitemap: https://www.totaledtexas.com/sitemap.xml

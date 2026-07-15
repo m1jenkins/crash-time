@@ -14,7 +14,7 @@ low insurance settlements.
 | `results.html` | Before/after case results, stats bar, testimonials |
 | `about.html` | Founder story, credentials, values, giving-back program |
 | `free-review.html` | Web3Forms-backed lead-capture form for the free tier |
-| `privacy.html` / `terms.html` / `disclaimer.html` | Legal page placeholders |
+| `privacy.html` / `terms.html` / `disclaimer.html` | Privacy, service terms, and appraisal disclaimer |
 | `css/styles.css` | Shared stylesheet (no frameworks, fully responsive) |
 | `js/main.js` | Mobile nav + form enhancements |
 | `BUSINESS-PLAN.md` | Full business plan: market, pricing, unit economics, GTM, risks |
@@ -38,9 +38,8 @@ Sample/placeholder content is marked with HTML comments in the source. At minimu
    figures and sample quotes with documented results and client-permissioned quotes.
 3. **Credentials** (`about.html`) — replace with the founder's actual, verifiable
    certifications and license numbers.
-4. **Legal pages** — have an attorney draft the real privacy policy, terms, and
-   disclaimer for your state and business structure.
+4. **Legal pages** — keep the effective dates, service terms, and privacy practices
+   current as the business and vendors change.
 5. **Lead forms** (`index.html`, `free-review.html`) — connected to Web3Forms;
    replace the access key if you create a different Web3Forms project.
-6. **Contact addresses & social links** — swap `*.example.com` emails and `#`
-   social links for real ones.
+6. **Social profiles** — add social links only after real business profiles are live.
