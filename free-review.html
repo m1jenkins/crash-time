@@ -39,10 +39,8 @@
     <div class="container">
 
       <!-- ================= LEAD CAPTURE FORM ================= -->
-      <!-- Wire the action attribute to your form backend (Formspree, Netlify Forms,
-           HubSpot, or your own endpoint). While action="#", js/main.js shows the
-           success message locally for demo purposes. -->
-      <form id="free-review-form" class="form-card reveal-on-scroll" action="#" method="post">
+      <form id="free-review-form" class="form-card reveal-on-scroll" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="439014c3-679c-4545-8d4d-a5934e20f632">
         <h1 class="visually-hidden">Start your free review</h1>
         <div class="form-group">
           <label for="name">Name *</label>
@@ -56,7 +54,7 @@
 
         <div class="form-group">
           <label for="details">Tell us about your situation</label>
-          <textarea id="details" name="details" rows="4" placeholder="What happened with your claim? Share anything you'd like us to know."></textarea>
+          <textarea id="details" name="message" rows="4" placeholder="What happened with your claim? Share anything you'd like us to know."></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary btn-block">Start My Free Review</button>
@@ -66,17 +64,6 @@
           See our <a href="privacy.html">Privacy Policy</a>.
         </p>
       </form>
-
-      <!-- Success message shown by js/main.js while the form is in demo mode -->
-      <div id="form-success" class="form-card" hidden style="text-align:center;">
-        <h2>✅ Request received!</h2>
-        <p style="color:var(--ink-soft);">
-          Thank you - a certified appraiser will review your information and email
-          your Free Claim Snapshot within 2 business days. Keep an eye on your inbox
-          (and your spam folder, just in case).
-        </p>
-        <a href="how-it-works.html" class="btn btn-outline">See What Happens Next</a>
-      </div>
 
     </div>
   </main>
