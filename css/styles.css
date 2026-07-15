@@ -4593,3 +4593,295 @@ a:hover {
   border-top: 1px solid var(--home-line, #e3e0da);
   font-size: 0.9rem;
 }
+
+/* ============================================================
+   Mobile usability audit
+   Compact hierarchy, reliable tap targets and safe-area support
+   ============================================================ */
+
+@media (max-width: 960px) {
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  .nav-links {
+    max-height: calc(100svh - 74px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .nav-links a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links .btn {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 700px) {
+  #claim-check,
+  #free-review-form,
+  #plans {
+    scroll-margin-top: 90px;
+  }
+
+  .home-redesign .btn,
+  .site-redesign .btn {
+    min-height: 52px;
+    font-size: 1rem;
+  }
+
+  .home-redesign input,
+  .home-redesign select,
+  .home-redesign textarea,
+  .site-redesign input,
+  .site-redesign select,
+  .site-redesign textarea {
+    font-size: 1rem;
+  }
+
+  .home-redesign .nav,
+  .site-redesign .nav {
+    min-height: 74px;
+    padding-top: max(0.75rem, env(safe-area-inset-top));
+    padding-bottom: 0.75rem;
+  }
+
+  .home-redesign .nav-links,
+  .site-redesign .nav-links {
+    gap: 0.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  }
+
+  .home-redesign .nav-links a,
+  .site-redesign .nav-links a {
+    min-height: 48px;
+    padding: 0.65rem 0;
+    font-size: 1rem;
+  }
+
+  .home-redesign .site-header .logo,
+  .site-redesign .site-header .logo,
+  .site-footer .logo {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .home-redesign .home-hero-copy {
+    padding-top: 2.75rem;
+    padding-bottom: 3rem;
+  }
+
+  .home-redesign .home-hero h1 {
+    order: 1;
+    margin-bottom: 1.15rem;
+    font-size: clamp(2.65rem, 12vw, 3.2rem);
+    line-height: 1;
+  }
+
+  .home-redesign .home-lede {
+    order: 2;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .home-redesign .home-hero-actions {
+    order: 3;
+    gap: 0.75rem;
+  }
+
+  .home-redesign .home-hero-note {
+    order: 4;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .home-redesign .home-price-proof {
+    order: 5;
+    margin: 1.25rem 0 0;
+  }
+
+  .home-redesign .home-price-claim {
+    font-size: 1rem;
+  }
+
+  .home-redesign .home-price-source {
+    font-size: 0.8rem;
+  }
+
+  .home-redesign .claim-card {
+    width: calc(100% - 32px);
+    padding: 1rem;
+  }
+
+  .home-redesign .claim-card .form-group label {
+    font-size: 0.82rem;
+  }
+
+  .home-redesign .claim-card .form-group input {
+    min-height: 48px;
+    font-size: 1rem;
+  }
+
+  .home-text-link {
+    min-height: 44px;
+    font-size: 1rem;
+  }
+
+  .home-redesign .process-rail p {
+    font-size: 1rem;
+  }
+
+  .home-redesign .process-action p {
+    font-size: 0.95rem;
+  }
+
+  .site-redesign .hero {
+    padding: 3rem 0;
+  }
+
+  .site-redesign .hero::before {
+    display: none;
+  }
+
+  .site-redesign .hero .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .site-redesign .hero .eyebrow {
+    order: 1;
+    margin-bottom: 0.75rem;
+  }
+
+  .site-redesign .hero h1 {
+    order: 2;
+    margin-bottom: 1.25rem;
+    font-size: clamp(2.5rem, 12vw, 3.15rem);
+    line-height: 1;
+  }
+
+  .site-redesign .hero .hero-ctas,
+  .site-redesign .hero .pricing-hero-footer {
+    order: 3;
+    margin: 0 0 1.25rem;
+  }
+
+  .site-redesign .hero .hero-ctas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .site-redesign .hero .hero-ctas .btn {
+    width: 100%;
+  }
+
+  .site-redesign .hero .lede {
+    order: 4;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .site-redesign .hero .hero-note {
+    order: 5;
+    margin: 1rem 0 0;
+    font-size: 0.85rem;
+  }
+
+  .site-redesign .section {
+    padding: 4rem 0;
+  }
+
+  .site-redesign .section-head {
+    margin-bottom: 2.5rem;
+  }
+
+  .site-redesign .section-head h2,
+  .site-redesign .grid-2 > div > h2 {
+    font-size: clamp(2.25rem, 10vw, 3rem);
+    line-height: 1.05;
+  }
+
+  .site-redesign .card p,
+  .site-redesign .legal-page p,
+  .site-redesign .legal-page li {
+    font-size: 1rem;
+  }
+
+  .site-redesign .form-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .site-redesign .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .site-redesign.pricing-page .pricing-intro p,
+  .site-redesign.pricing-page .price-card .tagline,
+  .site-redesign.pricing-page .price-card ul li,
+  .site-redesign.pricing-page .price-card .btn,
+  .comparison-help summary,
+  .comparison-help p,
+  .comparison-mobile-item dt,
+  .comparison-mobile-item dd,
+  .pricing-extras p,
+  .pricing-extras a {
+    font-size: 1rem;
+  }
+
+  .pricing-extras a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .site-footer ul li {
+    margin-bottom: 0;
+  }
+
+  .site-footer ul a,
+  .footer-nav-group a,
+  .home-footer-bottom a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .social-links a {
+    width: 44px;
+    height: 44px;
+  }
+
+  .pricing-page {
+    padding-bottom: calc(78px + env(safe-area-inset-bottom));
+  }
+
+  .pricing-mobile-cta {
+    padding-bottom: max(0.7rem, env(safe-area-inset-bottom));
+  }
+
+  .pricing-mobile-cta span {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-redesign .container,
+  .site-redesign .hero .container {
+    width: calc(100% - 28px);
+  }
+
+  .home-redesign .home-hero h1,
+  .site-redesign .hero h1 {
+    font-size: 2.45rem;
+  }
+}

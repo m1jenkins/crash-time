@@ -5,12 +5,51 @@ document.addEventListener("DOMContentLoaded", function () {
   var toggle = document.querySelector(".nav-toggle");
   var links = document.querySelector(".nav-links");
   if (toggle && links) {
+    if (!links.id) {
+      links.id = "primary-navigation";
+    }
+    toggle.setAttribute("aria-controls", links.id);
+    toggle.setAttribute("aria-label", "Open navigation");
+
+    var closeNavigation = function () {
+      links.classList.remove("open");
+      document.body.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open navigation");
+    };
+
     toggle.addEventListener("click", function () {
       links.classList.toggle("open");
       var isOpen = links.classList.contains("open");
       toggle.setAttribute("aria-expanded", isOpen);
       toggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+      document.body.classList.toggle("nav-open", isOpen);
     });
+
+    links.addEventListener("click", function (event) {
+      if (event.target.closest("a")) {
+        closeNavigation();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && links.classList.contains("open")) {
+        closeNavigation();
+        toggle.focus();
+      }
+    });
+
+    var desktopQuery = window.matchMedia("(min-width: 961px)");
+    var handleDesktopChange = function (event) {
+      if (event.matches) {
+        closeNavigation();
+      }
+    };
+    if (desktopQuery.addEventListener) {
+      desktopQuery.addEventListener("change", handleDesktopChange);
+    } else {
+      desktopQuery.addListener(handleDesktopChange);
+    }
   }
 
   // --- Lead Form Demo Handler ---
