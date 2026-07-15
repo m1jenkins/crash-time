@@ -4964,3 +4964,134 @@ a:hover {
     margin-bottom: 2rem;
   }
 }
+
+/* Desktop pricing cards: keep the full comparison comfortably inside a laptop viewport. */
+@media (min-width: 961px) {
+  .site-redesign.pricing-page .price-card {
+    padding: 1.5rem 1.35rem 1.25rem;
+  }
+
+  .site-redesign.pricing-page .price-card .tier-kicker {
+    margin-bottom: 0.6rem;
+    font-size: 0.68rem;
+  }
+
+  .site-redesign.pricing-page .price-card .tier-name {
+    min-height: 2em;
+    margin-bottom: 0.7rem;
+    font-size: clamp(1.9rem, 2.35vw, 2.55rem);
+  }
+
+  .site-redesign.pricing-page .price-card .price {
+    min-height: 80px;
+    padding: 0.75rem 0;
+    font-size: clamp(3.2rem, 4.45vw, 4.25rem);
+  }
+
+  .site-redesign.pricing-page .price-card .tagline {
+    min-height: 3em;
+    margin: 0.7rem 0 0.75rem;
+    font-size: 0.86rem;
+    line-height: 1.45;
+  }
+
+  .site-redesign.pricing-page .price-card ul {
+    margin-bottom: 1rem;
+  }
+
+  .site-redesign.pricing-page .price-card ul li {
+    padding: 0.44rem 0 0.44rem 1.35rem;
+    font-size: 0.78rem;
+    line-height: 1.32;
+  }
+
+  .site-redesign.pricing-page .price-card ul li::before {
+    top: 0.5rem;
+    width: 14px;
+    height: 14px;
+    font-size: 0.57rem;
+    line-height: 14px;
+  }
+
+  .site-redesign.pricing-page .price-card .btn {
+    min-height: 46px;
+    padding: 0.65rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1100px) {
+  .site-redesign.pricing-page .price-card {
+    padding: 1.15rem 1.1rem 0.95rem;
+  }
+
+  .site-redesign.pricing-page .price-card .tier-kicker {
+    margin-bottom: 0.45rem;
+    font-size: 0.64rem;
+  }
+
+  .site-redesign.pricing-page .price-card .tier-name {
+    margin-bottom: 0.5rem;
+    font-size: clamp(1.8rem, 2.7vw, 2.15rem);
+  }
+
+  .site-redesign.pricing-page .price-card .price {
+    min-height: 70px;
+    padding: 0.5rem 0;
+    font-size: clamp(3rem, 4.8vw, 3.8rem);
+  }
+
+  .site-redesign.pricing-page .price-card .tagline {
+    min-height: 2.8em;
+    margin: 0.5rem 0 0.55rem;
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
+  .site-redesign.pricing-page .price-card ul {
+    margin-bottom: 0.7rem;
+  }
+
+  .site-redesign.pricing-page .price-card ul li {
+    padding: 0.32rem 0 0.32rem 1.2rem;
+    font-size: 0.74rem;
+    line-height: 1.25;
+  }
+
+  .site-redesign.pricing-page .price-card ul li::before {
+    top: 0.37rem;
+    width: 12px;
+    height: 12px;
+    font-size: 0.5rem;
+    line-height: 12px;
+  }
+
+  .site-redesign.pricing-page .price-card .btn {
+    min-height: 42px;
+    padding: 0.5rem 0.65rem;
+    font-size: 0.75rem;
+  }
+
+  .site-redesign.pricing-page .nav {
+    min-height: 74px;
+    padding: 0.75rem 0;
+  }
+
+  .site-redesign.pricing-page .logo {
+    font-size: 1.7rem;
+  }
+
+  .site-redesign.pricing-page .nav-links {
+    gap: 1.05rem;
+  }
+
+  .site-redesign.pricing-page .nav-links a {
+    font-size: 0.82rem;
+  }
+
+  .site-redesign.pricing-page .nav-links .btn {
+    min-height: 42px;
+    padding: 0.55rem 0.85rem;
+    white-space: nowrap;
+  }
+}
