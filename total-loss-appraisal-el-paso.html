@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260715a">
+  <link rel="stylesheet" href="css/styles.css?v=20260717a">
   <link rel="icon" href="data:,">
   <script type="application/ld+json">
 {
@@ -149,6 +149,25 @@
         <a href="how-it-works.html" class="btn btn-secondary">See How It Works</a>
       </div>
       <p class="hero-note">Free review. No obligation. Vehicle value reports in 48 hours, backed by a money-back guarantee.</p>
+      <div class="claim-card" id="claim-check">
+        <form id="city-contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="439014c3-679c-4545-8d4d-a5934e20f632">
+          <h2>Let's check your offer</h2>
+          <div class="form-group">
+            <label for="city-name">Name</label>
+            <input type="text" id="city-name" name="name" autocomplete="name" required placeholder="Your full name">
+          </div>
+          <div class="form-group">
+            <label for="city-email">Email</label>
+            <input type="email" id="city-email" name="email" autocomplete="email" required placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label for="city-phone">Phone <span>(optional)</span></label>
+            <input type="tel" id="city-phone" name="phone" autocomplete="tel" placeholder="(555) 555-5555">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Start My Free Review <span aria-hidden="true">→</span></button>
+        </form>
+      </div>
     </div>
   </section>
 

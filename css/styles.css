@@ -2987,6 +2987,18 @@ a:hover {
   color: var(--home-ink-soft);
 }
 
+.site-redesign .hero .claim-card {
+  top: 50%;
+  right: 0;
+  left: auto;
+  width: min(390px, calc(36% - 2rem));
+  transform: translateY(-50%);
+}
+
+.site-redesign .hero .claim-card:hover {
+  transform: translateY(-52%);
+}
+
 /* Content rhythm */
 .site-redesign .section {
   padding: clamp(5rem, 9vw, 8rem) 0;
@@ -3643,7 +3655,7 @@ a:hover {
 
   .site-redesign .hero {
     min-height: 0;
-    padding-bottom: 23rem;
+    padding-bottom: 4rem;
     background: #fff;
   }
 
@@ -3657,6 +3669,19 @@ a:hover {
   .site-redesign .hero h1,
   .site-redesign .hero .lede {
     max-width: 820px;
+  }
+
+  .site-redesign .hero .claim-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: min(420px, 100%);
+    margin: 2.5rem 0 0 auto;
+    transform: none;
+  }
+
+  .site-redesign .hero .claim-card:hover {
+    transform: translateY(-2%);
   }
 
   .site-redesign .pricing-intro {
@@ -3693,7 +3718,7 @@ a:hover {
 
   .site-redesign .hero {
     min-height: 0;
-    padding: 4.8rem 0 18rem;
+    padding: 4.8rem 0 3rem;
   }
 
   .site-redesign .hero::before {
@@ -4814,6 +4839,10 @@ a:hover {
     order: 5;
     margin: 1rem 0 0;
     font-size: 0.85rem;
+  }
+
+  .site-redesign .hero .claim-card {
+    order: 6;
   }
 
   .site-redesign .section {
