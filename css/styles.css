@@ -3655,8 +3655,14 @@ a:hover {
 
   .site-redesign .hero {
     min-height: 0;
-    padding-bottom: 4rem;
+    /* Reserve the image's height plus breathing room so text cannot flow over it. */
+    padding-bottom: calc(19rem + 4rem);
     background: #fff;
+  }
+
+  /* City appraisal pages place their claim card in normal flow at this width. */
+  .site-redesign .hero:has(.claim-card) {
+    padding-bottom: 4rem;
   }
 
   .site-redesign .hero::before {
