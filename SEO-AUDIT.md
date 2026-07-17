@@ -268,9 +268,48 @@ Supporting changes:
   bumped sitewide (footer change touched every page).
 - `dateModified` bumped on the four edited guides.
 
-Still deliberately deferred: second-ring city pages (Arlington, Corpus
+~~Still deliberately deferred: second-ring city pages (Arlington, Corpus
 Christi, Plano, Lubbock, Laredo, Irving) — per §5, these wait until the
 first six city pages are indexing well, which can't be verified before
-launch. Next guide candidates: owner-retained/salvage-title explainer,
-gap-insurance shortfall guide, "how long does a total loss claim take in
-Texas".
+launch.~~ Built in §9. Next guide candidates: owner-retained/salvage-title
+explainer, gap-insurance shortfall guide, "how long does a total loss claim
+take in Texas".
+
+---
+
+## 9. Second-ring city pages (July 17, 2026)
+
+Built the second-ring city set — the six from §5 plus three fast-growing
+metro-satellite cities added at the owner's request (Cedar Park, San Marcos,
+New Braunfels):
+
+| Page | Local angle |
+|---|---|
+| `total-loss-appraisal-arlington.html` | No-transit car dependence, GM Arlington, I-30/I-20/SH-360 crash volume, hail alley |
+| `total-loss-appraisal-plano.html` | Legacy West late-model/highly-optioned fleet, options flattening, lease/gap FAQ, Collin County hail |
+| `total-loss-appraisal-irving.html` | SH-114/183/Loop 12/PGBT + DFW Airport corridor, high-mileage commuter mark-downs |
+| `total-loss-appraisal-cedar-park.html` | 183A growth corridor, Austin-metro replacement pricing, Williamson County hail |
+| `total-loss-appraisal-san-marcos.html` | I-35 crash corridor, Austin–San Antonio two-metro pricing, student/older-car deductions, river flood history |
+| `total-loss-appraisal-new-braunfels.html` | Fastest-growing-city corridor pricing, Guadalupe/Comal flood risk, I-35 claim waves |
+| `total-loss-appraisal-corpus-christi.html` | Coastal Bend port/energy truck demand, thin supply vs metro comps, storm-surge claim volume |
+| `total-loss-appraisal-lubbock.html` | Isolated South Plains market vs DFW comps, hail capital, ag/oilfield truck demand |
+| `total-loss-appraisal-laredo.html` | Largest inland port, work-truck premium, 150-mile isolated-market angle |
+
+Each mirrors the first-six template exactly (same boilerplate, rights section,
+compliance language, `Service` + `BreadcrumbList` + `FAQPage` JSON-LD) with
+unique hero, three unique local-market paragraphs, and a unique local FAQ.
+
+Linking structure (hub-and-spoke, deliberate):
+- **Footer unchanged** — the Texas Cities column stays at the six metros +
+  hub link; 15 city links per footer would dilute it. Second-ring pages are
+  reached via the hub and contextual metro links below.
+- `texas.html` hub city grid now lists all 15 cities.
+- Contextual metro↔suburb links: Dallas → Plano, Irving; Fort Worth →
+  Arlington; San Antonio → New Braunfels; Austin → Cedar Park, San Marcos
+  (Austin's suburb sentence updated to name them). Each second-ring page
+  links back to its parent metro page(s) in copy; standalone markets
+  (Corpus Christi, Lubbock, Laredo) link the hub only.
+- Guide cross-links: hail guide from Arlington, Plano, Cedar Park, Lubbock;
+  flood guide from San Marcos, New Braunfels, Corpus Christi.
+- Homepage `Organization` `areaServed` expanded to all 15 cities.
+- `sitemap.xml`: 9 new URLs at priority 0.7 (below the 0.9 first-ring pages).
