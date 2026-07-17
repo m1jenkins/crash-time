@@ -235,6 +235,17 @@ a:hover {
   text-decoration: none;
   font-family: var(--font-display);
   letter-spacing: -0.03em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  white-space: nowrap;
+}
+.logo::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 2rem;
+  background: url("../assets/brand/totaled-texas-mark.png") center / contain no-repeat;
 }
 .logo span {
   color: var(--amber);
@@ -1426,6 +1437,12 @@ a:hover {
   color: var(--home-ink);
   font-size: 2rem;
   line-height: 1;
+}
+
+.home-header .logo::before {
+  width: 2.45rem;
+  height: 2.45rem;
+  flex-basis: 2.45rem;
 }
 
 .home-header .logo span,
