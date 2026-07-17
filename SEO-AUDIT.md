@@ -234,3 +234,43 @@ Supporting changes:
 Remaining content roadmap (unbuilt): flooded-car guide (Houston angle),
 ACV-vs-market-value explainer, "what happens if I don't accept the offer",
 second-ring city pages — publish 1–2/week per the strategy doc's cadence.
+
+---
+
+## 8. Guide cluster completion (July 17, 2026)
+
+Built the three remaining guides from the §7 roadmap, closing out the four
+content pillars (total loss, ACV, appraisal clause, diminished value) — ACV
+previously had no dedicated page:
+
+| Page | Primary query targets |
+|---|---|
+| `actual-cash-value-texas.html` | actual cash value texas, ACV vs market value, how do insurance companies calculate ACV, actual cash value dispute |
+| `dont-accept-total-loss-offer-texas.html` | what happens if I don't accept total loss offer, reject total loss offer, can insurance force me to accept |
+| `flooded-car-total-loss-texas.html` | flooded car total loss texas, flood totaled my car, is flood damage covered by car insurance (Houston/Harvey angle) |
+
+Each follows the established guide playbook: front-loaded ~60-word answer in
+the lede, question-based H2s, Article + BreadcrumbList + FAQPage JSON-LD,
+named author byline with last-reviewed date, fact-dense (Ch. 501, Ch. 542,
+SB 458, 6.25% sales tax, $20k justice-court limit, 2-year limitations), and
+compliance-safe document-support framing throughout.
+
+Supporting changes:
+- **Footer:** Free Guides column on every page (and homepage variant)
+  expanded to all 8 guides in claim-lifecycle order.
+- **Texas hub:** guides section now lists all 8 guides.
+- **Contextual interlinks:** Houston page → flood guide; hail guide → flood
+  guide; what-to-do guide → ACV + don't-accept guides; SB 458 and sales-tax
+  guides → ACV guide (the ACV page now receives links from every pillar,
+  matching its role as the concept every dispute hangs on).
+- Fixed a copy typo in the texas.html diminished-value FAQ.
+- `sitemap.xml`: 3 new URLs (ACV at 0.8 as a pillar; others 0.7); lastmod
+  bumped sitewide (footer change touched every page).
+- `dateModified` bumped on the four edited guides.
+
+Still deliberately deferred: second-ring city pages (Arlington, Corpus
+Christi, Plano, Lubbock, Laredo, Irving) — per §5, these wait until the
+first six city pages are indexing well, which can't be verified before
+launch. Next guide candidates: owner-retained/salvage-title explainer,
+gap-insurance shortfall guide, "how long does a total loss claim take in
+Texas".
