@@ -1,6 +1,6 @@
-# Totaled Texas - robots.txt
+# Spur Auto - robots.txt
 
 User-agent: *
 Allow: /
 
-Sitemap: https://www.totaledtexas.com/sitemap.xml
+Sitemap: https://www.spurauto.com/sitemap.xml

@@ -1,4 +1,4 @@
-# Totaled Texas SEO Audit — Texas Total Loss Focus
+# Spur Auto SEO Audit — Texas Total Loss Focus
 
 **Date:** July 14, 2026
 **Goal:** Rank for searches by people in major Texas cities who want more money
@@ -49,7 +49,7 @@ intent, highest-value first:
 shows invoking appraisal raises total loss settlements by roughly $3,600–$5,800
 per claim on average — and Texas just made the appraisal clause universal
 (SB 458). "Texas + appraisal clause + total loss" is a rising-tide keyword
-cluster Totaled Texas should own early.
+cluster Spur Auto should own early.
 
 ---
 
@@ -59,7 +59,7 @@ cluster Totaled Texas should own early.
 |---|---------|----------|
 | 1 | **No geographic signals anywhere.** No page mentioned Texas or any city; impossible to rank for "…in Houston/Dallas" queries. | Critical |
 | 2 | **No city landing pages** — the primary battleground where all competitors rank. | Critical |
-| 3 | Titles/descriptions were brand-led ("Totaled Texas — Independent Auto Claims Advocacy") instead of keyword-led; "total loss" appeared in no title. | High |
+| 3 | Titles/descriptions were brand-led ("Spur Auto — Independent Auto Claims Advocacy") instead of keyword-led; "total loss" appeared in no title. | High |
 | 4 | No structured data (Organization/Service/FAQ schema) — no eligibility for rich results. | High |
 | 5 | No `sitemap.xml` or `robots.txt`. | High |
 | 6 | No canonical URLs, no Open Graph/Twitter metadata. | Medium |
@@ -72,7 +72,7 @@ cluster Totaled Texas should own early.
 
 ### Sitewide
 - **Keyword-led titles & meta descriptions** on every indexable page
-  (e.g. homepage: "Total Loss & Diminished Value Appraisals in Texas | Totaled Texas").
+  (e.g. homepage: "Total Loss & Diminished Value Appraisals in Texas | Spur Auto").
 - **Canonical URLs + Open Graph/Twitter tags** on every indexable page.
 - **`ProfessionalService` JSON-LD** on the homepage with `areaServed` for Texas
   and the six target cities.
@@ -104,7 +104,7 @@ The hub↔city↔home linking forms a proper topical cluster.
 ## 4. Before you launch (required)
 
 1. **Production domain complete.** Canonicals, `og:url`, JSON-LD, `robots.txt`,
-   social metadata, and `sitemap.xml` now use `https://www.totaledtexas.com`.
+   social metadata, and `sitemap.xml` now use `https://www.spurauto.com`.
 2. **Google Business Profile.** For "near me"/map-pack visibility in each metro
    you'll eventually want a verified GBP with a real Texas address; at minimum
    create one for the home base city.
@@ -153,7 +153,7 @@ adjuster license and sank Stonewater Roofing at the Texas Supreme Court.
 ### Schema
 - Replaced the address-dependent `LocalBusiness` markup with `Organization`
   (homepage entity + `provider` on the hub and all six city pages); brand `name`
-  and `legalName` are both "Totaled Texas".
+  and `legalName` are both "Spur Auto".
 - Homepage `areaServed` includes the six target cities; added `founder`
   Person, `knowsAbout`, and an offer catalog for Essential, Guided, Specialty,
   and Specialty + Guided services.

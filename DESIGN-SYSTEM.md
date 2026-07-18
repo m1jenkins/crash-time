@@ -1,6 +1,6 @@
-# Totaled Texas — Design System Specification
+# Spur Auto — Design System Specification
 
-This document defines the core styling rules, contrast standards, and component layouts for the Totaled Texas website. All developers and AI coding assistants must adhere to these guidelines to ensure visual consistency and high contrast.
+This document defines the core styling rules, contrast standards, and component layouts for the Spur Auto website. All developers and AI coding assistants must adhere to these guidelines to ensure visual consistency and high contrast.
 
 ---
 

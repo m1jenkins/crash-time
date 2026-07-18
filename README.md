@@ -1,4 +1,4 @@
-# Totaled Texas — Independent Total-Loss Appraisals
+# Spur Auto — Independent Total-Loss Appraisals
 
 A complete website + business plan for a niche independent appraisal service:
 certified total-loss vehicle valuation reports that help consumers challenge

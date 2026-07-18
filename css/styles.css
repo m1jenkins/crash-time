@@ -1,5 +1,5 @@
 /* ============================================================
-   Totaled Texas - Independent Auto Claims Advocacy
+   Spur Auto - Independent Auto Claims Advocacy
    Premium design system and stylesheet
    ============================================================ */
 
@@ -245,7 +245,7 @@ a:hover {
   width: 2rem;
   height: 2rem;
   flex: 0 0 2rem;
-  background: url("../assets/brand/totaled-texas-mark.png") center / contain no-repeat;
+  background: url("../assets/brand/spur-auto-mark.png") center / contain no-repeat;
 }
 .logo span {
   color: var(--amber);
@@ -1277,7 +1277,7 @@ a:hover {
 }
 
 /* ============================================================
-   Totaled Texas homepage redesign
+   Spur Auto homepage redesign
    Editorial, trust-led conversion system
    ============================================================ */
 
@@ -2721,7 +2721,7 @@ a:hover {
 }
 
 /* ============================================================
-   Totaled Texas interior pages
+   Spur Auto interior pages
    Extends the homepage editorial system across every route
    ============================================================ */
 

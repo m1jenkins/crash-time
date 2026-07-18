@@ -1,4 +1,4 @@
-# Totaled Texas — Business Plan
+# Spur Auto — Business Plan
 
 **Independent Total-Loss Appraisals · Certified Vehicle Valuations for Consumers**
 
@@ -9,7 +9,7 @@
 
 ## 1. Executive Summary
 
-Totaled Texas is a founder-led, expert-driven service that helps consumers challenge
+Spur Auto is a founder-led, expert-driven service that helps consumers challenge
 low total-loss insurance settlements. The core product is an **independent, certified
 vehicle valuation report** — professionally documented evidence a consumer can present
 to their insurer when the offered actual cash value will not replace the vehicle.
@@ -72,7 +72,7 @@ may combine both for $449 or add 24-hour priority delivery for $49.
 
 ## 5. Competition & Positioning
 
-| Alternative | Weakness Totaled Texas exploits |
+| Alternative | Weakness Spur Auto exploits |
 |---|---|
 | Accepting the insurer's offer | No independent evidence; our free tier makes checking costless |
 | DIY negotiation with internet printouts | No credentials, no methodology; adjusters dismiss it |

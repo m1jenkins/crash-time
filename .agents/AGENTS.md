@@ -1,6 +1,6 @@
-# Totaled Texas - Design System Rules for AI Coding Assistants
+# Spur Auto - Design System Rules for AI Coding Assistants
 
-This file contains strict design rules and behavioral constraints for all AI coding assistants (LLMs) working on the Totaled Texas website. Please review and adhere to these guidelines to maintain visual excellence, consistency, and proper contrast.
+This file contains strict design rules and behavioral constraints for all AI coding assistants (LLMs) working on the Spur Auto website. Please review and adhere to these guidelines to maintain visual excellence, consistency, and proper contrast.
 
 ---
 
