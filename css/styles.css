@@ -3398,6 +3398,22 @@ a:hover {
   line-height: 1;
 }
 
+.site-redesign .thank-you-card h1 {
+  max-width: 680px;
+  margin-bottom: 1.2rem;
+  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  line-height: 1;
+}
+
+.site-redesign .thank-you-card p:not(.eyebrow) {
+  max-width: 620px;
+  color: var(--home-ink-soft);
+}
+
+.site-redesign .thank-you-card .btn {
+  margin-top: 0.5rem;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
