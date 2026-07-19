@@ -1,0 +1,13 @@
+Campaign,Asset type,Asset text,Description line 1,Description line 2,Final URL,Status,Evidence or note
+Search | Competitor | TX | EN,Sitelink,Free Claim Review,Check your insurer offer,No payment details needed,https://www.spurauto.com/free-review.html,Enabled,Free review and no payment information are supported by the current form and site copy
+Search | Competitor | TX | EN,Sitelink,Packages and Pricing,Reports starting at $99,Compare package support,https://www.spurauto.com/pricing.html,Enabled,Current public pricing page
+Search | Competitor | TX | EN,Sitelink,How Spur Auto Works,See the three-step process,Know what each report covers,https://www.spurauto.com/how-it-works.html,Enabled,Current process page
+Search | Competitor | TX | EN,Sitelink,Sample Appraisal Report,See the report structure,Review evidence and notes,https://www.spurauto.com/results.html,Enabled,Page is explicitly a sample format and not a result prediction
+Search | Competitor | TX | EN,Callout,Free Claim Review,,,,Enabled,Current free-review offer
+Search | Competitor | TX | EN,Callout,Reports From $99,,,,Enabled,Current Essential package price
+Search | Competitor | TX | EN,Callout,48-Hour Standard Delivery,,,,Enabled,Must remain qualified by complete-file requirement on page
+Search | Competitor | TX | EN,Callout,Texas-Focused,,,,Enabled,Campaign and service launch market
+Search | Competitor | TX | EN,Callout,Money-Back Guarantee,,,,Enabled,Exact guarantee limits appear in Terms
+Search | Competitor | TX | EN,Callout,No Payment Info to Review,,,,Enabled,Free-review form has no payment field
+Search | Competitor | TX | EN,Structured snippet,Services,"Total Loss Appraisal | Claim Valuation Audit | Specialty Vehicle Review | Claim Document Support",,,Enabled,Use Google structured-snippet header Services; validate values in the current interface
+

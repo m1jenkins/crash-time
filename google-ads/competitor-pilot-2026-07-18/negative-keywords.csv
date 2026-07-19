@@ -1,0 +1,51 @@
+Campaign,Negative keyword,Match type,Scope,Category,Reason,Checked against positives
+Search | Competitor | TX | EN,login,Broad,Campaign,Existing-user navigation,Exclude account navigation,Yes
+Search | Competitor | TX | EN,log in,Broad,Campaign,Existing-user navigation,Exclude account navigation,Yes
+Search | Competitor | TX | EN,sign in,Broad,Campaign,Existing-user navigation,Exclude account navigation,Yes
+Search | Competitor | TX | EN,portal,Broad,Campaign,Existing-user navigation,Exclude account navigation,Yes
+Search | Competitor | TX | EN,dashboard,Broad,Campaign,Existing-user navigation,Exclude account navigation,Yes
+Search | Competitor | TX | EN,password,Broad,Campaign,Existing-user navigation,Exclude account navigation,Yes
+Search | Competitor | TX | EN,account,Broad,Campaign,Existing-user navigation,Exclude account navigation,Yes
+Search | Competitor | TX | EN,support,Broad,Campaign,Support,Exclude competitor support navigation,Yes
+Search | Competitor | TX | EN,customer service,Broad,Campaign,Support,Exclude competitor service contacts,Yes
+Search | Competitor | TX | EN,phone number,Phrase,Campaign,Support,Exclude competitor contact lookup,Yes
+Search | Competitor | TX | EN,jobs,Broad,Campaign,Employment,Exclude job intent,Yes
+Search | Competitor | TX | EN,job,Broad,Campaign,Employment,Exclude job intent,Yes
+Search | Competitor | TX | EN,careers,Broad,Campaign,Employment,Exclude job intent,Yes
+Search | Competitor | TX | EN,career,Broad,Campaign,Employment,Exclude job intent,Yes
+Search | Competitor | TX | EN,salary,Broad,Campaign,Employment,Exclude employment research,Yes
+Search | Competitor | TX | EN,salaries,Broad,Campaign,Employment,Exclude employment research,Yes
+Search | Competitor | TX | EN,internship,Broad,Campaign,Employment,Exclude employment research,Yes
+Search | Competitor | TX | EN,internships,Broad,Campaign,Employment,Exclude employment research,Yes
+Search | Competitor | TX | EN,resume,Broad,Campaign,Employment,Exclude employment research,Yes
+Search | Competitor | TX | EN,glassdoor,Broad,Campaign,Employment,Exclude employment research,Yes
+Search | Competitor | TX | EN,indeed,Broad,Campaign,Employment,Exclude employment research,Yes
+Search | Competitor | TX | EN,stock,Broad,Campaign,Corporate,Exclude investor intent,Yes
+Search | Competitor | TX | EN,stocks,Broad,Campaign,Corporate,Exclude investor intent,Yes
+Search | Competitor | TX | EN,investor,Broad,Campaign,Corporate,Exclude investor intent,Yes
+Search | Competitor | TX | EN,investors,Broad,Campaign,Corporate,Exclude investor intent,Yes
+Search | Competitor | TX | EN,funding,Broad,Campaign,Corporate,Exclude company research,Yes
+Search | Competitor | TX | EN,revenue,Broad,Campaign,Corporate,Exclude company research,Yes
+Search | Competitor | TX | EN,ceo,Broad,Campaign,Corporate,Exclude company research,Yes
+Search | Competitor | TX | EN,acquisition,Broad,Campaign,Corporate,Exclude company research,Yes
+Search | Competitor | TX | EN,crunchbase,Broad,Campaign,Corporate,Exclude company research,Yes
+Search | Competitor | TX | EN,course,Broad,Campaign,Education,Exclude educational intent,Yes
+Search | Competitor | TX | EN,courses,Broad,Campaign,Education,Exclude educational intent,Yes
+Search | Competitor | TX | EN,training,Broad,Campaign,Education,Exclude educational intent,Yes
+Search | Competitor | TX | EN,tutorial,Broad,Campaign,Education,Exclude educational intent,Yes
+Search | Competitor | TX | EN,tutorials,Broad,Campaign,Education,Exclude educational intent,Yes
+Search | Competitor | TX | EN,certification,Broad,Campaign,Education,Exclude credential-course intent,Yes
+Search | Competitor | TX | EN,download,Broad,Campaign,Piracy or files,Exclude file-download intent,Yes
+Search | Competitor | TX | EN,torrent,Broad,Campaign,Piracy or files,Exclude piracy intent,Yes
+Search | Competitor | TX | EN,crack,Broad,Campaign,Piracy or files,Exclude piracy intent,Yes
+Search | Competitor | TX | EN,diminished value,Phrase,Campaign,Service scope,Keep pilot limited to total loss,Yes
+Search | Competitor | TX | EN,pre purchase,Phrase,Campaign,Irrelevant appraisal,Exclude pre-purchase inspections,Yes
+Search | Competitor | TX | EN,pre-purchase,Phrase,Campaign,Irrelevant appraisal,Exclude pre-purchase inspections,Yes
+Search | Competitor | TX | EN,car inspection,Phrase,Campaign,Irrelevant appraisal,Exclude inspection intent,Yes
+Search | Competitor | TX | EN,trade in,Phrase,Campaign,Irrelevant appraisal,Exclude dealer trade-in intent,Yes
+Search | Competitor | TX | EN,trade-in,Phrase,Campaign,Irrelevant appraisal,Exclude dealer trade-in intent,Yes
+Search | Competitor | TX | EN,resale value,Phrase,Campaign,Irrelevant appraisal,Exclude general valuation intent,Yes
+Search | Competitor | TX | EN,home appraisal,Phrase,Campaign,Irrelevant appraisal,Exclude real-estate appraisal intent,Yes
+Search | Competitor | TX | EN,house appraisal,Phrase,Campaign,Irrelevant appraisal,Exclude real-estate appraisal intent,Yes
+Search | Competitor | TX | EN,real estate,Phrase,Campaign,Irrelevant appraisal,Exclude real-estate appraisal intent,Yes
+Search | Competitor | TX | EN,property appraisal,Phrase,Campaign,Irrelevant appraisal,Exclude real-estate appraisal intent,Yes
