@@ -1,6 +1,5 @@
 // Mobile nav toggle & Scroll animations fallbacks
-(function () {
-function initialize() {
+document.addEventListener("DOMContentLoaded", function () {
   // Move keyboard focus with the skip link, not only the visual scroll position.
   var skipLink = document.querySelector(".skip-link");
   var mainContent = document.querySelector("#main-content");
@@ -182,11 +181,4 @@ function initialize() {
       });
     }
   }
-}
-
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initialize);
-} else {
-  initialize();
-}
-})();
+});
