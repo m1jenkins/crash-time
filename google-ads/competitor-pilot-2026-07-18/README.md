@@ -17,6 +17,10 @@ Launch gates:
 4. A CRM field and Google Ads Data Manager enhanced-conversions-for-leads import identify `qualified_free_review` with GCLID/GBRAID/WBRAID retention and consent handling.
 5. The owner approves the $750 maximum test loss and the initial $2.50 max CPC.
 
+## Update 2026-07-19
+
+The campaign now exists in the account as campaign ID 24045577664. See `live-campaign-audit-2026-07-19.md` for the settings verification checklist, the two remaining measurement steps (conversion label + deploy), and the ongoing optimization cadence. Gate 3 (conversion event) and the capture half of gate 4 (GCLID/UTM into the CRM record) are implemented in site code as of this date.
+
 ## Files
 
 - `campaign-plan.md` — strategy, assumptions, legal/policy matrix, economics, landing-page brief, tracking, experiments, and launch checklist.
