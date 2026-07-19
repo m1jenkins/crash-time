@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="spurAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+  </defs>
+
+  <!-- Dark Navy Rounded Square Background -->
+  <rect width="120" height="120" rx="28" fill="#0A192F" />
+
+  <!-- Bold Sans-Serif S Monogram -->
+  <path d="M80 38 C80 28 70 20 58 20 C42 20 34 29 34 40 C34 52 48 55 64 59 C78 63 86 70 86 82 C86 94 72 102 56 102 C38 102 30 92 30 80" 
+        fill="none" 
+        stroke="#FFFFFF" 
+        stroke-width="15" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+
+  <!-- Western Star Spur Rowel Center Accent -->
+  <polygon points="60,46 64,55 74,53 67,61 73,70 64,67 59,76 55,67 46,69 52,61 46,53 55,55" 
+           fill="url(#spurAmber)" />
+</svg>
