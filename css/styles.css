@@ -3598,6 +3598,80 @@ body.site-redesign :focus-visible {
   color: var(--home-sage-dark);
 }
 
+/* State Selector Dropdown */
+.site-redesign .state-selector-box {
+  max-width: 640px;
+  margin: 1.5rem auto 0 auto;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: var(--radius-md, 16px);
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 20px rgba(16, 36, 62, 0.06);
+}
+
+.site-redesign .state-selector-label {
+  display: block;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--navy-deep);
+  margin-bottom: 0.75rem;
+  font-family: var(--font-display);
+}
+
+.site-redesign .state-selector-controls {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.site-redesign .state-select-wrapper {
+  flex: 1;
+  min-width: 240px;
+  position: relative;
+}
+
+.site-redesign .state-dropdown-select {
+  width: 100%;
+  padding: 0.85rem 2.5rem 0.85rem 1rem;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--navy-deep);
+  background-color: var(--bg, #f8fafc);
+  border: 1.5px solid var(--line, #cbd5e1);
+  border-radius: var(--radius-sm, 10px);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231e293b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.25rem;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.site-redesign .state-dropdown-select:focus {
+  outline: none;
+  border-color: var(--amber-dark, #d97706);
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+  background-color: #ffffff;
+}
+
+.site-redesign .state-selector-btn {
+  white-space: nowrap;
+  padding: 0.85rem 1.5rem;
+}
+
+@media (max-width: 540px) {
+  .site-redesign .state-selector-controls {
+    flex-direction: column;
+  }
+  .site-redesign .state-selector-btn {
+    width: 100%;
+  }
+}
+
 /* FAQs and city navigation */
 .site-redesign .city-links {
   display: grid;

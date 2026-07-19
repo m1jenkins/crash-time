@@ -8,6 +8,16 @@ document.addEventListener("DOMContentLoaded", function () {
       mainContent.focus({ preventScroll: true });
     });
   }
+
+  // State Selector Auto-Navigation
+  var stateSelect = document.querySelector("#state-select");
+  if (stateSelect) {
+    stateSelect.addEventListener("change", function () {
+      if (this.value) {
+        window.location.href = this.value;
+      }
+    });
+  }
   
   // --- Mobile Navigation Menu ---
   var toggle = document.querySelector(".nav-toggle");
