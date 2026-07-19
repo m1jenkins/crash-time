@@ -22,56 +22,121 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260715a">
+  <link rel="stylesheet" href="css/styles.css?v=20260718a">
   <link rel="icon" href="assets/brand/spur-auto-favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/spur-auto-favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/spur-auto-favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/brand/spur-auto-apple-touch-icon.png">
 </head>
 <body class="site-redesign">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
-    <div class="container nav">
+    <nav class="container nav" aria-label="Primary">
       <a href="index.html" class="logo">Spur <span>Auto</span></a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-      <ul class="nav-links">
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="how-it-works.html">How It Works</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="results.html">Results</a></li>
         <li><a href="texas.html">Texas</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="free-review.html" class="btn btn-primary">Free Claim Review</a></li>
+        <li><a href="free-review.html" class="btn btn-primary" aria-current="page">Free Claim Review</a></li>
       </ul>
-    </div>
+    </nav>
   </header>
 
-  <main class="section review-form-section">
+  <main class="section review-form-section" id="main-content" tabindex="-1">
     <div class="container">
 
       <!-- ================= LEAD CAPTURE FORM ================= -->
-      <form id="free-review-form" class="form-card reveal-on-scroll" action="https://api.web3forms.com/submit" method="POST">
+      <form id="free-review-form" class="form-card review-intake-form reveal-on-scroll" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" aria-labelledby="review-form-title">
         <input type="hidden" name="access_key" value="439014c3-679c-4545-8d4d-a5934e20f632">
         <input type="hidden" name="redirect" value="https://www.spurauto.com/thank-you.html">
-        <h1 class="visually-hidden">Start your free review</h1>
-        <div class="form-group">
-          <label for="name">Name *</label>
-          <input type="text" id="name" name="name" autocomplete="name" required>
-        </div>
+        <p class="eyebrow">Free claim review</p>
+        <h1 id="review-form-title">Check your total-loss offer.</h1>
+        <p class="form-intro">Share the offer and your vehicle details in two quick steps. We’ll use them to tell you whether a closer review may be worthwhile.</p>
 
-        <div class="form-group">
-          <label for="email">Email *</label>
-          <input type="email" id="email" name="email" autocomplete="email" required>
-        </div>
+        <ol class="review-form-steps" aria-label="Review request progress">
+          <li class="is-current" data-step-indicator="1" aria-current="step"><span>1</span> Contact &amp; offer</li>
+          <li data-step-indicator="2"><span>2</span> Vehicle &amp; report</li>
+        </ol>
 
-        <div class="form-group">
-          <label for="details">Tell us about your situation</label>
-          <textarea id="details" name="message" rows="4" placeholder="What happened with your claim? Share anything you'd like us to know."></textarea>
-        </div>
+        <fieldset class="review-form-step" data-form-step="1">
+          <legend>Contact and offer details</legend>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
 
-        <button type="submit" class="btn btn-primary btn-block">Start My Free Review</button>
+            <div class="form-group">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone <span aria-hidden="true">*</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required>
+            </div>
+
+            <div class="form-group">
+              <label for="insurer-offer">Insurer’s offer <span aria-hidden="true">*</span></label>
+              <input type="number" id="insurer-offer" name="insurer_offer" min="0" step="0.01" inputmode="decimal" placeholder="e.g., 14,250" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="vehicle">Vehicle year, make, and model <span aria-hidden="true">*</span></label>
+            <input type="text" id="vehicle" name="vehicle" autocomplete="off" placeholder="e.g., 2021 Toyota RAV4" required>
+          </div>
+
+          <div class="form-actions form-actions-next">
+            <button type="button" class="btn btn-primary" data-next-step>Continue to vehicle details <span aria-hidden="true">→</span></button>
+          </div>
+        </fieldset>
+
+        <fieldset class="review-form-step" data-form-step="2" hidden disabled>
+          <legend>Vehicle and valuation report</legend>
+          <div class="form-group">
+            <label for="valuation-report">Upload the insurer’s valuation report <span>(if available)</span></label>
+            <input type="file" id="valuation-report" name="attachment" accept="application/pdf,image/jpeg,image/png" aria-describedby="valuation-report-help valuation-report-error">
+            <p class="field-help" id="valuation-report-help">PDF, JPG, or PNG up to 5 MB. Your file is sent through this secure form and is used only for your review.</p>
+            <p class="field-error" id="valuation-report-error" role="alert" hidden></p>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="mileage">Mileage <span aria-hidden="true">*</span></label>
+              <input type="number" id="mileage" name="mileage" min="0" step="1" inputmode="numeric" required>
+            </div>
+
+            <div class="form-group">
+              <label for="trim">Trim <span aria-hidden="true">*</span></label>
+              <input type="text" id="trim" name="trim" autocomplete="off" placeholder="e.g., XLE Premium" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="zip">ZIP code <span aria-hidden="true">*</span></label>
+            <input type="text" id="zip" name="zip" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}(-[0-9]{4})?" placeholder="e.g., 75201" required>
+          </div>
+
+          <div class="form-group">
+            <label for="details">Anything else we should know? <span>(optional)</span></label>
+            <textarea id="details" name="message" rows="4" placeholder="Share claim timing, condition, upgrades, or anything that may affect the vehicle’s value."></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-outline" data-previous-step>Back</button>
+            <button type="submit" class="btn btn-primary">Send my free review <span aria-hidden="true">→</span></button>
+          </div>
+        </fieldset>
 
         <p class="form-privacy">
-          🔒 We'll only use your details to deliver your free review. No spam or selling your data.
+          🔒 We’ll only use your details and document to deliver your free review. No spam or selling your data.
           See our <a href="privacy.html">Privacy Policy</a>.
         </p>
       </form>
@@ -161,6 +226,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260715"></script>
+  <script src="js/main.js?v=20260718a"></script>
 </body>
 </html>

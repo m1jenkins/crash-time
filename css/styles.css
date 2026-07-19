@@ -1344,9 +1344,10 @@ a:hover {
   transform: translateY(0);
 }
 
-.home-redesign :focus-visible {
-  outline: 3px solid rgba(208, 79, 47, 0.34);
-  outline-offset: 4px;
+body.home-redesign :focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px #fff;
 }
 
 .home-redesign .btn {
@@ -2782,9 +2783,10 @@ a:hover {
   transform: none !important;
 }
 
-.site-redesign :focus-visible {
-  outline: 3px solid rgba(208, 79, 47, 0.34);
-  outline-offset: 4px;
+body.site-redesign :focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px #fff;
 }
 
 .site-redesign .btn {
@@ -3398,6 +3400,143 @@ a:hover {
   line-height: 1;
 }
 
+.site-redesign .review-intake-form h1 {
+  max-width: 620px;
+  margin-bottom: 1rem;
+  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  line-height: 1;
+}
+
+.site-redesign .form-intro {
+  max-width: 620px;
+  color: var(--home-ink-soft);
+  font-size: 1.05rem;
+}
+
+.review-form-steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: none;
+}
+
+.review-form-steps li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.75rem 0;
+  color: var(--home-ink-soft);
+  border-bottom: 2px solid var(--home-line);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.review-form-steps li span {
+  display: grid;
+  width: 1.65rem;
+  height: 1.65rem;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 0.76rem;
+}
+
+.review-form-steps li.is-current,
+.review-form-steps li.is-complete {
+  color: var(--home-accent);
+  border-color: var(--home-accent);
+}
+
+.review-form-step {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.review-form-step legend {
+  margin-bottom: 1.25rem;
+  color: var(--home-ink);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.site-redesign .form-group label span {
+  color: var(--home-ink-soft);
+  font-weight: 500;
+}
+
+.field-help {
+  margin: 0.5rem 0 0;
+  color: var(--home-ink-soft);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.field-error {
+  margin: 0.5rem 0 0;
+  color: #a1261d;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.form-actions-next {
+  justify-content: flex-end;
+}
+
+.next-steps-list {
+  display: grid;
+  gap: 1rem;
+  margin: 1.75rem 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: next-steps;
+}
+
+.next-steps-list li {
+  position: relative;
+  padding-left: 3rem;
+  color: var(--home-ink-soft);
+}
+
+.next-steps-list li::before {
+  counter-increment: next-steps;
+  content: counter(next-steps);
+  position: absolute;
+  top: 0.05rem;
+  left: 0;
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  color: var(--home-accent);
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.next-steps-list strong {
+  color: var(--home-ink);
+}
+
+.site-redesign .thank-you-note {
+  margin-bottom: 1.5rem;
+  font-size: 0.92rem;
+}
+
 .site-redesign .thank-you-card h1 {
   max-width: 680px;
   margin-bottom: 1.2rem;
@@ -3450,6 +3589,23 @@ a:hover {
   background: #fff;
   border: 1px solid #cbd1d5;
   border-radius: 4px;
+}
+
+.site-redesign .form-group input[type="file"] {
+  padding: 0.7rem;
+  font-size: 0.88rem;
+}
+
+.site-redesign .form-group input[type="file"]::file-selector-button {
+  margin-right: 0.8rem;
+  padding: 0.5rem 0.7rem;
+  color: var(--home-ink);
+  background: #fff8f5;
+  border: 1px solid var(--home-accent);
+  border-radius: 3px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .site-redesign .form-group input:focus,
@@ -4521,7 +4677,11 @@ a:hover {
 
 @media (max-width: 700px) {
   .site-redesign.pricing-page {
-    padding-bottom: 78px;
+    padding-bottom: 0;
+  }
+
+  .site-redesign.pricing-page.pricing-mobile-cta-visible {
+    padding-bottom: calc(3.75rem + env(safe-area-inset-bottom));
   }
 
   .site-redesign.pricing-page .pricing-hero {
@@ -4548,7 +4708,8 @@ a:hover {
   }
 
   .pricing-hero-cta {
-    display: none;
+    display: inline-flex;
+    margin-top: 1.1rem;
   }
 
   .site-redesign.pricing-page .pricing-section {
@@ -4624,16 +4785,16 @@ a:hover {
   }
 
   .pricing-mobile-cta {
+    display: none;
     position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 120;
-    display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    padding: 0.7rem 1rem;
+    gap: 0.75rem;
+    padding: 0.55rem 0.8rem;
     background: rgba(255, 255, 255, 0.97);
     border-top: 1px solid var(--home-line);
     box-shadow: 0 -10px 30px rgba(13, 27, 51, 0.08);
@@ -4641,27 +4802,24 @@ a:hover {
     -webkit-backdrop-filter: blur(12px);
   }
 
-  .pricing-mobile-cta strong,
-  .pricing-mobile-cta span {
-    display: block;
-  }
-
   .pricing-mobile-cta strong {
+    flex: 0 0 auto;
     color: var(--home-ink);
     font-family: var(--font-display);
-    font-size: 0.82rem;
+    font-size: 0.74rem;
+    white-space: nowrap;
   }
 
-  .pricing-mobile-cta span {
-    color: var(--home-ink-soft);
-    font-size: 0.68rem;
+  .pricing-mobile-cta.is-visible {
+    display: flex;
   }
 
-  .pricing-mobile-cta .btn {
-    min-height: 46px;
-    padding: 0.65rem 1.15rem;
+  .site-redesign.pricing-page .pricing-mobile-cta .btn {
+    min-height: 38px;
+    min-width: 0;
+    padding: 0.5rem 0.75rem;
     border-radius: 6px;
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     white-space: nowrap;
   }
 }
@@ -4684,10 +4842,6 @@ a:hover {
    ============================================================ */
 
 @media (max-width: 960px) {
-  body.nav-open {
-    overflow: hidden;
-  }
-
   .nav-links {
     max-height: calc(100svh - 74px);
     overflow-y: auto;
@@ -4702,6 +4856,21 @@ a:hover {
 
   .nav-links .btn {
     justify-content: center;
+  }
+
+  /* Keep the mobile menu in normal flow as a non-overlapping disclosure. */
+  .home-redesign .nav,
+  .site-redesign .nav {
+    flex-wrap: wrap;
+  }
+
+  .home-redesign .nav-links,
+  .site-redesign .nav-links {
+    position: static;
+    flex: 0 0 100%;
+    width: 100%;
+    max-height: none;
+    overflow: visible;
   }
 }
 
@@ -4912,6 +5081,25 @@ a:hover {
     font-size: 0.9rem;
   }
 
+  .review-form-steps {
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .review-form-steps li {
+    gap: 0.45rem;
+    font-size: 0.74rem;
+  }
+
+  .form-actions {
+    align-items: stretch;
+    flex-direction: column-reverse;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+
   .site-redesign.pricing-page .pricing-intro p,
   .site-redesign.pricing-page .price-card .tagline,
   .site-redesign.pricing-page .price-card ul li,
@@ -4950,15 +5138,15 @@ a:hover {
   }
 
   .pricing-page {
-    padding-bottom: calc(78px + env(safe-area-inset-bottom));
+    padding-bottom: 0;
+  }
+
+  .pricing-page.pricing-mobile-cta-visible {
+    padding-bottom: calc(3.75rem + env(safe-area-inset-bottom));
   }
 
   .pricing-mobile-cta {
-    padding-bottom: max(0.7rem, env(safe-area-inset-bottom));
-  }
-
-  .pricing-mobile-cta span {
-    font-size: 0.75rem;
+    padding-bottom: max(0.55rem, env(safe-area-inset-bottom));
   }
 }
 

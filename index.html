@@ -24,7 +24,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/spur-auto-favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/spur-auto-favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/brand/spur-auto-apple-touch-icon.png">
-  <link rel="stylesheet" href="css/home.20260717.min.css">
+  <link rel="stylesheet" href="css/styles.css?v=20260718a">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -74,12 +74,12 @@
 <body class="home-redesign">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header home-header">
-    <div class="container nav">
-      <a href="index.html" class="logo" aria-label="Spur Auto home">Spur <span>Auto</span></a>
-      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+    <nav class="container nav" aria-label="Primary">
+      <a href="index.html" class="logo" aria-label="Spur Auto home" aria-current="page">Spur <span>Auto</span></a>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav-links">
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="how-it-works.html">How It Works</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="results.html">Results</a></li>
@@ -87,9 +87,9 @@
         <li><a href="about.html">About</a></li>
         <li><a href="free-review.html" class="btn btn-primary">Free Claim Review</a></li>
       </ul>
-    </div>
+    </nav>
   </header>
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
     <section class="home-hero">
       <div class="home-hero-copy">
         <h1><span>Check whether</span><span>your offer is low.</span></h1>
@@ -99,7 +99,7 @@
           <p class="home-price-claim">One clear flat fee, with no percentage of your settlement.</p>
         </div>
         <div class="home-hero-actions">
-          <a href="#claim-check" class="btn btn-primary">Check My Offer Free</a>
+          <a href="#claim-check" class="btn btn-primary">Get My Free Claim Review</a>
           <a href="how-it-works.html" class="btn home-secondary">See How the Review Works</a>
         </div>
         <p class="home-hero-note">Free review <span>·</span> $99 flat fee <span>·</span> Texas-based</p>
@@ -266,10 +266,10 @@
     </section>
     <section class="home-final-cta">
       <div class="container reveal-on-scroll">
-        <h2>Start free. Get the full report for $99.</h2>
+        <h2>Start with a free claim review. Get the full report for $99.</h2>
         <p>We'll review your offer at no charge. If it's worth challenging, the complete independent appraisal report is just $99.</p>
         <div class="final-actions">
-          <a href="free-review.html" class="btn btn-primary">Check My Offer Free</a>
+          <a href="free-review.html" class="btn btn-primary">Get My Free Claim Review</a>
           <a href="pricing.html" class="home-text-link light">View transparent pricing <span aria-hidden="true">→</span></a>
         </div>
       </div>
@@ -325,6 +325,6 @@
       <p class="home-disclaimer">Spur Auto is an independent vehicle appraisal firm. We provide negotiation support such as reviewing insurer responses, explaining valuation issues, and helping draft follow-up correspondence, but we do not contact or negotiate with the insurer on your behalf, settle claims, or act as your representative - every decision and communication about your claim remains yours. We are not a public insurance adjuster or law firm, do not provide legal advice, and are not affiliated with any insurance company. Outcomes depend on your policy, vehicle, and applicable law.</p>
     </div>
   </footer>
-  <script src="js/main.20260715.js" defer></script>
+  <script src="js/main.js?v=20260718a" defer></script>
 </body>
 </html>

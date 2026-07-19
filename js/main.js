@@ -1,5 +1,13 @@
 // Mobile nav toggle & Scroll animations fallbacks
 document.addEventListener("DOMContentLoaded", function () {
+  // Move keyboard focus with the skip link, not only the visual scroll position.
+  var skipLink = document.querySelector(".skip-link");
+  var mainContent = document.querySelector("#main-content");
+  if (skipLink && mainContent) {
+    skipLink.addEventListener("click", function () {
+      mainContent.focus({ preventScroll: true });
+    });
+  }
   
   // --- Mobile Navigation Menu ---
   var toggle = document.querySelector(".nav-toggle");
@@ -13,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var closeNavigation = function () {
       links.classList.remove("open");
-      document.body.classList.remove("nav-open");
       toggle.setAttribute("aria-expanded", "false");
       toggle.setAttribute("aria-label", "Open navigation");
     };
@@ -23,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
       var isOpen = links.classList.contains("open");
       toggle.setAttribute("aria-expanded", isOpen);
       toggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
-      document.body.classList.toggle("nav-open", isOpen);
     });
 
     links.addEventListener("click", function (event) {
@@ -58,6 +64,43 @@ document.addEventListener("DOMContentLoaded", function () {
     link.href = "free-review.html#free-review-form";
   });
 
+  // --- Pricing CTA: keep the secondary mobile action out of the first viewport ---
+  var pricingMobileCta = document.querySelector(".pricing-mobile-cta");
+  var pricingHeroCta = document.querySelector(".pricing-hero-cta");
+  if (pricingMobileCta && pricingHeroCta) {
+    var pricingMobileQuery = window.matchMedia("(max-width: 700px)");
+    var setPricingMobileCtaVisibility = function (heroIsVisible) {
+      var shouldShow = pricingMobileQuery.matches && !heroIsVisible;
+      pricingMobileCta.classList.toggle("is-visible", shouldShow);
+      pricingMobileCta.setAttribute("aria-hidden", String(!shouldShow));
+      document.body.classList.toggle("pricing-mobile-cta-visible", shouldShow);
+    };
+
+    if ("IntersectionObserver" in window) {
+      var pricingHeroObserver = new IntersectionObserver(function (entries) {
+        setPricingMobileCtaVisibility(entries[0].isIntersecting);
+      }, { threshold: 0.01 });
+      pricingHeroObserver.observe(pricingHeroCta);
+    } else {
+      var updatePricingMobileCta = function () {
+        var rect = pricingHeroCta.getBoundingClientRect();
+        setPricingMobileCtaVisibility(rect.bottom > 0 && rect.top < window.innerHeight);
+      };
+      updatePricingMobileCta();
+      window.addEventListener("scroll", updatePricingMobileCta, { passive: true });
+    }
+
+    var handlePricingViewportChange = function () {
+      var rect = pricingHeroCta.getBoundingClientRect();
+      setPricingMobileCtaVisibility(rect.bottom > 0 && rect.top < window.innerHeight);
+    };
+    if (pricingMobileQuery.addEventListener) {
+      pricingMobileQuery.addEventListener("change", handlePricingViewportChange);
+    } else {
+      pricingMobileQuery.addListener(handlePricingViewportChange);
+    }
+  }
+
   var form = document.querySelector("#free-review-form");
   if (form && window.location.hash === "#free-review-form") {
     window.requestAnimationFrame(function () {
@@ -65,6 +108,91 @@ document.addEventListener("DOMContentLoaded", function () {
       window.scrollBy(0, -(header ? header.offsetHeight + 24 : 0));
       var nameInput = document.querySelector("#name");
       if (nameInput) nameInput.focus({ preventScroll: true });
+    });
+  }
+
+  // --- Two-step Free Review Intake ---
+  if (form) {
+    var steps = form.querySelectorAll("[data-form-step]");
+    var indicators = form.querySelectorAll("[data-step-indicator]");
+    var currentStep = 1;
+    var valuationReport = form.querySelector("#valuation-report");
+    var valuationReportError = form.querySelector("#valuation-report-error");
+
+    var setStep = function (stepNumber) {
+      currentStep = stepNumber;
+
+      steps.forEach(function (step) {
+        var stepIndex = Number(step.getAttribute("data-form-step"));
+        var isCurrent = stepIndex === stepNumber;
+        step.hidden = !isCurrent;
+        step.disabled = stepIndex > stepNumber;
+      });
+
+      indicators.forEach(function (indicator) {
+        var indicatorStep = Number(indicator.getAttribute("data-step-indicator"));
+        var isCurrent = indicatorStep === stepNumber;
+        indicator.classList.toggle("is-current", isCurrent);
+        indicator.classList.toggle("is-complete", indicatorStep < stepNumber);
+
+        if (isCurrent) {
+          indicator.setAttribute("aria-current", "step");
+        } else {
+          indicator.removeAttribute("aria-current");
+        }
+      });
+
+      var firstInput = form.querySelector('[data-form-step="' + stepNumber + '"] input, [data-form-step="' + stepNumber + '"] textarea');
+      if (firstInput) firstInput.focus();
+    };
+
+    var validateStep = function (stepNumber) {
+      var fields = form.querySelectorAll('[data-form-step="' + stepNumber + '"] input, [data-form-step="' + stepNumber + '"] textarea');
+      for (var i = 0; i < fields.length; i += 1) {
+        if (!fields[i].checkValidity()) {
+          fields[i].reportValidity();
+          return false;
+        }
+      }
+      return true;
+    };
+
+    var nextStepButton = form.querySelector("[data-next-step]");
+    if (nextStepButton) {
+      nextStepButton.addEventListener("click", function () {
+        if (validateStep(1)) setStep(2);
+      });
+    }
+
+    var previousStepButton = form.querySelector("[data-previous-step]");
+    if (previousStepButton) {
+      previousStepButton.addEventListener("click", function () {
+        setStep(1);
+      });
+    }
+
+    if (valuationReport) {
+      valuationReport.addEventListener("change", function () {
+        var file = valuationReport.files[0];
+        var errorMessage = file && file.size > 5 * 1024 * 1024
+          ? "The selected file is larger than 5 MB. Choose a PDF, JPG, or PNG that is 5 MB or smaller."
+          : "";
+
+        valuationReport.setCustomValidity(errorMessage);
+        valuationReport.toggleAttribute("aria-invalid", Boolean(errorMessage));
+
+        if (valuationReportError) {
+          valuationReportError.textContent = errorMessage;
+          valuationReportError.hidden = !errorMessage;
+        }
+      });
+    }
+
+    form.addEventListener("submit", function (event) {
+      if (currentStep === 1) {
+        event.preventDefault();
+        if (validateStep(1)) setStep(2);
+      }
     });
   }
 

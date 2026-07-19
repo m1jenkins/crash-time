@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260715a">
+  <link rel="stylesheet" href="css/styles.css?v=20260718a">
   <link rel="icon" href="assets/brand/spur-auto-favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/spur-auto-favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/spur-auto-favicon-16.png">
@@ -21,10 +21,10 @@
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
-    <div class="container nav">
+    <nav class="container nav" aria-label="Primary">
       <a href="index.html" class="logo">Spur <span>Auto</span></a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-      <ul class="nav-links">
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="how-it-works.html">How It Works</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="results.html">Results</a></li>
@@ -32,10 +32,10 @@
         <li><a href="about.html">About</a></li>
         <li><a href="free-review.html" class="btn btn-primary">Free Claim Review</a></li>
       </ul>
-    </div>
+    </nav>
   </header>
 
-  <main class="section" id="main-content">
+  <main class="section" id="main-content" tabindex="-1">
     <div class="container legal-page">
       <h1>Terms of Service</h1>
       <p><strong>Effective date:</strong> July 14, 2026</p>
@@ -49,7 +49,7 @@
       <p>A free claim review is a preliminary assessment based on limited information. It is not an appraisal, coverage opinion, promise of a higher settlement, or commitment to accept an engagement.</p>
 
       <h2>3. Independent appraisal and document-support boundaries</h2>
-      <p>Our appraisal reports express an independent independent opinion of vehicle value based on the records, photographs, market information, and other materials reasonably available when the report is prepared. We do not control an insurer's coverage decision, valuation method, response, payment, or settlement.</p>
+      <p>Our appraisal reports express an independent opinion of vehicle value based on the records, photographs, market information, and other materials reasonably available when the report is prepared. We do not control an insurer's coverage decision, valuation method, response, payment, or settlement.</p>
       <p>Guided Document Support may include claim-specific draft correspondence, an evidence index, a key-findings summary, a report walkthrough, review and explanation of written insurer responses, negotiation guidance, and assistance drafting follow-up correspondence throughout negotiations. You remain solely responsible for every claim decision, including what information to submit and whether to accept, reject, or dispute an offer. You review, approve, and send every communication.</p>
       <p>Spur Auto provides negotiation support and guidance but does not contact or negotiate with an insurer on your behalf, represent you in a claim, adjust or settle your claim, make coverage decisions, act as your attorney or public insurance adjuster, or create an attorney-client, fiduciary, or representative relationship.</p>
 
@@ -117,6 +117,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260715"></script>
+  <script src="js/main.js?v=20260718a"></script>
 </body>
 </html>
