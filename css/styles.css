@@ -1789,12 +1789,6 @@ body.home-redesign :focus-visible {
   align-items: start;
 }
 
-.accent-rule {
-  width: 98px;
-  height: 5px;
-  margin-bottom: 2.4rem;
-  background: var(--home-accent);
-}
 
 .evidence-intro h2 {
   max-width: 620px;
@@ -2537,11 +2531,6 @@ body.home-redesign :focus-visible {
     padding: 5.5rem 0;
   }
 
-  .accent-rule {
-    width: 72px;
-    margin-bottom: 1.8rem;
-  }
-
   .evidence-intro h2,
   .process-head h2,
   .founder-heading h2 {
@@ -2958,15 +2947,6 @@ body.site-redesign :focus-visible {
   max-width: none;
 }
 
-.site-redesign .hero .container::before {
-  content: "";
-  display: block;
-  width: 82px;
-  height: 4px;
-  margin-bottom: 1.7rem;
-  background: var(--home-accent);
-}
-
 .site-redesign .hero .eyebrow {
   padding: 0;
   margin-bottom: 1rem;
@@ -3031,15 +3011,6 @@ body.site-redesign :focus-visible {
   max-width: 860px;
   margin: 0 0 clamp(3rem, 6vw, 5rem);
   text-align: left;
-}
-
-.site-redesign .section-head::before {
-  content: "";
-  display: block;
-  width: 72px;
-  height: 3px;
-  margin-bottom: 1.6rem;
-  background: var(--home-accent);
 }
 
 .site-redesign .section-head .eyebrow {
@@ -3939,10 +3910,6 @@ body.site-redesign :focus-visible {
     font-size: clamp(3.15rem, 14vw, 4.7rem);
   }
 
-  .site-redesign .hero .container::before {
-    width: 64px;
-  }
-
   .site-redesign .section {
     padding: 5.3rem 0;
   }
@@ -4015,11 +3982,6 @@ body.site-redesign :focus-visible {
 
 .site-redesign.pricing-page .pricing-hero .container {
   width: min(1200px, calc(100% - 64px));
-}
-
-.site-redesign.pricing-page .pricing-hero .container::before {
-  width: 64px;
-  margin-bottom: 1.25rem;
 }
 
 .site-redesign.pricing-page .pricing-hero h1 {
@@ -5179,10 +5141,6 @@ body.site-redesign :focus-visible {
 .site-redesign.pricing-page .pricing-hero {
   min-height: 300px;
   padding: 2.75rem 0 2.5rem;
-}
-
-.site-redesign.pricing-page .pricing-hero .container::before {
-  margin-bottom: 1rem;
 }
 
 .site-redesign.pricing-page .pricing-hero h1 {
