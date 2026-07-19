@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="js/google-ads.js?v=20260718"></script>
+  <script src="js/google-ads.js?v=20260718" defer></script>
   <title>Flooded Car Total Loss in Texas: What You're Owed | Spur Auto</title>
   <meta name="description" content="Floodwater totaled your car in Texas? When flood damage is covered, why flooded cars are almost always totaled, and how to check the pre-flood value offer.">
   <link rel="canonical" href="https://www.spurauto.com/flooded-car-total-loss-texas.html">
@@ -18,10 +18,9 @@
   <meta name="twitter:title" content="Flooded Car Total Loss in Texas: What You're Owed | Spur Auto">
   <meta name="twitter:description" content="Flood claims are comprehensive claims, and the insurer owes your car's full pre-flood actual cash value - even as post-storm replacement prices climb. Here's how Texas flood totals work and how to check the offer before you accept it.">
   <meta name="twitter:image" content="https://www.spurauto.com/assets/images/vehicle-claim-hero.webp">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260718a">
+  <link rel="preload" href="assets/fonts/dm-serif-display-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-400-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css?v=20260718b">
   <link rel="icon" href="assets/brand/spur-auto-favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/spur-auto-favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/spur-auto-favicon-16.png">
@@ -30,15 +29,18 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
+  "@id": "https://www.spurauto.com/flooded-car-total-loss-texas.html#article",
   "headline": "Flooded Car Totaled in Texas? What You're Owed",
   "description": "Flood claims are comprehensive claims, and the insurer owes your car's full pre-flood actual cash value - even as post-storm replacement prices climb. Here's how Texas flood totals work and how to check the offer before you accept it.",
   "author": {
+    "@id": "https://www.spurauto.com/about.html#mark-west",
     "@type": "Person",
     "name": "Mark West",
     "jobTitle": "Founder & Car Enthusiast",
     "url": "https://www.spurauto.com/about.html"
   },
   "publisher": {
+    "@id": "https://www.spurauto.com/#organization",
     "@type": "Organization",
     "name": "Spur Auto",
     "legalName": "Spur Auto",
@@ -75,61 +77,13 @@
   ]
 }
   </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is flood damage covered by car insurance in Texas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Only if you carry comprehensive coverage. Comprehensive pays for water damage from floods, hurricanes, and rising water, minus your deductible, and fault is irrelevant. Liability-only policies don't cover flood damage to your own car, and homeowners and federal flood insurance generally exclude vehicles."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will my flooded car definitely be totaled?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Usually, if water reached the interior. Flood damage attacks electronics, wiring, and airbag systems, and corrosion and mold keep developing after the water recedes, so repair estimates climb past the Texas 100% threshold quickly. Brief water exposure below the floorboards can be repairable - which is why both the repair estimate and the valuation deserve independent checking."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I negotiate a flood total loss offer?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. After a flood event, valuations are bulk-processed by software while local replacement prices are rising, which makes generic condition assumptions and stale comparables common - and correctable. Request the valuation report, document your car's pre-flood condition and options, and counter in writing."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does it matter that thousands of other cars flooded at the same time?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It matters in your favor. A major flood removes thousands of vehicles from the local market at once, so replacement prices in the affected metro typically rise just as offers go out. Software anchored to pre-storm or out-of-market listings understates what it now costs to replace your car locally - exactly the error an independent appraisal documents."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Should I keep (buy back) my flooded car?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Be cautious. An owner-retained flood total gets a flood-branded salvage title, the salvage value is deducted from your settlement, and corrosion and electrical failures often surface months later. For most daily drivers, taking the full settlement is the safer path - just make sure the settlement is right first."
-      }
-    }
-  ]
-}
-  </script>
 </head>
 <body class="site-redesign">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
     <nav class="container nav" aria-label="Primary">
-      <a href="index.html" class="logo">Spur <span>Auto</span></a>
+      <a href="/" class="logo">Spur <span>Auto</span></a>
       <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">&#9776;</button>
       <ul class="nav-links" id="primary-navigation">
         <li><a href="how-it-works.html">How It Works</a></li>
@@ -255,7 +209,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">Spur <span>Auto</span></a>
+          <a href="/" class="logo">Spur <span>Auto</span></a>
           <p>
             Independent vehicle valuation and settlement guidance for people who deserve
             a fair settlement - not a fast one.
@@ -288,6 +242,9 @@
             <li><a href="total-loss-appraisal-san-antonio.html">San Antonio</a></li>
             <li><a href="total-loss-appraisal-austin.html">Austin</a></li>
             <li><a href="total-loss-appraisal-el-paso.html">El Paso</a></li>
+            <li><a href="total-loss-appraisal-corpus-christi.html">Corpus Christi</a></li>
+            <li><a href="total-loss-appraisal-lubbock.html">Lubbock</a></li>
+            <li><a href="total-loss-appraisal-laredo.html">Laredo</a></li>
             <li><a href="texas.html">All Texas Service Areas</a></li>
           </ul>
         </div>
@@ -333,6 +290,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260718a"></script>
+  <script src="js/main.js?v=20260718a" defer></script>
 </body>
 </html>

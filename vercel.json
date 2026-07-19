@@ -1,0 +1,88 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/total-loss-appraisal-arlington.html",
+      "destination": "/total-loss-appraisal-fort-worth.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/total-loss-appraisal-plano.html",
+      "destination": "/total-loss-appraisal-dallas.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/total-loss-appraisal-irving.html",
+      "destination": "/total-loss-appraisal-dallas.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/total-loss-appraisal-cedar-park.html",
+      "destination": "/total-loss-appraisal-austin.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/total-loss-appraisal-san-marcos.html",
+      "destination": "/total-loss-appraisal-austin.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/total-loss-appraisal-new-braunfels.html",
+      "destination": "/total-loss-appraisal-san-antonio.html",
+      "statusCode": 301
+    }
+  ],
+  "headers": [
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
+}

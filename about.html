@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="js/google-ads.js?v=20260718"></script>
+  <script src="js/google-ads.js?v=20260718" defer></script>
   <title>About Spur Auto | Vehicle Value Help for Texas Drivers</title>
   <meta name="description" content="Spur Auto was founded after a low insurance offer showed how much correct mileage, trim, options, and comparable vehicles matter.">
   <link rel="canonical" href="https://www.spurauto.com/about.html">
@@ -18,10 +18,9 @@
   <meta name="twitter:title" content="About Spur Auto | Vehicle Value Help for Texas Drivers">
   <meta name="twitter:description" content="Founded to help drivers spot the vehicle details and bad comparables that can make an insurance offer too low.">
   <meta name="twitter:image" content="https://www.spurauto.com/assets/images/vehicle-claim-hero.webp">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260718a">
+  <link rel="preload" href="assets/fonts/dm-serif-display-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-400-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css?v=20260718b">
   <link rel="icon" href="assets/brand/spur-auto-favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/spur-auto-favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/spur-auto-favicon-16.png">
@@ -33,11 +32,13 @@
     "url": "https://www.spurauto.com/about.html",
     "mainEntity": {
       "@type": "Person",
+      "@id": "https://www.spurauto.com/about.html#mark-west",
       "name": "Mark West",
       "jobTitle": "Founder & Car Enthusiast",
       "description": "Car enthusiast and founder of Spur Auto, helping Texas drivers understand the vehicle details and comparable listings behind an insurance valuation.",
       "worksFor": {
         "@type": "Organization",
+        "@id": "https://www.spurauto.com/#organization",
         "name": "Spur Auto",
         "legalName": "Spur Auto",
         "url": "https://www.spurauto.com/"
@@ -59,7 +60,7 @@
 
   <header class="site-header">
     <nav class="container nav" aria-label="Primary">
-      <a href="index.html" class="logo">Spur <span>Auto</span></a>
+      <a href="/" class="logo">Spur <span>Auto</span></a>
       <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">☰</button>
       <ul class="nav-links" id="primary-navigation">
         <li><a href="how-it-works.html">How It Works</a></li>
@@ -198,7 +199,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">Spur <span>Auto</span></a>
+          <a href="/" class="logo">Spur <span>Auto</span></a>
           <p>
             Independent vehicle valuation and settlement guidance for people who deserve
             a fair settlement - not a fast one.
@@ -231,6 +232,9 @@
             <li><a href="total-loss-appraisal-san-antonio.html">San Antonio</a></li>
             <li><a href="total-loss-appraisal-austin.html">Austin</a></li>
             <li><a href="total-loss-appraisal-el-paso.html">El Paso</a></li>
+            <li><a href="total-loss-appraisal-corpus-christi.html">Corpus Christi</a></li>
+            <li><a href="total-loss-appraisal-lubbock.html">Lubbock</a></li>
+            <li><a href="total-loss-appraisal-laredo.html">Laredo</a></li>
             <li><a href="texas.html">All Texas Service Areas</a></li>
           </ul>
         </div>
@@ -276,6 +280,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260718a"></script>
+  <script src="js/main.js?v=20260718a" defer></script>
 </body>
 </html>

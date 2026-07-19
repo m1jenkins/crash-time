@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="js/google-ads.js?v=20260718"></script>
+  <script src="js/google-ads.js?v=20260718" defer></script>
   <title>Texas Total Loss Sales Tax: What Insurers Owe | Spur Auto</title>
   <meta name="description" content="Learn when a Texas total-loss settlement should include 6.25% motor vehicle sales tax, title, and registration fees, and what to check if they are missing.">
   <link rel="canonical" href="https://www.spurauto.com/totaled-car-sales-tax-texas.html">
@@ -18,10 +18,9 @@
   <meta name="twitter:title" content="Texas Total Loss Sales Tax: What Insurers Owe | Spur Auto">
   <meta name="twitter:description" content="In most Texas total loss settlements, the payment should account for the 6.25% motor vehicle sales tax plus title and registration fees - over $1,875 on a $30,000 car. What to check on your settlement breakdown and what to do if it's missing.">
   <meta name="twitter:image" content="https://www.spurauto.com/assets/images/vehicle-claim-hero.webp">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260718a">
+  <link rel="preload" href="assets/fonts/dm-serif-display-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-400-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css?v=20260718b">
   <link rel="icon" href="assets/brand/spur-auto-favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/spur-auto-favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/spur-auto-favicon-16.png">
@@ -30,15 +29,18 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
+  "@id": "https://www.spurauto.com/totaled-car-sales-tax-texas.html#article",
   "headline": "Does Insurance Pay Sales Tax on a Totaled Car in Texas?",
   "description": "In most Texas total loss settlements, the payment should account for the 6.25% motor vehicle sales tax plus title and registration fees - over $1,875 on a $30,000 car. What to check on your settlement breakdown and what to do if it's missing.",
   "author": {
+    "@id": "https://www.spurauto.com/about.html#mark-west",
     "@type": "Person",
     "name": "Mark West",
     "jobTitle": "Founder & Car Enthusiast",
     "url": "https://www.spurauto.com/about.html"
   },
   "publisher": {
+    "@id": "https://www.spurauto.com/#organization",
     "@type": "Organization",
     "name": "Spur Auto",
     "legalName": "Spur Auto",
@@ -75,53 +77,13 @@
   ]
 }
   </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Does the insurer pay sales tax if I don't buy a replacement car?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It depends on your policy. Some policies and settlement practices pay taxes and fees as part of the loss settlement regardless; others reimburse them only when you actually incur them on a replacement purchase, sometimes within a set window. Ask your adjuster in writing which approach your policy uses and what documentation is required."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is the sales tax based on the insurer's valuation or my new car's price?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Typically it's calculated on the totaled vehicle's actual cash value - the amount the insurer is paying for the loss - not on whatever you choose to buy next. That's another reason the ACV matters: an undervalued car also produces an undervalued tax line."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do third-party total loss settlements include sales tax in Texas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It's frequently disputed. Your loss is the value of the vehicle taken from you, and replacing it requires paying tax - so document the full replacement cost and demand it in writing. Practices vary by insurer, and a documented, itemized demand is far harder to ignore than a phone call."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I check whether my settlement already includes taxes and fees?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Request the full valuation report and an itemized settlement statement in writing. Look for separate line items for sales tax, title, and registration on top of the vehicle's adjusted value. If the offer is a single unexplained number, treat that as your cue to ask questions before accepting."
-      }
-    }
-  ]
-}
-  </script>
 </head>
 <body class="site-redesign">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
     <nav class="container nav" aria-label="Primary">
-      <a href="index.html" class="logo">Spur <span>Auto</span></a>
+      <a href="/" class="logo">Spur <span>Auto</span></a>
       <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">&#9776;</button>
       <ul class="nav-links" id="primary-navigation">
         <li><a href="how-it-works.html">How It Works</a></li>
@@ -237,7 +199,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">Spur <span>Auto</span></a>
+          <a href="/" class="logo">Spur <span>Auto</span></a>
           <p>
             Independent vehicle valuation and settlement guidance for people who deserve
             a fair settlement - not a fast one.
@@ -270,6 +232,9 @@
             <li><a href="total-loss-appraisal-san-antonio.html">San Antonio</a></li>
             <li><a href="total-loss-appraisal-austin.html">Austin</a></li>
             <li><a href="total-loss-appraisal-el-paso.html">El Paso</a></li>
+            <li><a href="total-loss-appraisal-corpus-christi.html">Corpus Christi</a></li>
+            <li><a href="total-loss-appraisal-lubbock.html">Lubbock</a></li>
+            <li><a href="total-loss-appraisal-laredo.html">Laredo</a></li>
             <li><a href="texas.html">All Texas Service Areas</a></li>
           </ul>
         </div>
@@ -315,6 +280,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260718a"></script>
+  <script src="js/main.js?v=20260718a" defer></script>
 </body>
 </html>

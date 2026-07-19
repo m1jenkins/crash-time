@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="js/google-ads.js?v=20260718"></script>
+  <script src="js/google-ads.js?v=20260718" defer></script>
   <title>Texas Appraisal Clause &amp; SB 458 Guide | Spur Auto</title>
   <meta name="description" content="Learn how Texas SB 458 appraisal clauses work, which auto policies are covered, how appraisal is invoked, what it costs, and when to use it.">
   <link rel="canonical" href="https://www.spurauto.com/texas-appraisal-clause-sb458.html">
@@ -18,10 +18,9 @@
   <meta name="twitter:title" content="Texas Appraisal Clause &amp; SB 458 Guide | Spur Auto">
   <meta name="twitter:description" content="Every Texas personal auto policy issued or renewed on or after January 1, 2026 must include an appraisal clause under SB 458. What the clause does, how to invoke it, what it costs, and when it beats negotiating.">
   <meta name="twitter:image" content="https://www.spurauto.com/assets/images/vehicle-claim-hero.webp">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260718a">
+  <link rel="preload" href="assets/fonts/dm-serif-display-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-400-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css?v=20260718b">
   <link rel="icon" href="assets/brand/spur-auto-favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/spur-auto-favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/spur-auto-favicon-16.png">
@@ -30,15 +29,19 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
+  "@id": "https://www.spurauto.com/texas-appraisal-clause-sb458.html#article",
+  "image": "https://www.spurauto.com/assets/images/comparable-review.webp",
   "headline": "Texas Right to Appraisal: How the Appraisal Clause Works (SB 458)",
   "description": "Every Texas personal auto policy issued or renewed on or after January 1, 2026 must include an appraisal clause under SB 458. What the clause does, how to invoke it, what it costs, and when it beats negotiating.",
   "author": {
+    "@id": "https://www.spurauto.com/about.html#mark-west",
     "@type": "Person",
     "name": "Mark West",
     "jobTitle": "Founder & Car Enthusiast",
     "url": "https://www.spurauto.com/about.html"
   },
   "publisher": {
+    "@id": "https://www.spurauto.com/#organization",
     "@type": "Organization",
     "name": "Spur Auto",
     "legalName": "Spur Auto",
@@ -75,53 +78,13 @@
   ]
 }
   </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is the appraisal award binding?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The award resolves the amount-of-loss dispute under the policy's appraisal provision - that's its purpose. It does not decide coverage or fault questions, which remain outside the appraisal process. Check your policy's exact provision for the binding language that applies to your claim."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I invoke the appraisal clause on a policy issued before 2026?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Often yes. SB 458 makes the clause mandatory for Texas personal auto policies issued or renewed on or after January 1, 2026, but many earlier policies already include an appraisal provision. Read your policy's conditions section, or ask your insurer in writing whether your policy includes one."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need a lawyer to invoke appraisal?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Appraisal is a policy right you can exercise yourself with a written demand, and it exists precisely so value disputes can be resolved without litigation. For very large claims, coverage denials, or bad-faith conduct, talking to an attorney is still wise - and if we think your claim needs one, we'll say so."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who can serve as my appraiser?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Your policy sets the standard, typically requiring a competent, independent (disinterested) appraiser. In practice you want an independent vehicle appraiser who documents value from verified market comparables and can defend the methodology in front of an umpire - not a friend with a printout."
-      }
-    }
-  ]
-}
-  </script>
 </head>
 <body class="site-redesign">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
     <nav class="container nav" aria-label="Primary">
-      <a href="index.html" class="logo">Spur <span>Auto</span></a>
+      <a href="/" class="logo">Spur <span>Auto</span></a>
       <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">&#9776;</button>
       <ul class="nav-links" id="primary-navigation">
         <li><a href="how-it-works.html">How It Works</a></li>
@@ -150,6 +113,21 @@
       <p class="hero-note">By <a href="about.html">Mark West</a>, Founder &middot; Last reviewed July 14, 2026</p>
     </div>
   </section>
+
+  <figure class="guide-media reveal-on-scroll">
+    <picture>
+      <source type="image/webp"
+              srcset="assets/images/comparable-review-480.webp 480w,
+                      assets/images/comparable-review-768.webp 768w,
+                      assets/images/comparable-review-1200.webp 1200w,
+                      assets/images/comparable-review.webp 2048w"
+              sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1450px) calc(100vw - 64px), 1200px">
+      <img src="assets/images/comparable-review-768.webp"
+           alt="Appraiser reviewing vehicle valuation evidence for an appraisal-clause claim"
+           width="2048" height="768" loading="lazy" decoding="async">
+    </picture>
+    <figcaption>A documented market review gives an appraisal-clause demand a clear factual foundation.</figcaption>
+  </figure>
 
   <section class="section">
     <div class="container">
@@ -237,7 +215,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">Spur <span>Auto</span></a>
+          <a href="/" class="logo">Spur <span>Auto</span></a>
           <p>
             Independent vehicle valuation and settlement guidance for people who deserve
             a fair settlement - not a fast one.
@@ -270,6 +248,9 @@
             <li><a href="total-loss-appraisal-san-antonio.html">San Antonio</a></li>
             <li><a href="total-loss-appraisal-austin.html">Austin</a></li>
             <li><a href="total-loss-appraisal-el-paso.html">El Paso</a></li>
+            <li><a href="total-loss-appraisal-corpus-christi.html">Corpus Christi</a></li>
+            <li><a href="total-loss-appraisal-lubbock.html">Lubbock</a></li>
+            <li><a href="total-loss-appraisal-laredo.html">Laredo</a></li>
             <li><a href="texas.html">All Texas Service Areas</a></li>
           </ul>
         </div>
@@ -315,6 +296,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260718a"></script>
+  <script src="js/main.js?v=20260718a" defer></script>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="js/google-ads.js?v=20260718"></script>
-  <script src="js/ads-conversions.js?v=20260718"></script>
+  <script src="js/google-ads.js?v=20260718" defer></script>
+  <script src="js/ads-conversions.js?v=20260718" defer></script>
   <title>Check Whether Your Total-Loss Offer Is Low | $99 Appraisal | Spur Auto</title>
   <meta name="description" content="Texas drivers: check whether your total-loss offer is low with a free claim review and a complete $99 independent appraisal report.">
   <link rel="canonical" href="https://www.spurauto.com/">
@@ -20,54 +20,55 @@
   <meta name="twitter:title" content="Check Whether Your Total-Loss Offer Is Low | $99 Appraisal | Spur Auto">
   <meta name="twitter:description" content="A free claim review and complete $99 independent total-loss appraisal report for Texas drivers.">
   <link rel="preload" href="assets/fonts/dm-serif-display-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-400-800.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="assets/brand/spur-auto-favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/spur-auto-favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/spur-auto-favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/brand/spur-auto-apple-touch-icon.png">
-  <link rel="stylesheet" href="css/styles.css?v=20260718a">
+  <link rel="stylesheet" href="css/styles.css?v=20260718b">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Spur Auto",
-    "legalName": "Spur Auto",
-    "url": "https://www.spurauto.com/",
-    "description": "Independent total-loss appraisal packages from $99 for Texas drivers disputing low insurance settlements.",
-    "areaServed": [
-      { "@type": "State", "name": "Texas" },
-      { "@type": "City", "name": "Houston" },
-      { "@type": "City", "name": "Dallas" },
-      { "@type": "City", "name": "Fort Worth" },
-      { "@type": "City", "name": "San Antonio" },
-      { "@type": "City", "name": "Austin" },
-      { "@type": "City", "name": "El Paso" },
-      { "@type": "City", "name": "Arlington" },
-      { "@type": "City", "name": "Plano" },
-      { "@type": "City", "name": "Irving" },
-      { "@type": "City", "name": "Cedar Park" },
-      { "@type": "City", "name": "San Marcos" },
-      { "@type": "City", "name": "New Braunfels" },
-      { "@type": "City", "name": "Corpus Christi" },
-      { "@type": "City", "name": "Lubbock" },
-      { "@type": "City", "name": "Laredo" }
-    ],
-    "knowsAbout": ["Total loss insurance claims", "Actual cash value disputes", "Vehicle appraisal clause", "Specialty vehicle valuation", "Texas insurance law"],
-    "founder": {
-      "@type": "Person",
-      "name": "Mark West",
-      "jobTitle": "Founder & Car Enthusiast"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Appraisal Services",
-      "itemListElement": [
-        { "@type": "Offer", "price": "99", "priceCurrency": "USD", "url": "https://buy.stripe.com/3cIfZg6fUcmA7vO8vl9MY04", "itemOffered": { "@type": "Service", "name": "Essential Total Loss Report" } },
-        { "@type": "Offer", "price": "299", "priceCurrency": "USD", "url": "https://buy.stripe.com/fZu4gyeMq9aodUc9zp9MY02", "itemOffered": { "@type": "Service", "name": "Guided Total Loss Report" } },
-        { "@type": "Offer", "price": "299", "priceCurrency": "USD", "url": "https://buy.stripe.com/fZueVcbAe0DS8zS12T9MY03", "itemOffered": { "@type": "Service", "name": "Specialty Total Loss Report" } },
-        { "@type": "Offer", "price": "449", "priceCurrency": "USD", "url": "https://buy.stripe.com/fZueVcbAe0DS8zS12T9MY03", "itemOffered": { "@type": "Service", "name": "Specialty and Guided Total Loss Package" } },
-        { "@type": "Offer", "price": "0", "priceCurrency": "USD", "itemOffered": { "@type": "Service", "name": "Free Claim Review" } }
-      ]
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.spurauto.com/#organization",
+        "name": "Spur Auto",
+        "legalName": "Spur Auto",
+        "url": "https://www.spurauto.com/",
+        "description": "Independent total-loss appraisal packages for Texas drivers disputing low insurance settlements.",
+        "areaServed": { "@type": "State", "name": "Texas" },
+        "knowsAbout": ["Total loss insurance claims", "Actual cash value disputes", "Vehicle appraisal clause", "Specialty vehicle valuation", "Texas insurance law"],
+        "founder": { "@id": "https://www.spurauto.com/about.html#mark-west" }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.spurauto.com/#service",
+        "name": "Independent total-loss appraisal services",
+        "serviceType": "Total loss vehicle appraisal",
+        "provider": { "@id": "https://www.spurauto.com/#organization" },
+        "areaServed": { "@type": "State", "name": "Texas" },
+        "offers": [
+          {
+            "@type": "Offer",
+            "@id": "https://www.spurauto.com/#offer-essential",
+            "name": "Complete total-loss report",
+            "price": "99",
+            "priceCurrency": "USD",
+            "url": "https://buy.stripe.com/3cIfZg6fUcmA7vO8vl9MY04",
+            "itemOffered": { "@type": "Service", "name": "Essential Total Loss Report" }
+          },
+          {
+            "@type": "Offer",
+            "@id": "https://www.spurauto.com/#offer-review",
+            "name": "Free claim review",
+            "price": "0",
+            "priceCurrency": "USD",
+            "itemOffered": { "@type": "Service", "name": "Free Claim Review" }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -75,7 +76,7 @@
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header home-header">
     <nav class="container nav" aria-label="Primary">
-      <a href="index.html" class="logo" aria-label="Spur Auto home" aria-current="page">Spur <span>Auto</span></a>
+      <a href="/" class="logo" aria-label="Spur Auto home" aria-current="page">Spur <span>Auto</span></a>
       <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
         <span></span><span></span><span></span>
       </button>
@@ -280,7 +281,7 @@
     <div class="container">
       <div class="home-footer-top">
         <div class="footer-intro">
-          <a href="index.html" class="logo">Spur <span>Auto</span></a>
+          <a href="/" class="logo">Spur <span>Auto</span></a>
           <p>Independent vehicle valuation for a fair settlement, not a fast one.</p>
         </div>
         <div class="footer-nav-group">
@@ -304,6 +305,9 @@
             <a href="total-loss-appraisal-san-antonio.html">San Antonio</a>
             <a href="total-loss-appraisal-austin.html">Austin</a>
             <a href="total-loss-appraisal-el-paso.html">El Paso</a>
+            <a href="total-loss-appraisal-corpus-christi.html">Corpus Christi</a>
+            <a href="total-loss-appraisal-lubbock.html">Lubbock</a>
+            <a href="total-loss-appraisal-laredo.html">Laredo</a>
             <a href="texas.html">All Texas service areas</a>
           </div>
           <div>

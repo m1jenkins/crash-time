@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="js/google-ads.js?v=20260718"></script>
+  <script src="js/google-ads.js?v=20260718" defer></script>
   <title>Texas Total Loss &amp; Appraisal Rights Guide | Spur Auto</title>
   <meta name="description" content="Learn Texas total-loss rules, appraisal rights under SB 458, how to dispute a low ACV offer, and where to get an independent vehicle appraisal.">
   <link rel="canonical" href="https://www.spurauto.com/texas.html">
@@ -18,10 +18,9 @@
   <meta name="twitter:title" content="Texas Total Loss &amp; Appraisal Rights Guide | Spur Auto">
   <meta name="twitter:description" content="When is a car totaled in Texas, how the new appraisal-clause law works, and how to dispute a lowball total loss settlement with an independent vehicle value report.">
   <meta name="twitter:image" content="https://www.spurauto.com/assets/images/vehicle-claim-hero.webp">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260718a">
+  <link rel="preload" href="assets/fonts/dm-serif-display-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-400-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css?v=20260718b">
   <link rel="icon" href="assets/brand/spur-auto-favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/spur-auto-favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/spur-auto-favicon-16.png">
@@ -30,43 +29,11 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": "https://www.spurauto.com/texas.html#service",
     "serviceType": "Total loss vehicle appraisal",
-    "provider": { "@type": "Organization", "name": "Spur Auto", "legalName": "Spur Auto", "url": "https://www.spurauto.com/" },
+    "provider": { "@type": "Organization", "@id": "https://www.spurauto.com/#organization", "name": "Spur Auto", "legalName": "Spur Auto", "url": "https://www.spurauto.com/" },
     "areaServed": { "@type": "State", "name": "Texas" },
     "description": "Independent vehicle value reports that help Texas drivers dispute lowball total loss insurance settlements."
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "When is a car considered a total loss in Texas?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Texas uses a 100% total loss threshold: a vehicle is generally declared a total loss when the cost to repair it equals or exceeds its actual cash value (ACV). That makes the insurer's ACV number the single most important figure in your claim - if the ACV is set too low, both the total loss decision and your payout can be wrong." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I dispute a total loss settlement offer in Texas?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. You are not required to accept the insurer's first offer. You can present your own evidence of value - comparable local listings, options and condition documentation, and an independent vehicle value report - and negotiate. Texas personal auto policies issued or renewed on or after January 1, 2026 must also include an appraisal clause you can invoke to have the amount of loss decided through an independent appraisal process." }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the Texas appraisal clause law (SB 458)?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Senate Bill 458, passed in 2025, requires personal auto and residential property policies in Texas to include an appraisal provision. It applies to policies issued or renewed on or after January 1, 2026. When you and your insurer disagree about the amount of a loss, either side can invoke appraisal: each party hires its own appraiser, the appraisers select an umpire if needed, and the resulting award resolves the value dispute." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I claim diminished value in Texas?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Generally yes for third-party claims: if another driver was at fault, you can pursue the loss in market value your repaired vehicle suffered because of its accident history against the at-fault driver's insurer. The Texas Department of Insurance confirmed in Bulletin B-0027-00 that diminished value is recoverable in third-party liability claims. A documented diminished value appraisal is the core evidence for that claim. Texas claims are generally subject to a two-year limitations period from the date of loss, so don't wait." }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does the insurer have to pay my claim in Texas?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The Texas Prompt Payment of Claims Act (Insurance Code Chapter 542) sets deadlines for insurers to acknowledge a claim, decide it after receiving the items they requested, and pay after accepting it. If an insurer misses those deadlines it can owe interest and attorney's fees. If you believe your claim is being mishandled, you can also file a complaint with the Texas Department of Insurance." }
-      }
-    ]
   }
   </script>
 </head>
@@ -75,7 +42,7 @@
 
   <header class="site-header">
     <nav class="container nav" aria-label="Primary">
-      <a href="index.html" class="logo">Spur <span>Auto</span></a>
+      <a href="/" class="logo">Spur <span>Auto</span></a>
       <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">☰</button>
       <ul class="nav-links" id="primary-navigation">
         <li><a href="how-it-works.html">How It Works</a></li>
@@ -209,12 +176,6 @@
         <a href="total-loss-appraisal-san-antonio.html">San Antonio<span>Total loss appraisal &amp; settlement disputes</span></a>
         <a href="total-loss-appraisal-austin.html">Austin<span>Total loss appraisal &amp; settlement disputes</span></a>
         <a href="total-loss-appraisal-el-paso.html">El Paso<span>Total loss appraisal &amp; settlement disputes</span></a>
-        <a href="total-loss-appraisal-arlington.html">Arlington<span>Total loss appraisal &amp; settlement disputes</span></a>
-        <a href="total-loss-appraisal-plano.html">Plano<span>Total loss appraisal &amp; settlement disputes</span></a>
-        <a href="total-loss-appraisal-irving.html">Irving<span>Total loss appraisal &amp; settlement disputes</span></a>
-        <a href="total-loss-appraisal-cedar-park.html">Cedar Park<span>Total loss appraisal &amp; settlement disputes</span></a>
-        <a href="total-loss-appraisal-san-marcos.html">San Marcos<span>Total loss appraisal &amp; settlement disputes</span></a>
-        <a href="total-loss-appraisal-new-braunfels.html">New Braunfels<span>Total loss appraisal &amp; settlement disputes</span></a>
         <a href="total-loss-appraisal-corpus-christi.html">Corpus Christi<span>Total loss appraisal &amp; settlement disputes</span></a>
         <a href="total-loss-appraisal-lubbock.html">Lubbock<span>Total loss appraisal &amp; settlement disputes</span></a>
         <a href="total-loss-appraisal-laredo.html">Laredo<span>Total loss appraisal &amp; settlement disputes</span></a>
@@ -345,7 +306,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">Spur <span>Auto</span></a>
+          <a href="/" class="logo">Spur <span>Auto</span></a>
           <p>
             Independent vehicle valuation and settlement guidance for people who deserve
             a fair settlement - not a fast one.
@@ -378,6 +339,9 @@
             <li><a href="total-loss-appraisal-san-antonio.html">San Antonio</a></li>
             <li><a href="total-loss-appraisal-austin.html">Austin</a></li>
             <li><a href="total-loss-appraisal-el-paso.html">El Paso</a></li>
+            <li><a href="total-loss-appraisal-corpus-christi.html">Corpus Christi</a></li>
+            <li><a href="total-loss-appraisal-lubbock.html">Lubbock</a></li>
+            <li><a href="total-loss-appraisal-laredo.html">Laredo</a></li>
             <li><a href="texas.html">All Texas Service Areas</a></li>
           </ul>
         </div>
@@ -423,6 +387,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260718a"></script>
+  <script src="js/main.js?v=20260718a" defer></script>
 </body>
 </html>

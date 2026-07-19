@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="js/google-ads.js?v=20260718"></script>
+  <script src="js/google-ads.js?v=20260718" defer></script>
   <title>Texas Hail Total Loss Guide | Spur Auto</title>
   <meta name="description" content="Was your car totaled by Texas hail? Learn how to check the pre-storm actual cash value, spot valuation errors, and document a stronger claim.">
   <link rel="canonical" href="https://www.spurauto.com/hail-totaled-car-texas.html">
@@ -18,10 +18,9 @@
   <meta name="twitter:title" content="Texas Hail Total Loss Guide | Spur Auto">
   <meta name="twitter:description" content="DFW sits in hail alley, and after a major storm insurers bulk-process total loss claims with valuation software. You're owed your car's full pre-storm actual cash value - here's how to check the offer and push back.">
   <meta name="twitter:image" content="https://www.spurauto.com/assets/images/vehicle-claim-hero.webp">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260718a">
+  <link rel="preload" href="assets/fonts/dm-serif-display-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-400-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css?v=20260718b">
   <link rel="icon" href="assets/brand/spur-auto-favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/spur-auto-favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/spur-auto-favicon-16.png">
@@ -30,15 +29,18 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
+  "@id": "https://www.spurauto.com/hail-totaled-car-texas.html#article",
   "headline": "Hail Totaled Your Car in Texas? What You're Owed",
   "description": "DFW sits in hail alley, and after a major storm insurers bulk-process total loss claims with valuation software. You're owed your car's full pre-storm actual cash value - here's how to check the offer and push back.",
   "author": {
+    "@id": "https://www.spurauto.com/about.html#mark-west",
     "@type": "Person",
     "name": "Mark West",
     "jobTitle": "Founder & Car Enthusiast",
     "url": "https://www.spurauto.com/about.html"
   },
   "publisher": {
+    "@id": "https://www.spurauto.com/#organization",
     "@type": "Organization",
     "name": "Spur Auto",
     "legalName": "Spur Auto",
@@ -75,53 +77,13 @@
   ]
 }
   </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is a hail total loss handled differently from a collision total?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The coverage is different - hail falls under comprehensive - but the valuation fight is identical: the insurer owes the actual cash value of your vehicle immediately before the loss. Deductibles differ, fault is irrelevant, and everything about auditing the ACV and invoking the appraisal clause works the same way."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I negotiate a hail total loss offer?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Bulk-processed catastrophe settlements are especially prone to generic condition assumptions and weak comparables, which makes them especially correctable. Request the valuation report, present documented evidence of your car's pre-storm value, and counter in writing."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "The adjuster wants an answer fast - do I have to decide now?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Pressure to settle quickly after a storm is common, but you're entitled to see the full valuation report and verify it first. A few days spent checking the number is usually worth far more than a fast deposit, and prompt-payment deadlines bind the insurer, not you."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "My car was hit by hail but the insurer says it's repairable - can the total loss call be wrong?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It can, in both directions, because Texas totals a car when repair costs reach 100% of its actual cash value. An undervalued ACV can wrongly tip a repairable car into a total - or shortchange a genuine total. If the numbers feel off, have both the repair estimate and the valuation checked independently."
-      }
-    }
-  ]
-}
-  </script>
 </head>
 <body class="site-redesign">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
     <nav class="container nav" aria-label="Primary">
-      <a href="index.html" class="logo">Spur <span>Auto</span></a>
+      <a href="/" class="logo">Spur <span>Auto</span></a>
       <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">&#9776;</button>
       <ul class="nav-links" id="primary-navigation">
         <li><a href="how-it-works.html">How It Works</a></li>
@@ -235,7 +197,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">Spur <span>Auto</span></a>
+          <a href="/" class="logo">Spur <span>Auto</span></a>
           <p>
             Independent vehicle valuation and settlement guidance for people who deserve
             a fair settlement - not a fast one.
@@ -268,6 +230,9 @@
             <li><a href="total-loss-appraisal-san-antonio.html">San Antonio</a></li>
             <li><a href="total-loss-appraisal-austin.html">Austin</a></li>
             <li><a href="total-loss-appraisal-el-paso.html">El Paso</a></li>
+            <li><a href="total-loss-appraisal-corpus-christi.html">Corpus Christi</a></li>
+            <li><a href="total-loss-appraisal-lubbock.html">Lubbock</a></li>
+            <li><a href="total-loss-appraisal-laredo.html">Laredo</a></li>
             <li><a href="texas.html">All Texas Service Areas</a></li>
           </ul>
         </div>
@@ -313,6 +278,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260718a"></script>
+  <script src="js/main.js?v=20260718a" defer></script>
 </body>
 </html>

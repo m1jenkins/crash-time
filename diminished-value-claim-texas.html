@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="js/google-ads.js?v=20260718"></script>
+  <script src="js/google-ads.js?v=20260718" defer></script>
   <title>Texas Diminished Value Claims: Rules &amp; Deadlines | Spur Auto</title>
   <meta name="description" content="Learn how Texas diminished value claims work, the two-year deadline, how lost resale value is calculated, and what evidence supports your claim.">
   <link rel="canonical" href="https://www.spurauto.com/diminished-value-claim-texas.html">
@@ -18,10 +18,9 @@
   <meta name="twitter:title" content="Texas Diminished Value Claims: Rules &amp; Deadlines | Spur Auto">
   <meta name="twitter:description" content="If another driver damaged your car, Texas lets you claim its lost resale value from their insurer - TDI Bulletin B-0027-00 confirms it. The 2-year deadline, how diminished value is calculated, and how to document a claim.">
   <meta name="twitter:image" content="https://www.spurauto.com/assets/images/vehicle-claim-hero.webp">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260718a">
+  <link rel="preload" href="assets/fonts/dm-serif-display-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-400-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css?v=20260718b">
   <link rel="icon" href="assets/brand/spur-auto-favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/spur-auto-favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/spur-auto-favicon-16.png">
@@ -30,15 +29,18 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
+  "@id": "https://www.spurauto.com/diminished-value-claim-texas.html#article",
   "headline": "Diminished Value Claims in Texas: Deadlines, Rules & How to File",
   "description": "If another driver damaged your car, Texas lets you claim its lost resale value from their insurer - TDI Bulletin B-0027-00 confirms it. The 2-year deadline, how diminished value is calculated, and how to document a claim.",
   "author": {
+    "@id": "https://www.spurauto.com/about.html#mark-west",
     "@type": "Person",
     "name": "Mark West",
     "jobTitle": "Founder & Car Enthusiast",
     "url": "https://www.spurauto.com/about.html"
   },
   "publisher": {
+    "@id": "https://www.spurauto.com/#organization",
     "@type": "Organization",
     "name": "Spur Auto",
     "legalName": "Spur Auto",
@@ -75,53 +77,13 @@
   ]
 }
   </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is a diminished value claim worth pursuing in Texas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "As a rule of thumb: the newer the car, the lower the mileage, and the more significant the repaired damage, the more value the accident history may have erased. Compare the likely loss with the time and professional costs required to document the claim."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I claim diminished value if the accident was my fault?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Generally no. Texas courts have held that standard collision coverage generally doesn't owe diminished value on a properly repaired vehicle, so first-party DV claims usually fail. The exception addressed in TDI Bulletin B-0027-00 involves uninsured/underinsured motorist coverage, where DV can be recoverable."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need an appraisal to claim diminished value?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You need evidence, and an independent market-based appraisal is the strongest form of it. Without one, the insurer's formula worksheet becomes the only number in the file - and those formulas are built to produce small numbers. A documented appraisal replaces the formula with the actual market."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does a diminished value claim take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Preparing market evidence can take days, while the insurer's review can take weeks. Ignored or disputed claims can take longer. The two-year limitations period is the outer boundary, and earlier documentation is generally stronger."
-      }
-    }
-  ]
-}
-  </script>
 </head>
 <body class="site-redesign">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
     <nav class="container nav" aria-label="Primary">
-      <a href="index.html" class="logo">Spur <span>Auto</span></a>
+      <a href="/" class="logo">Spur <span>Auto</span></a>
       <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">&#9776;</button>
       <ul class="nav-links" id="primary-navigation">
         <li><a href="how-it-works.html">How It Works</a></li>
@@ -235,7 +197,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">Spur <span>Auto</span></a>
+          <a href="/" class="logo">Spur <span>Auto</span></a>
           <p>
             Independent vehicle valuation and settlement guidance for people who deserve
             a fair settlement - not a fast one.
@@ -268,6 +230,9 @@
             <li><a href="total-loss-appraisal-san-antonio.html">San Antonio</a></li>
             <li><a href="total-loss-appraisal-austin.html">Austin</a></li>
             <li><a href="total-loss-appraisal-el-paso.html">El Paso</a></li>
+            <li><a href="total-loss-appraisal-corpus-christi.html">Corpus Christi</a></li>
+            <li><a href="total-loss-appraisal-lubbock.html">Lubbock</a></li>
+            <li><a href="total-loss-appraisal-laredo.html">Laredo</a></li>
             <li><a href="texas.html">All Texas Service Areas</a></li>
           </ul>
         </div>
@@ -313,6 +278,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260718a"></script>
+  <script src="js/main.js?v=20260718a" defer></script>
 </body>
 </html>

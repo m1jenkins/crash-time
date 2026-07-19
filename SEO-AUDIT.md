@@ -74,8 +74,8 @@ cluster Spur Auto should own early.
 - **Keyword-led titles & meta descriptions** on every indexable page
   (e.g. homepage: "Total Loss & Diminished Value Appraisals in Texas | Spur Auto").
 - **Canonical URLs + Open Graph/Twitter tags** on every indexable page.
-- **`ProfessionalService` JSON-LD** on the homepage with `areaServed` for Texas
-  and the six target cities.
+- **Organization** JSON-LD on the homepage with `areaServed` for Texas and the
+  nine retained city markets.
 - **`robots.txt` + `sitemap.xml`.**
 - **Internal linking:** "Texas" added to main nav; "Texas Cities" column added to
   the footer of every page; homepage gained a "Serving all of Texas" section
@@ -92,11 +92,12 @@ cluster Spur Auto should own early.
 | `total-loss-appraisal-austin.html` | total loss appraisal austin (+ EV/hybrid valuation angle) |
 | `total-loss-appraisal-el-paso.html` | total loss appraisal el paso (+ isolated-market angle) |
 
-Each city page has **unique local content** (roads, weather risk, market
-dynamics, suburb names), a Texas-rights section, a five-question FAQ, and
-`Service` + `BreadcrumbList` + `FAQPage` JSON-LD. FAQ markup helps machines
-understand the page, but Google limits visible FAQ rich results to authoritative
-government and health sites.
+Each retained city page has **unique local comparison scope**, a dated regional
+market analysis, vehicle-specific valuation considerations, a clear remote
+service explanation, honest evidence disclosure, and `Service` +
+`BreadcrumbList` JSON-LD. Repeated legal explanations and city FAQs were
+removed from these pages; the canonical Texas guides carry the statewide
+process and rights content.
 The hub↔city↔home linking forms a proper topical cluster.
 
 ---
@@ -145,9 +146,9 @@ The customer remains responsible for every decision and sends every communicatio
 
 ### Schema
 - Replaced the address-dependent `LocalBusiness` markup with `Organization`
-  (homepage entity + `provider` on the hub and all six city pages); brand `name`
+  (homepage entity + `provider` on the hub and retained city pages); brand `name`
   and `legalName` are both "Spur Auto".
-- Homepage `areaServed` includes the six target cities; added `founder`
+- Homepage `areaServed` includes the nine retained city markets; added `founder`
   Person, `knowsAbout`, and an offer catalog for Essential, Guided, Specialty,
   and Specialty + Guided services.
 - About page: `AboutPage` + `Person` schema for the founder (jobTitle,
@@ -200,7 +201,7 @@ the research-phase and situational queries in §1C/§1D:
 
 Each guide follows the AI-search (GEO) playbook from the strategy doc:
 - **Front-loaded direct answer** in the lede (~60 words), question-based H2s.
-- **Article + BreadcrumbList + FAQPage JSON-LD**, named author (`Person` →
+- **Article + BreadcrumbList JSON-LD**, named author (`Person` →
   Mark West → about.html), `datePublished`/`dateModified`, visible byline
   with "Last reviewed" date.
 - **Fact-dense**: Transportation Code Ch. 501 (100% threshold), Ins. Code
@@ -224,9 +225,9 @@ Supporting changes:
   consider a dedicated 1200×630 og-image before launch).
 - New CSS: guide list styling under `.legal-page`.
 
-Remaining content roadmap (unbuilt): flooded-car guide (Houston angle),
-ACV-vs-market-value explainer, "what happens if I don't accept the offer",
-second-ring city pages — publish 1–2/week per the strategy doc's cadence.
+Remaining content roadmap (unbuilt): owner-retained/salvage-title explainer,
+gap-insurance shortfall, and "how long does a total loss claim take in Texas";
+publish only when the business has original evidence to support each page.
 
 ---
 
@@ -243,7 +244,7 @@ previously had no dedicated page:
 | `flooded-car-total-loss-texas.html` | flooded car total loss texas, flood totaled my car, is flood damage covered by car insurance (Houston/Harvey angle) |
 
 Each follows the established guide playbook: front-loaded ~60-word answer in
-the lede, question-based H2s, Article + BreadcrumbList + FAQPage JSON-LD,
+the lede, question-based H2s, Article + BreadcrumbList JSON-LD,
 named author byline with last-reviewed date, fact-dense (Ch. 501, Ch. 542,
 SB 458, 6.25% sales tax, $20k justice-court limit, 2-year limitations), and
 compliance-safe document-support framing throughout.
@@ -261,48 +262,47 @@ Supporting changes:
   bumped sitewide (footer change touched every page).
 - `dateModified` bumped on the four edited guides.
 
-~~Still deliberately deferred: second-ring city pages (Arlington, Corpus
-Christi, Plano, Lubbock, Laredo, Irving) — per §5, these wait until the
-first six city pages are indexing well, which can't be verified before
-launch.~~ Built in §9. Next guide candidates: owner-retained/salvage-title
-explainer, gap-insurance shortfall guide, "how long does a total loss claim
-take in Texas".
+Location architecture is now intentionally consolidated to the Texas hub and
+nine retained markets: Houston, Dallas, Fort Worth, San Antonio, Austin, El
+Paso, Corpus Christi, Lubbock, and Laredo. The next content candidates are
+owner-retained/salvage-title, gap-insurance shortfall, and "how long does a
+total loss claim take in Texas" guides.
 
 ---
 
-## 9. Second-ring city pages (July 17, 2026)
+## 9. Consolidated location architecture (July 18, 2026)
 
-Built the second-ring city set — the six from §5 plus three fast-growing
-metro-satellite cities added at the owner's request (Cedar Park, San Marcos,
-New Braunfels):
+The location inventory now retains the Texas hub and nine distinct market
+pages:
 
-| Page | Local angle |
+| Market | Canonical URL |
 |---|---|
-| `total-loss-appraisal-arlington.html` | No-transit car dependence, GM Arlington, I-30/I-20/SH-360 crash volume, hail alley |
-| `total-loss-appraisal-plano.html` | Legacy West late-model/highly-optioned fleet, options flattening, lease/gap FAQ, Collin County hail |
-| `total-loss-appraisal-irving.html` | SH-114/183/Loop 12/PGBT + DFW Airport corridor, high-mileage commuter mark-downs |
-| `total-loss-appraisal-cedar-park.html` | 183A growth corridor, Austin-metro replacement pricing, Williamson County hail |
-| `total-loss-appraisal-san-marcos.html` | I-35 crash corridor, Austin–San Antonio two-metro pricing, student/older-car deductions, river flood history |
-| `total-loss-appraisal-new-braunfels.html` | Fastest-growing-city corridor pricing, Guadalupe/Comal flood risk, I-35 claim waves |
-| `total-loss-appraisal-corpus-christi.html` | Coastal Bend port/energy truck demand, thin supply vs metro comps, storm-surge claim volume |
-| `total-loss-appraisal-lubbock.html` | Isolated South Plains market vs DFW comps, hail capital, ag/oilfield truck demand |
-| `total-loss-appraisal-laredo.html` | Largest inland port, work-truck premium, 150-mile isolated-market angle |
+| Houston | `total-loss-appraisal-houston.html` |
+| Dallas | `total-loss-appraisal-dallas.html` |
+| Fort Worth | `total-loss-appraisal-fort-worth.html` |
+| San Antonio | `total-loss-appraisal-san-antonio.html` |
+| Austin | `total-loss-appraisal-austin.html` |
+| El Paso | `total-loss-appraisal-el-paso.html` |
+| Corpus Christi | `total-loss-appraisal-corpus-christi.html` |
+| Lubbock | `total-loss-appraisal-lubbock.html` |
+| Laredo | `total-loss-appraisal-laredo.html` |
 
-Each mirrors the first-six template exactly (same boilerplate, rights section,
-compliance language, `Service` + `BreadcrumbList` + `FAQPage` JSON-LD) with
-unique hero, three unique local-market paragraphs, and a unique local FAQ.
+Retired routes permanently redirect one-to-one in `vercel.json`:
 
-Linking structure (hub-and-spoke, deliberate):
-- **Footer unchanged** — the Texas Cities column stays at the six metros +
-  hub link; 15 city links per footer would dilute it. Second-ring pages are
-  reached via the hub and contextual metro links below.
-- `texas.html` hub city grid now lists all 15 cities.
-- Contextual metro↔suburb links: Dallas → Plano, Irving; Fort Worth →
-  Arlington; San Antonio → New Braunfels; Austin → Cedar Park, San Marcos
-  (Austin's suburb sentence updated to name them). Each second-ring page
-  links back to its parent metro page(s) in copy; standalone markets
-  (Corpus Christi, Lubbock, Laredo) link the hub only.
-- Guide cross-links: hail guide from Arlington, Plano, Cedar Park, Lubbock;
-  flood guide from San Marcos, New Braunfels, Corpus Christi.
-- Homepage `Organization` `areaServed` expanded to all 15 cities.
-- `sitemap.xml`: 9 new URLs at priority 0.7 (below the 0.9 first-ring pages).
+- Arlington → Fort Worth
+- Plano and Irving → Dallas
+- Cedar Park and San Marcos → Austin
+- New Braunfels → San Antonio
+
+The retained pages were rebuilt with visible Home → Texas → City breadcrumbs,
+self-referential canonicals, Service + BreadcrumbList JSON-LD, dated July 18,
+2026 regional comparison-scope notes, local valuation considerations, explicit
+remote-service expectations, and honest disclosure that no client-authorized
+city-specific appraisal example is currently published. Repeated city FAQs and
+generic Texas-rights explanations were removed; city pages now link to the
+canonical Texas guides instead.
+
+The homepage, Texas hub, footers, `areaServed` data, redirect config, and
+`sitemap.xml` now use the same nine-city inventory. The sitemap contains 24
+canonical indexable URLs and excludes all six redirected routes plus noindex
+utility pages.
