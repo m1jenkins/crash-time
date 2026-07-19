@@ -2513,9 +2513,6 @@ body.home-redesign :focus-visible {
     border-bottom: 1px solid var(--home-line);
   }
 
-  .assurance-item:nth-child(3) {
-    border-bottom: 1px solid var(--home-line);
-  }
 
   .assurance-item:last-child {
     border-bottom: 0;
@@ -2763,7 +2760,7 @@ body.home-redesign :focus-visible {
 }
 
 .site-redesign .container {
-  width: min(1450px, calc(100% - 64px));
+  width: min(1240px, calc(100% - 64px));
 }
 
 .site-redesign .reveal-on-scroll {
@@ -2924,10 +2921,10 @@ body.site-redesign :focus-visible {
 
 /* Editorial page hero */
 .site-redesign .hero {
-  min-height: clamp(470px, 58vw, 680px);
+  min-height: clamp(380px, 45vw, 520px);
   display: flex;
   align-items: center;
-  padding: clamp(5rem, 9vw, 8.5rem) 0;
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0;
   color: var(--home-ink);
   background:
     linear-gradient(90deg, #fff 0%, #fff 64%, rgba(237, 241, 233, 0.82) 64%, rgba(237, 241, 233, 0.82) 100%);
@@ -2943,7 +2940,7 @@ body.site-redesign :focus-visible {
 }
 
 .site-redesign .hero .container {
-  width: min(1450px, calc(100% - 64px));
+  width: min(1240px, calc(100% - 64px));
   max-width: none;
 }
 
@@ -2958,11 +2955,11 @@ body.site-redesign :focus-visible {
 }
 
 .site-redesign .hero h1 {
-  max-width: min(1000px, calc(64% - 3rem));
-  margin-bottom: 1.5rem;
+  max-width: min(840px, calc(64% - 2rem));
+  margin-bottom: 1.25rem;
   color: var(--home-ink);
-  font-size: clamp(3.4rem, 6.3vw, 6.4rem);
-  line-height: 0.98;
+  font-size: clamp(2.5rem, 4.2vw, 3.8rem);
+  line-height: 1.08;
 }
 
 .site-redesign .hero h1 em {
@@ -2975,11 +2972,11 @@ body.site-redesign :focus-visible {
 }
 
 .site-redesign .hero .lede {
-  max-width: min(760px, calc(64% - 3rem));
-  margin-bottom: 2rem;
+  max-width: min(720px, calc(64% - 2rem));
+  margin-bottom: 1.75rem;
   color: var(--home-ink-soft);
-  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
-  line-height: 1.75;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.65;
 }
 
 .site-redesign .hero-note {
@@ -3000,7 +2997,7 @@ body.site-redesign :focus-visible {
 
 /* Content rhythm */
 .site-redesign .section {
-  padding: clamp(5rem, 9vw, 8rem) 0;
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0;
 }
 
 .site-redesign .section.alt {
@@ -3008,8 +3005,8 @@ body.site-redesign :focus-visible {
 }
 
 .site-redesign .section-head {
-  max-width: 860px;
-  margin: 0 0 clamp(3rem, 6vw, 5rem);
+  max-width: 800px;
+  margin: 0 0 clamp(2rem, 4vw, 3.5rem);
   text-align: left;
 }
 
@@ -3020,15 +3017,15 @@ body.site-redesign :focus-visible {
 
 .site-redesign .section-head h2,
 .site-redesign .grid-2 > div > h2 {
-  margin-bottom: 1rem;
-  font-size: clamp(2.75rem, 5.2vw, 5.1rem);
-  line-height: 1.02;
+  margin-bottom: 0.85rem;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.12;
 }
 
 .site-redesign .section-head p {
-  max-width: 760px;
-  font-size: 1.08rem;
-  line-height: 1.8;
+  max-width: 720px;
+  font-size: 1.02rem;
+  line-height: 1.7;
 }
 
 .site-redesign .grid-2,
@@ -3673,7 +3670,7 @@ body.site-redesign :focus-visible {
 
 /* Conversion and footer */
 .site-redesign .cta-band {
-  padding: clamp(5rem, 9vw, 8rem) 0;
+  padding: clamp(4rem, 7vw, 6rem) 0;
   background: var(--home-sage-dark);
 }
 
@@ -3685,11 +3682,11 @@ body.site-redesign :focus-visible {
 }
 
 .site-redesign .cta-band h2 {
-  max-width: 900px;
+  max-width: 840px;
   margin: 0 auto 1rem;
   color: #fff;
-  font-size: clamp(2.8rem, 5.5vw, 5.3rem);
-  line-height: 1.02;
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  line-height: 1.08;
 }
 
 .site-redesign .cta-band p {
@@ -3907,11 +3904,11 @@ body.site-redesign :focus-visible {
   }
 
   .site-redesign .hero h1 {
-    font-size: clamp(3.15rem, 14vw, 4.7rem);
+    font-size: clamp(2.1rem, 8vw, 3.1rem);
   }
 
   .site-redesign .section {
-    padding: 5.3rem 0;
+    padding: 3.5rem 0;
   }
 
   .site-redesign .pricing-reports {
@@ -3929,7 +3926,7 @@ body.site-redesign :focus-visible {
 
   .site-redesign .section-head h2,
   .site-redesign .grid-2 > div > h2 {
-    font-size: clamp(2.7rem, 12vw, 4rem);
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
   }
 
   .site-redesign .chapter {
