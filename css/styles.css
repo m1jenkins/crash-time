@@ -3601,25 +3601,72 @@ body.site-redesign :focus-visible {
 /* FAQs and city navigation */
 .site-redesign .city-links {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  border-top: 1px solid var(--home-line);
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
 }
 
 .site-redesign .city-links a {
-  padding: 1.4rem 1rem 1.4rem 0;
-  color: var(--home-ink);
-  border-bottom: 1px solid var(--home-line);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm, 12px);
+  color: var(--navy-deep);
   font-weight: 700;
+  font-size: 1.05rem;
+  font-family: var(--font-display);
+  line-height: 1.3;
+  text-decoration: none;
+  position: relative;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
+  box-shadow: 0 2px 6px rgba(16, 36, 62, 0.03);
+  padding-right: 2.75rem;
+}
+
+.site-redesign .city-links a span {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-family: var(--font-body);
+  color: var(--ink-soft);
+  margin-top: 0.4rem;
+  line-height: 1.45;
 }
 
 .site-redesign .city-links a::after {
-  content: " →";
-  color: var(--home-accent);
+  content: "→";
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--amber-dark);
+  transition: transform var(--transition-fast);
 }
 
 .site-redesign .city-links a:hover {
-  color: var(--home-accent);
+  transform: translateY(-3px);
+  border-color: var(--amber-dark);
+  box-shadow: 0 10px 24px rgba(16, 36, 62, 0.08);
+  background: #ffffff;
+  color: var(--navy-deep);
+}
+
+.site-redesign .city-links a:hover::after {
+  transform: translateX(4px);
+}
+
+.site-redesign .city-links.coming-soon-grid a {
+  background: var(--bg-alt);
+  border-style: dashed;
+}
+
+.site-redesign .city-links.coming-soon-grid a:hover {
+  background: #ffffff;
+  border-style: solid;
 }
 
 .site-redesign .faq-list {
