@@ -49,8 +49,10 @@ appraiser in 48 hours:
    state claim-handling references, and an escalation checklist (supervisor →
    appraisal clause → department of insurance complaint).
 
-Guided document support personalizes the submission package without negotiating or
-communicating with the insurer. Specialty research adds VIN/build-sheet validation,
+Guided document support personalizes the submission package and supports the
+customer throughout negotiations through insurer-response review, negotiation
+guidance, and follow-up drafting. Spur Auto does not contact or negotiate with the
+insurer on the customer's behalf. Specialty research adds VIN/build-sheet validation,
 upgrade documentation, niche comparables, and a specialty-value appendix. Customers
 may combine both for $449 or add 24-hour priority delivery for $49.
 
@@ -165,9 +167,10 @@ B2B pipeline (volume without CAC), and productized templates (margin).
   (comparable listings, auction data, valuation guides), e-sign, payment processor,
   case management folders.
 - **Compliance:** state appraiser licensing where required; clear
-  not-a-law-firm/not-a-public-adjuster boundaries; Guided is document support only
-  and excludes negotiation, insurer-response analysis, ongoing Q&A, representation,
-  and scripts; attorney-reviewed terms,
+  not-a-law-firm/not-a-public-adjuster boundaries; Guided provides negotiation
+  support, insurer-response analysis, ongoing correspondence drafting, and
+  guidance while excluding insurer contact, representation, claim settlement,
+  and coverage decisions; attorney-reviewed terms,
   privacy policy, and guarantee language; E&O insurance.
 
 ## 10. Founder & Team

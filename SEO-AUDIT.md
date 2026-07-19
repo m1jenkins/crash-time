@@ -135,20 +135,13 @@ Changes applied after reviewing the regional SEO & AI-search strategy document
 (Texas total-loss market):
 
 ### Compliance language scrub (TX Ins. Code Ch. 4102 / *Stonewater*)
-The strategy doc's #1 finding: marketing that says we "negotiate/settle/handle
-your claim" is the exact conduct that requires a Texas public insurance
-adjuster license and sank Stonewater Roofing at the Texas Supreme Court.
-- Negotiation services were removed entirely. The Guided package is limited to
-  claim-specific document preparation, an evidence index, a report walkthrough,
-  and one factual addendum; it excludes negotiation, response analysis, ongoing
-  Q&A, representation, and scripts.
-- The same boundary is stated on pricing, how-it-works, all six city pages, the
-  terms, disclaimer, and educational guides. Service-specific sample content
-  was removed.
-- Sitewide footer disclaimer now states we are **not a public insurance
-  adjuster** and do not negotiate or settle claims on anyone's behalf.
-- Package boundaries and contract language were confirmed with counsel before
-  the July 2026 legal-page publication pass.
+This section reflects the prior July 14, 2026 service model and is superseded.
+Spur Auto does offer negotiation support through Guided Document Support:
+reviewing insurer responses, explaining valuation issues, providing negotiation
+guidance, and helping draft follow-up correspondence throughout negotiations.
+Spur Auto does not contact or negotiate with the insurer on the customer's
+behalf, settle claims, or act as a public insurance adjuster or representative.
+The customer remains responsible for every decision and sends every communication.
 
 ### Schema
 - Replaced the address-dependent `LocalBusiness` markup with `Organization`
