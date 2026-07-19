@@ -106,70 +106,15 @@ document.addEventListener("DOMContentLoaded", function () {
     window.requestAnimationFrame(function () {
       var header = document.querySelector(".site-header");
       window.scrollBy(0, -(header ? header.offsetHeight + 24 : 0));
-      var nameInput = document.querySelector("#name");
-      if (nameInput) nameInput.focus({ preventScroll: true });
+      var emailInput = document.querySelector("#email");
+      if (emailInput) emailInput.focus({ preventScroll: true });
     });
   }
 
-  // --- Two-step Free Review Intake ---
+  // --- Free Review Form ---
   if (form) {
-    var steps = form.querySelectorAll("[data-form-step]");
-    var indicators = form.querySelectorAll("[data-step-indicator]");
-    var currentStep = 1;
     var valuationReport = form.querySelector("#valuation-report");
     var valuationReportError = form.querySelector("#valuation-report-error");
-
-    var setStep = function (stepNumber) {
-      currentStep = stepNumber;
-
-      steps.forEach(function (step) {
-        var stepIndex = Number(step.getAttribute("data-form-step"));
-        var isCurrent = stepIndex === stepNumber;
-        step.hidden = !isCurrent;
-        step.disabled = stepIndex > stepNumber;
-      });
-
-      indicators.forEach(function (indicator) {
-        var indicatorStep = Number(indicator.getAttribute("data-step-indicator"));
-        var isCurrent = indicatorStep === stepNumber;
-        indicator.classList.toggle("is-current", isCurrent);
-        indicator.classList.toggle("is-complete", indicatorStep < stepNumber);
-
-        if (isCurrent) {
-          indicator.setAttribute("aria-current", "step");
-        } else {
-          indicator.removeAttribute("aria-current");
-        }
-      });
-
-      var firstInput = form.querySelector('[data-form-step="' + stepNumber + '"] input, [data-form-step="' + stepNumber + '"] textarea');
-      if (firstInput) firstInput.focus();
-    };
-
-    var validateStep = function (stepNumber) {
-      var fields = form.querySelectorAll('[data-form-step="' + stepNumber + '"] input, [data-form-step="' + stepNumber + '"] textarea');
-      for (var i = 0; i < fields.length; i += 1) {
-        if (!fields[i].checkValidity()) {
-          fields[i].reportValidity();
-          return false;
-        }
-      }
-      return true;
-    };
-
-    var nextStepButton = form.querySelector("[data-next-step]");
-    if (nextStepButton) {
-      nextStepButton.addEventListener("click", function () {
-        if (validateStep(1)) setStep(2);
-      });
-    }
-
-    var previousStepButton = form.querySelector("[data-previous-step]");
-    if (previousStepButton) {
-      previousStepButton.addEventListener("click", function () {
-        setStep(1);
-      });
-    }
 
     if (valuationReport) {
       valuationReport.addEventListener("change", function () {
@@ -187,13 +132,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
-
-    form.addEventListener("submit", function (event) {
-      if (currentStep === 1) {
-        event.preventDefault();
-        if (validateStep(1)) setStep(2);
-      }
-    });
   }
 
   // --- PROGRESSIVE ENHANCEMENT: Scroll-Driven Animation Fallbacks ---

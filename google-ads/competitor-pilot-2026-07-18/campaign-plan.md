@@ -162,7 +162,7 @@ Before deploy: render at 375, 768, and 1440 pixels; test all CTAs; confirm TLS a
 
 | Event | Primary/secondary | Trigger | Value | Deduplication | CRM/offline mapping | Current status |
 |---|---|---|---:|---|---|---|
-| `qualified_free_review` | Primary | CRM marks Texas total-loss submission serviceable after human review | $25 provisional optimization value | CRM lead ID + Google click ID | Import enhanced conversions for leads/offline conversion with original GCLID/GBRAID/WBRAID | Not implemented |
+| `qualified_free_review` | Primary | CRM marks Texas total-loss submission serviceable after human review | $25 provisional optimization value | CRM lead ID/order ID + click identifier | Import enhanced conversions for leads through Google Ads Data Manager with GCLID and available GBRAID/WBRAID, consent, and hashed first-party identifiers | Not implemented |
 | `free_review_submitted` | Secondary | Confirmed `thank-you.html` reached after Web3Forms success | 0 | Unique lead ID; count one | Lead created in CRM | Google Ads event not implemented |
 | `paid_report` | Secondary reporting / later primary value | Stripe payment succeeds and CRM order is matched | Actual net revenue | Stripe event ID/order ID | Import value and package tier | Not implemented |
 | `landing_cta_click` | Secondary diagnostic | Click from comparison page to free-review page | 0 | Session/event ID | Preserve competitor/ad group attribution | Not implemented |
@@ -170,7 +170,9 @@ Before deploy: render at 375, 768, and 1440 pixels; test all CTAs; confirm TLS a
 
 Repository finding: `js/google-ads.js` loads `AW-18071301983`, but no `gtag('event','conversion', ...)` for Google Ads is present. `js/ads-conversions.js` handles a separate OpenAI Ads pixel and does not complete Google Ads conversion measurement.
 
-Required dimensions: campaign, competitor/ad group, intent, keyword, search term, match type, network, device, location, RSA, landing-page version, GCLID/GBRAID/WBRAID, lead qualification, paid package, net revenue, and refund.
+Required dimensions: campaign, competitor/ad group, intent, keyword, search term, match type, network, device, location, RSA, landing-page version, GCLID/GBRAID/WBRAID, consent state, lead qualification, paid package, net revenue, and refund.
+
+Current implementation note: Google states that beginning 2026-06-15, offline-conversion and enhanced-conversions-for-leads uploads migrate to the Data Manager API and are blocked in the Google Ads API for workflows without legacy access. Use [Google Ads Data Manager / enhanced conversions for leads](https://support.google.com/google-ads/answer/11021502), not a new legacy file/API implementation. Google also recommends importing GCLID when available, unique order IDs for deduplication, conversion value, consent, and GBRAID/WBRAID when available; checked 2026-07-18.
 
 Attribution recommendation: data-driven attribution when supported; preserve first-party CRM timestamps and report both click-to-lead and lead-to-paid lag. Do not optimize to CTA clicks or pageviews.
 
@@ -201,8 +203,8 @@ Cluster rules:
 - [ ] Landing page deployed, mobile-rendered, accessible, fast, and free of 404s.
 - [ ] Every CTA reaches the form and every successful form reaches `thank-you.html`.
 - [ ] Google Ads `free_review_submitted` event installed and deduplicated.
-- [ ] GCLID/GBRAID/WBRAID captured through Web3Forms and stored in CRM.
-- [ ] `qualified_free_review` offline import tested with a non-production QA lead.
+- [ ] GCLID/GBRAID/WBRAID and consent state captured through Web3Forms and stored in CRM.
+- [ ] `qualified_free_review` enhanced-conversions-for-leads import tested through Google Ads Data Manager with a non-production QA lead.
 - [ ] Stripe/CRM paid report and refund values can be reconciled.
 - [ ] Campaign, budget, and conversion goal isolated from brand/generic traffic.
 - [ ] Google Search only; Search Partners and Display off.
@@ -220,6 +222,6 @@ Cluster rules:
 
 ## 12. Sources
 
-Policy and law: [Google trademark policy](https://support.google.com/adspolicy/answer/6118), [Google keyword matching](https://support.google.com/google-ads/answer/14996023), [Google negative keywords](https://support.google.com/google-ads/answer/2453972), [Google responsive search ads](https://support.google.com/google-ads/answer/7684791), [Google Search Partners](https://support.google.com/google-ads/answer/2616017), [15 U.S.C. §1125](https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title15-section1125), [Texas Insurance Code Ch. 1813](https://statutes.capitol.texas.gov/Docs/IN/pdf/IN.1813.pdf), and [Texas proposed appraisal rules](https://www.sos.state.tx.us/texreg/archive/May82026/Proposed%20Rules/28.INSURANCE.html).
+Policy, measurement, and law: [Google trademark policy](https://support.google.com/adspolicy/answer/6118), [Google keyword matching](https://support.google.com/google-ads/answer/14996023), [Google negative keywords](https://support.google.com/google-ads/answer/2453972), [Google responsive search ads](https://support.google.com/google-ads/answer/7684791), [Google Search Partners](https://support.google.com/google-ads/answer/2616017), [Google enhanced conversions for leads](https://support.google.com/google-ads/answer/11021502), [15 U.S.C. §1125](https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title15-section1125), [Texas Insurance Code Ch. 1813](https://statutes.capitol.texas.gov/Docs/IN/pdf/IN.1813.pdf), and [Texas proposed appraisal rules](https://www.sos.state.tx.us/texreg/archive/May82026/Proposed%20Rules/28.INSURANCE.html).
 
 Market evidence: [AutoACV pricing](https://autoacv.com/pricing), [TotalLoss.com](https://totalloss.com/), [TotalLossAppraiser.net](https://www.totallossappraiser.net/), [Dallas Auto Appraisers](https://www.dallasautoappraisers.com/total-loss.html), [Select Auto Appraisals](https://www.selectautoappraisals.com/home), [Collision Claims Advisors](https://www.collisionclaimsadvisors.com/), and the [Texas Department of Insurance appraisal experience report](https://www.tdi.texas.gov/reports/pc/documents/2024-appraisal-experience-data-call-report.pdf). All checked 2026-07-18.

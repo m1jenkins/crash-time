@@ -51,41 +51,17 @@
 
       <!-- ================= LEAD CAPTURE FORM ================= -->
       <form id="free-review-form" class="form-card review-intake-form reveal-on-scroll" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" aria-labelledby="review-form-title">
-        <input type="hidden" name="access_key" value="439014c3-679c-4545-8d4d-a5934e20f632">
+        <input type="hidden" name="access_key" value="88f1d2af-59c2-46b1-92e6-0c554846ef34">
         <input type="hidden" name="redirect" value="https://www.spurauto.com/thank-you.html">
         <p class="eyebrow">Free claim review</p>
         <h1 id="review-form-title">Check your total-loss offer.</h1>
-        <p class="form-intro">Share the offer and your vehicle details in two quick steps. We’ll use them to tell you whether a closer review may be worthwhile.</p>
+        <p class="form-intro">Share your offer and vehicle details in one quick step. We’ll use them to tell you whether a closer review may be worthwhile.</p>
 
-        <ol class="review-form-steps" aria-label="Review request progress">
-          <li class="is-current" data-step-indicator="1" aria-current="step"><span>1</span> Contact &amp; offer</li>
-          <li data-step-indicator="2"><span>2</span> Vehicle &amp; report</li>
-        </ol>
-
-        <fieldset class="review-form-step" data-form-step="1">
-          <legend>Contact and offer details</legend>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Name <span aria-hidden="true">*</span></label>
-              <input type="text" id="name" name="name" autocomplete="name" required>
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email <span aria-hidden="true">*</span></label>
-              <input type="email" id="email" name="email" autocomplete="email" required>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="phone">Phone <span aria-hidden="true">*</span></label>
-              <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required>
-            </div>
-
-            <div class="form-group">
-              <label for="insurer-offer">Insurer’s offer <span aria-hidden="true">*</span></label>
-              <input type="number" id="insurer-offer" name="insurer_offer" min="0" step="0.01" inputmode="decimal" placeholder="e.g., 14,250" required>
-            </div>
+        <fieldset class="review-form-step">
+          <legend>Offer and vehicle details</legend>
+          <div class="form-group">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
           </div>
 
           <div class="form-group">
@@ -93,45 +69,20 @@
             <input type="text" id="vehicle" name="vehicle" autocomplete="off" placeholder="e.g., 2021 Toyota RAV4" required>
           </div>
 
-          <div class="form-actions form-actions-next">
-            <button type="button" class="btn btn-primary" data-next-step>Continue to vehicle details <span aria-hidden="true">→</span></button>
-          </div>
-        </fieldset>
-
-        <fieldset class="review-form-step" data-form-step="2" hidden disabled>
-          <legend>Vehicle and valuation report</legend>
           <div class="form-group">
-            <label for="valuation-report">Upload the insurer’s valuation report <span>(if available)</span></label>
+            <label for="insurer-offer">Insurer’s offer <span aria-hidden="true">*</span></label>
+            <input type="number" id="insurer-offer" name="insurer_offer" min="0" step="0.01" inputmode="decimal" placeholder="e.g., 14,250" required>
+          </div>
+
+          <div class="form-group">
+            <label for="valuation-report">Upload your insurer’s offer or valuation report <span>(optional)</span></label>
             <input type="file" id="valuation-report" name="attachment" accept="application/pdf,image/jpeg,image/png" aria-describedby="valuation-report-help valuation-report-error">
-            <p class="field-help" id="valuation-report-help">PDF, JPG, or PNG up to 5 MB. Your file is sent through this secure form and is used only for your review.</p>
+            <p class="field-help" id="valuation-report-help">PDF, JPG, or PNG up to 5 MB. Don’t have it handy? You can still submit.</p>
             <p class="field-error" id="valuation-report-error" role="alert" hidden></p>
           </div>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label for="mileage">Mileage <span aria-hidden="true">*</span></label>
-              <input type="number" id="mileage" name="mileage" min="0" step="1" inputmode="numeric" required>
-            </div>
-
-            <div class="form-group">
-              <label for="trim">Trim <span aria-hidden="true">*</span></label>
-              <input type="text" id="trim" name="trim" autocomplete="off" placeholder="e.g., XLE Premium" required>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="zip">ZIP code <span aria-hidden="true">*</span></label>
-            <input type="text" id="zip" name="zip" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}(-[0-9]{4})?" placeholder="e.g., 75201" required>
-          </div>
-
-          <div class="form-group">
-            <label for="details">Anything else we should know? <span>(optional)</span></label>
-            <textarea id="details" name="message" rows="4" placeholder="Share claim timing, condition, upgrades, or anything that may affect the vehicle’s value."></textarea>
-          </div>
-
           <div class="form-actions">
-            <button type="button" class="btn btn-outline" data-previous-step>Back</button>
-            <button type="submit" class="btn btn-primary">Send my free review <span aria-hidden="true">→</span></button>
+            <button type="submit" class="btn btn-primary">Check my offer <span aria-hidden="true">→</span></button>
           </div>
         </fieldset>
 

@@ -14,7 +14,7 @@ Launch gates:
 1. Counsel reviews the Texas trademark/comparative-advertising boundary and the campaign-only landing page.
 2. The new landing page is deployed and its mobile form path is tested end to end.
 3. Google Ads conversion measurement is completed; the repository currently loads `AW-18071301983` but does not fire a Google Ads lead conversion event.
-4. A CRM field and offline import identify `qualified_free_review` with GCLID/GBRAID/WBRAID retention.
+4. A CRM field and Google Ads Data Manager enhanced-conversions-for-leads import identify `qualified_free_review` with GCLID/GBRAID/WBRAID retention and consent handling.
 5. The owner approves the $750 maximum test loss and the initial $2.50 max CPC.
 
 ## Files
@@ -39,8 +39,7 @@ Launch gates:
 
 1. Deploy and QA `compare-total-loss-appraisal-services.html`.
 2. Create or verify the campaign conversion actions described in `campaign-plan.md`.
-3. Import `campaign-settings.csv`, then `google-ads-editor-keywords.csv`, `google-ads-editor-rsas.csv`, and `ad-assets.csv` into Google Ads Editor.
+3. Import `campaign-settings.csv`, then `google-ads-editor-keywords.csv`, `google-ads-editor-rsas.csv`, and `ad-assets.csv` into Google Ads Editor. Map columns during preview because Editor labels can vary by version.
 4. Attach `negative-keywords.csv` at campaign scope.
 5. Review every rendered RSA combination and every final URL in Editor.
 6. Keep all entities paused until the legal, measurement, destination, and budget gates are signed off.
-

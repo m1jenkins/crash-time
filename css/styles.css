@@ -3819,6 +3819,14 @@ body.site-redesign :focus-visible {
   border-left: 4px solid var(--home-sage-dark);
 }
 
+/* Competitor-search landing page: keep the hero qualification inside the copy column. */
+.comparison-page .hero .fine-print {
+  max-width: min(760px, calc(64% - 3rem));
+  margin: 0;
+  color: var(--home-ink-soft);
+  text-align: left;
+}
+
 @media (max-width: 1100px) {
   .site-redesign .container,
   .site-redesign .hero .container {
@@ -3863,6 +3871,10 @@ body.site-redesign :focus-visible {
 
   .site-redesign .hero h1,
   .site-redesign .hero .lede {
+    max-width: 820px;
+  }
+
+  .comparison-page .hero .fine-print {
     max-width: 820px;
   }
 
@@ -5349,5 +5361,21 @@ body.site-redesign :focus-visible {
     min-height: 42px;
     padding: 0.55rem 0.85rem;
     white-space: nowrap;
+  }
+}
+
+@media (max-width: 700px) {
+  .comparison-page .hero .lede {
+    order: 3;
+    margin-bottom: 1.25rem;
+  }
+
+  .comparison-page .hero .hero-ctas {
+    order: 4;
+  }
+
+  .comparison-page .hero .fine-print {
+    order: 5;
+    margin-top: 0;
   }
 }
