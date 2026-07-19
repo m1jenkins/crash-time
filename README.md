@@ -18,7 +18,21 @@ low insurance settlements.
 | `privacy.html` / `terms.html` / `disclaimer.html` | Privacy, service terms, and appraisal disclaimer |
 | `css/styles.css` | Shared stylesheet (no frameworks, fully responsive) |
 | `js/main.js` | Mobile nav + form enhancements |
+| `data/states.json` | Master JSON database of states and cities for SSG |
+| `templates/` | HTML templates for state hub and city pages |
+| `scripts/build.js` | Static site generator script |
+| `AGENTS.md` | Guide for LLMs and developers on managing SSG pages |
 | `BUSINESS-PLAN.md` | Full business plan: market, pricing, unit economics, GTM, risks |
+
+## Build system & Static Site Generator (SSG)
+
+To add or update state and city pages, edit `data/states.json` and run:
+
+```bash
+npm run build
+```
+
+This compiles all state hubs (`states/*.html`), city pages (`states/*/*.html`), and updates `sitemap.xml`. See [`AGENTS.md`](file:///Users/macbookprom42025/.gemini/antigravity/scratch/total-loss-advocate/AGENTS.md) for full instructions for AI agents and human developers.
 
 ## Running locally
 
@@ -28,6 +42,7 @@ It's a static site — open `index.html` in a browser, or:
 python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
+
 
 ## Before launch — replace the placeholders
 
