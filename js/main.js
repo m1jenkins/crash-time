@@ -112,28 +112,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // --- Free Review Form ---
-  if (form) {
-    var valuationReport = form.querySelector("#valuation-report");
-    var valuationReportError = form.querySelector("#valuation-report-error");
-
-    if (valuationReport) {
-      valuationReport.addEventListener("change", function () {
-        var file = valuationReport.files[0];
-        var errorMessage = file && file.size > 5 * 1024 * 1024
-          ? "The selected file is larger than 5 MB. Choose a PDF, JPG, or PNG that is 5 MB or smaller."
-          : "";
-
-        valuationReport.setCustomValidity(errorMessage);
-        valuationReport.toggleAttribute("aria-invalid", Boolean(errorMessage));
-
-        if (valuationReportError) {
-          valuationReportError.textContent = errorMessage;
-          valuationReportError.hidden = !errorMessage;
-        }
-      });
-    }
-  }
-
   // --- PROGRESSIVE ENHANCEMENT: Scroll-Driven Animation Fallbacks ---
 
   // 1. Fallback for shrinking header on scroll (e.g., Firefox, older Safari)

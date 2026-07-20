@@ -50,7 +50,7 @@
     <div class="container">
 
       <!-- ================= LEAD CAPTURE FORM ================= -->
-      <form id="free-review-form" class="form-card review-intake-form reveal-on-scroll" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" aria-labelledby="review-form-title">
+      <form id="free-review-form" class="form-card review-intake-form reveal-on-scroll" action="https://api.web3forms.com/submit" method="POST" aria-labelledby="review-form-title">
         <input type="hidden" name="access_key" value="88f1d2af-59c2-46b1-92e6-0c554846ef34">
         <input type="hidden" name="redirect" value="https://www.spurauto.com/thank-you.html">
         <p class="eyebrow">Free claim review</p>
@@ -75,10 +75,9 @@
           </div>
 
           <div class="form-group">
-            <label for="valuation-report">Upload your insurer’s offer or valuation report <span>(optional)</span></label>
-            <input type="file" id="valuation-report" name="attachment" accept="application/pdf,image/jpeg,image/png" aria-describedby="valuation-report-help valuation-report-error">
-            <p class="field-help" id="valuation-report-help">PDF, JPG, or PNG up to 5 MB. Don’t have it handy? You can still submit.</p>
-            <p class="field-error" id="valuation-report-error" role="alert" hidden></p>
+            <label for="valuation-notes">Offer or valuation details <span>(optional)</span></label>
+            <textarea id="valuation-notes" name="valuation_notes" rows="4" placeholder="Paste any key numbers or notes from your insurer’s offer or valuation report."></textarea>
+            <p class="field-help" id="valuation-notes-help">Don’t have the report handy? You can still submit.</p>
           </div>
 
           <div class="form-actions">
@@ -87,7 +86,7 @@
         </fieldset>
 
         <p class="form-privacy">
-          🔒 We’ll only use your details and document to deliver your free review. No spam or selling your data.
+          🔒 We’ll only use your details to deliver your free review. No spam or selling your data.
           See our <a href="privacy.html">Privacy Policy</a>.
         </p>
       </form>
