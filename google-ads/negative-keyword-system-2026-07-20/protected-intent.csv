@@ -1,0 +1,22 @@
+term_or_intent,decision,reason
+free,retain,Spur Auto offers a free claim review
+DIY,retain,Research intent may assist a qualified review
+reddit,retain,Research journey is not proven irrelevant
+sample,retain,Sample-report interest may precede conversion
+template,retain,Document research may precede conversion
+reviews,retain,High-value provider evaluation intent
+complaints,retain,High-value provider evaluation intent
+pricing,retain,Commercial evaluation intent
+cost,retain,Commercial evaluation intent
+comparison,retain,Commercial evaluation intent
+alternative,retain,Commercial evaluation intent
+competitor,retain,Commercial evaluation intent
+switch,retain,Commercial evaluation intent
+lawyer,retain,Potential claimant or B2B referral journey
+attorney,retain,Potential claimant or B2B referral journey
+CCC,retain,Relevant valuation-report intent
+Mitchell,retain,Relevant valuation-report intent
+KBB,retain,Relevant vehicle-value research
+insurer names,retain,Relevant total-loss dispute intent
+actual cash value,retain,Core service intent
+appraisal clause,retain,Core service intent

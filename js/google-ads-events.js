@@ -4,6 +4,7 @@
 
   var FREE_REVIEW_SEND_TO = "AW-18071301983/jk5bCOXEy9McEN_eiKlD";
   var STRIPE_PURCHASE_SEND_TO = "AW-18071301983/xUrsCOjEy9McEN_eiKlD";
+  var FREE_REVIEW_PENDING_KEY = "spur_auto_google_ads_free_review_pending";
   var FREE_REVIEW_SENT_KEY = "spur_auto_google_ads_free_review_sent";
   var STRIPE_PURCHASE_SENT_KEY = "spur_auto_google_ads_stripe_purchase_sent";
 
@@ -24,6 +25,22 @@
     }
   }
 
+  function removeSessionValue(key) {
+    try {
+      window.sessionStorage.removeItem(key);
+    } catch (error) {
+      // Storage failures must never block a confirmed lead experience.
+    }
+  }
+
+  function createConversionId() {
+    if (window.crypto && typeof window.crypto.randomUUID === "function") {
+      return window.crypto.randomUUID();
+    }
+
+    return "lead-" + Date.now() + "-" + Math.random().toString(16).slice(2);
+  }
+
   function sendConversion(payload) {
     if (typeof window.gtag !== "function") return false;
 
@@ -32,11 +49,29 @@
   }
 
   function trackFreeReviewSubmitted() {
-    if (getSessionValue(FREE_REVIEW_SENT_KEY) === "1") return false;
-    if (!sendConversion({ send_to: FREE_REVIEW_SEND_TO })) return false;
+    var conversionId = getSessionValue(FREE_REVIEW_PENDING_KEY);
 
-    setSessionValue(FREE_REVIEW_SENT_KEY, "1");
+    // A direct visit to the thank-you page is not a lead.
+    if (!conversionId || getSessionValue(FREE_REVIEW_SENT_KEY) === conversionId) {
+      return false;
+    }
+
+    if (!sendConversion({
+      send_to: FREE_REVIEW_SEND_TO,
+      transaction_id: conversionId
+    })) return false;
+
+    setSessionValue(FREE_REVIEW_SENT_KEY, conversionId);
+    removeSessionValue(FREE_REVIEW_PENDING_KEY);
     return true;
+  }
+
+  function rememberFreeReviewSubmission(form) {
+    if (!form) return;
+
+    form.addEventListener("submit", function () {
+      setSessionValue(FREE_REVIEW_PENDING_KEY, createConversionId());
+    });
   }
 
   // Call this only after Stripe confirms payment. Never attach it to a checkout-link click.
@@ -68,6 +103,9 @@
   window.spurAutoGoogleAds.trackStripePurchase = trackStripePurchase;
 
   function initialize() {
+    rememberFreeReviewSubmission(document.querySelector("#hero-contact-form"));
+    rememberFreeReviewSubmission(document.querySelector("#free-review-form"));
+
     if (document.body && document.body.hasAttribute("data-lead-success")) {
       trackFreeReviewSubmitted();
     }

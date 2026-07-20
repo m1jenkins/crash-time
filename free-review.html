@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/google-ads.js?v=20260718" ></script>
+  <script src="js/google-ads-events.js?v=20260720" ></script>
   <script src="js/ads-conversions.js?v=20260718" ></script>
   <title>Free Total Loss Claim Review | Spur Auto</title>
   <meta name="description" content="Think your totaled-car offer is too low? Get a free, no-obligation review within two business days and learn whether the value is worth challenging.">
@@ -46,8 +47,9 @@
     </nav>
   </header>
 
-  <main class="section review-form-section" id="main-content" tabindex="-1">
-    <div class="container">
+  <main id="main-content" tabindex="-1">
+    <section class="section review-form-section" aria-labelledby="review-form-title">
+      <div class="container">
 
       <!-- ================= LEAD CAPTURE FORM ================= -->
       <form id="free-review-form" class="form-card review-intake-form reveal-on-scroll" action="https://api.web3forms.com/submit" method="POST" aria-labelledby="review-form-title">
@@ -89,8 +91,63 @@
           See our <a href="privacy.html">Privacy Policy</a>.
         </p>
       </form>
+      </div>
+    </section>
 
-    </div>
+    <section class="section review-value-section" aria-labelledby="review-value-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Independent Texas total-loss review</p>
+          <h2 id="review-value-title">Find out whether your insurer missed vehicle value.</h2>
+          <p>Spur Auto reviews the details behind a total-loss offer before you pay for a report. The review is designed for Texas drivers who believe the insurer&rsquo;s actual-cash-value calculation or settlement offer may be too low.</p>
+        </div>
+        <div class="grid-3 review-value-grid">
+          <article class="card">
+            <h3>Appraisal evidence</h3>
+            <p>We check trim, mileage, options, condition, comparable vehicles, and material adjustments that can change a vehicle&rsquo;s documented value.</p>
+          </article>
+          <article class="card">
+            <h3>Low-offer review</h3>
+            <p>We look for unsupported deductions, mismatched comparables, missing equipment, and other reasons a totaled-car payout may be understated.</p>
+          </article>
+          <article class="card">
+            <h3>Clear next step</h3>
+            <p>You receive an initial assessment within two business days explaining whether a paid independent appraisal appears worthwhile.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section review-pricing-section" aria-labelledby="review-pricing-title">
+      <div class="container review-pricing-layout">
+        <div>
+          <p class="eyebrow">No payment for the initial review</p>
+          <h2 id="review-pricing-title">A complete standard report starts at $99.</h2>
+          <p>If the review identifies a supportable valuation issue, the Essential package includes an independent vehicle value report, a line-by-line valuation audit, verified replacement comparables, and general response templates.</p>
+          <a href="pricing.html" class="home-text-link">Compare report packages <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <dl class="review-proof-list">
+          <div><dt>$0</dt><dd>Initial claim review</dd></div>
+          <div><dt>$99</dt><dd>Complete standard report</dd></div>
+          <div><dt>48 hr</dt><dd>Standard delivery after a complete file</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section review-process-section" aria-labelledby="review-process-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">How the free review works</p>
+          <h2 id="review-process-title">One form. A documented answer.</h2>
+        </div>
+        <ol class="review-process-list">
+          <li><strong>Share the offer.</strong><span>Send the insurer&rsquo;s amount and your vehicle details. The valuation report is helpful but optional.</span></li>
+          <li><strong>We check the evidence.</strong><span>We review the vehicle description, valuation inputs, comparable market, and obvious omissions.</span></li>
+          <li><strong>You choose what happens next.</strong><span>We explain whether a closer appraisal looks worthwhile. You remain in control of every claim decision.</span></li>
+        </ol>
+        <p class="review-disclaimer">Spur Auto is an independent vehicle appraisal firm, not a public adjuster or law firm. We do not negotiate with the insurer on your behalf, and no appraisal can guarantee a settlement increase.</p>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
