@@ -163,12 +163,30 @@ Before deploy: render at 375, 768, and 1440 pixels; test all CTAs; confirm TLS a
 | Event | Primary/secondary | Trigger | Value | Deduplication | CRM/offline mapping | Current status |
 |---|---|---|---:|---|---|---|
 | `qualified_free_review` | Primary | CRM marks Texas total-loss submission serviceable after human review | $25 provisional optimization value | CRM lead ID/order ID + click identifier | Import enhanced conversions for leads through Google Ads Data Manager with GCLID and available GBRAID/WBRAID, consent, and hashed first-party identifiers | Not implemented |
-| `free_review_submitted` | Secondary | Confirmed `thank-you.html` reached after Web3Forms success | 0 | Unique lead ID; count one | Lead created in CRM | Google Ads event not implemented |
-| `paid_report` | Secondary reporting / later primary value | Stripe payment succeeds and CRM order is matched | Actual net revenue | Stripe event ID/order ID | Import value and package tier | Not implemented |
+| `free_review_submitted` | Secondary | Confirmed `thank-you.html` reached after Web3Forms success | 0 | Session-scoped guard; count one | Lead created in CRM; CRM qualification remains separate | Deployed 2026-07-20 to `AW-18071301983/jk5bCOXEy9McEN_eiKlD`; Google Ads diagnostics QA remains |
+| `paid_report` | Secondary reporting / later primary value | Server verifies Stripe Checkout Session is `complete` and `paid` after the customer returns from Checkout | Actual Stripe Checkout amount and currency | Checkout Session ID sent as Google Ads `transaction_id`; session-scoped browser guard plus Google Ads transaction deduplication | Store Checkout Session ID as the CRM order key; retain Payment Intent ID, package, gross amount, currency, refunded amount, and order status | Deployed 2026-07-20 to `AW-18071301983/xUrsCOjEy9McEN_eiKlD`; CRM persistence/refund-update process remains |
 | `landing_cta_click` | Secondary diagnostic | Click from comparison page to free-review page | 0 | Session/event ID | Preserve competitor/ad group attribution | Not implemented |
 | `phone_qualified_lead` | Secondary until call process exists | Call exceeds qualification threshold and is tagged qualified | $25 provisional | Google forwarding/call ID | CRM call record | No call asset in pilot |
 
-Repository finding: `js/google-ads.js` loads `AW-18071301983`, but no `gtag('event','conversion', ...)` for Google Ads is present. `js/ads-conversions.js` handles a separate OpenAI Ads pixel and does not complete Google Ads conversion measurement.
+Deployment finding, verified 2026-07-20: `js/google-ads-events.js` now sends both Google Ads conversions. Lead tracking runs only on the Web3Forms success destination marked with `data-lead-success`. Purchase tracking runs only after `stripe-success.html` receives a Checkout Session ID and `/api/stripe-session` confirms the session is both complete and paid. No checkout-link click handler fires a purchase conversion.
+
+### Stripe-to-CRM purchase and refund workflow
+
+1. A customer pays through one of the three active hosted Stripe Payment Links.
+2. Stripe redirects the customer to `https://www.spurauto.com/stripe-success.html?session_id={CHECKOUT_SESSION_ID}`.
+3. The success page sends the ID to the same-origin Vercel function `/api/stripe-session`; the browser never receives the Stripe secret key.
+4. The function authenticates to Stripe with the sensitive, production-only `STRIPE_SECRET_KEY`, expands the Payment Intent, latest charge, and refunds, and returns:
+   - Checkout Session ID and CRM-facing order ID;
+   - Payment Intent ID;
+   - actual Checkout amount and ISO currency;
+   - Stripe payment status;
+   - refunded amount; and
+   - normalized order status: `paid`, `partially_refunded`, or `refunded`.
+5. Only a response with `confirmedPaid: true` can call `trackStripePurchase()`. The Google Ads conversion uses the actual amount/currency and Checkout Session ID as `transaction_id`.
+6. The CRM should store the Checkout Session ID as its immutable Stripe join key and the Payment Intent ID as a secondary reference. Package, gross amount, currency, refunded amount, and current order status should be stored alongside the CRM order.
+7. Refund reconciliation remains an operational integration step: the endpoint reports Stripe's current refund state whenever queried, but there is no Stripe webhook or scheduled CRM sync. Until one is added, staff must refresh/reconcile the order from Stripe and update the CRM before reporting net revenue.
+
+Production evidence: commit `43d75a5` deployed successfully on Vercel on 2026-07-20. The live success page loaded, malformed session IDs returned HTTP 400, and a valid-format nonexistent live ID returned Stripe's HTTP 404, proving the production function authenticated to Stripe without creating a charge.
 
 Required dimensions: campaign, competitor/ad group, intent, keyword, search term, match type, network, device, location, RSA, landing-page version, GCLID/GBRAID/WBRAID, consent state, lead qualification, paid package, net revenue, and refund.
 
@@ -202,10 +220,12 @@ Cluster rules:
 - [ ] Competitor evidence ledger refreshed; all sources and dates recorded.
 - [ ] Landing page deployed, mobile-rendered, accessible, fast, and free of 404s.
 - [ ] Every CTA reaches the form and every successful form reaches `thank-you.html`.
-- [ ] Google Ads `free_review_submitted` event installed and deduplicated.
+- [x] Google Ads `free_review_submitted` event installed and session-deduplicated; deployed 2026-07-20.
+- [ ] Google Ads diagnostics/test conversion confirms the lead event and conversion-action settings without a duplicate production conversion.
 - [ ] GCLID/GBRAID/WBRAID and consent state captured through Web3Forms and stored in CRM.
 - [ ] `qualified_free_review` enhanced-conversions-for-leads import tested through Google Ads Data Manager with a non-production QA lead.
-- [ ] Stripe/CRM paid report and refund values can be reconciled.
+- [x] Stripe purchase conversion is server-confirmed, value/currency-aware, transaction-deduplicated, and deployed.
+- [ ] CRM stores Checkout Session ID/Payment Intent ID and has an owned refund-update procedure or webhook/scheduled sync.
 - [ ] Campaign, budget, and conversion goal isolated from brand/generic traffic.
 - [ ] Google Search only; Search Partners and Display off.
 - [ ] Texas presence option and English language verified.

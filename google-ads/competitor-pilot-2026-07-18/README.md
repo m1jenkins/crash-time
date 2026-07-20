@@ -13,9 +13,18 @@ Launch gates:
 
 1. Counsel reviews the Texas trademark/comparative-advertising boundary and the campaign-only landing page.
 2. The new landing page is deployed and its mobile form path is tested end to end.
-3. Google Ads conversion measurement is completed; the repository currently loads `AW-18071301983` but does not fire a Google Ads lead conversion event.
+3. Complete conversion QA. The deduplicated Google Ads `free_review_submitted` event and server-confirmed Stripe purchase event were deployed on 2026-07-20; verify each once in Google Ads diagnostics without creating duplicate production conversions.
 4. A CRM field and Google Ads Data Manager enhanced-conversions-for-leads import identify `qualified_free_review` with GCLID/GBRAID/WBRAID retention and consent handling.
 5. The owner approves the $750 maximum test loss and the initial $2.50 max CPC.
+
+Measurement deployment update, 2026-07-20:
+
+- `thank-you.html` now triggers the deduplicated Google Ads lead conversion through `js/google-ads-events.js` only after the Web3Forms success path reaches the thank-you page.
+- All three active Stripe Payment Links redirect to `stripe-success.html` with `{CHECKOUT_SESSION_ID}`.
+- `api/stripe-session.js` retrieves the Checkout Session from Stripe using Vercel's sensitive, production-only `STRIPE_SECRET_KEY` and returns the Checkout Session/order ID, Payment Intent ID, actual amount, currency, payment status, refunded amount, and paid/partial-refund/refund status.
+- `trackStripePurchase()` is called only after the server reports a completed, paid Checkout Session. Checkout-link clicks never fire the purchase conversion.
+- Production commit `43d75a5` deployed successfully. Invalid IDs are rejected, and a valid-format nonexistent ID reached Stripe, confirming production authentication without creating a charge.
+- CRM qualification and enhanced-conversions-for-leads import remain separate launch gates. The CRM must retain the Stripe Checkout Session ID as the purchase/refund reconciliation key.
 
 ## Files
 
