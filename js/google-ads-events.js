@@ -45,8 +45,10 @@
     var transactionId = String(details.transactionId || "");
     var value = Number(details.value);
     var currency = String(details.currency || "USD");
+    var paymentStatus = String(details.paymentStatus || "");
 
-    if (!transactionId || !isFinite(value) || value < 0) return false;
+    if (paymentStatus !== "paid") return false;
+    if (!transactionId || !isFinite(value) || value <= 0) return false;
     if (getSessionValue(STRIPE_PURCHASE_SENT_KEY) === transactionId) return false;
 
     if (!sendConversion({
