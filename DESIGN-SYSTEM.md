@@ -5,21 +5,10 @@ This document defines the core styling rules, contrast standards, and component 
 ---
 
 ## 1. Visual Hierarchy & Badges
-* **No Pill Shapes for Eyebrows/Labels**:
-  - Do NOT style eyebrow labels or section tags (e.g. `.eyebrow`, `.offer-card-label`) with background pills, rounded borders, or padding.
-  - Eyebrows should be formatted as flat, uppercase text with letter-spacing (e.g., `letter-spacing: 0.14em;`) and bold weights.
-  - Example:
-    ```css
-    .eyebrow {
-      display: inline-block;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-size: 0.78rem;
-      font-weight: 800;
-      color: var(--amber-dark);
-      margin-bottom: 0.8rem;
-    }
-    ```
+* **No Eyebrows or Tag Lines**:
+  - Do NOT display eyebrow labels, tag lines, or section tags (e.g., `.eyebrow`, `.offer-card-label`, section taglines above headings). Little tag lines must NOT show up anywhere on the site.
+  - Section headings (h1, h2, h3) should stand cleanly on their own without small uppercase taglines or eyebrows above them.
+  - Ensure `.eyebrow { display: none !important; }` in CSS so that any tagline/eyebrow elements are completely hidden.
 
 ## 2. Text Contrast & Background Compatibility
 * **Dark Background Components (e.g., Hero, CTA Bands)**:

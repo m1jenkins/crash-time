@@ -1,0 +1,17 @@
+{
+  "name": "total-loss-advocate",
+  "version": "1.0.0",
+  "description": "Spur Auto - Total Loss Appraisal & Rights Platform",
+  "main": "scripts/build.js",
+  "scripts": {
+    "build": "node scripts/build.js"
+  },
+  "keywords": [
+    "total-loss",
+    "appraisal-clause",
+    "vehicle-appraisal",
+    "acv-dispute"
+  ],
+  "author": "Spur Auto",
+  "license": "ISC"
+}

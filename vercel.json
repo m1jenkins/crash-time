@@ -1,5 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "outputDirectory": ".",
   "trailingSlash": false,
   "redirects": [
     {
@@ -77,6 +78,15 @@
     },
     {
       "source": "/(.*).html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/states/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
