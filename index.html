@@ -263,6 +263,91 @@
         </div>
       </div>
     </section>
+    <section class="home-section outcomes-section" aria-labelledby="outcomes-heading">
+      <div class="container reveal-on-scroll">
+        <div class="outcomes-heading">
+          <h2 id="outcomes-heading">What a stronger valuation can change.</h2>
+          <p>Examples from completed customer claims.</p>
+        </div>
+
+        <div class="outcome-tabs" role="tablist" aria-label="Customer claim examples">
+          <button class="outcome-tab is-active"
+                  id="outcome-tab-miata"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="outcome-panel"
+                  tabindex="0"
+                  data-vehicle="2019 Mazda Miata"
+                  data-offer="$19,256"
+                  data-payment="$21,709"
+                  data-recovered="$2,453"
+                  data-photo-src=""
+                  data-photo-alt="2019 Mazda Miata customer vehicle">2019 Mazda Miata</button>
+          <button class="outcome-tab"
+                  id="outcome-tab-f150"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="outcome-panel"
+                  tabindex="-1"
+                  data-vehicle="2022 Ford F-150 King Ranch"
+                  data-offer="$43,650"
+                  data-payment="$46,491"
+                  data-recovered="$2,841"
+                  data-photo-src=""
+                  data-photo-alt="2022 Ford F-150 King Ranch customer vehicle">2022 Ford F-150 King Ranch</button>
+          <button class="outcome-tab"
+                  id="outcome-tab-avalon"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="outcome-panel"
+                  tabindex="-1"
+                  data-vehicle="2016 Toyota Avalon"
+                  data-offer="$15,433"
+                  data-payment="$16,236"
+                  data-recovered="$803"
+                  data-photo-src=""
+                  data-photo-alt="2016 Toyota Avalon customer vehicle">2016 Toyota Avalon</button>
+        </div>
+
+        <div class="outcome-panel" id="outcome-panel" role="tabpanel" aria-labelledby="outcome-tab-miata">
+          <figure class="outcome-photo" data-outcome-photo>
+            <img data-outcome-image alt="" hidden>
+            <div class="outcome-photo-placeholder" data-outcome-placeholder>
+              <svg viewBox="0 0 56 56" aria-hidden="true">
+                <rect x="5" y="8" width="46" height="38" rx="2"></rect>
+                <circle cx="38" cy="20" r="4"></circle>
+                <path d="m10 40 12-12 9 9 5-5 10 8"></path>
+              </svg>
+              <span>Vehicle photo</span>
+            </div>
+          </figure>
+
+          <div class="outcome-details">
+            <h3 data-outcome-vehicle>2019 Mazda Miata</h3>
+            <dl class="outcome-values">
+              <div>
+                <dt>Initial insurance offer</dt>
+                <dd data-outcome-offer>$19,256</dd>
+              </div>
+              <div>
+                <dt>Final claim payment</dt>
+                <dd data-outcome-payment>$21,709</dd>
+              </div>
+            </dl>
+            <div class="outcome-gain">
+              <p>Additional amount recovered</p>
+              <strong data-outcome-recovered>$2,453</strong>
+            </div>
+            <a href="#claim-check" class="btn btn-primary">Check My Offer</a>
+          </div>
+        </div>
+
+        <p class="outcomes-disclaimer">Individual results vary. These examples do not guarantee a similar outcome.</p>
+      </div>
+    </section>
     <section class="home-section founder-section">
       <div class="container reveal-on-scroll">
         <div class="founder-heading">
