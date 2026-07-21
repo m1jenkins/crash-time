@@ -70,9 +70,23 @@
     if (!form || !pixelConfigured) return;
 
     form.addEventListener("submit", function () {
-      setSessionValue(CONVERSION_ID_KEY, createConversionId());
+      // Enhanced forms publish only after Web3Forms confirms success. Keep this
+      // pre-submit path solely for the native POST fallback.
+      if (form.dataset.leadEnhanced === "true") return;
+      var conversionId = form.dataset.leadSubmissionId || createConversionId();
+      setSessionValue(CONVERSION_ID_KEY, conversionId);
       removeSessionValue(CONVERSION_SENT_KEY);
     });
+  }
+
+  function rememberConfirmedLead(event) {
+    if (!pixelConfigured) return;
+    var detail = event && event.detail ? event.detail : {};
+    var conversionId = String(detail.submissionId || "");
+    if (!conversionId || detail.provider !== "web3forms") return;
+
+    setSessionValue(CONVERSION_ID_KEY, conversionId);
+    removeSessionValue(CONVERSION_SENT_KEY);
   }
 
   function measureConfirmedLead() {
@@ -98,8 +112,8 @@
   }
 
   function initializeConversionHooks() {
-    rememberLeadSubmission(document.querySelector("#hero-contact-form"));
-    rememberLeadSubmission(document.querySelector("#free-review-form"));
+    document.querySelectorAll("form[data-lead-form]").forEach(rememberLeadSubmission);
+    document.addEventListener("spurauto:lead-confirmed", rememberConfirmedLead);
 
     if (document.body && document.body.hasAttribute("data-lead-success")) {
       measureConfirmedLead();

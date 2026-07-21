@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/google-ads.js?v=20260718" ></script>
-  <script src="js/google-ads-events.js?v=20260720" ></script>
-  <script src="js/ads-conversions.js?v=20260721" ></script>
+  <script src="js/google-ads-events.js?v=20260721f02" ></script>
+  <script src="js/ads-conversions.js?v=20260721f02" ></script>
   <title>Check Whether Your Total-Loss Offer Is Low | $99 Appraisal | Spur Auto</title>
   <meta name="description" content="Check whether your total-loss offer is low with a free claim review and a complete $99 independent appraisal report. Serving drivers nationwide.">
   <link rel="canonical" href="https://www.spurauto.com/">
@@ -25,7 +25,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/spur-auto-favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/spur-auto-favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/brand/spur-auto-apple-touch-icon.png">
-  <link rel="stylesheet" href="css/styles.css?v=20260721c">
+  <link rel="stylesheet" href="css/styles.css?v=20260721f02">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -115,7 +115,7 @@
              alt="Collision-damaged crossover beside organized vehicle appraisal evidence"
              width="1402" height="1122" fetchpriority="high" decoding="async">
         <div class="claim-card" id="claim-check">
-          <form id="hero-contact-form" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+          <form id="hero-contact-form" data-lead-form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" data-submit-state="idle">
             <input type="hidden" name="access_key" value="88f1d2af-59c2-46b1-92e6-0c554846ef34">
             <input type="hidden" name="redirect" value="https://www.spurauto.com/thank-you.html">
             <input type="hidden" name="subject" value="New Spur Auto free claim review">
@@ -152,7 +152,7 @@
             <div class="form-group claim-file-group">
               <label for="hero-attachment">Valuation report <span>(recommended)</span></label>
               <input type="file" id="hero-attachment" name="attachment" accept="application/pdf,image/jpeg,image/png" aria-describedby="hero-attachment-help">
-              <p class="field-help" id="hero-attachment-help">Upload the insurer&rsquo;s PDF, JPG, or PNG if you have it. You can still submit without it.</p>
+              <p class="field-help" id="hero-attachment-help">Upload the insurer&rsquo;s PDF, JPG, or PNG up to 5 MB if you have it. You can still submit without it.</p>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Check My Offer <span aria-hidden="true">→</span></button>
             <p class="form-privacy">
@@ -466,6 +466,7 @@
       <p class="home-disclaimer">Spur Auto is an independent vehicle appraisal firm. We provide negotiation support such as reviewing insurer responses, explaining valuation issues, and helping draft follow-up correspondence, but we do not contact or negotiate with the insurer on your behalf, settle claims, or act as your representative - every decision and communication about your claim remains yours. We are not a public insurance adjuster or law firm, do not provide legal advice, and are not affiliated with any insurance company. Outcomes depend on your policy, vehicle, and applicable law.</p>
     </div>
   </footer>
+  <script src="js/lead-form.js?v=20260721f02"></script>
   <script src="js/main.js?v=20260721b" ></script>
 </body>
 </html>

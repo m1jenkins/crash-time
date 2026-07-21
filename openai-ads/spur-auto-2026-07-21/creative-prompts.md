@@ -16,7 +16,17 @@ Primary request: Remove the entire navy graphic overlay, the invented logo, ever
 Constraints: change only the graphic/text overlays and the areas they cover; keep the appraiser's hands, redacted valuation paper, laptop with unbranded vehicle comparables, warm wood desk, natural daylight, color balance, square framing, and photorealistic style unchanged; no text anywhere; no logo; no watermark; no insurer or vehicle trademarks; no new objects; do not imitate any app or chat interface.
 ```
 
-Accepted output: `assets/images/openai-ads/spur-auto-offer-review-2026-07-21.jpg`
+Final IP correction:
+
+```text
+Use case: precise-object-edit
+Asset type: square ChatGPT Ads campaign image for Spur Auto
+Input images: Image 1 is the edit target
+Primary request: Remove only every visible or implied automaker badge, grille emblem, logo, or trademark from the three vehicle thumbnails on the laptop screen. Replace each badge area with a plain, realistic, unbranded grille surface that matches the surrounding vehicle.
+Constraints: change only the vehicle badge/emblem areas; preserve the appraiser, hands, paper, laptop, redactions, vehicle shapes, workspace, lighting, colors, square framing, and all other details unchanged; keep every vehicle generic and unbranded; no text, no logo, no watermark, no insurer marks, no new objects, no app or chat interface imitation.
+```
+
+Accepted output: `assets/images/openai-ads/spur-auto-offer-review-v2-2026-07-21.jpg`
 
 ## CR-EVIDENCE-01 — finished appraisal evidence
 
@@ -34,7 +44,16 @@ Constraints: no people, no injuries, no crash scene, no damaged vehicle, no insu
 Avoid: legal or courtroom imagery, stacks of cash, alarm symbols, clutter, dramatic shadows, fabricated certificates or seals
 ```
 
-Accepted output: `assets/images/openai-ads/spur-auto-appraisal-evidence-2026-07-21.jpg`
+Final IP correction:
+
+```text
+Use case: precise-object-edit
+Asset type: square ChatGPT Ads campaign image for Spur Auto
+Input images: Image 1 is the edit target
+Primary request: Remove only every visible or implied automaker badge, grille emblem, logo, or trademark from all three vehicle photos on the comparable sheets. Replace each badge area with a plain, realistic, unbranded grille surface that matches the surrounding vehicle.
+Constraints: change only the vehicle badge/emblem areas; preserve the bound report, comparable sheets, redacted document details, car key, pen, calculator, plant, desk, lighting, colors, square framing, and all other details unchanged; keep every vehicle generic and unbranded; no text, no logo, no watermark, no insurer marks, no new objects, no app or chat interface imitation.
+```
+
+Accepted output: `assets/images/openai-ads/spur-auto-appraisal-evidence-v2-2026-07-21.jpg`
 
 Before submission, inspect the final hosted files at the direct URLs and confirm no recognizable third-party vehicle badge or other mark appears at ad-unit size.
-

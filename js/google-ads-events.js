@@ -70,8 +70,21 @@
     if (!form) return;
 
     form.addEventListener("submit", function () {
-      setSessionValue(FREE_REVIEW_PENDING_KEY, createConversionId());
+      // Enhanced forms publish only after Web3Forms confirms success. Keep this
+      // pre-submit path solely for the native POST fallback.
+      if (form.dataset.leadEnhanced === "true") return;
+      var conversionId = form.dataset.leadSubmissionId || createConversionId();
+      setSessionValue(FREE_REVIEW_PENDING_KEY, conversionId);
     });
+  }
+
+  function rememberConfirmedFreeReview(event) {
+    var detail = event && event.detail ? event.detail : {};
+    var conversionId = String(detail.submissionId || "");
+    if (!conversionId || detail.provider !== "web3forms") return;
+
+    setSessionValue(FREE_REVIEW_PENDING_KEY, conversionId);
+    removeSessionValue(FREE_REVIEW_SENT_KEY);
   }
 
   // Call this only after Stripe confirms payment. Never attach it to a checkout-link click.
@@ -103,8 +116,8 @@
   window.spurAutoGoogleAds.trackStripePurchase = trackStripePurchase;
 
   function initialize() {
-    rememberFreeReviewSubmission(document.querySelector("#hero-contact-form"));
-    rememberFreeReviewSubmission(document.querySelector("#free-review-form"));
+    document.querySelectorAll("form[data-lead-form]").forEach(rememberFreeReviewSubmission);
+    document.addEventListener("spurauto:lead-confirmed", rememberConfirmedFreeReview);
 
     if (document.body && document.body.hasAttribute("data-lead-success")) {
       trackFreeReviewSubmitted();

@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/google-ads.js?v=20260718" ></script>
-  <script src="js/google-ads-events.js?v=20260720" ></script>
-  <script src="js/ads-conversions.js?v=20260721" ></script>
+  <script src="js/google-ads-events.js?v=20260721f02" ></script>
+  <script src="js/ads-conversions.js?v=20260721f02" ></script>
   <title>Free Total-Loss Offer Review | Spur Auto</title>
   <meta name="description" content="Send your insurer&rsquo;s offer and vehicle details for a free total-loss claim review. Get a response within 48 hours. Available nationwide.">
   <link rel="canonical" href="https://www.spurauto.com/free-review.html">
@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260721">
+  <link rel="stylesheet" href="css/styles.css?v=20260721f02">
   <link rel="icon" href="assets/brand/spur-auto-favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/spur-auto-favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/spur-auto-favicon-16.png">
@@ -52,7 +52,7 @@
       <div class="container">
 
       <!-- ================= LEAD CAPTURE FORM ================= -->
-      <form id="free-review-form" class="form-card review-intake-form reveal-on-scroll" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" aria-labelledby="review-form-title">
+      <form id="free-review-form" class="form-card review-intake-form reveal-on-scroll" data-lead-form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" aria-labelledby="review-form-title" data-submit-state="idle">
         <input type="hidden" name="access_key" value="88f1d2af-59c2-46b1-92e6-0c554846ef34">
         <input type="hidden" name="redirect" value="https://www.spurauto.com/thank-you.html">
         <input type="hidden" name="subject" value="New Spur Auto free claim review">
@@ -100,7 +100,7 @@
             <div class="form-group review-form-full">
               <label for="valuation-report">Insurer&rsquo;s valuation report <span>(recommended)</span></label>
               <input type="file" id="valuation-report" name="attachment" accept="application/pdf,image/jpeg,image/png" aria-describedby="valuation-report-help">
-              <p class="field-help" id="valuation-report-help">Upload the PDF, JPG, or PNG sent by the insurer or other party&rsquo;s insurer. You can still submit without it.</p>
+              <p class="field-help" id="valuation-report-help">Upload the PDF, JPG, or PNG up to 5 MB sent by the insurer or other party&rsquo;s insurer. You can still submit without it.</p>
             </div>
 
             <div class="form-group review-form-full">
@@ -256,6 +256,7 @@
     </div>
   </footer>
 
+  <script src="js/lead-form.js?v=20260721f02"></script>
   <script src="js/main.js?v=20260718a" ></script>
 </body>
 </html>

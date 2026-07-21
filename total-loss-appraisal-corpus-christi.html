@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/google-ads.js?v=20260718" ></script>
+  <script src="js/google-ads-events.js?v=20260721f02"></script>
+  <script src="js/ads-conversions.js?v=20260721f02"></script>
   <title>Corpus Christi Total Loss Appraisal | Local ACV Review | Spur Auto</title>
   <meta name="description" content="Car totaled in Corpus Christi? Spur Auto reviews the insurer's ACV, vehicle-specific evidence, and Nueces County comparables remotely.">
   <link rel="canonical" href="https://www.spurauto.com/total-loss-appraisal-corpus-christi.html">
@@ -21,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260718a">
+  <link rel="stylesheet" href="css/styles.css?v=20260721f02">
   <link rel="icon" href="assets/brand/spur-auto-favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/spur-auto-favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/spur-auto-favicon-16.png">
@@ -115,8 +117,10 @@
         </div>
         <p class="hero-note">Remote service across Texas. Free review responses arrive within two business days; paid vehicle value reports are delivered within 48 hours.</p>
         <div class="claim-card" id="claim-check">
-          <form id="city-contact-form" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+          <form id="city-contact-form" data-lead-form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" data-submit-state="idle">
             <input type="hidden" name="access_key" value="88f1d2af-59c2-46b1-92e6-0c554846ef34">
+            <input type="hidden" name="redirect" value="https://www.spurauto.com/thank-you.html">
+            <input type="hidden" name="subject" value="New Spur Auto city-page free claim review">
             <h2>Let’s check your offer</h2>
             <div class="form-group">
               <label for="city-name">Name</label>
@@ -314,6 +318,7 @@
     </div>
   </footer>
 
+  <script src="js/lead-form.js?v=20260721f02"></script>
   <script src="js/main.js?v=20260718b" ></script>
 </body>
 </html>

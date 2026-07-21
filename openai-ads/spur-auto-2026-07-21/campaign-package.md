@@ -7,11 +7,13 @@ Prepared 2026-07-21. Current platform mechanics and policies were checked agains
 Run one Texas-only Clicks campaign at $25/day with two focused need-states:
 
 1. A driver wants to check whether a total-loss valuation deserves a closer look.
-2. A driver is evaluating independent appraisal evidence after noticing possible valuation errors.
+2. A driver is evaluating independent vehicle-value evidence after noticing possible valuation errors.
 
 Both groups lead to the free review page and optimize provisionally to the confirmed `lead_created` event. This keeps the free review as the single primary conversion and prevents the minimum budget from being split across multiple campaigns.
 
-The offer is positioned literally: free review first, optional $99 standard report if a paid appraisal appears worthwhile. The ads do not promise savings, a higher settlement, negotiation, representation, legal help, licensing coverage, or a turnaround time.
+The offer is positioned literally: free review first, optional $99 standard report if a paid report appears worthwhile. The ads do not promise savings, a higher settlement, negotiation, representation, legal help, licensing coverage, or a turnaround time.
+
+Customer-facing fields use “vehicle-value review” and “value report,” not “appraiser” or “appraisal.” Internal policy notes retain the business's exact service description so category review remains truthful and is not treated as an attempt to evade platform rules.
 
 ## 2. Facts, assumptions, and unresolved decisions
 
@@ -62,7 +64,7 @@ The draft ads intentionally omit those claims. Because OpenAI reviews destinatio
 | Campaign | Objective | Geography | Budget | Ad group | Need-state | Max bid | Primary conversion | Destination |
 |---|---|---|---:|---|---|---:|---|---|
 | `openai_clicks_total_loss_tx_prospecting` | Clicks | Texas | $25/day | `offer_check` | Check a total-loss valuation before deciding | $3.00 max CPC | `lead_created` | `/free-review.html` |
-| `openai_clicks_total_loss_tx_prospecting` | Clicks | Texas | Shared | `appraisal_evidence` | Evaluate independent appraisal evidence and price | $3.00 max CPC | `lead_created` | `/free-review.html` |
+| `openai_clicks_total_loss_tx_prospecting` | Clicks | Texas | Shared | `value_report` | Evaluate independent vehicle-value evidence and price | $3.00 max CPC | `lead_created` | `/free-review.html` |
 
 The $3.00 starting maximum CPC is the low end of OpenAI's current $3-$5 guidance. If delivery remains weak after account/ad approval and 48 hours of clean tracking, test $3.50 in one ad group at a time without changing copy or budget in the same observation window.
 
@@ -88,15 +90,15 @@ Every ad maps to the same relevant free-review destination with a unique static 
 - Audience situation: checking an insurer's total-loss valuation
 - Communication goal: show calm, independent evidence review
 - Proof shown: redacted valuation packet and comparable vehicle listings
-- Composition: appraiser hands, paper, laptop, one clear square focal area
+- Composition: reviewer hands, paper, laptop, one clear square focal area
 - On-asset text: none
 - Brand treatment: site favicon/advertiser identity supplied by Ads Manager; no generated logo in the image
 - Policy controls: no crash damage, injury, distress, insurer logos, savings claims, UI imitation, or endorsement
 - Destination match: free review page explains vehicle-detail and comparable review
 
-### CR-EVIDENCE-01
+### CR-REPORT-01
 
-- Audience situation: deciding whether a paid independent appraisal is worthwhile
+- Audience situation: deciding whether a paid vehicle value report is worthwhile
 - Communication goal: make the report and comparable evidence tangible
 - Proof shown: finished bound report and three abstract/redacted comparable sheets
 - Composition: clean overhead three-quarter still life
@@ -111,7 +113,7 @@ Final prompts and the rejected-first-draft correction are documented in `creativ
 | Ad group / angle | Destination | Above-fold promise | Proof | CTA | Form friction | Event | Required change | Owner |
 |---|---|---|---|---|---|---|---|---|
 | Offer check | `/free-review.html` | Check a total-loss offer at no charge | Inputs reviewed and review process | Check my offer | Email, vehicle, mileage, ZIP, offer; insurer and file optional | `lead_created` | Confirm Texas eligibility, qualify unsupported nationwide wording, complete live pixel test | Business + analytics |
-| Appraisal evidence | `/free-review.html` | Review first; optional complete report at $99 | Vehicle details, comparables, valuation audit | Start free | Same form | `lead_created` | Keep $99 price and scope consistent; obtain category approval | Business + policy owner |
+| Value report | `/free-review.html` | Review first; optional complete report at $99 | Vehicle details, comparables, valuation audit | Start free | Same form | `lead_created` | Keep $99 price and scope consistent; obtain category approval | Business + policy owner |
 
 The form requests only fields plausibly needed for the review. The optional insurer name and file upload should remain optional. UTM values currently stay in the browser URL, but no repository evidence showed those fields joining the submitted Web3Forms lead or a CRM record.
 
@@ -183,9 +185,9 @@ Capacity references, not forecasts: $25 divided by a $3 average CPC is about 8.3
 | Priority | Hypothesis | Variable | Control | Variant | Primary metric | Guardrail | Observation rule | Decision action |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | The confirmed lead event is reliable | Measurement | One test submission | Refresh and repeat-path test | One event per confirmed lead | No PII/claim data sent; no duplicates | Complete before activation | Block spend if failed |
-| 2 | Free-check framing earns more qualified interest than report framing | Message/ad group | `offer_check` | `appraisal_evidence` | Qualified lead rate | Confirmed lead CPA | Read directionally only after each group has at least 30 clicks and no tracking issue | Keep winner; rewrite loser without changing bid |
+| 2 | Free-check framing earns more qualified interest than report framing | Message/ad group | `offer_check` | `value_report` | Qualified lead rate | Confirmed lead CPA | Read directionally only after each group has at least 30 clicks and no tracking issue | Keep winner; rewrite loser without changing bid |
 | 3 | Input-specific copy improves useful clicks | Ad copy | OA_TX_OFFER_A | OA_TX_OFFER_B | Confirmed lead CVR | CTR and qualified rate | At least 30 clicks per ad or 14 days, whichever is later | Keep the better business-quality variant |
-| 4 | Transparent $99 pricing improves qualification | Ad copy | OA_TX_APPRAISAL_A | OA_TX_APPRAISAL_B | Qualified lead rate | Paid-report rate | Same rule; do not judge on CTR alone | Keep price-led copy only if downstream quality improves |
+| 4 | Transparent $99 pricing improves qualification | Ad copy | OA_TX_REPORT_A | OA_TX_REPORT_B | Qualified lead rate | Paid-report rate | Same rule; do not judge on CTR alone | Keep price-led copy only if downstream quality improves |
 | 5 | Texas-specific page framing improves form completion | Landing page | Current destination | Texas-qualified ad landing variant | Form CVR | Policy clarity and qualification | Only after message test; one page variable family at a time | Ship only if claims and service scope stay accurate |
 | 6 | A higher bid unlocks delivery | Max CPC | $3.00 | $3.50 in one group | Impressions and clicks | CPC and daily pacing | Only after 48 clean hours with approved ads and weak delivery | Retain only if volume improves within CPA guardrail |
 
@@ -234,4 +236,3 @@ Use Ads Manager for delivery metrics and the first-party lead/revenue system for
 1. Send OpenAI Ads support a precise category-review request with the destination, service boundary, Texas scope, credentials, and representative deliverables.
 2. Resolve the site claims and run the measurement/UTM QA checklist.
 3. After approval, transfer the CSV rows into the current Ads Manager template, keep all entities in Draft, and request a final preflight before activation.
-

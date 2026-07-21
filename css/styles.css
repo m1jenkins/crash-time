@@ -6314,3 +6314,118 @@ body.site-redesign :focus-visible {
     padding: 1.25rem 1rem;
   }
 }
+
+/* Resilient lead-form submission states */
+form[data-lead-form] {
+  min-width: 0;
+}
+
+form[data-lead-form] button[type="submit"]:disabled,
+form[data-lead-form] button[type="submit"][aria-disabled="true"] {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+  box-shadow: none;
+}
+
+.lead-form-feedback {
+  min-width: 0;
+  margin-top: 1rem;
+}
+
+.lead-form-feedback [hidden] {
+  display: none !important;
+}
+
+.lead-form-status,
+.lead-form-error-message,
+.lead-form-field-error {
+  overflow-wrap: anywhere;
+}
+
+.lead-form-status {
+  margin: 0;
+  padding: 0.85rem 1rem;
+  color: var(--home-ink, var(--navy));
+  background: var(--home-sage-light, #edf1e9);
+  border-left: 4px solid var(--home-sage-dark, #31583b);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.lead-form-error-summary {
+  padding: 1rem;
+  color: #711e12;
+  background: #fff3f0;
+  border: 1px solid #c84a2b;
+  border-left-width: 4px;
+  border-radius: 6px;
+}
+
+.lead-form-error-summary:focus-visible {
+  outline: 3px solid #1d64b4;
+  outline-offset: 3px;
+}
+
+.lead-form-error-message {
+  margin: 0;
+  color: inherit;
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1.5;
+}
+
+.lead-form-error-list {
+  margin: 0.75rem 0 0;
+  padding-left: 1.3rem;
+}
+
+.lead-form-error-list li + li {
+  margin-top: 0.45rem;
+}
+
+.lead-form-error-list a {
+  color: #711e12;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.18em;
+}
+
+.lead-form-field-error {
+  margin: 0.45rem 0 0;
+  color: #8a2416;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+form[data-lead-form] [aria-invalid="true"] {
+  border-color: #b83e21 !important;
+  box-shadow: 0 0 0 3px rgba(184, 62, 33, 0.14) !important;
+}
+
+.lead-form-retry.btn {
+  min-height: 44px;
+  margin-top: 0.85rem;
+  padding: 0.7rem 1.15rem;
+  color: var(--home-ink, var(--navy));
+  background: #fff;
+  border: 2px solid currentColor;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.lead-form-retry.btn:hover {
+  color: #fff;
+  background: var(--home-ink, var(--navy));
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  form[data-lead-form] button,
+  .lead-form-retry.btn {
+    transition: none;
+  }
+}
