@@ -2,8 +2,8 @@
 (function (window, document) {
   "use strict";
 
-  // Pixel IDs are public browser configuration. Set this before deployment.
-  var OPENAI_ADS_PIXEL_ID = "REPLACE_WITH_OPENAI_ADS_PIXEL_ID";
+  // Pixel IDs are public browser configuration.
+  var OPENAI_ADS_PIXEL_ID = "1FkmT28b6AkfCMFBEcxsHP";
   var PIXEL_PLACEHOLDER = "REPLACE_WITH_OPENAI_ADS_PIXEL_ID";
   var CONVERSION_ID_KEY = "spur_auto_lead_conversion_id";
   var CONVERSION_SENT_KEY = "spur_auto_lead_conversion_sent";
