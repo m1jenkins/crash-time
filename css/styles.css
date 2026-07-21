@@ -4391,8 +4391,8 @@ body.site-redesign :focus-visible {
    Pricing decision page
    ============================================================ */
 .site-redesign.pricing-page .pricing-hero {
-  min-height: 330px;
-  padding: 3.75rem 0 3.25rem;
+  min-height: 0;
+  padding: 3rem 0 2.75rem;
   background: linear-gradient(100deg, #fff 0 76%, var(--home-sage-light) 76% 100%);
 }
 
@@ -4413,74 +4413,20 @@ body.site-redesign :focus-visible {
 
 .site-redesign.pricing-page .pricing-hero .lede {
   max-width: 760px;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.25rem;
   font-size: 1.08rem;
   line-height: 1.65;
 }
 
-.pricing-hero-points {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem 1.5rem;
-  color: var(--home-ink);
-  font-size: 0.84rem;
-  font-weight: 700;
-}
-
-.pricing-hero-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-
 .pricing-hero-cta {
-  flex: 0 0 auto;
   min-height: 48px;
   padding: 0.72rem 1.25rem;
   border-radius: 6px;
   font-size: 0.82rem;
 }
 
-.pricing-hero-points span {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-}
-
-.pricing-hero-points span::before {
-  content: "✓";
-  display: grid;
-  width: 19px;
-  height: 19px;
-  place-items: center;
-  color: #fff;
-  background: var(--home-sage-dark);
-  border-radius: 50%;
-  font-size: 0.68rem;
-}
-
 .site-redesign.pricing-page .pricing-section {
-  padding: 3.5rem 0 6rem;
-}
-
-.site-redesign.pricing-page .pricing-intro {
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 2rem;
-  align-items: center;
-  margin-bottom: 2.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.site-redesign.pricing-page .pricing-intro h2 {
-  font-size: clamp(2.25rem, 4vw, 3.75rem);
-  line-height: 1;
-}
-
-.site-redesign.pricing-page .pricing-intro p {
-  max-width: 490px;
-  color: var(--home-ink-soft);
-  font-size: 0.98rem;
+  padding: 2.5rem 0 6rem;
 }
 
 .site-redesign.pricing-page .pricing-layout {
@@ -5092,28 +5038,12 @@ body.site-redesign :focus-visible {
     font-size: clamp(2.85rem, 13vw, 4.2rem);
   }
 
-  .pricing-hero-points {
-    display: grid;
-    gap: 0.55rem;
-  }
-
-  .pricing-hero-footer {
-    display: block;
-  }
-
   .pricing-hero-cta {
     display: inline-flex;
-    margin-top: 1.1rem;
   }
 
   .site-redesign.pricing-page .pricing-section {
-    padding: 3.25rem 0 4.5rem;
-  }
-
-  .site-redesign.pricing-page .pricing-intro {
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-    margin-bottom: 2.2rem;
+    padding: 2.25rem 0 4.5rem;
   }
 
   .site-redesign.pricing-page .price-card {
@@ -5414,8 +5344,7 @@ body.site-redesign :focus-visible {
     line-height: 1;
   }
 
-  .site-redesign .hero .hero-ctas,
-  .site-redesign .hero .pricing-hero-footer {
+  .site-redesign .hero .hero-ctas {
     order: 3;
     margin: 0 0 1.25rem;
   }
@@ -5515,7 +5444,6 @@ body.site-redesign :focus-visible {
     width: 100%;
   }
 
-  .site-redesign.pricing-page .pricing-intro p,
   .site-redesign.pricing-page .price-card .tagline,
   .site-redesign.pricing-page .price-card ul li,
   .site-redesign.pricing-page .price-card .btn,
@@ -5579,26 +5507,12 @@ body.site-redesign :focus-visible {
 
 /* Pricing page restoration
    Keep the compact decision flow isolated from later global mobile rules. */
-.site-redesign.pricing-page .pricing-hero {
-  min-height: 300px;
-  padding: 2.75rem 0 2.5rem;
-}
-
 .site-redesign.pricing-page .pricing-hero h1 {
   margin-bottom: 0.8rem;
 }
 
 .site-redesign.pricing-page .pricing-hero .lede {
   margin-bottom: 1.15rem;
-}
-
-.site-redesign.pricing-page .pricing-section {
-  padding-top: 2.75rem;
-}
-
-.site-redesign.pricing-page .pricing-intro {
-  margin-bottom: 2rem;
-  padding-bottom: 1.25rem;
 }
 
 @media (max-width: 700px) {
@@ -5618,17 +5532,8 @@ body.site-redesign :focus-visible {
     margin: 0 0 1.25rem;
   }
 
-  .site-redesign.pricing-page .hero .pricing-hero-footer,
-  .site-redesign.pricing-page .pricing-hero-footer {
-    margin: 0;
-  }
-
   .site-redesign.pricing-page .pricing-section {
-    padding-top: 3rem;
-  }
-
-  .site-redesign.pricing-page .pricing-intro {
-    margin-bottom: 2rem;
+    padding-top: 2.25rem;
   }
 }
 
