@@ -1,0 +1,2 @@
+campaign_name,objective,budget_type,daily_budget_usd,start_date,end_date,country,state,primary_conversion,status,notes
+openai_clicks_total_loss_tx_prospecting,Clicks,Daily,25.00,2026-07-27,2026-08-25,United States,Texas,lead_created,Draft,"Dates and Texas-only geography require owner confirmation; do not activate until policy and measurement blockers are closed"

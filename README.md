@@ -67,3 +67,7 @@ Sample/placeholder content is marked with HTML comments in the source. At minimu
    assets use immutable caching. The `lead_created` event fires only on
    `thank-you.html` after a successful Web3Forms redirect.
 7. **Social profiles** — add social links only after real business profiles are live.
+
+Static CSS and JavaScript are cached immutably in production. Whenever either
+asset changes, bump its `?v=` query string on every page that needs the new
+version so the deployment cannot combine fresh HTML with stale assets.

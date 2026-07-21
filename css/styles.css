@@ -2977,6 +2977,8 @@ body.home-redesign :focus-visible {
   }
 
   .outcome-values > div {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.75rem;
     min-height: 76px;
   }
 
@@ -2986,7 +2988,7 @@ body.home-redesign :focus-visible {
   }
 
   .outcome-values dd {
-    min-width: 120px;
+    min-width: 0;
     font-size: clamp(2rem, 9vw, 2.6rem);
   }
 

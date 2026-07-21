@@ -1,0 +1,180 @@
+{
+  "project": "Spur Auto frontend audit 2026-07-21",
+  "design_thesis": "This experience should feel calmly investigative and evidence-led for drivers dealing with a stressful total-loss offer because they come to decide whether the valuation is worth challenging; it must make the free review and paid independent appraisal immediately clear, prove who performs the work and what evidence the customer receives, and differ through real report artifacts, current state sources, and a document-review composition.",
+  "browser_inspected": true,
+  "primary_routes": [
+    "/",
+    "/how-it-works.html",
+    "/pricing.html",
+    "/results.html",
+    "/locations.html",
+    "/about.html",
+    "/free-review.html"
+  ],
+  "inspected_routes": [
+    "/",
+    "/how-it-works.html",
+    "/pricing.html",
+    "/results.html",
+    "/locations.html",
+    "/about.html",
+    "/free-review.html",
+    "/texas.html",
+    "/states/florida.html",
+    "/total-loss-appraisal-houston.html",
+    "/actual-cash-value-texas.html"
+  ],
+  "viewport_evidence": [
+    {
+      "viewport": "320x568",
+      "routes": ["/", "/how-it-works.html", "/pricing.html", "/results.html", "/locations.html", "/about.html", "/free-review.html"],
+      "evidence": ["frontend-audit/*-320x568-viewport.png"]
+    },
+    {
+      "viewport": "390x844",
+      "routes": ["/", "/how-it-works.html", "/pricing.html", "/results.html", "/locations.html", "/about.html", "/free-review.html"],
+      "evidence": ["frontend-audit/*-mobile-390x844-full.png"]
+    },
+    {
+      "viewport": "844x390",
+      "routes": ["/", "/how-it-works.html", "/pricing.html", "/results.html", "/locations.html", "/about.html", "/free-review.html"],
+      "evidence": ["frontend-audit/*-844x390-viewport.png"]
+    },
+    {
+      "viewport": "768x1024",
+      "routes": ["/", "/how-it-works.html", "/pricing.html", "/results.html", "/locations.html", "/about.html", "/free-review.html"],
+      "evidence": ["frontend-audit/*-768x1024-viewport.png"]
+    },
+    {
+      "viewport": "1024x768",
+      "routes": ["/", "/how-it-works.html", "/pricing.html", "/results.html", "/locations.html", "/about.html", "/free-review.html"],
+      "evidence": ["frontend-audit/*-1024x768-viewport.png"]
+    },
+    {
+      "viewport": "1366x768",
+      "routes": ["/", "/how-it-works.html", "/pricing.html", "/results.html", "/locations.html", "/about.html", "/free-review.html"],
+      "evidence": ["frontend-audit/*-1366x768-viewport.png"]
+    },
+    {
+      "viewport": "1440x900",
+      "routes": ["/", "/how-it-works.html", "/pricing.html", "/results.html", "/locations.html", "/about.html", "/free-review.html"],
+      "evidence": ["frontend-audit/*-desktop-1440x900-full.png"]
+    },
+    {
+      "viewport": "1920x1080",
+      "routes": ["/", "/how-it-works.html", "/pricing.html", "/results.html", "/locations.html", "/about.html", "/free-review.html"],
+      "evidence": ["frontend-audit/*-1920x1080-viewport.png"]
+    }
+  ],
+  "checks": {
+    "keyboard_primary_paths": {"status": "pass", "evidence": ["Mobile nav, homepage tabs, pricing disclosures, skip link, and form invalid focus tested in Chromium"], "reason": ""},
+    "visible_focus": {"status": "pass", "evidence": ["3px #005fcc focus outline plus 6px white separation ring observed"], "reason": ""},
+    "semantics_and_names": {"status": "fail", "evidence": ["One h1 and landmarks pass; pricing jumps from h1 to h3"], "reason": ""},
+    "contrast": {"status": "fail", "evidence": ["axe serious color-contrast and link-in-text-block violations"], "reason": ""},
+    "status_announcements": {"status": "fail", "evidence": ["Primary form has no in-page submitting, network error, retry, or success status"], "reason": ""},
+    "reduced_motion": {"status": "pass", "evidence": ["No running animations after load in reduced-motion contexts"], "reason": ""},
+    "text_resize_200": {"status": "fail", "evidence": ["320px text-size stress produced widths of 626px home, 344px pricing, and 388px free-review"], "reason": ""},
+    "reflow_no_horizontal_scroll": {"status": "fail", "evidence": ["Homepage scrollWidth 335px at a 320px viewport"], "reason": ""},
+    "mobile_reprioritized": {"status": "fail", "evidence": ["Pricing adapts well, but internal pages largely stack and city pages put the form before local orientation"], "reason": ""},
+    "claims_verified": {"status": "fail", "evidence": ["Homepage exact outcomes lack repository proof and conflict with launch placeholder notes; nationwide scope unverified"], "reason": ""},
+    "pattern_ledger_complete": {"status": "pass", "evidence": ["Pattern ledger in audit report covers hero, pricing, FAQ, outcomes, card grids, and CTA bands"], "reason": ""},
+    "adversarial_critique_and_revision": {"status": "not_run", "evidence": ["Adversarial critique completed"], "reason": "Audit-only scope did not authorize website revisions"},
+    "accessibility_automation": {"status": "pass", "evidence": ["axe-core 4.10.3 run on desktop and mobile primary plus representative content routes"], "reason": ""},
+    "manual_accessibility": {"status": "fail", "evidence": ["Keyboard/focus/reflow pass completed; screen-reader pass not completed and form recovery fails"], "reason": ""}
+  },
+  "state_families": {
+    "data_fetching": {"status": "not_applicable", "evidence": [], "reason": "Rendered page content is static and does not fetch application data"},
+    "data_presence": {"status": "not_applicable", "evidence": [], "reason": "No stored or filterable dynamic data surface is present"},
+    "submission": {"status": "fail", "evidence": ["Native invalid state passes; simulated network failure loses page and input"], "reason": ""},
+    "controls": {"status": "pass", "evidence": ["Buttons, tabs, details, form controls, hover, focus, and selection inspected"], "reason": ""},
+    "navigation": {"status": "pass", "evidence": ["Current state, expanded/collapsed, Escape, and focus return verified"], "reason": ""},
+    "media": {"status": "fail", "evidence": ["Outcome panel contains unresolved Vehicle photo placeholder and empty photo sources"], "reason": ""},
+    "auth": {"status": "not_applicable", "evidence": [], "reason": "No identity-dependent routes or controls exist"},
+    "permissions": {"status": "not_applicable", "evidence": [], "reason": "No role or entitlement dependent capability exists"},
+    "content_stress": {"status": "fail", "evidence": ["320px and 200% text-size overflow"], "reason": ""},
+    "display_preferences": {"status": "fail", "evidence": ["Reduced motion passes, but enlarged text and reflow fail"], "reason": ""},
+    "localization": {"status": "not_applicable", "evidence": [], "reason": "Current stated product scope is English-only service in the United States"}
+  },
+  "pattern_justifications": [
+    {
+      "pattern": "Split task-first homepage hero with inline form",
+      "content_or_task_job": "Explains the offer and lets urgent users begin a free review without another navigation step",
+      "context_fit": "High-intent drivers may be time-sensitive and already have the insurer offer available",
+      "alternative_considered": "One hero CTA to the dedicated free-review route",
+      "selection_reason": "The split view makes price, timing, scope, and action simultaneously visible on desktop",
+      "constraints": "Mobile orientation must precede the long form; loading, error, retry, success, keyboard, and privacy states are required",
+      "rendered_evidence": "Homepage 1440x900 and 390x844 full-page captures plus form state tests"
+    },
+    {
+      "pattern": "Pricing cards plus comparison table and mobile disclosures",
+      "content_or_task_job": "Compares three parallel packages with shared fields and different support depth",
+      "context_fit": "Users need transparent one-time price and deliverable differences before purchase",
+      "alternative_considered": "Plain stacked price list",
+      "selection_reason": "Cards support initial selection while the table supports detailed comparison; mobile disclosures avoid a squeezed table",
+      "constraints": "Correct heading levels, long copy, keyboard disclosure, contrast, 320px, and 200% text-size behavior",
+      "rendered_evidence": "Pricing desktop/mobile full-page captures and keyboard disclosure test"
+    },
+    {
+      "pattern": "Native FAQ disclosures",
+      "content_or_task_job": "Reveals secondary purchase answers on demand",
+      "context_fit": "Pricing objections are important but should not dominate first comparison",
+      "alternative_considered": "Always-open answers beside each package",
+      "selection_reason": "Native details preserve semantics and keyboard behavior with low implementation complexity",
+      "constraints": "Answers that belong near a purchase decision should be moved there; summary targets must remain large and clear",
+      "rendered_evidence": "Desktop/mobile pricing and guide captures with keyboard interaction"
+    },
+    {
+      "pattern": "Customer outcome tabs",
+      "content_or_task_job": "Intended to compare claim outcomes as social proof",
+      "context_fit": "Real consented cases could answer whether the service changes outcomes",
+      "alternative_considered": "Omit outcome proof until records exist",
+      "selection_reason": "Current selection is rejected because proof is not verifiable and placeholder media remains",
+      "constraints": "Requires consented records, accurate context, keyboard operation, a narrow alternative, and zero overflow",
+      "rendered_evidence": "Homepage full-page captures, keyboard tab test, 320px overflow diagnostics, and repository proof audit"
+    }
+  ],
+  "declared_automatic_failures": [
+    "Unverified precise customer outcomes are published as completed claims and an unresolved Vehicle photo placeholder is visible",
+    "Primary lead form has no loading, network-error, preserved-input, or retry path; simulated failure loses the page and data",
+    "Homepage horizontally overflows at 320px",
+    "200% text-size stress causes horizontal overflow on home, pricing, and free-review",
+    "Serious WCAG contrast and link-distinction violations remain on primary and representative routes"
+  ],
+  "issues": [
+    {"id": "F-01", "category": "trust", "severity": "critical", "resolved": false, "priority": 67.5},
+    {"id": "F-02", "category": "functional_completeness", "severity": "critical", "resolved": false, "priority": 33.75},
+    {"id": "F-03", "category": "trust", "severity": "high", "resolved": false, "priority": 18.0},
+    {"id": "F-04", "category": "accessibility", "severity": "high", "resolved": false, "priority": 54.0},
+    {"id": "F-05", "category": "accessibility", "severity": "high", "resolved": false, "priority": 27.0},
+    {"id": "F-06", "category": "mobile_composition", "severity": "high", "resolved": false, "priority": 54.0},
+    {"id": "F-07", "category": "trust", "severity": "high", "resolved": false, "priority": 18.0},
+    {"id": "F-08", "category": "accessibility", "severity": "medium", "resolved": false, "priority": 18.0},
+    {"id": "F-09", "category": "mobile_composition", "severity": "high", "resolved": false, "priority": 12.0},
+    {"id": "F-10", "category": "imagery_art_direction", "severity": "medium", "resolved": false, "priority": 9.0},
+    {"id": "F-11", "category": "trust", "severity": "high", "resolved": false, "priority": 8.0},
+    {"id": "F-12", "category": "mobile_composition", "severity": "low", "resolved": false, "priority": 4.5},
+    {"id": "F-13", "category": "functional_completeness", "severity": "medium", "resolved": false, "priority": 3.0}
+  ],
+  "scores": {
+    "brand_specificity": 4,
+    "audience_fit": 4,
+    "industry_fit": 4,
+    "content_specificity": 3,
+    "information_hierarchy": 4,
+    "composition": 4,
+    "typography": 4,
+    "color": 3,
+    "imagery_art_direction": 2,
+    "shape_language": 4,
+    "interaction_quality": 2,
+    "motion": 4,
+    "mobile_composition": 3,
+    "accessibility": 2,
+    "functional_completeness": 2,
+    "visual_coherence": 4,
+    "originality": 4,
+    "trust": 1,
+    "conversion_clarity": 4,
+    "memorability": 4
+  }
+}
