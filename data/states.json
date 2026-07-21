@@ -4,7 +4,28 @@
       "name": "Florida",
       "abbreviation": "FL",
       "slug": "florida",
+      "canonicalPath": "/states/florida.html",
+      "status": "published",
+      "renderMode": "generated",
+      "aliases": [],
+      "relatedGuides": [],
+      "review": {"reviewedOn": "2026-07-20"},
+      "sources": [
+        {
+          "title": "Florida Statutes §319.30, Salvage",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399%2F0319%2FSections%2F0319.30.html",
+          "supports": ["totalLossThreshold"],
+          "sourceType": "statute"
+        },
+        {
+          "title": "Florida Office of Insurance Regulation",
+          "url": "https://www.floir.com/",
+          "supports": ["deptOfInsurance"],
+          "sourceType": "regulator"
+        }
+      ],
       "totalLossThreshold": "80%",
+      "thresholdDescription": "Florida uses an 80% fixed total-loss threshold: a vehicle is generally a total loss when the cost of repair reaches at least 80% of its actual cash value.",
       "thresholdType": "fixed",
       "appraisalClause": "Not mandated by state statute; most policies include an appraisal clause as standard contractual language. If your policy includes one, you can invoke it to resolve a valuation dispute.",
       "insuranceCodeRef": "Florida Statutes §626.9744 (Motor Vehicle Insurance Claims), §627.7015 (Alternative Dispute Resolution)",
@@ -13,12 +34,32 @@
       "deadlines": "Florida law requires insurers to acknowledge claims within 14 days and pay within 90 days of receiving proof of loss.",
       "diminishedValue": "Available in third-party claims against the at-fault driver's insurer. First-party diminished value claims are generally not recoverable under your own policy.",
       "localAngles": ["Hurricane and flood damage claims", "High uninsured motorist rates", "Year-round driving exposure", "Tourism corridor accident volume"],
-      "cities": ["miami", "tampa", "jacksonville", "orlando", "fort-lauderdale", "st-petersburg"]
+      "cities": ["miami", "tampa", "jacksonville", "orlando"]
     },
     "california": {
       "name": "California",
       "abbreviation": "CA",
       "slug": "california",
+      "canonicalPath": "/states/california.html",
+      "status": "published",
+      "renderMode": "generated",
+      "aliases": [],
+      "relatedGuides": [],
+      "review": {"reviewedOn": "2026-07-20"},
+      "sources": [
+        {
+          "title": "California Department of Insurance Fair Claims Settlement Practices Regulations",
+          "url": "https://www.insurance.ca.gov/01-consumers/130-laws-regs-hearings/05-CCR/fair-claims-regs.cfm",
+          "supports": ["appraisalClause", "deadlines", "insuranceCodeRef"],
+          "sourceType": "regulator"
+        },
+        {
+          "title": "California Department of Insurance, So You've Had an Accident, What's Next?",
+          "url": "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/01-auto/hadaccident.cfm",
+          "supports": ["appraisalClause", "deadlines"],
+          "sourceType": "official-publication"
+        }
+      ],
       "totalLossThreshold": "TLF",
       "thresholdDescription": "California uses the Total Loss Formula: a vehicle is a total loss when the cost of repair plus the salvage value equals or exceeds the actual cash value.",
       "thresholdType": "formula",
@@ -29,12 +70,32 @@
       "deadlines": "California requires insurers to accept or deny claims within 40 days of receiving proof of claim. Payment is due within 30 days of settlement agreement.",
       "diminishedValue": "Available in third-party claims. California courts have recognized diminished value as a recoverable damage in tort claims against the at-fault driver.",
       "localAngles": ["Largest state by population and vehicle registrations", "High vehicle replacement costs in metro areas", "EV and hybrid valuation complexity", "Wildfire and earthquake-adjacent total loss claims"],
-      "cities": ["los-angeles", "san-diego", "san-francisco", "sacramento", "san-jose", "oakland", "fresno", "long-beach"]
+      "cities": ["los-angeles", "san-diego", "san-francisco", "sacramento"]
     },
     "georgia": {
       "name": "Georgia",
       "abbreviation": "GA",
       "slug": "georgia",
+      "canonicalPath": "/states/georgia.html",
+      "status": "published",
+      "renderMode": "generated",
+      "aliases": [],
+      "relatedGuides": [],
+      "review": {"reviewedOn": "2026-07-20"},
+      "sources": [
+        {
+          "title": "Georgia Office of the Commissioner of Insurance and Safety Fire, Auto Insurance",
+          "url": "https://oci.georgia.gov/insurance-resources/auto",
+          "supports": ["deptOfInsurance"],
+          "sourceType": "regulator"
+        },
+        {
+          "title": "Georgia Office of the Commissioner of Insurance and Safety Fire, Auto Claim Tips",
+          "url": "https://oci.georgia.gov/insurance-resources/auto/auto-claim-tips",
+          "supports": ["deadlines"],
+          "sourceType": "official-publication"
+        }
+      ],
       "totalLossThreshold": "TLF",
       "thresholdDescription": "Georgia uses the Total Loss Formula: a vehicle is a total loss when the cost of repair plus the salvage value equals or exceeds the actual cash value.",
       "thresholdType": "formula",
@@ -51,7 +112,34 @@
       "name": "North Carolina",
       "abbreviation": "NC",
       "slug": "north-carolina",
+      "canonicalPath": "/states/north-carolina.html",
+      "status": "published",
+      "renderMode": "generated",
+      "aliases": [],
+      "relatedGuides": [],
+      "review": {"reviewedOn": "2026-07-20"},
+      "sources": [
+        {
+          "title": "North Carolina Department of Insurance, After an Accident",
+          "url": "https://www.ncdoi.gov/consumers/auto-and-vehicle-insurance/after-accident",
+          "supports": ["totalLossThreshold", "thresholdDescription"],
+          "sourceType": "regulator"
+        },
+        {
+          "title": "North Carolina General Statutes §20-71.3",
+          "url": "https://www.ncleg.gov/enactedlegislation/statutes/html/bysection/chapter_20/gs_20-71.3.html",
+          "supports": ["totalLossThreshold", "insuranceCodeRef"],
+          "sourceType": "statute"
+        },
+        {
+          "title": "North Carolina Department of Insurance, Claims Handling Rule Changes",
+          "url": "https://www.ncdoi.gov/documents/consumer/administrative-rules-changes-claims-handling-2020/open",
+          "supports": ["deadlines"],
+          "sourceType": "official-publication"
+        }
+      ],
       "totalLossThreshold": "75%",
+      "thresholdDescription": "North Carolina uses a 75% fixed total-loss threshold: a vehicle is generally a total loss when the cost of repair reaches at least 75% of its actual cash value.",
       "thresholdType": "fixed",
       "appraisalClause": "Not mandated by state statute. Most North Carolina auto policies include an appraisal clause. The state does require insurers to provide a reasonable basis for total loss valuations.",
       "insuranceCodeRef": "N.C.G.S. §58-63-15 (Unfair Claim Settlement Practices), N.C. Admin. Code 11 NCAC 04 .0413",
@@ -66,7 +154,55 @@
       "name": "Texas",
       "abbreviation": "TX",
       "slug": "texas",
+      "canonicalPath": "/texas.html",
+      "status": "static",
+      "renderMode": "static",
+      "aliases": ["/states/texas.html"],
+      "relatedGuides": [
+        "/what-to-do-car-totaled-texas.html",
+        "/actual-cash-value-texas.html",
+        "/dont-accept-total-loss-offer-texas.html",
+        "/texas-appraisal-clause-sb458.html",
+        "/totaled-car-sales-tax-texas.html",
+        "/hail-totaled-car-texas.html",
+        "/flooded-car-total-loss-texas.html",
+        "/diminished-value-claim-texas.html"
+      ],
+      "review": {"reviewedOn": "2026-07-20"},
+      "sources": [
+        {
+          "title": "Texas Insurance Code Chapter 1813, Appraisal",
+          "url": "https://statutes.capitol.texas.gov/Docs/IN/pdf/IN.1813.pdf",
+          "supports": ["appraisalClause", "insuranceCodeRef"],
+          "sourceType": "statute"
+        },
+        {
+          "title": "Texas Senate Bill 458, Enrolled Version",
+          "url": "https://capitol.texas.gov/tlodocs/89R/billtext/html/SB00458F.htm",
+          "supports": ["appraisalClause", "insuranceCodeRef"],
+          "sourceType": "official-publication"
+        },
+        {
+          "title": "Texas Department of Insurance Auto Insurance Guide",
+          "url": "https://www.tdi.texas.gov/pubs/consumer/cb020.html",
+          "supports": ["deadlines"],
+          "sourceType": "regulator"
+        },
+        {
+          "title": "Texas Department of Insurance Commissioner's Bulletin B-0027-00, Payment of Diminished Value to Policyholders",
+          "url": "https://tdi.texas.gov/bulletins/2000/b-0027-0.html",
+          "supports": ["diminishedValue"],
+          "sourceType": "regulator"
+        },
+        {
+          "title": "Texas Department of Motor Vehicles Salvage/Nonrepairable Motor Vehicle Manual",
+          "url": "https://www.txdmv.gov/sites/default/files/body-files/Salvage_Nonrepairable_Manual.pdf",
+          "supports": ["totalLossThreshold", "insuranceCodeRef"],
+          "sourceType": "official-publication"
+        }
+      ],
       "totalLossThreshold": "100%",
+      "thresholdDescription": "Texas uses a 100% fixed total-loss threshold: a vehicle is generally a total loss when the cost of repairs equals or exceeds its actual cash value.",
       "thresholdType": "fixed",
       "appraisalClause": "Mandatory under SB 458 (Insurance Code Ch. 1813) for all personal auto policies issued or renewed on or after January 1, 2026. Either party can invoke appraisal to resolve a valuation dispute.",
       "insuranceCodeRef": "Transportation Code Ch. 501 (100% threshold), Insurance Code Ch. 542 (Prompt Payment), Ch. 1813 / SB 458 (Appraisal Clause)",
@@ -75,7 +211,6 @@
       "deadlines": "Texas Prompt Payment of Claims Act (Ch. 542) sets specific deadlines for acknowledging, deciding, and paying claims. Missed deadlines can trigger 18% interest and attorney's fees.",
       "diminishedValue": "Available in third-party claims per TDI Bulletin B-0027-00. Subject to a two-year limitations period from date of loss.",
       "localAngles": ["Highest total loss threshold in the nation (100%)", "Mandatory appraisal clause (SB 458)", "Hail corridor in DFW", "Hurricane and flood exposure on the Gulf Coast"],
-      "existingHub": "texas.html",
       "cities": ["houston", "dallas", "fort-worth", "san-antonio", "austin", "el-paso", "corpus-christi", "lubbock", "laredo"]
     }
   },
@@ -83,90 +218,302 @@
     "miami": {
       "name": "Miami",
       "state": "florida",
+      "canonicalPath": "/states/florida/miami.html",
+      "status": "published",
+      "renderMode": "generated",
+      "aliases": [],
+      "relatedGuides": [],
       "county": "Miami-Dade County",
       "metroArea": "South Florida / Miami-Fort Lauderdale-Pompano Beach",
       "localAngle": "South Florida's dense urban traffic, high uninsured motorist rates, hurricane season exposure, and diverse vehicle market create frequent valuation disputes. Replacement costs in Miami-Dade often exceed statewide averages.",
-      "comparisonScope": "Miami-Dade County, with expansion into Broward and Palm Beach counties when vehicle-specific comparables require it."
+      "comparisonScope": "Miami-Dade County, with expansion into Broward and Palm Beach counties when vehicle-specific comparables require it.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
     },
     "tampa": {
       "name": "Tampa",
       "state": "florida",
+      "canonicalPath": "/states/florida/tampa.html",
+      "status": "published",
+      "renderMode": "generated",
+      "aliases": [],
+      "relatedGuides": [],
       "county": "Hillsborough County",
       "metroArea": "Tampa Bay / Tampa-St. Petersburg-Clearwater",
       "localAngle": "Tampa Bay's rapid population growth, interstate corridor traffic (I-4, I-75), and hurricane exposure drive a high volume of total loss claims. The mix of retiree and commuter vehicle markets requires careful comparable selection.",
-      "comparisonScope": "Hillsborough County, with expansion into Pinellas, Pasco, and Polk counties when the vehicle type or availability warrants it."
+      "comparisonScope": "Hillsborough County, with expansion into Pinellas, Pasco, and Polk counties when the vehicle type or availability warrants it.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
     },
     "jacksonville": {
       "name": "Jacksonville",
       "state": "florida",
+      "canonicalPath": "/states/florida/jacksonville.html",
+      "status": "published",
+      "renderMode": "generated",
+      "aliases": [],
+      "relatedGuides": [],
       "county": "Duval County",
       "metroArea": "Jacksonville",
       "localAngle": "Jacksonville's sprawling geography, military population (Naval Station Mayport, NAS Jacksonville), and position as a logistics hub mean the vehicle market ranges from military-spec trucks to commuter sedans. PCS moves and military deployments can complicate title and condition histories.",
-      "comparisonScope": "Duval County and the greater Jacksonville metro, including St. Johns, Clay, and Nassau counties as needed."
+      "comparisonScope": "Duval County and the greater Jacksonville metro, including St. Johns, Clay, and Nassau counties as needed.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
     },
     "orlando": {
       "name": "Orlando",
       "state": "florida",
+      "canonicalPath": "/states/florida/orlando.html",
+      "status": "published",
+      "renderMode": "generated",
+      "aliases": [],
+      "relatedGuides": [],
       "county": "Orange County",
       "metroArea": "Orlando-Kissimmee-Sanford",
       "localAngle": "Orlando's tourism-driven economy, heavy rental car traffic on I-4 and surrounding highways, and rapid population growth create a high-accident-rate environment. Vehicle valuations here must account for the region's unique mix of rental fleet vehicles and permanent-resident cars.",
-      "comparisonScope": "Orange County, with expansion into Seminole, Osceola, and Lake counties when comparables require it."
+      "comparisonScope": "Orange County, with expansion into Seminole, Osceola, and Lake counties when comparables require it.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
     },
     "los-angeles": {
       "name": "Los Angeles",
       "state": "california",
+      "canonicalPath": "/states/california/los-angeles.html",
+      "status": "published",
+      "renderMode": "generated",
+      "aliases": [],
+      "relatedGuides": [],
       "county": "Los Angeles County",
       "metroArea": "Greater Los Angeles / Los Angeles-Long Beach-Anaheim",
       "localAngle": "The largest metro vehicle market in the US, with extreme traffic density, high replacement costs, a massive EV and hybrid population, and wide variation in vehicle values across neighborhoods. LA County's size means comparables must be carefully scoped to avoid mixing distant sub-markets.",
-      "comparisonScope": "Los Angeles County, with careful attention to sub-market differences (Westside vs. Inland, for example). Expansion into Orange, Ventura, or San Bernardino counties only when the vehicle type or trim availability requires it."
+      "comparisonScope": "Los Angeles County, with careful attention to sub-market differences (Westside vs. Inland, for example). Expansion into Orange, Ventura, or San Bernardino counties only when the vehicle type or trim availability requires it.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
     },
     "san-diego": {
       "name": "San Diego",
       "state": "california",
+      "canonicalPath": "/states/california/san-diego.html",
+      "status": "published",
+      "renderMode": "generated",
+      "aliases": [],
+      "relatedGuides": [],
       "county": "San Diego County",
       "metroArea": "San Diego-Chula Vista-Carlsbad",
       "localAngle": "San Diego's military presence (Camp Pendleton, Naval Base San Diego, MCAS Miramar), border proximity, and coastal climate create a distinct vehicle market. Military PCS transfers and cross-border vehicle histories require careful documentation.",
-      "comparisonScope": "San Diego County. The relatively self-contained market rarely requires expansion beyond county lines."
+      "comparisonScope": "San Diego County. The relatively self-contained market rarely requires expansion beyond county lines.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
     },
     "san-francisco": {
       "name": "San Francisco",
       "state": "california",
+      "canonicalPath": "/states/california/san-francisco.html",
+      "status": "published",
+      "renderMode": "generated",
+      "aliases": [],
+      "relatedGuides": [],
       "county": "San Francisco County",
       "metroArea": "San Francisco-Oakland-Berkeley",
       "localAngle": "San Francisco's compact geography, high cost of living, and tech-industry vehicle preferences (EVs, luxury imports) create above-average replacement costs. The Bay Area's congested corridors and bridge traffic contribute to high accident volume.",
-      "comparisonScope": "San Francisco County and the immediate Bay Area (Alameda, Contra Costa, San Mateo counties), reflecting the interconnected metro market."
+      "comparisonScope": "San Francisco County and the immediate Bay Area (Alameda, Contra Costa, San Mateo counties), reflecting the interconnected metro market.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
     },
     "sacramento": {
       "name": "Sacramento",
       "state": "california",
+      "canonicalPath": "/states/california/sacramento.html",
+      "status": "published",
+      "renderMode": "generated",
+      "aliases": [],
+      "relatedGuides": [],
       "county": "Sacramento County",
       "metroArea": "Sacramento-Roseville-Folsom",
       "localAngle": "Sacramento's Central Valley position, state-capital economy, and growing suburban sprawl create a vehicle market that bridges Northern California's coastal and inland pricing. Flood-zone exposure along the Sacramento and American rivers adds a weather-damage dimension.",
-      "comparisonScope": "Sacramento County, with expansion into Placer, El Dorado, and Yolo counties when suburban and foothill markets affect comparable availability."
+      "comparisonScope": "Sacramento County, with expansion into Placer, El Dorado, and Yolo counties when suburban and foothill markets affect comparable availability.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
     },
     "atlanta": {
       "name": "Atlanta",
       "state": "georgia",
+      "canonicalPath": "/states/georgia/atlanta.html",
+      "status": "published",
+      "renderMode": "generated",
+      "aliases": [],
+      "relatedGuides": [],
       "county": "Fulton County",
       "metroArea": "Atlanta-Sandy Springs-Alpharetta",
       "localAngle": "Atlanta's status as the #6 US metro, with extreme highway congestion (I-285, I-85, I-75), severe weather (hail, ice storms), and one of the nation's strongest diminished value precedents (State Farm v. Mabry), makes it a high-volume market for total loss and diminished value disputes. The metro's sprawl across 29 counties means comparable scope decisions are critical.",
-      "comparisonScope": "Fulton and DeKalb counties as the starting point, expanding into Cobb, Gwinnett, Clayton, and other metro-Atlanta counties only when the vehicle type and availability require it."
+      "comparisonScope": "Fulton and DeKalb counties as the starting point, expanding into Cobb, Gwinnett, Clayton, and other metro-Atlanta counties only when the vehicle type and availability require it.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
     },
     "charlotte": {
       "name": "Charlotte",
       "state": "north-carolina",
+      "canonicalPath": "/states/north-carolina/charlotte.html",
+      "status": "published",
+      "renderMode": "generated",
+      "aliases": [],
+      "relatedGuides": [],
       "county": "Mecklenburg County",
       "metroArea": "Charlotte-Concord-Gastonia (NC-SC)",
       "localAngle": "Charlotte's banking-industry economy, rapid metro growth, and position as the #23 US metro create a diverse vehicle market. The cross-state metro area (extending into South Carolina) means comparable vehicles may come from two states, each with different insurance regulations.",
-      "comparisonScope": "Mecklenburg County, with expansion into Cabarrus, Gaston, Union, and York (SC) counties when the cross-state metro market affects comparables."
+      "comparisonScope": "Mecklenburg County, with expansion into Cabarrus, Gaston, Union, and York (SC) counties when the cross-state metro market affects comparables.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
     },
     "raleigh": {
       "name": "Raleigh",
       "state": "north-carolina",
+      "canonicalPath": "/states/north-carolina/raleigh.html",
+      "status": "published",
+      "renderMode": "generated",
+      "aliases": [],
+      "relatedGuides": [],
       "county": "Wake County",
       "metroArea": "Raleigh-Durham-Chapel Hill (Research Triangle)",
       "localAngle": "The Research Triangle's tech-industry growth, university population, and rapidly expanding suburban development create a vehicle market with above-average EV adoption and newer model years. Wake County's fast-growing inventory of vehicles makes timely comparable selection important.",
-      "comparisonScope": "Wake County, with expansion into Durham, Orange, and Johnston counties reflecting the interconnected Research Triangle market."
+      "comparisonScope": "Wake County, with expansion into Durham, Orange, and Johnston counties reflecting the interconnected Research Triangle market.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
+    },
+    "houston": {
+      "name": "Houston",
+      "state": "texas",
+      "canonicalPath": "/total-loss-appraisal-houston.html",
+      "status": "static",
+      "renderMode": "static",
+      "aliases": ["/states/texas/houston.html"],
+      "relatedGuides": [],
+      "county": "Harris County",
+      "metroArea": "Houston-The Woodlands-Sugar Land",
+      "localAngle": "Houston-area work often turns on vehicle history, exact equipment, and whether a listing is genuinely comparable. Water or title history is considered only when documented for the vehicle; a ZIP code or storm reference is not a substitute for vehicle evidence.",
+      "comparisonScope": "Start with Houston and Harris County listings. If the report needs Fort Bend, Montgomery, Brazoria, or another nearby area, the final report identifies the reason for the expansion instead of blending the region into an unexplained average.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
+    },
+    "dallas": {
+      "name": "Dallas",
+      "state": "texas",
+      "canonicalPath": "/total-loss-appraisal-dallas.html",
+      "status": "static",
+      "renderMode": "static",
+      "aliases": ["/states/texas/dallas.html"],
+      "relatedGuides": [],
+      "county": "Dallas County",
+      "metroArea": "Dallas-Fort Worth-Arlington",
+      "localAngle": "The local question is not simply whether a listing is in DFW. It is whether the same year, trim, equipment, mileage band, condition, title history, and sale context make it a defensible comparison for this Dallas claim.",
+      "comparisonScope": "Start with Dallas County and the vehicle’s likely replacement market. If Collin, Denton, Rockwall, or another adjacent area is used, the report records the location, date, trim, mileage, and reason each comparable belongs in the set.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
+    },
+    "fort-worth": {
+      "name": "Fort Worth",
+      "state": "texas",
+      "canonicalPath": "/total-loss-appraisal-fort-worth.html",
+      "status": "static",
+      "renderMode": "static",
+      "aliases": ["/states/texas/fort-worth.html"],
+      "relatedGuides": [],
+      "county": "Tarrant County",
+      "metroArea": "Dallas-Fort Worth-Arlington",
+      "localAngle": "Fort Worth work benefits from keeping location, listing date, vehicle configuration, mileage, condition, title status, and seller type visible. Those details matter more than a broad metro label.",
+      "comparisonScope": "Begin with Tarrant County. Parker, Johnson, Denton, Dallas, or other regional listings can be considered when they are actually relevant to the replacement question and are clearly identified in the analysis.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
+    },
+    "san-antonio": {
+      "name": "San Antonio",
+      "state": "texas",
+      "canonicalPath": "/total-loss-appraisal-san-antonio.html",
+      "status": "static",
+      "renderMode": "static",
+      "aliases": ["/states/texas/san-antonio.html"],
+      "relatedGuides": [],
+      "county": "Bexar County",
+      "metroArea": "San Antonio-New Braunfels",
+      "localAngle": "The analysis separates actual vehicle evidence from assumptions about the driver. Equipment, service records, mileage, prior damage, title history, and the insurer’s adjustment logic are evaluated case by case.",
+      "comparisonScope": "Use Bexar County first. Comal, Guadalupe, Medina, or another nearby market may be considered when the listing is a defensible comparable; the report explains the geography instead of presenting a regional average as a fact.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
+    },
+    "austin": {
+      "name": "Austin",
+      "state": "texas",
+      "canonicalPath": "/total-loss-appraisal-austin.html",
+      "status": "static",
+      "renderMode": "static",
+      "aliases": ["/states/texas/austin.html"],
+      "relatedGuides": [],
+      "county": "Travis County",
+      "metroArea": "Austin-Round Rock-Georgetown",
+      "localAngle": "Options and packages are not assumed from a model name. The report checks the VIN or records, equipment, mileage, condition, prior damage, title history, and listing details before making any adjustment.",
+      "comparisonScope": "Begin with Travis County. Williamson, Hays, Bastrop, or another nearby area may be included when those listings reflect the realistic replacement market for the assignment and are labeled accordingly.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
+    },
+    "el-paso": {
+      "name": "El Paso",
+      "state": "texas",
+      "canonicalPath": "/total-loss-appraisal-el-paso.html",
+      "status": "static",
+      "renderMode": "static",
+      "aliases": ["/states/texas/el-paso.html"],
+      "relatedGuides": [],
+      "county": "El Paso County",
+      "metroArea": "El Paso",
+      "localAngle": "Distance, seller type, title history, mileage, equipment, condition, and documented vehicle history can all affect whether a comparable is useful. Any regional adjustment must be supported by the actual listing set and assignment facts.",
+      "comparisonScope": "Start with El Paso County. If a suitable comparable is outside the immediate area, the report identifies the location, timing, configuration, and reason it was included; out-of-area listings are not treated as interchangeable by default.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
+    },
+    "corpus-christi": {
+      "name": "Corpus Christi",
+      "state": "texas",
+      "canonicalPath": "/total-loss-appraisal-corpus-christi.html",
+      "status": "static",
+      "renderMode": "static",
+      "aliases": ["/states/texas/corpus-christi.html"],
+      "relatedGuides": [],
+      "county": "Nueces County",
+      "metroArea": "Corpus Christi",
+      "localAngle": "For any vehicle with a water, title, or prior-damage issue, the analysis relies on records and inspection evidence rather than a broad coastal label. Trim, options, mileage, condition, and listing date remain central.",
+      "comparisonScope": "Begin with Nueces County. San Patricio, Aransas, Kleberg, or another nearby area may be used where the listing is relevant to replacement; the report keeps each location and its role visible.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
+    },
+    "lubbock": {
+      "name": "Lubbock",
+      "state": "texas",
+      "canonicalPath": "/total-loss-appraisal-lubbock.html",
+      "status": "static",
+      "renderMode": "static",
+      "aliases": ["/states/texas/lubbock.html"],
+      "relatedGuides": [],
+      "county": "Lubbock County",
+      "metroArea": "Lubbock",
+      "localAngle": "Exact trim and equipment, mileage, condition, title history, seller type, and whether the listing is current all influence the comparison. Regional geography is documented rather than converted into an unsupported adjustment.",
+      "comparisonScope": "Start with Lubbock County. A wider South Plains search can be appropriate when it produces better-matched vehicles; the report identifies the location, date, configuration, and reason for each expansion.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
+    },
+    "laredo": {
+      "name": "Laredo",
+      "state": "texas",
+      "canonicalPath": "/total-loss-appraisal-laredo.html",
+      "status": "static",
+      "renderMode": "static",
+      "aliases": ["/states/texas/laredo.html"],
+      "relatedGuides": [],
+      "county": "Webb County",
+      "metroArea": "Laredo",
+      "localAngle": "The analysis checks title and registration history, mileage, equipment, condition, seller type, listing date, and whether a cross-market comparison is appropriate. No automatic border or distance adjustment is assumed.",
+      "comparisonScope": "Begin with Webb County. A regional comparable can be considered only when its vehicle configuration, timing, seller context, and replacement relevance are documented in the report.",
+      "review": {"reviewedOn": "2026-07-18"},
+      "sources": []
     }
   }
 }

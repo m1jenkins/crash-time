@@ -9,6 +9,56 @@
       "permanent": true
     },
     {
+      "source": "/states/texas.html",
+      "destination": "/texas.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/states/texas/austin.html",
+      "destination": "/total-loss-appraisal-austin.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/states/texas/corpus-christi.html",
+      "destination": "/total-loss-appraisal-corpus-christi.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/states/texas/dallas.html",
+      "destination": "/total-loss-appraisal-dallas.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/states/texas/el-paso.html",
+      "destination": "/total-loss-appraisal-el-paso.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/states/texas/fort-worth.html",
+      "destination": "/total-loss-appraisal-fort-worth.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/states/texas/houston.html",
+      "destination": "/total-loss-appraisal-houston.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/states/texas/laredo.html",
+      "destination": "/total-loss-appraisal-laredo.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/states/texas/lubbock.html",
+      "destination": "/total-loss-appraisal-lubbock.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/states/texas/san-antonio.html",
+      "destination": "/total-loss-appraisal-san-antonio.html",
+      "statusCode": 301
+    },
+    {
       "source": "/total-loss-appraisal-arlington.html",
       "destination": "/total-loss-appraisal-fort-worth.html",
       "statusCode": 301

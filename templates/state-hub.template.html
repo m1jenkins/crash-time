@@ -6,12 +6,12 @@
   <script src="../js/google-ads.js?v=20260718"></script>
   <title>{{STATE_NAME}} Total Loss &amp; Appraisal Rights Guide | Spur Auto</title>
   <meta name="description" content="Learn {{STATE_NAME}} total-loss rules, appraisal rights, how to dispute a low ACV offer, and where to get an independent vehicle appraisal.">
-  <link rel="canonical" href="https://www.spurauto.com/states/{{STATE_SLUG}}.html">
+  <link rel="canonical" href="{{CANONICAL_URL}}">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Spur Auto">
   <meta property="og:title" content="{{STATE_NAME}} Total Loss &amp; Appraisal Rights Guide | Spur Auto">
   <meta property="og:description" content="When is a car totaled in {{STATE_NAME}}, how the total loss rules work, and how to dispute a lowball settlement with an independent vehicle value report.">
-  <meta property="og:url" content="https://www.spurauto.com/states/{{STATE_SLUG}}.html">
+  <meta property="og:url" content="{{CANONICAL_URL}}">
   <meta property="og:image" content="https://www.spurauto.com/assets/images/vehicle-claim-hero.webp">
   <meta property="og:image:alt" content="Spur Auto independent vehicle appraisal services">
   <meta name="twitter:card" content="summary_large_image">
@@ -30,7 +30,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": "https://www.spurauto.com/states/{{STATE_SLUG}}.html#service",
+    "@id": "{{CANONICAL_URL}}#service",
     "serviceType": "Total loss vehicle appraisal",
     "provider": { "@type": "Organization", "@id": "https://www.spurauto.com/#organization", "name": "Spur Auto", "legalName": "Spur Auto", "url": "https://www.spurauto.com/" },
     "areaServed": { "@type": "State", "name": "{{STATE_NAME}}" },
@@ -55,7 +55,7 @@
       "@type": "ListItem",
       "position": 3,
       "name": "{{STATE_NAME}}",
-      "item": "https://www.spurauto.com/states/{{STATE_SLUG}}.html"
+      "item": "{{CANONICAL_URL}}"
     }]
   }
   </script>
@@ -65,7 +65,7 @@
 
   <header class="site-header">
     <nav class="container nav" aria-label="Primary">
-      <a href="../index.html" class="logo">Spur <span>Auto</span></a>
+      <a href="../" class="logo">Spur <span>Auto</span></a>
       <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">☰</button>
       <ul class="nav-links" id="primary-navigation">
         <li><a href="../how-it-works.html">How It Works</a></li>
@@ -81,7 +81,7 @@
   <main id="main-content" tabindex="-1">
 
   <div class="container breadcrumbs" style="padding-top: 1rem; font-size: 0.875rem;">
-    <a href="../index.html">Home</a> &rarr; <a href="../locations.html">Locations</a> &rarr; {{STATE_NAME}}
+    <a href="../">Home</a> &rarr; <a href="../locations.html">Locations</a> &rarr; {{STATE_NAME}}
   </div>
 
   <section class="hero">
@@ -187,14 +187,7 @@
         </p>
       </div>
       <div class="city-links reveal-on-scroll">
-        <a href="../what-to-do-car-totaled-texas.html">Totaled car: what to do<span>Seven steps from lowball offer to fair payout</span></a>
-        <a href="../actual-cash-value-texas.html">Actual cash value (ACV)<span>ACV vs market value, and how insurers set it</span></a>
-        <a href="../dont-accept-total-loss-offer-texas.html">Rejecting a low offer<span>What happens if you don't accept, and your options</span></a>
-        <a href="../texas-appraisal-clause-sb458.html">Your right to appraisal<span>How the appraisal clause works</span></a>
-        <a href="../totaled-car-sales-tax-texas.html">Sales tax on a total loss<span>The line item worth checking</span></a>
-        <a href="../hail-totaled-car-texas.html">Hail total loss<span>What you're owed after a hailstorm</span></a>
-        <a href="../flooded-car-total-loss-texas.html">Flooded car total loss<span>What you're owed after floodwater</span></a>
-        <a href="../diminished-value-claim-texas.html">Diminished value claims<span>Rules, deadlines &amp; how to file</span></a>
+        {{RELATED_GUIDES_HTML}}
       </div>
     </div>
   </section>
@@ -250,6 +243,7 @@
       <p class="fine-print">
         This page is general information about {{STATE_NAME}} claims, not legal advice. Your rights depend on your policy language, the facts of your claim, and current {{STATE_NAME}} law.
       </p>
+      {{SOURCE_REVIEW_MODULE_HTML}}
     </div>
   </section>
 
@@ -269,7 +263,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="../index.html" class="logo">Spur <span>Auto</span></a>
+          <a href="../" class="logo">Spur <span>Auto</span></a>
           <p>
             Independent vehicle valuation and settlement guidance for people who deserve a fair settlement - not a fast one.
           </p>
@@ -302,17 +296,7 @@
           </ul>
         </div>
         <div>
-          <h3>Free Guides</h3>
-          <ul>
-            <li><a href="../what-to-do-car-totaled-texas.html">Totaled Car: What to Do</a></li>
-            <li><a href="../actual-cash-value-texas.html">Actual Cash Value (ACV)</a></li>
-            <li><a href="../dont-accept-total-loss-offer-texas.html">Rejecting a Low Offer</a></li>
-            <li><a href="../texas-appraisal-clause-sb458.html">Right to Appraisal</a></li>
-            <li><a href="../totaled-car-sales-tax-texas.html">Sales Tax on a Total Loss</a></li>
-            <li><a href="../hail-totaled-car-texas.html">Hail Total Loss</a></li>
-            <li><a href="../flooded-car-total-loss-texas.html">Flooded Car Total Loss</a></li>
-            <li><a href="../diminished-value-claim-texas.html">Diminished Value</a></li>
-          </ul>
+          {{RELATED_GUIDES_FOOTER_HTML}}
         </div>
         <div>
           <h3>Legal</h3>

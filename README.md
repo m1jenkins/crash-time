@@ -29,10 +29,13 @@ low insurance settlements.
 To add or update state and city pages, edit `data/states.json` and run:
 
 ```bash
+npm run validate
+npm run test:seo
 npm run build
+npm run audit:seo
 ```
 
-This compiles all state hubs (`states/*.html`), city pages (`states/*/*.html`), and updates `sitemap.xml`. See [`AGENTS.md`](file:///Users/macbookprom42025/.gemini/antigravity/scratch/total-loss-advocate/AGENTS.md) for full instructions for AI agents and human developers.
+Validation runs before any generated output changes. The build renders published routes in a temporary directory, verifies the result, then replaces generated HTML under `states/` and rebuilds `sitemap.xml` from the indexable canonical inventory. Static and draft routes are skipped. See [`AGENTS.md`](AGENTS.md) for the route schema and full instructions.
 
 ## Running locally
 

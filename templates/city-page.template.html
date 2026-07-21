@@ -6,12 +6,12 @@
   <script src="../../js/google-ads.js?v=20260718"></script>
   <title>{{CITY_NAME}} Total Loss Appraisal | Local ACV Review | Spur Auto</title>
   <meta name="description" content="Car totaled in {{CITY_NAME}}? Spur Auto reviews the insurer's ACV, vehicle-specific evidence, and {{COUNTY}} comparables remotely.">
-  <link rel="canonical" href="https://www.spurauto.com/states/{{STATE_SLUG}}/{{CITY_SLUG}}.html">
+  <link rel="canonical" href="{{CANONICAL_URL}}">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Spur Auto">
   <meta property="og:title" content="{{CITY_NAME}} Total Loss Appraisal | Local ACV Review | Spur Auto">
   <meta property="og:description" content="Car totaled in {{CITY_NAME}}? Spur Auto reviews the insurer's ACV, vehicle-specific evidence, and {{COUNTY}} comparables remotely.">
-  <meta property="og:url" content="https://www.spurauto.com/states/{{STATE_SLUG}}/{{CITY_SLUG}}.html">
+  <meta property="og:url" content="{{CANONICAL_URL}}">
   <meta property="og:image" content="https://www.spurauto.com/assets/images/vehicle-claim-hero.webp">
   <meta property="og:image:alt" content="Spur Auto independent vehicle appraisal services">
   <meta name="twitter:card" content="summary_large_image">
@@ -30,7 +30,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://www.spurauto.com/states/{{STATE_SLUG}}/{{CITY_SLUG}}.html#service",
+  "@id": "{{CANONICAL_URL}}#service",
   "serviceType": "Total loss vehicle appraisal",
   "name": "Total Loss Appraisal - {{CITY_NAME}}, {{STATE_ABBREVIATION}}",
   "provider": {
@@ -72,13 +72,13 @@
       "@type": "ListItem",
       "position": 3,
       "name": "{{STATE_NAME}}",
-      "item": "https://www.spurauto.com/states/{{STATE_SLUG}}.html"
+      "item": "{{STATE_CANONICAL_URL}}"
     },
     {
       "@type": "ListItem",
       "position": 4,
       "name": "{{CITY_NAME}}",
-      "item": "https://www.spurauto.com/states/{{STATE_SLUG}}/{{CITY_SLUG}}.html"
+      "item": "{{CANONICAL_URL}}"
     }
   ]
 }
@@ -107,7 +107,7 @@
       <nav class="location-breadcrumbs" aria-label="Breadcrumb">
         <a href="../../">Home</a><span aria-hidden="true">/</span>
         <a href="../../locations.html">Locations</a><span aria-hidden="true">/</span>
-        <a href="../{{STATE_SLUG}}.html">{{STATE_NAME}}</a><span aria-hidden="true">/</span>
+        <a href="{{STATE_CANONICAL_URL}}">{{STATE_NAME}}</a><span aria-hidden="true">/</span>
         <span aria-current="page">{{CITY_NAME}}</span>
       </nav>
     </div>
@@ -147,7 +147,8 @@
     <section class="section" id="regional-analysis">
       <div class="container">
         <div class="section-head">
-          <h2>{{CITY_NAME}} valuation scope, reviewed on <time datetime="2026-07-18">July 18, 2026</time></h2>
+          <h2>{{CITY_NAME}} valuation scope</h2>
+          {{REVIEWED_AT_HTML}}
           <p class="market-meta">For {{CITY_NAME}} assignments, the comparison area starts with {{COUNTY}} and expands into nearby counties only when those listings reflect the market in which the vehicle would reasonably be replaced. This is a dated methodology note, not a citywide price claim; current comparables are rechecked for each assignment.</p>
         </div>
         <div class="grid-2">
@@ -227,15 +228,10 @@
           <p>This page stays focused on {{CITY_NAME}}-area valuation. Use the canonical state guides for rules, rights, and claim process questions.</p>
         </div>
         <div class="grid-2">
-          <article class="card">
-            <h3><a href="../{{STATE_SLUG}}.html">{{STATE_NAME}} total loss and appraisal rights</a></h3>
-            <p>Statewide rules, appraisal clause context, and the main dispute paths.</p>
-          </article>
-          <article class="card">
-            <h3><a href="../../what-to-do-car-totaled-texas.html">What to do when your car is totaled</a></h3>
-            <p>A checklist for preserving documents and deciding what to do next.</p>
-          </article>
+          {{RELATED_GUIDES_HTML}}
         </div>
+        {{REVIEWED_AT_HTML}}
+        {{SOURCE_REVIEW_MODULE_HTML}}
       </div>
     </section>
 
@@ -285,17 +281,7 @@
           </ul>
         </div>
         <div>
-          <h3>Free Guides</h3>
-          <ul>
-            <li><a href="../../what-to-do-car-totaled-texas.html">Totaled Car: What to Do</a></li>
-            <li><a href="../../actual-cash-value-texas.html">Actual Cash Value (ACV)</a></li>
-            <li><a href="../../dont-accept-total-loss-offer-texas.html">Rejecting a Low Offer</a></li>
-            <li><a href="../../texas-appraisal-clause-sb458.html">Right to Appraisal</a></li>
-            <li><a href="../../totaled-car-sales-tax-texas.html">Sales Tax on a Total Loss</a></li>
-            <li><a href="../../hail-totaled-car-texas.html">Hail Total Loss</a></li>
-            <li><a href="../../flooded-car-total-loss-texas.html">Flooded Car Total Loss</a></li>
-            <li><a href="../../diminished-value-claim-texas.html">Diminished Value</a></li>
-          </ul>
+          {{RELATED_GUIDES_FOOTER_HTML}}
         </div>
         <div>
           <h3>Legal</h3>
