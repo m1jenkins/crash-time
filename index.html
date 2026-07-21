@@ -12,20 +12,20 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Spur Auto">
   <meta property="og:title" content="Check Whether Your Total-Loss Offer Is Low | $99 Appraisal | Spur Auto">
-  <meta property="og:description" content="Find missed value in your insurance offer with a free review and a complete $99 independent total-loss appraisal report. Serving drivers nationwide.">
+  <meta property="og:description" content="Send your insurer&rsquo;s offer and vehicle details for a free review. Get a response within 48 hours. Complete independent reports start at $99.">
   <meta property="og:url" content="https://www.spurauto.com/">
   <meta property="og:image" content="https://www.spurauto.com/assets/images/vehicle-claim-hero-v2.webp">
   <meta property="og:image:alt" content="Collision-damaged crossover beside organized vehicle appraisal evidence">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.spurauto.com/assets/images/vehicle-claim-hero-v2.webp">
   <meta name="twitter:title" content="Check Whether Your Total-Loss Offer Is Low | $99 Appraisal | Spur Auto">
-  <meta name="twitter:description" content="A free claim review and complete $99 independent total-loss appraisal report. Serving drivers nationwide.">
+  <meta name="twitter:description" content="Send your insurer&rsquo;s offer and vehicle details for a free review with a response within 48 hours. Serving drivers nationwide.">
   <link rel="preload" href="assets/fonts/dm-serif-display-latin-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="assets/brand/spur-auto-favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/spur-auto-favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/spur-auto-favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/brand/spur-auto-apple-touch-icon.png">
-  <link rel="stylesheet" href="css/styles.css?v=20260718a">
+  <link rel="stylesheet" href="css/styles.css?v=20260721">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -93,17 +93,17 @@
   <main id="main-content" tabindex="-1">
     <section class="home-hero">
       <div class="home-hero-copy">
-        <h1><span>Get more money</span><span>for your totaled car.</span></h1>
-        <p class="home-lede">Insurers routinely underpay total loss claims. We review your offer for free and deliver a detailed $99 appraisal report to help you recover what your vehicle is actually worth.</p>
+        <h1><span>Is your total-loss</span><span>offer too low?</span></h1>
+        <p class="home-lede">Send us the insurance company&rsquo;s offer and details about your vehicle. We&rsquo;ll review the valuation at no charge and respond within 48 hours. If a paid appraisal makes sense, a complete report starts at $99.</p>
         <div class="home-price-proof" aria-label="Total-loss report pricing">
-          <p class="home-price-line">Complete Total-Loss Report: <strong>$99</strong></p>
-          <p class="home-price-claim">Independent appraisal report to challenge low payouts — keep 100% of your settlement.</p>
+          <p class="home-price-line">Free review first. Complete report from <strong>$99</strong></p>
+          <p class="home-price-claim">No percentage fee. You keep 100% of any additional settlement.</p>
         </div>
         <div class="home-hero-actions">
-          <a href="#claim-check" class="btn btn-primary">Get My Free Claim Review</a>
+          <a href="#claim-check" class="btn btn-primary">Check My Offer</a>
           <a href="how-it-works.html" class="btn home-secondary">See How It Works</a>
         </div>
-        <p class="home-hero-note">Free initial review <span>·</span> Fast 2-day turnaround <span>·</span> Serving all 50 states</p>
+        <p class="home-hero-note">Free review <span>·</span> Response within 48 hours <span>·</span> Nationwide</p>
       </div>
       <div class="home-hero-media">
         <img src="assets/images/vehicle-claim-hero-v2-768.webp"
@@ -116,23 +116,49 @@
              width="1402" height="1122" fetchpriority="high" decoding="async">
         <div class="claim-card" id="claim-check">
           <form id="hero-contact-form" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="access_key" value="88f1d2af-59c2-46b1-92e6-0c554846ef34">
+            <input type="hidden" name="access_key" value="88f1d2af-59c2-46b1-92e6-0c554846ef34">
             <input type="hidden" name="redirect" value="https://www.spurauto.com/thank-you.html">
-            <h2>Let's check your offer</h2>
+            <input type="hidden" name="subject" value="New Spur Auto free claim review">
+            <h2>Check your offer for free</h2>
+            <p class="claim-card-intro">Tell us what the insurer offered and which vehicle was valued.</p>
             <div class="form-group">
-              <label for="hero-name">Name</label>
-              <input type="text" id="hero-name" name="name" autocomplete="name" placeholder="Your full name">
-            </div>
-            <div class="form-group">
-              <label for="hero-email">Email</label>
+              <label for="hero-email">Email <span aria-hidden="true">*</span></label>
               <input type="email" id="hero-email" name="email" autocomplete="email" required placeholder="you@example.com">
             </div>
             <div class="form-group">
-              <label for="hero-attachment">Upload your insurer&rsquo;s offer or valuation report <span>(optional)</span></label>
-              <input type="file" id="hero-attachment" name="attachment" accept="application/pdf,image/jpeg,image/png" aria-describedby="hero-attachment-help">
-              <p class="field-help" id="hero-attachment-help">PDF, JPG, or PNG up to 5 MB. Don&rsquo;t have it handy? You can still submit.</p>
+              <label for="hero-vehicle">Vehicle year, make, model, and trim <span aria-hidden="true">*</span></label>
+              <input type="text" id="hero-vehicle" name="vehicle" autocomplete="off" required placeholder="2021 Toyota RAV4 XLE">
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Start My Free Review <span aria-hidden="true">→</span></button>
+            <div class="claim-card-row">
+              <div class="form-group">
+                <label for="hero-mileage">Mileage <span aria-hidden="true">*</span></label>
+                <input type="number" id="hero-mileage" name="mileage" min="0" step="1" inputmode="numeric" required placeholder="48,000">
+              </div>
+              <div class="form-group">
+                <label for="hero-zip">ZIP code <span aria-hidden="true">*</span></label>
+                <input type="text" id="hero-zip" name="zip_code" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}(-[0-9]{4})?" required placeholder="75001">
+              </div>
+            </div>
+            <div class="claim-card-row">
+              <div class="form-group">
+                <label for="hero-offer">Insurer&rsquo;s offer <span aria-hidden="true">*</span></label>
+                <input type="number" id="hero-offer" name="insurer_offer" min="0" step="0.01" inputmode="decimal" required placeholder="$14,250">
+              </div>
+              <div class="form-group">
+                <label for="hero-insurer">Insurance company <span>(optional)</span></label>
+                <input type="text" id="hero-insurer" name="insurance_company" autocomplete="organization" placeholder="Company name">
+              </div>
+            </div>
+            <div class="form-group claim-file-group">
+              <label for="hero-attachment">Valuation report <span>(recommended)</span></label>
+              <input type="file" id="hero-attachment" name="attachment" accept="application/pdf,image/jpeg,image/png" aria-describedby="hero-attachment-help">
+              <p class="field-help" id="hero-attachment-help">Upload the insurer&rsquo;s PDF, JPG, or PNG if you have it. You can still submit without it.</p>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Check My Offer <span aria-hidden="true">→</span></button>
+            <p class="form-privacy">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              We use your details only for this review. <a href="privacy.html">Privacy policy</a>
+            </p>
           </form>
         </div>
       </div>
@@ -145,7 +171,7 @@
         </div>
         <div class="assurance-item">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3m10-3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v14H4V6a1 1 0 0 1 1-1Z"/></svg>
-          <span>Reply in 2 business days</span>
+          <span>Free-review response within 48 hours</span>
         </div>
         <div class="assurance-item">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 12 2.5 2.5L16 9m-4-6 7 3v5c0 4.6-2.8 8.4-7 10-4.2-1.6-7-5.4-7-10V6l7-3Z"/></svg>
@@ -156,29 +182,29 @@
     <section class="home-section evidence-section">
       <div class="container evidence-layout reveal-on-scroll">
         <div class="evidence-intro">
-          <h2>We find the value insurance reports <em>miss.</em></h2>
-          <p>Insurance valuations can miss the details that make your vehicle worth more. We check the parts that automated reports often overlook.</p>
-          <img src="assets/images/comparable-review-v2-768.webp"
-               srcset="assets/images/comparable-review-v2-480.webp 480w,
-                       assets/images/comparable-review-v2-768.webp 768w,
-                       assets/images/comparable-review-v2-1200.webp 1200w,
-                       assets/images/comparable-review-v2.webp 1916w"
+          <h2>A useful review starts with the <em>right inputs.</em></h2>
+          <p>We look at the insurer&rsquo;s valuation, the facts about your vehicle, and relevant market evidence before suggesting a paid report.</p>
+          <img src="assets/images/claim-file-review-v3-768.webp"
+               srcset="assets/images/claim-file-review-v3-480.webp 480w,
+                       assets/images/claim-file-review-v3-768.webp 768w,
+                       assets/images/claim-file-review-v3-1200.webp 1200w,
+                       assets/images/claim-file-review-v3.webp 1536w"
                sizes="(max-width: 960px) calc(100vw - 32px), (max-width: 1450px) calc(50vw - 64px), 620px"
-               alt="An appraiser marking a vehicle comparison within a market evidence packet"
-               width="1916" height="821" loading="lazy" decoding="async">
+               alt="An appraiser reviewing a redacted insurance valuation packet, vehicle details, and comparable listings"
+               width="1536" height="1024" loading="lazy" decoding="async">
         </div>
         <div class="evidence-list">
           <article>
             <span>01</span>
-            <div><h3>Wrong comparables</h3><p>Base trims, higher mileage, or vehicles from the wrong market can drag your value down.</p></div>
+            <div><h3>The insurer&rsquo;s valuation</h3><p>The offer and valuation report show which vehicles, adjustments, and deductions shaped the number.</p></div>
           </article>
           <article>
             <span>02</span>
-            <div><h3>Missing value</h3><p>Options, condition, maintenance, and local demand deserve to be counted.</p></div>
+            <div><h3>Your exact vehicle</h3><p>Trim, mileage, options, condition, and prior upgrades help us check whether the vehicle description is accurate.</p></div>
           </article>
           <article>
             <span>03</span>
-            <div><h3>Pressure to settle</h3><p>You can ask questions, correct errors, and support your position with independent evidence.</p></div>
+            <div><h3>Relevant comparables</h3><p>We consider available listings and other market evidence that better match the vehicle and location.</p></div>
           </article>
           <a href="how-it-works.html" class="home-text-link">What an appraisal checks <span aria-hidden="true">→</span></a>
         </div>
@@ -193,24 +219,24 @@
     <section class="home-section process-section">
       <div class="container reveal-on-scroll">
         <div class="process-head">
-          <h2>How we help you<br>ask for more.</h2>
-          <p>You send the claim. We do the market work.<br>You get evidence you can actually use.</p>
+          <h2>From insurer offer<br>to a clear next step.</h2>
+          <p>Start with a free review. Pay for a report only if the valuation issue appears worth documenting.</p>
         </div>
         <div class="process-rail">
           <article>
             <span class="process-number">1</span>
-            <h3>Share your offer</h3>
-            <p>Send the settlement report and a few vehicle details. About 10 minutes.</p>
+            <h3>Send the core details</h3>
+            <p>Share the insurer&rsquo;s offer, vehicle details, and the valuation report if you have it.</p>
           </article>
           <article>
             <span class="process-number sage">2</span>
-            <h3>We check the market</h3>
-            <p>We compare the valuation against real listings, auction results, and private-party sales.</p>
+            <h3>We review the valuation</h3>
+            <p>We check the vehicle description, adjustments, comparable choices, and relevant market evidence.</p>
           </article>
           <article>
             <span class="process-number">3</span>
-            <h3>Decide with confidence</h3>
-            <p>If the offer looks low, choose Essential, Guided, or Specialty support and move forward with evidence built for your vehicle.</p>
+            <h3>Get a response within 48 hours</h3>
+            <p>We explain whether a paid appraisal appears worthwhile. If the offer looks fair, we&rsquo;ll tell you that too.</p>
           </article>
         </div>
         <div class="process-lower">
@@ -218,7 +244,7 @@
             <a href="how-it-works.html" class="btn btn-primary">See the Full Process <span aria-hidden="true">→</span></a>
             <p>
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-              Full reports delivered in 48 hours
+              Paid reports delivered within 48 hours after your file is complete
             </p>
           </div>
           <div class="report-preview" aria-label="Sample appraisal report preview">
@@ -240,12 +266,12 @@
     <section class="home-section founder-section">
       <div class="container reveal-on-scroll">
         <div class="founder-heading">
-          <h2>Born from<br>a lowball offer.</h2>
+          <h2>Built to make the<br>valuation understandable.</h2>
         </div>
         <div class="founder-story">
           <div class="founder-mark" aria-hidden="true">MW</div>
           <blockquote>
-            <p>“When my insurer lowballed me after an accident, knowing the right mileage, trim, options, and comparables helped me recover thousands more. I started Spur Auto to share that knowledge with other drivers.”</p>
+            <p>“After my own total-loss claim, I saw how much trim, mileage, condition, and comparables matter. I started Spur Auto to help drivers understand the numbers behind an insurance valuation.”</p>
             <cite><strong>Mark West</strong>, Founder and Car Enthusiast</cite>
           </blockquote>
         </div>
@@ -265,12 +291,42 @@
         </div>
       </div>
     </section>
+    <section class="home-section home-faq" aria-labelledby="home-faq-title">
+      <div class="container reveal-on-scroll">
+        <div class="home-faq-heading">
+          <h2 id="home-faq-title">Before you send your offer.</h2>
+          <p>Clear answers about the free review, the 48-hour response, and what happens next.</p>
+        </div>
+        <div class="home-faq-list">
+          <details>
+            <summary>Is the initial review really free?</summary>
+            <p>Yes. There is no charge to submit your offer for an initial review. If a paid appraisal appears worthwhile, we explain the available report options before you decide.</p>
+          </details>
+          <details>
+            <summary>What should I send?</summary>
+            <p>Send the insurer&rsquo;s offer amount, your vehicle&rsquo;s year, make, model, mileage, and ZIP code. The insurer&rsquo;s valuation report is strongly recommended because it shows the comparable vehicles and adjustments used.</p>
+          </details>
+          <details>
+            <summary>What if my offer looks fair?</summary>
+            <p>We&rsquo;ll tell you. The free review is meant to help you decide whether further appraisal work appears worthwhile, not to sell a report in every case.</p>
+          </details>
+          <details>
+            <summary>When will I hear back?</summary>
+            <p>We respond within 48 hours after we receive the information needed to review your offer. If anything essential is missing or unreadable, we&rsquo;ll email you with the specific item needed.</p>
+          </details>
+          <details>
+            <summary>Does Spur Auto negotiate with the insurer for me?</summary>
+            <p>No. Spur Auto provides independent valuation evidence and general response support, but does not contact or negotiate with the insurer on your behalf. You remain in control of all claim decisions and communications.</p>
+          </details>
+        </div>
+      </div>
+    </section>
     <section class="home-final-cta">
       <div class="container reveal-on-scroll">
-        <h2>Start with a free claim review. Get the full report for $99.</h2>
-        <p>We'll review your offer at no charge. If it's worth challenging, the complete independent appraisal report is just $99.</p>
+        <h2>Find out whether your offer is worth a closer look.</h2>
+        <p>Send the offer and vehicle details for a free review. We&rsquo;ll respond within 48 hours, and a complete independent report starts at $99 only if you choose to continue.</p>
         <div class="final-actions">
-          <a href="free-review.html" class="btn btn-primary">Get My Free Claim Review</a>
+          <a href="free-review.html" class="btn btn-primary">Check My Offer</a>
           <a href="pricing.html" class="home-text-link light">View transparent pricing <span aria-hidden="true">→</span></a>
         </div>
       </div>

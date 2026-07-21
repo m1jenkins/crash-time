@@ -6,24 +6,24 @@
   <script src="js/google-ads.js?v=20260718" ></script>
   <script src="js/google-ads-events.js?v=20260720" ></script>
   <script src="js/ads-conversions.js?v=20260718" ></script>
-  <title>Free Total Loss Claim Review | Spur Auto</title>
-  <meta name="description" content="Think your totaled-car offer is too low? Get a free, no-obligation review within two business days and learn whether the value is worth challenging.">
+  <title>Free Total-Loss Offer Review | Spur Auto</title>
+  <meta name="description" content="Send your insurer&rsquo;s offer and vehicle details for a free total-loss claim review. Get a response within 48 hours. Available nationwide.">
   <link rel="canonical" href="https://www.spurauto.com/free-review.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Spur Auto">
-  <meta property="og:title" content="Free Total Loss Claim Review | Spur Auto">
-  <meta property="og:description" content="Get a free, no-obligation expert review of your insurance settlement offer within 2 business days.">
+  <meta property="og:title" content="Free Total-Loss Offer Review | Spur Auto">
+  <meta property="og:description" content="Send your insurer&rsquo;s offer and vehicle details for a free total-loss claim review with a response within 48 hours.">
   <meta property="og:url" content="https://www.spurauto.com/free-review.html">
-  <meta property="og:image" content="https://www.spurauto.com/assets/images/vehicle-claim-hero.webp">
-  <meta property="og:image:alt" content="Spur Auto independent vehicle appraisal services">
+  <meta property="og:image" content="https://www.spurauto.com/assets/images/claim-file-review-v3.webp">
+  <meta property="og:image:alt" content="An appraiser reviewing a redacted insurance valuation packet and vehicle comparables">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Free Total Loss Claim Review | Spur Auto">
-  <meta name="twitter:description" content="Get a free, no-obligation expert review of your insurance settlement offer within 2 business days.">
-  <meta name="twitter:image" content="https://www.spurauto.com/assets/images/vehicle-claim-hero.webp">
+  <meta name="twitter:title" content="Free Total-Loss Offer Review | Spur Auto">
+  <meta name="twitter:description" content="Send your insurer&rsquo;s offer and vehicle details for a free review with a response within 48 hours.">
+  <meta name="twitter:image" content="https://www.spurauto.com/assets/images/claim-file-review-v3.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260718a">
+  <link rel="stylesheet" href="css/styles.css?v=20260721">
   <link rel="icon" href="assets/brand/spur-auto-favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/spur-auto-favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/spur-auto-favicon-16.png">
@@ -52,33 +52,61 @@
       <div class="container">
 
       <!-- ================= LEAD CAPTURE FORM ================= -->
-      <form id="free-review-form" class="form-card review-intake-form reveal-on-scroll" action="https://api.web3forms.com/submit" method="POST" aria-labelledby="review-form-title">
+      <form id="free-review-form" class="form-card review-intake-form reveal-on-scroll" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" aria-labelledby="review-form-title">
         <input type="hidden" name="access_key" value="88f1d2af-59c2-46b1-92e6-0c554846ef34">
         <input type="hidden" name="redirect" value="https://www.spurauto.com/thank-you.html">
+        <input type="hidden" name="subject" value="New Spur Auto free claim review">
         <h1 id="review-form-title">Check your total-loss offer.</h1>
-        <p class="form-intro">Share your offer and vehicle details in one quick step. We’ll use them to tell you whether a closer review may be worthwhile.</p>
+        <p class="form-intro">Share the insurer&rsquo;s offer and the details about your vehicle. We&rsquo;ll use them to tell you whether a closer appraisal may be worthwhile.</p>
+        <ul class="review-intake-assurances" aria-label="Review assurances">
+          <li>Free initial review</li>
+          <li>Response within 48 hours</li>
+          <li>Available nationwide</li>
+        </ul>
 
         <fieldset class="review-form-step">
           <legend>Offer and vehicle details</legend>
-          <div class="form-group">
-            <label for="email">Email <span aria-hidden="true">*</span></label>
-            <input type="email" id="email" name="email" autocomplete="email" required>
-          </div>
+          <div class="review-form-grid">
+            <div class="form-group review-form-full">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com">
+            </div>
 
-          <div class="form-group">
-            <label for="vehicle">Vehicle year, make, and model <span aria-hidden="true">*</span></label>
-            <input type="text" id="vehicle" name="vehicle" autocomplete="off" placeholder="e.g., 2021 Toyota RAV4" required>
-          </div>
+            <div class="form-group review-form-full">
+              <label for="vehicle">Vehicle year, make, model, and trim <span aria-hidden="true">*</span></label>
+              <input type="text" id="vehicle" name="vehicle" autocomplete="off" placeholder="2021 Toyota RAV4 XLE" required>
+            </div>
 
-          <div class="form-group">
-            <label for="insurer-offer">Insurer’s offer <span aria-hidden="true">*</span></label>
-            <input type="number" id="insurer-offer" name="insurer_offer" min="0" step="0.01" inputmode="decimal" placeholder="e.g., 14,250" required>
-          </div>
+            <div class="form-group">
+              <label for="mileage">Mileage <span aria-hidden="true">*</span></label>
+              <input type="number" id="mileage" name="mileage" min="0" step="1" inputmode="numeric" placeholder="48,000" required>
+            </div>
 
-          <div class="form-group">
-            <label for="valuation-notes">Offer or valuation details <span>(optional)</span></label>
-            <textarea id="valuation-notes" name="valuation_notes" rows="4" placeholder="Paste any key numbers or notes from your insurer’s offer or valuation report."></textarea>
-            <p class="field-help" id="valuation-notes-help">Don’t have the report handy? You can still submit.</p>
+            <div class="form-group">
+              <label for="zip-code">ZIP code <span aria-hidden="true">*</span></label>
+              <input type="text" id="zip-code" name="zip_code" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}(-[0-9]{4})?" placeholder="75001" required>
+            </div>
+
+            <div class="form-group">
+              <label for="insurer-offer">Insurer&rsquo;s offer <span aria-hidden="true">*</span></label>
+              <input type="number" id="insurer-offer" name="insurer_offer" min="0" step="0.01" inputmode="decimal" placeholder="$14,250" required>
+            </div>
+
+            <div class="form-group">
+              <label for="insurance-company">Insurance company <span>(optional)</span></label>
+              <input type="text" id="insurance-company" name="insurance_company" autocomplete="organization" placeholder="Company name">
+            </div>
+
+            <div class="form-group review-form-full">
+              <label for="valuation-report">Insurer&rsquo;s valuation report <span>(recommended)</span></label>
+              <input type="file" id="valuation-report" name="attachment" accept="application/pdf,image/jpeg,image/png" aria-describedby="valuation-report-help">
+              <p class="field-help" id="valuation-report-help">Upload the PDF, JPG, or PNG sent by the insurer or other party&rsquo;s insurer. You can still submit without it.</p>
+            </div>
+
+            <div class="form-group review-form-full">
+              <label for="valuation-notes">Anything else we should know? <span>(optional)</span></label>
+              <textarea id="valuation-notes" name="valuation_notes" rows="4" placeholder="Note the trim, options, condition, recent upgrades, or anything in the valuation that looks wrong."></textarea>
+            </div>
           </div>
 
           <div class="form-actions">
@@ -87,7 +115,7 @@
         </fieldset>
 
         <p class="form-privacy">
-          🔒 We’ll only use your details to deliver your free review. No spam or selling your data.
+          🔒 We&rsquo;ll only use your details to deliver your free review. No spam or selling your data.
           See our <a href="privacy.html">Privacy Policy</a>.
         </p>
       </form>
@@ -97,9 +125,8 @@
     <section class="section review-value-section" aria-labelledby="review-value-title">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Independent Texas total-loss review</p>
           <h2 id="review-value-title">Find out whether your insurer missed vehicle value.</h2>
-          <p>Spur Auto reviews the details behind a total-loss offer before you pay for a report. The review is designed for Texas drivers who believe the insurer&rsquo;s actual-cash-value calculation or settlement offer may be too low.</p>
+          <p>Spur Auto reviews the details behind a total-loss offer before you pay for a report. The review is available nationwide for drivers who want to understand whether an insurer&rsquo;s valuation may be worth challenging.</p>
         </div>
         <div class="grid-3 review-value-grid">
           <article class="card">
@@ -112,7 +139,7 @@
           </article>
           <article class="card">
             <h3>Clear next step</h3>
-            <p>You receive an initial assessment within two business days explaining whether a paid independent appraisal appears worthwhile.</p>
+            <p>You receive a response within 48 hours after we have the information needed to explain whether a paid independent appraisal appears worthwhile.</p>
           </article>
         </div>
       </div>
@@ -121,7 +148,6 @@
     <section class="section review-pricing-section" aria-labelledby="review-pricing-title">
       <div class="container review-pricing-layout">
         <div>
-          <p class="eyebrow">No payment for the initial review</p>
           <h2 id="review-pricing-title">A complete standard report starts at $99.</h2>
           <p>If the review identifies a supportable valuation issue, the Essential package includes an independent vehicle value report, a line-by-line valuation audit, verified replacement comparables, and general response templates.</p>
           <a href="pricing.html" class="home-text-link">Compare report packages <span aria-hidden="true">&rarr;</span></a>
@@ -137,11 +163,10 @@
     <section class="section review-process-section" aria-labelledby="review-process-title">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">How the free review works</p>
           <h2 id="review-process-title">One form. A documented answer.</h2>
         </div>
         <ol class="review-process-list">
-          <li><strong>Share the offer.</strong><span>Send the insurer&rsquo;s amount and your vehicle details. The valuation report is helpful but optional.</span></li>
+          <li><strong>Share the offer.</strong><span>Send the insurer&rsquo;s amount and your vehicle details. The valuation report is strongly recommended but optional.</span></li>
           <li><strong>We check the evidence.</strong><span>We review the vehicle description, valuation inputs, comparable market, and obvious omissions.</span></li>
           <li><strong>You choose what happens next.</strong><span>We explain whether a closer appraisal looks worthwhile. You remain in control of every claim decision.</span></li>
         </ol>

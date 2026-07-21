@@ -1344,6 +1344,12 @@ body.home-redesign :focus-visible {
   box-shadow: 0 0 0 6px #fff;
 }
 
+#claim-check,
+#free-review-form,
+#plans {
+  scroll-margin-top: 110px;
+}
+
 .home-redesign .btn {
   min-height: 52px;
   border-radius: 7px;
@@ -1505,7 +1511,7 @@ body.home-redesign :focus-visible {
 
 /* First viewport */
 .home-hero {
-  min-height: 700px;
+  min-height: 800px;
   display: grid;
   grid-template-columns: minmax(0, 48%) minmax(0, 52%);
   background: #fff;
@@ -1600,7 +1606,7 @@ body.home-redesign :focus-visible {
 
 .home-hero-media {
   position: relative;
-  min-height: 700px;
+  min-height: 800px;
   background: #e8e7e2;
   overflow: hidden;
 }
@@ -1618,8 +1624,8 @@ body.home-redesign :focus-visible {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: min(420px, calc(100% - 56px));
-  padding: 2.2rem;
+  width: min(520px, calc(100% - 48px));
+  padding: 1.65rem 1.75rem;
   border: 1px solid rgba(13, 27, 51, 0.15);
   border-top: 5px solid var(--home-accent);
   border-radius: 16px;
@@ -1643,8 +1649,22 @@ body.home-redesign :focus-visible {
   letter-spacing: -0.035em;
 }
 
+.claim-card-intro {
+  margin: 0 0 1rem;
+  color: var(--home-ink-soft);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.claim-card-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
 .claim-card .form-group {
-  margin-bottom: 0.95rem;
+  min-width: 0;
+  margin-bottom: 0.75rem;
 }
 
 .claim-card .form-group label {
@@ -1662,14 +1682,40 @@ body.home-redesign :focus-visible {
 }
 
 .claim-card .form-group input {
-  min-height: 46px;
-  padding: 0.65rem 0.8rem;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.58rem 0.72rem;
   border: 1px solid #cbd0d5;
   border-radius: 6px;
   background: #fff;
   color: var(--home-ink);
   font-family: var(--font-body);
   font-size: 0.88rem;
+}
+
+.claim-card .form-group input[type="file"] {
+  min-height: 48px;
+  padding: 0.42rem;
+  font-size: 0.76rem;
+}
+
+.claim-card .form-group input[type="file"]::file-selector-button {
+  min-height: 36px;
+  margin-right: 0.55rem;
+  padding: 0.4rem 0.65rem;
+  color: var(--home-ink);
+  background: #fff8f5;
+  border: 1px solid var(--home-accent);
+  border-radius: 4px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.claim-card .field-help {
+  margin-top: 0.35rem;
+  font-size: 0.7rem;
+  line-height: 1.35;
 }
 
 .claim-card .form-group input:focus {
@@ -1694,7 +1740,8 @@ body.home-redesign :focus-visible {
   gap: 0.4rem;
   margin: 0.7rem 0 0;
   color: var(--home-ink-soft);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
+  line-height: 1.4;
 }
 
 .claim-card .form-privacy svg {
@@ -1702,6 +1749,13 @@ body.home-redesign :focus-visible {
   fill: none;
   stroke: var(--home-sage-dark);
   stroke-width: 1.8;
+}
+
+.claim-card .form-privacy a {
+  color: var(--home-ink);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .claim-card .offer-card-success {
@@ -1804,7 +1858,7 @@ body.home-redesign :focus-visible {
 
 .evidence-intro img {
   width: 100%;
-  height: 220px;
+  height: clamp(260px, 28vw, 390px);
   border-radius: 8px;
   object-fit: cover;
 }
@@ -2166,6 +2220,82 @@ body.home-redesign :focus-visible {
   line-height: 1.6;
 }
 
+/* Homepage FAQ */
+.home-faq {
+  background: var(--home-paper, #f7f8f4);
+  border-top: 1px solid var(--home-line);
+}
+
+.home-faq .container {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1.3fr);
+  gap: clamp(3rem, 8vw, 8rem);
+  align-items: start;
+}
+
+.home-faq-heading {
+  position: sticky;
+  top: 120px;
+}
+
+.home-faq-heading h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(3rem, 5vw, 4.8rem);
+  line-height: 1;
+}
+
+.home-faq-heading p {
+  max-width: 430px;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.home-faq-list {
+  border-top: 1px solid #aeb5bc;
+}
+
+.home-faq-list details {
+  border-bottom: 1px solid #aeb5bc;
+}
+
+.home-faq-list summary {
+  position: relative;
+  padding: 1.45rem 3rem 1.45rem 0;
+  color: var(--home-ink);
+  cursor: pointer;
+  font-size: 1.04rem;
+  font-weight: 750;
+  line-height: 1.45;
+  list-style: none;
+}
+
+.home-faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.home-faq-list summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 0.25rem;
+  color: var(--home-accent);
+  font-family: var(--home-serif);
+  font-size: 1.8rem;
+  font-weight: 400;
+  transform: translateY(-50%);
+}
+
+.home-faq-list details[open] summary::after {
+  content: "−";
+}
+
+.home-faq-list details p {
+  max-width: 720px;
+  margin: -0.25rem 0 1.5rem;
+  padding-right: 2rem;
+  line-height: 1.75;
+}
+
 /* Closing conversion section */
 .home-final-cta {
   padding: clamp(4.5rem, 8vw, 7rem) 0;
@@ -2347,7 +2477,7 @@ body.home-redesign :focus-visible {
   }
 
   .home-hero-media {
-    min-height: 690px;
+    min-height: 780px;
   }
 
   .home-assurance-grid {
@@ -2370,6 +2500,7 @@ body.home-redesign :focus-visible {
   .evidence-layout,
   .process-head,
   .process-lower,
+  .home-faq .container,
   .home-footer-top {
     grid-template-columns: 1fr;
   }
@@ -2392,6 +2523,27 @@ body.home-redesign :focus-visible {
 
   .process-lower {
     margin-top: 4rem;
+  }
+
+  .home-faq-heading {
+    position: static;
+  }
+
+  .founder-points {
+    grid-template-columns: 1fr;
+  }
+
+  .founder-points article,
+  .founder-points article:first-child,
+  .founder-points article:last-child {
+    min-height: 0;
+    padding: 1.5rem 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--home-sage);
+  }
+
+  .founder-points article:last-child {
+    border-bottom: 0;
   }
 
   .process-action {
@@ -2484,11 +2636,18 @@ body.home-redesign :focus-visible {
 
   .claim-card {
     position: relative;
+    left: auto;
+    top: auto;
     right: auto;
     bottom: auto;
     z-index: 2;
     width: 100%;
     margin-top: 0;
+    transform: none;
+  }
+
+  .claim-card:hover {
+    transform: none;
   }
 
   .home-assurance {
@@ -2634,6 +2793,10 @@ body.home-redesign :focus-visible {
     grid-template-columns: 1fr;
   }
 
+  .home-faq-heading h2 {
+    font-size: clamp(2.8rem, 13vw, 4rem);
+  }
+
   .founder-points article,
   .founder-points article:first-child,
   .founder-points article:last-child {
@@ -2686,6 +2849,11 @@ body.home-redesign :focus-visible {
 
   .claim-card {
     padding: 1.3rem;
+  }
+
+  .claim-card-row {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .founder-story {
@@ -3338,7 +3506,7 @@ body.site-redesign :focus-visible {
 }
 
 .site-redesign .form-card {
-  max-width: 760px;
+  max-width: 860px;
   padding: clamp(2rem, 5vw, 4rem);
   background: var(--home-paper);
   border: 1px solid var(--home-line);
@@ -3365,6 +3533,45 @@ body.site-redesign :focus-visible {
   max-width: 620px;
   color: var(--home-ink-soft);
   font-size: 1.05rem;
+}
+
+.review-intake-assurances {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.35rem;
+  margin: 1.35rem 0 2rem;
+  padding: 0 0 1.25rem;
+  color: var(--home-ink);
+  border-bottom: 1px solid var(--home-line);
+  list-style: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.review-intake-assurances li {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.review-intake-assurances li::before {
+  content: "";
+  position: absolute;
+  top: 0.55em;
+  left: 0;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--home-sage-dark);
+}
+
+.review-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 1rem;
+}
+
+.review-form-full {
+  grid-column: 1 / -1;
 }
 
 .review-form-steps {
@@ -5259,6 +5466,18 @@ body.site-redesign :focus-visible {
 
   .site-redesign .form-card {
     padding: 1.5rem 1.25rem;
+  }
+
+  .site-redesign .review-form-section .container {
+    width: min(100% - 32px, 680px);
+  }
+
+  .review-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-form-full {
+    grid-column: auto;
   }
 
   .site-redesign .review-pricing-layout,
