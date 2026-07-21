@@ -35,12 +35,13 @@ const TEMPLATE_TOKENS = {
     'STATE_NAME', 'STATE_ABBREVIATION', 'STATE_SLUG', 'CANONICAL_URL',
     'TOTAL_LOSS_THRESHOLD', 'THRESHOLD_DESCRIPTION', 'APPRAISAL_CLAUSE',
     'INSURANCE_CODE_REF', 'DEPT_OF_INSURANCE', 'DEADLINES', 'DIMINISHED_VALUE',
-    'CITY_LINKS_HTML', 'RELATED_GUIDES_HTML', 'RELATED_GUIDES_FOOTER_HTML', 'SOURCE_LINKS_HTML', 'SOURCE_REVIEW_MODULE_HTML', 'REVIEWED_AT_HTML'
+    'CITY_LINKS_HTML', 'RELATED_GUIDES_SECTION_HTML', 'RELATED_GUIDES_FOOTER_HTML',
+    'INLINE_REFERENCES_HTML'
   ]),
   city: new Set([
     'CITY_NAME', 'CITY_SLUG', 'STATE_NAME', 'STATE_ABBREVIATION', 'STATE_SLUG',
     'STATE_CANONICAL_URL', 'CANONICAL_URL', 'COUNTY', 'METRO_AREA', 'LOCAL_ANGLE',
-    'COMPARISON_SCOPE', 'RELATED_GUIDES_HTML', 'RELATED_GUIDES_FOOTER_HTML', 'SOURCE_LINKS_HTML', 'SOURCE_REVIEW_MODULE_HTML', 'REVIEWED_AT_HTML'
+    'COMPARISON_SCOPE', 'RELATED_GUIDES_HTML', 'RELATED_GUIDES_FOOTER_HTML', 'REVIEWED_AT_HTML'
   ])
 };
 
@@ -329,8 +330,8 @@ function validateTemplate(template, kind, errors) {
     if (!TEMPLATE_TOKENS[kind].has(token)) errors.push(`${kind} template contains unknown token {{${token}}}.`);
   }
   const required = kind === 'state'
-    ? ['CANONICAL_URL', 'RELATED_GUIDES_HTML', 'RELATED_GUIDES_FOOTER_HTML', 'SOURCE_REVIEW_MODULE_HTML']
-    : ['CANONICAL_URL', 'STATE_CANONICAL_URL', 'RELATED_GUIDES_HTML', 'RELATED_GUIDES_FOOTER_HTML', 'SOURCE_REVIEW_MODULE_HTML', 'REVIEWED_AT_HTML'];
+    ? ['CANONICAL_URL', 'CITY_LINKS_HTML', 'RELATED_GUIDES_SECTION_HTML', 'RELATED_GUIDES_FOOTER_HTML', 'INLINE_REFERENCES_HTML']
+    : ['CANONICAL_URL', 'STATE_CANONICAL_URL', 'RELATED_GUIDES_HTML', 'RELATED_GUIDES_FOOTER_HTML', 'REVIEWED_AT_HTML'];
   for (const token of required) {
     if (!tokens.has(token)) errors.push(`${kind} template must include {{${token}}}.`);
   }
@@ -414,11 +415,9 @@ function renderState(project, plan, route) {
     DEADLINES: escapeHtml(state.deadlines),
     DIMINISHED_VALUE: escapeHtml(state.diminishedValue),
     CITY_LINKS_HTML: cityLinks,
-    RELATED_GUIDES_HTML: renderRelatedGuides(route.outputPath, state.relatedGuides),
+    RELATED_GUIDES_SECTION_HTML: renderRelatedGuidesSection(route.outputPath, state.relatedGuides),
     RELATED_GUIDES_FOOTER_HTML: renderFooterGuides(route.outputPath, state),
-    SOURCE_LINKS_HTML: renderSourceLinks(state.sources),
-    SOURCE_REVIEW_MODULE_HTML: renderSourceReviewModule(state),
-    REVIEWED_AT_HTML: renderReviewedAt(state.review.reviewedOn)
+    INLINE_REFERENCES_HTML: renderInlineReferences(state.sources)
   };
   return replaceTemplateTokens(project.stateTemplate, values);
 }
@@ -441,21 +440,28 @@ function renderCity(project, plan, route) {
     COMPARISON_SCOPE: escapeHtml(city.comparisonScope),
     RELATED_GUIDES_HTML: renderCityGuides(route.outputPath, stateRoute),
     RELATED_GUIDES_FOOTER_HTML: renderFooterGuides(route.outputPath, state),
-    SOURCE_LINKS_HTML: renderSourceLinks(state.sources),
-    SOURCE_REVIEW_MODULE_HTML: renderSourceReviewModule(state),
     REVIEWED_AT_HTML: renderReviewedAt(city.review.reviewedOn)
   };
   return replaceTemplateTokens(project.cityTemplate, values);
 }
 
-function renderRelatedGuides(fromOutputPath, guidePaths) {
+function renderRelatedGuidesSection(fromOutputPath, guidePaths) {
   const guides = guidePaths.map(resolveGuide).filter(Boolean);
-  if (guides.length === 0) {
-    return '<p class="fine-print">No jurisdiction-specific claim guides are currently published for this state. This page contains the current statewide overview.</p>';
-  }
-  return guides
+  if (guides.length === 0) return '';
+  const links = guides
     .map(guide => `<a href="${escapeHtml(relativeHref(fromOutputPath, guide.canonicalPath))}">${escapeHtml(guide.title)}<span>${escapeHtml(guide.description)}</span></a>`)
     .join('\n        ');
+  return `<section class="section alt related-guides-section">
+    <div class="container">
+      <div class="section-head reveal-on-scroll">
+        <h2>More claim guides</h2>
+        <p>Use these plain-English guides to prepare for the next step in your claim.</p>
+      </div>
+      <div class="city-links reveal-on-scroll">
+        ${links}
+      </div>
+    </div>
+  </section>`;
 }
 
 function renderCityGuides(fromOutputPath, stateRoute) {
@@ -470,11 +476,11 @@ function renderCityGuides(fromOutputPath, stateRoute) {
   return cards.join('\n          ');
 }
 
-function renderSourceLinks(sources) {
+function renderInlineReferences(sources) {
   const links = sources
-    .map(source => `<li><a href="${escapeHtml(source.url)}" rel="noopener noreferrer">${escapeHtml(source.title || source.label)}</a></li>`)
-    .join('\n          ');
-  return `<div class="source-links"><p>Sources</p><ul>${links}</ul></div>`;
+    .map(source => `<a href="${escapeHtml(source.url)}" rel="noopener noreferrer">${escapeHtml(source.title || source.label)}</a>`)
+    .join('<span aria-hidden="true">·</span>');
+  return `<p class="inline-references"><strong>Official references:</strong>${links}</p>`;
 }
 
 function renderFooterGuides(fromOutputPath, state) {
@@ -491,22 +497,6 @@ function renderFooterGuides(fromOutputPath, state) {
 function resolveGuide(guide) {
   if (typeof guide === 'object' && guide !== null) return guide;
   return GUIDE_METADATA.find(candidate => candidate.canonicalPath === guide) || null;
-}
-
-function renderSourceReviewModule(state) {
-  const reviewedOn = state.review.reviewedOn;
-  const sources = state.sources
-    .map(source => `<li><a href="${escapeHtml(source.url)}" rel="noopener noreferrer">${escapeHtml(source.title || source.label)}</a></li>`)
-    .join('\n          ');
-  return `<aside class="source-review card" aria-labelledby="source-review-title">
-          <h2 id="source-review-title">State sources and editorial review</h2>
-          <p><strong>Substantive source review:</strong> <time datetime="${escapeHtml(reviewedOn)}">${escapeHtml(formatDate(reviewedOn))}</time> by Spur Auto editorial review.</p>
-          <h3>Primary sources</h3>
-          <ul>
-          ${sources}
-          </ul>
-          <p class="fine-print">This page is general information, not legal advice or legal representation. It is not attorney-reviewed and does not create an attorney-client relationship. Your rights depend on your policy language, claim facts, and current law; verify the sources and consult a qualified professional when appropriate.</p>
-        </aside>`;
 }
 
 function renderReviewedAt(date) {

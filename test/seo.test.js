@@ -104,6 +104,27 @@ test('baseline build is atomic, idempotent, and produces the 40-URL canonical in
   assert.match(output(audit), /40 canonical URLs/);
 });
 
+test('generated location templates omit empty review modules and use the stable city hero', t => {
+  const rootDir = createFixture(t);
+  assert.equal(runBuild(rootDir).status, 0);
+
+  const florida = fs.readFileSync(path.join(rootDir, 'states', 'florida.html'), 'utf8');
+  assert.doesNotMatch(florida, /State sources and editorial review/i);
+  assert.doesNotMatch(florida, /No jurisdiction-specific claim guides/i);
+  assert.doesNotMatch(florida, /Know your claim before you negotiate it/i);
+  assert.match(florida, /class="inline-references"/);
+  assert.match(florida, /href="florida\/orlando\.html"/);
+
+  const orlando = fs.readFileSync(path.join(rootDir, 'states', 'florida', 'orlando.html'), 'utf8');
+  assert.doesNotMatch(orlando, /State sources and editorial review/i);
+  assert.doesNotMatch(orlando, /Client-specific appraisal example/i);
+  assert.match(orlando, /class="city-hero"/);
+  assert.match(orlando, /class="container city-hero-grid"/);
+  assert.match(orlando, /class="city-claim-card" id="claim-check"/);
+  assert.equal((orlando.match(/id="city-contact-form"/g) || []).length, 1);
+  assert.ok(orlando.indexOf('class="city-hero-copy"') < orlando.indexOf('class="city-claim-card"'));
+});
+
 test('invalid input fails before changing generated output', t => {
   const rootDir = createFixture(t);
   assert.equal(runBuild(rootDir).status, 0);

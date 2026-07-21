@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/styles.css?v=20260718a">
+  <link rel="stylesheet" href="../../css/styles.css?v=20260720a">
   <link rel="icon" href="../../assets/brand/spur-auto-favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="../../assets/brand/spur-auto-favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../../assets/brand/spur-auto-favicon-16.png">
@@ -112,19 +112,27 @@
       </nav>
     </div>
 
-    <section class="hero">
-      <div class="container">
-        <h1>The right San Francisco total loss valuation starts with the replacement market - not a generic California average.</h1>
-        <p class="lede">We review the insurer's ACV against the San Francisco-area market that fits your vehicle, then document trim, equipment, mileage, condition, and comparable selection. The work is fully remote, so you can challenge a low offer without an office visit.</p>
-        <div class="hero-ctas">
-          <a href="../../free-review.html" class="btn btn-primary">Get My Free Claim Review</a>
-          <a href="../../how-it-works.html" class="btn btn-secondary">See How It Works</a>
+    <section class="city-hero">
+      <div class="container city-hero-grid">
+        <div class="city-hero-copy">
+          <p class="eyebrow">San Francisco, CA vehicle valuation</p>
+          <h1>San Francisco total loss appraisal built around your local replacement market.</h1>
+          <p class="lede">We compare the insurer's actual cash value with San Francisco-area listings that fit your vehicle, then document trim, equipment, mileage, condition, and comparable selection.</p>
+          <div class="hero-ctas">
+            <a href="#claim-check" class="btn btn-primary">Check My Offer</a>
+            <a href="../../how-it-works.html" class="btn btn-secondary">See How It Works</a>
+          </div>
+          <ul class="city-service-points" aria-label="Service details">
+            <li>Remote service across California</li>
+            <li>Free review response within two business days</li>
+            <li>Paid vehicle value reports delivered within 48 hours</li>
+          </ul>
         </div>
-        <p class="hero-note">Remote service across California. Free review responses arrive within two business days; paid vehicle value reports are delivered within 48 hours.</p>
-        <div class="claim-card" id="claim-check">
+        <aside class="city-claim-card" id="claim-check" aria-labelledby="city-form-title">
           <form id="city-contact-form" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="access_key" value="88f1d2af-59c2-46b1-92e6-0c554846ef34">
-            <h2>Let's check your offer</h2>
+            <h2 id="city-form-title">Let's check your offer</h2>
+            <p class="city-form-intro">Send the offer now or start with your contact details. No office visit is required.</p>
             <div class="form-group">
               <label for="city-name">Name</label>
               <input type="text" id="city-name" name="name" autocomplete="name" placeholder="Your full name">
@@ -140,7 +148,7 @@
             </div>
             <button type="submit" class="btn btn-primary btn-block">Start My Free Review <span aria-hidden="true">→</span></button>
           </form>
-        </div>
+        </aside>
       </div>
     </section>
 
@@ -151,22 +159,18 @@
           <p class="reviewed-at">Reviewed on <time datetime="2026-07-18">July 18, 2026</time></p>
           <p class="market-meta">For San Francisco assignments, the comparison area starts with San Francisco County and expands into nearby counties only when those listings reflect the market in which the vehicle would reasonably be replaced. This is a dated methodology note, not a citywide price claim; current comparables are rechecked for each assignment.</p>
         </div>
-        <div class="grid-2">
+        <div class="grid-3 city-market-grid">
           <article class="card">
             <h3>Where the comparison starts</h3>
             <p>San Francisco County and the immediate Bay Area (Alameda, Contra Costa, San Mateo counties), reflecting the interconnected metro market.</p>
           </article>
           <article class="card">
             <h3>Local valuation considerations</h3>
-            <p>San Francisco&#39;s compact geography, high cost of living, and tech-industry vehicle preferences (EVs, luxury imports) create above-average replacement costs. The Bay Area&#39;s congested corridors and bridge traffic contribute to high accident volume.</p>
+            <p>Bay Area replacement searches can cross county lines quickly. The report should identify the seller location and explain why an Alameda, Contra Costa, San Mateo, or other regional listing reflects the replacement market for the vehicle.</p>
           </article>
           <article class="card">
-            <h3>What this analysis does not assume</h3>
-            <p>This page does not assume that every San Francisco vehicle segment has the same pricing, that traffic density changed every local value, or that a distant listing is interchangeable with a nearby replacement.</p>
-          </article>
-          <article class="card">
-            <h3>Client-specific appraisal example</h3>
-            <p>No client-authorized San Francisco appraisal example is published in this repository yet. We will publish a real example only with permission and supporting source records. For the current public format, see the <a href="../../results.html">sample report walkthrough</a>; it is not a customer result or outcome prediction.</p>
+            <h3>What stays vehicle-specific</h3>
+            <p>Every comparison still depends on the exact trim, equipment, mileage, condition, title history, seller context, and timing of the available listings.</p>
           </article>
         </div>
       </div>
@@ -174,73 +178,41 @@
 
     <section class="section alt">
       <div class="container">
-        <div class="section-head">
-          <h2>A local page should lead to a useful report.</h2>
-          <p>The city changes the comparison scope. Your vehicle evidence determines the actual analysis.</p>
+        <div class="section-head city-process-intro">
+          <p class="eyebrow">Documented, not assumed</p>
+          <h2>What your appraisal report should make clear</h2>
+          <p>A useful report shows the evidence behind the number so you can review it and decide what to send the insurer.</p>
         </div>
         <div class="grid-3">
           <article class="card">
+            <div class="step-num">1</div>
             <h3>Comparable selection</h3>
             <p>We record source, date, location, trim, mileage, equipment, condition, and seller context so the comparison set can be checked.</p>
           </article>
           <article class="card">
+            <div class="step-num">2</div>
             <h3>Vehicle-specific adjustments</h3>
             <p>We separate documented facts about your vehicle from generic assumptions about a city, model, weather event, or driver.</p>
           </article>
           <article class="card">
-            <h3>Send-it-yourself support</h3>
+            <div class="step-num">3</div>
+            <h3>A report you control</h3>
             <p>Your report and draft correspondence are evidence for you to review and send. Spur Auto does not contact the insurer, settle the claim, or act as your representative.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
+    <section class="section city-state-guidance" id="state-guides">
+      <div class="container city-state-guidance-layout">
         <div class="section-head">
-          <h2>No office visit is required in San Francisco.</h2>
-          <p>Remote service means you can start from anywhere in California with the information already in your claim file.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card">
-            <div class="step-num">1</div>
-            <h3>Send the records</h3>
-            <p>Upload the insurer's offer or valuation report, VIN, photos, and any service or equipment records you have.</p>
-          </article>
-          <article class="card">
-            <div class="step-num">2</div>
-            <h3>We research the San Francisco market</h3>
-            <p>We review the comparison area and vehicle details, then deliver the paid report within 48 hours under the current service promise.</p>
-          </article>
-          <article class="card">
-            <div class="step-num">3</div>
-            <h3>You decide and communicate</h3>
-            <p>You receive a clear evidence package and guidance on next steps. You make every claim decision and send every insurer communication.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" id="state-guides">
-      <div class="container">
-        <div class="section-head">
-          <h2>Keep the legal explanations in the California guides.</h2>
-          <p>This page stays focused on San Francisco-area valuation. Use the canonical state guides for rules, rights, and claim process questions.</p>
+          <p class="eyebrow">Statewide guidance</p>
+          <h2>Use the California guide for rules and appraisal rights.</h2>
+          <p>This city page stays focused on San Francisco-area valuation. The state guide covers claim rules, policy context, and dispute paths.</p>
         </div>
         <div class="grid-2">
           <article class="card"><h3><a href="../california.html">California total loss and appraisal rights</a></h3><p>Statewide rules, appraisal clause context, and the main dispute paths.</p></article>
         </div>
-        <p class="reviewed-at">Reviewed on <time datetime="2026-07-18">July 18, 2026</time></p>
-        <aside class="source-review card" aria-labelledby="source-review-title">
-          <h2 id="source-review-title">State sources and editorial review</h2>
-          <p><strong>Substantive source review:</strong> <time datetime="2026-07-20">July 20, 2026</time> by Spur Auto editorial review.</p>
-          <h3>Primary sources</h3>
-          <ul>
-          <li><a href="https://www.insurance.ca.gov/01-consumers/130-laws-regs-hearings/05-CCR/fair-claims-regs.cfm" rel="noopener noreferrer">California Department of Insurance Fair Claims Settlement Practices Regulations</a></li>
-          <li><a href="https://www.insurance.ca.gov/01-consumers/105-type/95-guides/01-auto/hadaccident.cfm" rel="noopener noreferrer">California Department of Insurance, So You&#39;ve Had an Accident, What&#39;s Next?</a></li>
-          </ul>
-          <p class="fine-print">This page is general information, not legal advice or legal representation. It is not attorney-reviewed and does not create an attorney-client relationship. Your rights depend on your policy language, claim facts, and current law; verify the sources and consult a qualified professional when appropriate.</p>
-        </aside>
       </div>
     </section>
 

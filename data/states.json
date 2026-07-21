@@ -225,7 +225,7 @@
       "relatedGuides": [],
       "county": "Miami-Dade County",
       "metroArea": "South Florida / Miami-Fort Lauderdale-Pompano Beach",
-      "localAngle": "South Florida's dense urban traffic, high uninsured motorist rates, hurricane season exposure, and diverse vehicle market create frequent valuation disputes. Replacement costs in Miami-Dade often exceed statewide averages.",
+      "localAngle": "Miami-Dade comparisons should keep trim, mileage, seller type, title history, and listing location visible. Broward or Palm Beach listings are useful only when they represent a realistic replacement option for the specific vehicle.",
       "comparisonScope": "Miami-Dade County, with expansion into Broward and Palm Beach counties when vehicle-specific comparables require it.",
       "review": {"reviewedOn": "2026-07-18"},
       "sources": []
@@ -240,7 +240,7 @@
       "relatedGuides": [],
       "county": "Hillsborough County",
       "metroArea": "Tampa Bay / Tampa-St. Petersburg-Clearwater",
-      "localAngle": "Tampa Bay's rapid population growth, interstate corridor traffic (I-4, I-75), and hurricane exposure drive a high volume of total loss claims. The mix of retiree and commuter vehicle markets requires careful comparable selection.",
+      "localAngle": "Tampa Bay spans several connected county markets. A defensible report distinguishes Hillsborough listings from Pinellas, Pasco, and Polk instead of blending them into one unexplained regional average.",
       "comparisonScope": "Hillsborough County, with expansion into Pinellas, Pasco, and Polk counties when the vehicle type or availability warrants it.",
       "review": {"reviewedOn": "2026-07-18"},
       "sources": []
@@ -255,7 +255,7 @@
       "relatedGuides": [],
       "county": "Duval County",
       "metroArea": "Jacksonville",
-      "localAngle": "Jacksonville's sprawling geography, military population (Naval Station Mayport, NAS Jacksonville), and position as a logistics hub mean the vehicle market ranges from military-spec trucks to commuter sedans. PCS moves and military deployments can complicate title and condition histories.",
+      "localAngle": "Jacksonville's broad geography makes distance and seller location part of comparable quality. The report should show when listings come from Duval versus surrounding counties and why each one belongs in the comparison set.",
       "comparisonScope": "Duval County and the greater Jacksonville metro, including St. Johns, Clay, and Nassau counties as needed.",
       "review": {"reviewedOn": "2026-07-18"},
       "sources": []
@@ -270,7 +270,7 @@
       "relatedGuides": [],
       "county": "Orange County",
       "metroArea": "Orlando-Kissimmee-Sanford",
-      "localAngle": "Orlando's tourism-driven economy, heavy rental car traffic on I-4 and surrounding highways, and rapid population growth create a high-accident-rate environment. Vehicle valuations here must account for the region's unique mix of rental fleet vehicles and permanent-resident cars.",
+      "localAngle": "Orlando-area listings can include retail vehicles and former fleet inventory. Seller type, title history, mileage, condition, and equipment need to be documented before a listing is treated as comparable.",
       "comparisonScope": "Orange County, with expansion into Seminole, Osceola, and Lake counties when comparables require it.",
       "review": {"reviewedOn": "2026-07-18"},
       "sources": []
@@ -285,7 +285,7 @@
       "relatedGuides": [],
       "county": "Los Angeles County",
       "metroArea": "Greater Los Angeles / Los Angeles-Long Beach-Anaheim",
-      "localAngle": "The largest metro vehicle market in the US, with extreme traffic density, high replacement costs, a massive EV and hybrid population, and wide variation in vehicle values across neighborhoods. LA County's size means comparables must be carefully scoped to avoid mixing distant sub-markets.",
+      "localAngle": "Los Angeles County is large enough that nearby and distant submarkets should not be treated as interchangeable. The report keeps seller location, listing date, vehicle configuration, mileage, and title history visible when the search expands.",
       "comparisonScope": "Los Angeles County, with careful attention to sub-market differences (Westside vs. Inland, for example). Expansion into Orange, Ventura, or San Bernardino counties only when the vehicle type or trim availability requires it.",
       "review": {"reviewedOn": "2026-07-18"},
       "sources": []
@@ -300,7 +300,7 @@
       "relatedGuides": [],
       "county": "San Diego County",
       "metroArea": "San Diego-Chula Vista-Carlsbad",
-      "localAngle": "San Diego's military presence (Camp Pendleton, Naval Base San Diego, MCAS Miramar), border proximity, and coastal climate create a distinct vehicle market. Military PCS transfers and cross-border vehicle histories require careful documentation.",
+      "localAngle": "San Diego County often provides a workable first comparison area. When a listing carries a cross-border, out-of-area, or unusual title history, that context should be documented instead of treated as a generic adjustment.",
       "comparisonScope": "San Diego County. The relatively self-contained market rarely requires expansion beyond county lines.",
       "review": {"reviewedOn": "2026-07-18"},
       "sources": []
@@ -315,7 +315,7 @@
       "relatedGuides": [],
       "county": "San Francisco County",
       "metroArea": "San Francisco-Oakland-Berkeley",
-      "localAngle": "San Francisco's compact geography, high cost of living, and tech-industry vehicle preferences (EVs, luxury imports) create above-average replacement costs. The Bay Area's congested corridors and bridge traffic contribute to high accident volume.",
+      "localAngle": "Bay Area replacement searches can cross county lines quickly. The report should identify the seller location and explain why an Alameda, Contra Costa, San Mateo, or other regional listing reflects the replacement market for the vehicle.",
       "comparisonScope": "San Francisco County and the immediate Bay Area (Alameda, Contra Costa, San Mateo counties), reflecting the interconnected metro market.",
       "review": {"reviewedOn": "2026-07-18"},
       "sources": []
@@ -330,7 +330,7 @@
       "relatedGuides": [],
       "county": "Sacramento County",
       "metroArea": "Sacramento-Roseville-Folsom",
-      "localAngle": "Sacramento's Central Valley position, state-capital economy, and growing suburban sprawl create a vehicle market that bridges Northern California's coastal and inland pricing. Flood-zone exposure along the Sacramento and American rivers adds a weather-damage dimension.",
+      "localAngle": "Sacramento-area comparisons may extend into nearby suburban and foothill counties when the exact trim or equipment is scarce. Each expansion should remain visible rather than being folded into an unexplained regional average.",
       "comparisonScope": "Sacramento County, with expansion into Placer, El Dorado, and Yolo counties when suburban and foothill markets affect comparable availability.",
       "review": {"reviewedOn": "2026-07-18"},
       "sources": []
@@ -345,7 +345,7 @@
       "relatedGuides": [],
       "county": "Fulton County",
       "metroArea": "Atlanta-Sandy Springs-Alpharetta",
-      "localAngle": "Atlanta's status as the #6 US metro, with extreme highway congestion (I-285, I-85, I-75), severe weather (hail, ice storms), and one of the nation's strongest diminished value precedents (State Farm v. Mabry), makes it a high-volume market for total loss and diminished value disputes. The metro's sprawl across 29 counties means comparable scope decisions are critical.",
+      "localAngle": "Metro Atlanta extends across several county markets, so the location of each comparable matters. The report should separate Fulton and DeKalb listings from wider metro results and explain why any broader search is appropriate for the vehicle.",
       "comparisonScope": "Fulton and DeKalb counties as the starting point, expanding into Cobb, Gwinnett, Clayton, and other metro-Atlanta counties only when the vehicle type and availability require it.",
       "review": {"reviewedOn": "2026-07-18"},
       "sources": []
@@ -360,7 +360,7 @@
       "relatedGuides": [],
       "county": "Mecklenburg County",
       "metroArea": "Charlotte-Concord-Gastonia (NC-SC)",
-      "localAngle": "Charlotte's banking-industry economy, rapid metro growth, and position as the #23 US metro create a diverse vehicle market. The cross-state metro area (extending into South Carolina) means comparable vehicles may come from two states, each with different insurance regulations.",
+      "localAngle": "Charlotte's replacement market can cross the North Carolina-South Carolina line. A report should identify the jurisdiction and seller location of every listing and explain when a cross-state comparable belongs in the set.",
       "comparisonScope": "Mecklenburg County, with expansion into Cabarrus, Gaston, Union, and York (SC) counties when the cross-state metro market affects comparables.",
       "review": {"reviewedOn": "2026-07-18"},
       "sources": []
@@ -375,7 +375,7 @@
       "relatedGuides": [],
       "county": "Wake County",
       "metroArea": "Raleigh-Durham-Chapel Hill (Research Triangle)",
-      "localAngle": "The Research Triangle's tech-industry growth, university population, and rapidly expanding suburban development create a vehicle market with above-average EV adoption and newer model years. Wake County's fast-growing inventory of vehicles makes timely comparable selection important.",
+      "localAngle": "Research Triangle searches may draw listings from Wake, Durham, Orange, and Johnston counties. The report should keep each location, listing date, seller type, and vehicle configuration visible when comparing the available market.",
       "comparisonScope": "Wake County, with expansion into Durham, Orange, and Johnston counties reflecting the interconnected Research Triangle market.",
       "review": {"reviewedOn": "2026-07-18"},
       "sources": []

@@ -108,7 +108,7 @@ If you need to change page layouts or global structures across all state hubs or
 - Modify `templates/state-hub.template.html` for state hub pages.
 - Modify `templates/city-page.template.html` for city appraisal pages.
 - Available template tags:
-  - State templates: `{{STATE_NAME}}`, `{{STATE_ABBREVIATION}}`, `{{STATE_SLUG}}`, `{{CANONICAL_URL}}`, `{{TOTAL_LOSS_THRESHOLD}}`, `{{THRESHOLD_DESCRIPTION}}`, `{{APPRAISAL_CLAUSE}}`, `{{INSURANCE_CODE_REF}}`, `{{DEPT_OF_INSURANCE}}`, `{{DEADLINES}}`, `{{DIMINISHED_VALUE}}`, `{{CITY_LINKS_HTML}}`.
-  - Shared values: `{{CANONICAL_URL}}`, `{{RELATED_GUIDES_HTML}}`, `{{SOURCE_LINKS_HTML}}`, `{{REVIEWED_AT_HTML}}`.
-  - City templates: `{{CITY_NAME}}`, `{{CITY_SLUG}}`, `{{STATE_NAME}}`, `{{STATE_ABBREVIATION}}`, `{{STATE_SLUG}}`, `{{STATE_CANONICAL_URL}}`, `{{CANONICAL_URL}}`, `{{COUNTY}}`, `{{METRO_AREA}}`, `{{LOCAL_ANGLE}}`, `{{COMPARISON_SCOPE}}`.
+  - State templates: `{{STATE_NAME}}`, `{{STATE_ABBREVIATION}}`, `{{STATE_SLUG}}`, `{{CANONICAL_URL}}`, `{{TOTAL_LOSS_THRESHOLD}}`, `{{THRESHOLD_DESCRIPTION}}`, `{{APPRAISAL_CLAUSE}}`, `{{INSURANCE_CODE_REF}}`, `{{DEPT_OF_INSURANCE}}`, `{{DEADLINES}}`, `{{DIMINISHED_VALUE}}`, `{{CITY_LINKS_HTML}}`, `{{RELATED_GUIDES_SECTION_HTML}}`, `{{INLINE_REFERENCES_HTML}}`.
+  - Shared values: `{{CANONICAL_URL}}`, `{{RELATED_GUIDES_FOOTER_HTML}}`.
+  - City templates: `{{CITY_NAME}}`, `{{CITY_SLUG}}`, `{{STATE_NAME}}`, `{{STATE_ABBREVIATION}}`, `{{STATE_SLUG}}`, `{{STATE_CANONICAL_URL}}`, `{{CANONICAL_URL}}`, `{{COUNTY}}`, `{{METRO_AREA}}`, `{{LOCAL_ANGLE}}`, `{{COMPARISON_SCOPE}}`, `{{RELATED_GUIDES_HTML}}`, `{{REVIEWED_AT_HTML}}`.
 - Always run `npm run build` after editing templates.
