@@ -53,8 +53,8 @@ Sample/placeholder content is marked with HTML comments in the source. At minimu
 
 1. **Trust bar** (`index.html`) — replace bracketed outlets with *real* media
    features only.
-2. **Stats & testimonials** (`index.html`, `results.html`) — replace illustrative
-   figures and sample quotes with documented results and client-permissioned quotes.
+2. **Stats & testimonials** (`index.html`, `results.html`) — published case results
+   are real; keep identifying details redacted and use client-permissioned quotes only.
 3. **Credentials** (`about.html`) — replace with the founder's actual, verifiable
    certifications and license numbers.
 4. **Legal pages** — keep the effective dates, service terms, and privacy practices

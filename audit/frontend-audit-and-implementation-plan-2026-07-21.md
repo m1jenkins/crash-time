@@ -11,19 +11,18 @@ Scope: audit and planning only. No website source, generated state/city HTML, or
 - Primary routes inspected: `/`, `/how-it-works.html`, `/pricing.html`, `/results.html`, `/locations.html`, `/about.html`, `/free-review.html`
 - Representative content routes inspected: `/texas.html`, `/states/florida.html`, `/total-loss-appraisal-houston.html`, `/actual-cash-value-texas.html`
 - Automatic failures:
-  - Precise settlement outcomes are presented as completed customer claims without supporting records in the repository, while the repository launch notes still classify result figures as illustrative placeholders.
-  - The outcome component contains an unresolved `Vehicle photo` placeholder.
+  - The outcome component does not include a customer-authorized vehicle photo.
   - A failed primary form submission navigates to a blank browser error page and loses the entered data. Loading, error, preserved-input, and retry states are absent.
   - The homepage horizontally overflows at 320px.
   - A 200% text-size stress test creates substantial horizontal overflow on the homepage, pricing page, and free-review page.
   - Axe reports serious WCAG issues for contrast and links that rely on color alone on conversion, location, state, and editorial routes.
-- Remaining blocker: proof and operating-scope claims must be verified before they are used to support a purchase or lead submission.
+- Remaining blocker: operating-scope claims must be verified before they are used to support a purchase or lead submission. The owner has confirmed that the published customer claim outcomes are real.
 
-The visual redesign is stronger than the outcome suggests. It has a recognizable editorial voice, a clear primary action, restrained shapes, good keyboard focus, and competent responsive work. The Reject result is caused by non-compensable trust, form-recovery, accessibility, and reflow failures.
+The visual redesign is stronger than the outcome suggests. It has a recognizable editorial voice, a clear primary action, restrained shapes, good keyboard focus, and competent responsive work. After the owner corrected the case-status assumption, the remaining Reject factors are form recovery, accessibility, reflow, and operating-scope verification.
 
 ## Design thesis
 
-> This experience should feel **calmly investigative and evidence-led** for drivers dealing with a stressful total-loss offer because they come to decide whether the valuation is worth challenging; it must make the free review and paid independent appraisal immediately clear, prove who performs the work and what evidence the customer receives, and differ from generic claims-lead websites through real report artifacts, current state-specific sources, and a document-review composition rather than unsupported outcome marketing.
+> This experience should feel **calmly investigative and evidence-led** for drivers dealing with a stressful total-loss offer because they come to decide whether the valuation is worth challenging; it must make the free review and paid independent appraisal immediately clear, prove who performs the work and what evidence the customer receives, and differ from generic claims-lead websites through real customer outcomes, report artifacts, current state-specific sources, and a document-review composition.
 
 Thesis tests:
 
@@ -60,23 +59,23 @@ Top first-visit questions:
 | Legal/service boundary | Footer, free-review, city pages, terms/disclaimer | Yes in repository | Are you representing me? | Mostly footer and lower-page copy | Ready but visually over-repeated |
 | Current state rules and sources | `data/states.json`, generated routes, Texas guides | Yes in repository | Do you understand my state? | State and guide pages | Strongest current proof type |
 | Founder name and first-person story | `about.html` and homepage | Yes as published content | Who is behind the service? | About and homepage | Identity present; qualifications absent |
-| Completed customer outcomes with exact dollar values | `index.html` | No supporting records found | Does this work? | Homepage outcome tabs | **Blocked: remove or substantiate** |
-| Customer vehicle photos | Empty `data-photo-src` values in `index.html` | No | Are these real cases? | Homepage outcome panel | **Blocked placeholder** |
+| Completed customer outcomes with exact dollar values | `index.html`; owner confirmation received 2026-07-22 | Yes, confirmed by owner | Does this work? | Homepage outcome panel | **Approved real cases; keep privacy redactions and results disclaimer** |
+| Customer vehicle photos | No customer photo is currently displayed | Not supplied | Can I see the vehicle? | Homepage outcome panel | **Optional; publish only with customer authorization** |
 | Credentialed operator, experience, licenses, certifications | Claims appear in `BUSINESS-PLAN.md`; `README.md` says credentials must be verified | No | Are they qualified? | Not visibly established | **Blocked: do not publish until verified** |
 | Nationwide availability and ability to work in any state | Homepage, free-review, locations; only five state systems are represented and business plan notes state-specific licensing | No operating proof found | Can you serve me here? | High in funnel | **Blocked: qualify or verify** |
 | Money-back guarantee | Pricing and FAQ | Partial | What if the report does not support more value? | Pricing | Needs complete terms, process, exclusions, and timing |
 | Real sample report | Stylized preview on homepage and explanatory `results.html` | No downloadable/redacted artifact found | What am I buying? | Results and homepage | **Missing high-value proof** |
 | Media, reviews, testimonials | Repository launch notes say to add only after real proof exists | No | Has anyone credible validated this? | Omitted | Correctly omitted |
 
-Proof that must not be fabricated: customer results, customer photos, testimonials, review counts, media logos, founder qualifications, licenses, volume metrics, nationwide operating authorization, or a report sample represented as customer work.
+Proof that must not be fabricated: customer photos, testimonials, review counts, media logos, founder qualifications, licenses, volume metrics, nationwide operating authorization, or a report represented as customer work. The owner confirms that the published customer results are real.
 
 ## Context-to-interface decisions
 
 | Dimension | Recommended decision | Context reason | Acceptance evidence |
 |---|---|---|---|
 | Page model and hierarchy | Keep a task-first homepage, but move verifiable report evidence before any outcome claim | The user is urgent but needs proof before commitment | First two desktop screens show task, price, scope, and a real artifact |
-| Navigation vocabulary | Rename `Results` to `Sample Report` until verified cases exist | Current label implies proof the route does not provide | Nav label and page title match the content |
-| Copy and tone | Use specific scope, evidence, limits, geography, and timing; remove unsupported frequency/outcome claims | High-trust service cannot rely on suggestive generalities | Every material claim has an owner/source in a proof ledger |
+| Navigation vocabulary | Keep `Results` where it links users to the real published case; clarify when a section is specifically a report walkthrough | The label should lead to genuine outcome evidence | Nav label and page content match the destination promise |
+| Copy and tone | Use specific scope, evidence, limits, geography, and timing; preserve privacy redactions and individual-results language | High-trust service benefits from precise context | Every material claim has an owner/source in a proof ledger |
 | Typography | Retain the serif/sans pairing, increase long-form reading size, and correct heading hierarchy | Current typography is distinctive, but some body copy is small and pricing skips from h1 to h3 | No heading-level jumps; long-form text remains comfortable at 200% |
 | Color roles | Retain navy, oxide, and sage; use darker oxide on off-white and underline inline links | The palette fits the investigative editorial thesis but has measured AA failures | Axe reports zero WCAG 2 AA/2.1 AA/2.2 AA violations |
 | Imagery | Use real report pages, document annotations, founder portrait, and state-source artifacts; stop reusing one vehicle hero everywhere | Trust depends on work and operator proof, not generic category atmosphere | Every prominent image has a named job: prove, explain, or orient |
@@ -97,7 +96,7 @@ Proof that must not be fabricated: customer results, customer photos, testimonia
 
 Selected direction: **A. Task-first evidence review**, borrowing verified operator proof from Direction B.
 
-Why: the current homepage already proves that direct task framing converts visually. The redesign should preserve that speed while replacing unverified customer outcomes with tangible report evidence and stronger operator credibility. Direction C is a useful later product expansion after the core lead path is resilient.
+Why: the current homepage already proves that direct task framing converts visually. The redesign should preserve that speed while pairing its real customer outcome with tangible report evidence and stronger operator credibility. Direction C is a useful later product expansion after the core lead path is resilient.
 
 ## Rendered evidence
 
@@ -140,12 +139,12 @@ Priority formula: `severity x path criticality x breadth x confidence / effort`.
 
 | ID | Priority | Score | Observation -> impact -> cause -> revision -> verification |
 |---|---:|---:|---|
-| F-01 | P0 | 67.5 | Homepage presents exact values as completed customer claims while repository launch notes still call result figures illustrative, and all three photo sources are empty -> users may commit based on unsupported proof -> proof was added as a visual widget without a publication gate -> remove the module immediately or connect every case to consented records, dates, scope, and real media -> require a proof-led content review and re-run the logo-swap/trust audit |
+| F-01 | Resolved | 0.0 | Owner confirmed on 2026-07-22 that the published homepage outcomes are real customer claims -> retain the module with identifying details redacted and an individual-results disclaimer -> keep approved claim records and publication authorization outside the public repository |
 | F-02 | P0 | 33.8 | Simulated Web3Forms failure navigates to `chrome-error://chromewebdata/`, shows a blank page, and loses inputs -> the primary lead path has no recovery -> direct document POST has no progressive-enhancement error state -> intercept submission, preserve data, expose loading/error/retry/success, and keep native POST as a fallback -> test timeout, offline, 4xx, 5xx, double submit, and retry success |
 | F-03 | P0 | 18.0 | `Nationwide`, `every state`, and `any state` appear throughout the funnel, but operating/licensing proof was not found and the business plan says state-specific expansion -> wrong-fit users may submit or buy under an unverified availability assumption -> marketing scope is broader than published operating evidence -> qualify availability by verified service scope and route unsupported states to a transparent eligibility review -> owner/legal approval plus state-by-state content test |
 | F-04 | P0 | 54.0 | Axe reports serious link-distinction failures on the free-review privacy link, city breadcrumbs, city inline links, and editorial links; it also reports 4.4:1 accent contrast on pricing/state surfaces -> links may be missed and AA is not met -> shared inline-link styling relies on a small color delta, and oxide is too light on paper -> underline inline content links and use a darker semantic accent on off-white -> axe zero violations plus manual hover/focus/visited inspection |
 | F-05 | P0 | 27.0 | A 200% text-size stress creates 626px, 344px, and 388px page widths in a 320px viewport on home, pricing, and free-review -> users with enlarged text must pan horizontally -> fixed/minimum widths and oversized brand/type treatments do not yield -> make containers intrinsic, allow logo/type wrapping or scaling, and test every critical component at enlarged text -> zero horizontal scroll at 200% with all controls intact |
-| F-06 | P0 | 54.0 | Homepage is 15px wider than a 320px viewport because outcome values extend to 335px and the tab strip extends off-canvas -> narrow users lose reflow and can accidentally pan -> the two-column outcome value geometry has a hard width and the tab rail is not isolated -> remove the blocked module or make value rows intrinsic and contain intentional tab scrolling -> 320x568 automated width check reports zero overflow |
+| F-06 | P0 | 54.0 | Homepage is 15px wider than a 320px viewport because outcome values extend to 335px and the tab strip extends off-canvas -> narrow users lose reflow and can accidentally pan -> the two-column outcome value geometry has a hard width and the tab rail is not isolated -> make value rows intrinsic and contain intentional tab scrolling -> 320x568 automated width check reports zero overflow |
 | F-07 | P0 | 18.0 | The Results route contains no visible report pages and no real result, while navigation calls it `Results` -> users looking for proof see abstract cards and a repeated vehicle image -> navigation promise and page artifact do not match -> rename to `Sample Report` and show a verified/redacted multi-page artifact, or publish consented case studies and keep `Results` -> five-second test confirms the route delivers what the label promises |
 | F-08 | P0 | 18.0 | Pricing begins with h1 and then jumps directly to h3 tier names -> assistive navigation loses a section level -> price cards were styled without a semantic section heading -> add an h2 such as `Choose the report depth that fits your claim` and keep package names at h3, or promote package names if structurally appropriate -> automated heading-outline check reports no jumps |
 | F-09 | P0 | 12.0 | City mobile pages place the full short form before the local h1 and comparison context -> search visitors are asked for data before confirming location relevance and service scope -> desktop conversion columns were reordered into a form-first stack -> show local h1, scope, currentness, and one CTA first; place the form after orientation or link to the dedicated form -> first two mobile screens identify city, task, proof, and action in that order |
@@ -158,7 +157,7 @@ Priority formula: `severity x path criticality x breadth x confidence / effort`.
 
 | Route | One job | What works | Main revision |
 |---|---|---|---|
-| `/` | Qualify concern and start a free review | Strong task clarity, price/timing transparency, distinctive editorial composition | Remove unverified outcomes, replace with real report evidence, fix 320/200% reflow, add form recovery |
+| `/` | Qualify concern and start a free review | Strong task clarity, price/timing transparency, distinctive editorial composition, real customer outcome | Add supporting report evidence, fix 320/200% reflow, and add form recovery |
 | `/how-it-works.html` | Explain the customer journey and deliverable | Clear sequence and report chapters | Replace repeated hero art; source or soften broad claims such as how most insurers respond |
 | `/pricing.html` | Help a driver choose report depth | Transparent prices, comparison table, effective mobile disclosures | Repair heading outline and contrast; expand guarantee process/limits near purchase actions |
 | `/results.html` | Currently: explain report structure | Honest disclaimer that it is not a result | Rename to Sample Report and show the actual artifact; do not imply results until proof exists |
@@ -175,7 +174,7 @@ Priority formula: `severity x path criticality x breadth x confidence / effort`.
 | Split task-first homepage hero with form | Lets urgent users understand and act in one view | Strong fit for an anxious, high-intent lead funnel | Hero with one CTA to dedicated form | Retain on desktop; on mobile keep orientation and CTA before the long form. Form must have complete states and preserve data | Desktop/mobile first-view and form-state matrix |
 | Tier cards plus comparison | Compares parallel paid packages | Strong fit because packages share a schema but differ by support/research depth | Plain price list | Retain cards and table; keep mobile disclosures; correct semantic heading order | Keyboard, long-copy, 320px, and 200% tests |
 | FAQ disclosures | Resolve purchase objections without a very long open page | Valid because answers are secondary and native `details` is accessible | Inline answers beside each package | Retain only questions that cannot be answered near the related decision | Keyboard/touch and open-state screenshots |
-| Outcome tabs | Intended to compare real customer claims | Context would support it only with consented, verifiable cases | Omit the module | Remove now. Reintroduce only after proof exists, with contained horizontal behavior and a non-tabular mobile alternative if needed | Proof gate, keyboard tab test, 320px reflow |
+| Outcome tabs | Present real customer claims | Owner-confirmed cases provide relevant proof when privacy and context are preserved | Static single-case section | Retain the approved cases; keep redactions and individual-results language, and use a contained non-tabular mobile layout if needed | Record gate, keyboard test, 320px reflow |
 | Repeated three-column cards | Organizes parallel process/rule/value concepts | Mixed: valid for parallel state rules, weaker for About values and repeated marketing claims | Editorial list or one lead artifact with supporting notes | Retain only where objects are truly comparable; replace About emoji cards and generic proof cards | Logo-swap and arbitrary-reordering tests |
 | Repeated full-width CTA band | Provides a closing action | Valid for conversion, but copy must reflect the page's argument | Inline text link | Retain one closing band per page, using route-specific evidence and action copy | Scroll-path review on desktop/mobile |
 
@@ -188,7 +187,7 @@ Priority formula: `severity x path criticality x breadth x confidence / effort`.
 | Submission | **Fail** | Native invalid state works; loading, server error, offline, preserved input, retry, and retry success are missing |
 | Controls | Partial pass | Focus, hover, tab selection, and native disclosures work; pricing semantics/contrast need revision |
 | Navigation | Pass | Current page, collapsed/expanded, Escape close, and focus return verified |
-| Media | **Fail** | Outcome media is an unresolved placeholder; route art is over-reused; broken-image fallback needs explicit verification after new assets |
+| Media | **Fail** | No customer-authorized vehicle image is supplied; route art is over-reused; broken-image fallback needs explicit verification after new assets |
 | Auth | Not applicable | No identity-dependent routes |
 | Permissions | Not applicable | No role/entitlement-dependent controls |
 | Content stress | **Fail** | 320px homepage overflow and 200% text-size overflow |
@@ -202,8 +201,8 @@ Priority formula: `severity x path criticality x breadth x confidence / effort`.
 Goal: make every claim near a form or purchase action supportable.
 
 1. Create a small proof manifest for operator claims, operating states, timing, guarantee terms, report artifacts, and customer outcomes.
-2. Remove the homepage outcome widget and `We often find hundreds and sometimes thousands` claim until the records are approved.
-3. Change `Results` navigation/page language to `Sample Report`, unless approved customer cases are supplied.
+2. Retain the owner-confirmed real homepage outcome with privacy redactions, exact approved figures, and an individual-results disclaimer.
+3. Keep `Results` for genuine customer outcomes and clearly label report-only walkthrough content.
 4. Replace nationwide/any-state language with verified operating scope or a clearly described eligibility review.
 5. Add owner/legal approval for guarantee wording, service boundary, turnaround trigger, and state eligibility.
 
@@ -390,4 +389,3 @@ Not completed:
 ## Revisions made after rendered critique
 
 None. The requested scope was audit and implementation planning. Website changes should begin only after the proof/operating-scope gate is resolved, then be re-rendered and re-inspected before sign-off.
-

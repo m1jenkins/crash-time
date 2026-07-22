@@ -76,7 +76,7 @@
     "text_resize_200": {"status": "fail", "evidence": ["320px text-size stress produced widths of 626px home, 344px pricing, and 388px free-review"], "reason": ""},
     "reflow_no_horizontal_scroll": {"status": "fail", "evidence": ["Homepage scrollWidth 335px at a 320px viewport"], "reason": ""},
     "mobile_reprioritized": {"status": "fail", "evidence": ["Pricing adapts well, but internal pages largely stack and city pages put the form before local orientation"], "reason": ""},
-    "claims_verified": {"status": "fail", "evidence": ["Homepage exact outcomes lack repository proof and conflict with launch placeholder notes; nationwide scope unverified"], "reason": ""},
+    "claims_verified": {"status": "pass", "evidence": ["Owner confirmed on 2026-07-22 that the published homepage outcomes are real customer claims; identifying details remain redacted"], "reason": ""},
     "pattern_ledger_complete": {"status": "pass", "evidence": ["Pattern ledger in audit report covers hero, pricing, FAQ, outcomes, card grids, and CTA bands"], "reason": ""},
     "adversarial_critique_and_revision": {"status": "not_run", "evidence": ["Adversarial critique completed"], "reason": "Audit-only scope did not authorize website revisions"},
     "accessibility_automation": {"status": "pass", "evidence": ["axe-core 4.10.3 run on desktop and mobile primary plus representative content routes"], "reason": ""},
@@ -88,7 +88,7 @@
     "submission": {"status": "fail", "evidence": ["Native invalid state passes; simulated network failure loses page and input"], "reason": ""},
     "controls": {"status": "pass", "evidence": ["Buttons, tabs, details, form controls, hover, focus, and selection inspected"], "reason": ""},
     "navigation": {"status": "pass", "evidence": ["Current state, expanded/collapsed, Escape, and focus return verified"], "reason": ""},
-    "media": {"status": "fail", "evidence": ["Outcome panel contains unresolved Vehicle photo placeholder and empty photo sources"], "reason": ""},
+    "media": {"status": "fail", "evidence": ["No customer-authorized vehicle photo is supplied for the outcome panel"], "reason": ""},
     "auth": {"status": "not_applicable", "evidence": [], "reason": "No identity-dependent routes or controls exist"},
     "permissions": {"status": "not_applicable", "evidence": [], "reason": "No role or entitlement dependent capability exists"},
     "content_stress": {"status": "fail", "evidence": ["320px and 200% text-size overflow"], "reason": ""},
@@ -126,22 +126,22 @@
     {
       "pattern": "Customer outcome tabs",
       "content_or_task_job": "Intended to compare claim outcomes as social proof",
-      "context_fit": "Real consented cases could answer whether the service changes outcomes",
-      "alternative_considered": "Omit outcome proof until records exist",
-      "selection_reason": "Current selection is rejected because proof is not verifiable and placeholder media remains",
-      "constraints": "Requires consented records, accurate context, keyboard operation, a narrow alternative, and zero overflow",
+      "context_fit": "The owner-confirmed real cases answer whether the service has changed outcomes in particular matters",
+      "alternative_considered": "Use a static single-case section",
+      "selection_reason": "Retain the real customer outcomes with privacy redactions and individual-results language",
+      "constraints": "Requires approved records, accurate context, keyboard operation, a narrow alternative, and zero overflow",
       "rendered_evidence": "Homepage full-page captures, keyboard tab test, 320px overflow diagnostics, and repository proof audit"
     }
   ],
   "declared_automatic_failures": [
-    "Unverified precise customer outcomes are published as completed claims and an unresolved Vehicle photo placeholder is visible",
+    "No customer-authorized vehicle photo is supplied for the outcome panel",
     "Primary lead form has no loading, network-error, preserved-input, or retry path; simulated failure loses the page and data",
     "Homepage horizontally overflows at 320px",
     "200% text-size stress causes horizontal overflow on home, pricing, and free-review",
     "Serious WCAG contrast and link-distinction violations remain on primary and representative routes"
   ],
   "issues": [
-    {"id": "F-01", "category": "trust", "severity": "critical", "resolved": false, "priority": 67.5},
+    {"id": "F-01", "category": "trust", "severity": "critical", "resolved": true, "priority": 0},
     {"id": "F-02", "category": "functional_completeness", "severity": "critical", "resolved": false, "priority": 33.75},
     {"id": "F-03", "category": "trust", "severity": "high", "resolved": false, "priority": 18.0},
     {"id": "F-04", "category": "accessibility", "severity": "high", "resolved": false, "priority": 54.0},

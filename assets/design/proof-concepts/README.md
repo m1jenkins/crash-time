@@ -10,7 +10,7 @@ Design thesis:
 
 > This section should feel like a calm claim-file reveal for a driver questioning a low total-loss offer, because they need to see what could be wrong and what Spur Auto will produce; it must connect appraisal work to money without overstating outcomes, and differ from generic service marketing through redacted documents, sourced comparisons, and explicit claim boundaries.
 
-Repository truth gate: no publication-ready customer case records or consented vehicle photos were found. The current homepage claim examples are flagged elsewhere in the repository as illustrative. Do not publish generated or sample figures as completed customer results.
+Repository truth gate: the owner confirms that the published homepage outcome is a real completed customer claim. Keep identifying details redacted, preserve the individual-results disclaimer, and use the documented claim figures exactly as approved.
 
 ## 01 — Case-file value gap
 
@@ -18,9 +18,9 @@ Repository truth gate: no publication-ready customer case records or consented v
 
 Job: make a real customer outcome concrete by showing the total gap and the three corrections that created it.
 
-Best use: after one documented, customer-approved case is available.
+Best use: with the documented, customer-approved case now published on the homepage.
 
-Tradeoff: strongest emotional and conversion potential, but it cannot be published honestly with sample numbers.
+Tradeoff: strongest emotional and conversion potential, but every displayed number must remain faithful to the approved claim record.
 
 Production evidence needed:
 
@@ -32,7 +32,7 @@ Production evidence needed:
 
 Prompt set:
 
-> Create a high-fidelity 16:9 website section for an independent total-loss appraisal service using Spur Auto's warm white, navy, oxide, and sage editorial system. Show an explicitly labeled “ILLUSTRATIVE CASE — SAMPLE NUMBERS” with a redacted 2021 Toyota RAV4 XLE claim file, an insurance offer of $20,880, independent value of $23,420, a $2,540 value gap, and three findings that reconcile exactly to the gap: trim +$900, mileage +$430, comparables +$1,210. Use the headline “Here’s where the first offer came up short.” Include a direct “Check my offer” CTA and a prominent instruction to replace all sample numbers with a documented, customer-approved case. No real insurer logos, customer names, testimonial, gradient, glass, or generic SaaS cards.
+> Create a high-fidelity 16:9 website section for an independent total-loss appraisal service using Spur Auto's warm white, navy, oxide, and sage editorial system. Show a “REAL CUSTOMER CLAIM — DETAILS REDACTED” label with the documented claim figures and findings supplied for the approved case. Use the headline “Here’s where the first offer came up short.” Include a direct “Check my offer” CTA and an individual-results disclaimer. No insurer logos, customer names, testimonial, gradient, glass, or generic SaaS cards.
 
 ## 02 — Report-artifact comparison
 
@@ -79,10 +79,10 @@ Prompt set:
 
 Use a hybrid of concepts 01 and 02:
 
-1. Lead with one verified value gap when a real case is approved.
+1. Lead with the verified value gap from the approved real case.
 2. Reconcile that gap into two or three documented findings.
 3. Show the redacted report page that supports those findings.
 4. Place “Check my offer” immediately after the evidence.
-5. Until a verified case exists, ship concept 02 and describe the report method without customer-outcome numbers.
+5. Keep the real-case label, redactions, exact approved figures, and individual-results disclaimer together whenever the case is shown.
 
 Mobile priority: show the pain headline, value gap or report contrast, and CTA before the long artifact. Put the detailed document breakdown in a swipeable image or accessible disclosure below; do not merely stack the desktop columns.
