@@ -5696,6 +5696,8 @@ body.site-redesign :focus-visible {
 
   .site-redesign .hero h1 {
     order: 2;
+    width: 100%;
+    max-width: 100%;
     margin-bottom: 1.25rem;
     font-size: clamp(2.5rem, 12vw, 3.15rem);
     line-height: 1;
@@ -5718,6 +5720,8 @@ body.site-redesign :focus-visible {
 
   .site-redesign .hero .lede {
     order: 4;
+    width: 100%;
+    max-width: 100%;
     margin: 0;
     font-size: 1rem;
     line-height: 1.65;

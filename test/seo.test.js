@@ -92,7 +92,7 @@ function mutateHtml(rootDir, relativePath, mutator) {
   fs.writeFileSync(file, mutator(fs.readFileSync(file, 'utf8')));
 }
 
-test('baseline build is atomic, idempotent, and produces the 40-URL canonical inventory', t => {
+test('baseline build is atomic, idempotent, and produces the 50-URL canonical inventory', t => {
   const rootDir = createFixture(t);
   assert.equal(runValidate(rootDir).status, 0);
   assert.equal(runBuild(rootDir).status, 0);
@@ -101,7 +101,7 @@ test('baseline build is atomic, idempotent, and produces the 40-URL canonical in
   assert.equal(generatedHash(rootDir), firstHash);
   const audit = runAudit(rootDir);
   assert.equal(audit.status, 0, output(audit));
-  assert.match(output(audit), /40 canonical URLs/);
+  assert.match(output(audit), /50 canonical URLs/);
 });
 
 test('generated location templates omit empty review modules and use the stable city hero', t => {

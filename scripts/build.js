@@ -9,6 +9,16 @@ const ROUTE_STATUSES = new Set(['published', 'draft', 'static', 'redirect', 'ali
 const ROUTE_MODES = new Set(['generated', 'none', 'draft', 'static', 'redirect', 'alias']);
 
 const GUIDE_METADATA = [
+  { canonicalPath: '/dispute-ccc-one-total-loss-valuation.html', title: 'Audit a CCC ONE valuation', description: 'Check the vehicle, comparables, adjustments, and settlement math' },
+  { canonicalPath: '/total-loss-comparable-vehicles.html', title: 'Check comparable vehicles', description: 'Test whether each car is a sound market match' },
+  { canonicalPath: '/total-loss-condition-adjustment.html', title: 'Condition adjustments', description: 'Find the baseline and document pre-loss condition' },
+  { canonicalPath: '/wrong-trim-missing-options-total-loss.html', title: 'Wrong trim or missing options', description: 'Prove the vehicle configuration and request a correction' },
+  { canonicalPath: '/total-loss-mileage-adjustment.html', title: 'Mileage adjustments', description: 'Verify odometers, direction, and calculation' },
+  { canonicalPath: '/total-loss-counteroffer-letter.html', title: 'Counteroffer letter', description: 'Use a concise template and evidence index' },
+  { canonicalPath: '/why-total-loss-offer-is-low.html', title: 'Why the offer is low', description: 'Separate valuation issues from ordinary settlement deductions' },
+  { canonicalPath: '/questions-to-ask-total-loss-adjuster.html', title: 'Questions for the adjuster', description: 'Get the report, math, timing, and next steps in writing' },
+  { canonicalPath: '/first-party-vs-third-party-total-loss-texas.html', title: 'Your insurer vs the other insurer', description: 'Understand how the Texas claim path changes your options' },
+  { canonicalPath: '/is-total-loss-appraisal-worth-it.html', title: 'Is an appraisal worth it?', description: 'Compare the supported value gap with cost and scope' },
   { canonicalPath: '/what-to-do-car-totaled-texas.html', title: 'Totaled car: what to do', description: 'Seven steps from lowball offer to fair payout' },
   { canonicalPath: '/actual-cash-value-texas.html', title: 'Actual cash value (ACV)', description: 'ACV vs market value, and how insurers set it' },
   { canonicalPath: '/dont-accept-total-loss-offer-texas.html', title: 'Rejecting a low offer', description: 'What happens if you do not accept, and your options' },
