@@ -1359,12 +1359,12 @@ body.home-redesign :focus-visible {
 }
 
 .home-redesign .btn {
-  min-height: 52px;
+  min-height: 48px;
   border-radius: 7px;
-  padding: 0.85rem 1.45rem;
+  padding: 0.75rem 1.3rem;
   border-width: 1px;
   font-family: var(--font-body);
-  font-size: 0.94rem;
+  font-size: 0.91rem;
   font-weight: 700;
   letter-spacing: -0.01em;
   box-shadow: none;
@@ -1436,8 +1436,8 @@ body.home-redesign :focus-visible {
 }
 
 .home-header .nav {
-  min-height: 88px;
-  padding: 1rem 0;
+  min-height: 78px;
+  padding: 0.75rem 0;
   animation: none !important;
 }
 
@@ -1458,7 +1458,7 @@ body.home-redesign :focus-visible {
 }
 
 .home-header .logo-image {
-  width: 154px;
+  width: 144px;
   max-width: 38vw;
   height: auto;
   flex: 0 0 auto;
@@ -1529,7 +1529,7 @@ body.home-redesign :focus-visible {
 
 /* First viewport */
 .home-hero {
-  min-height: clamp(720px, calc(100svh - 95px), 800px);
+  min-height: clamp(640px, calc(100svh - 79px), 700px);
   display: grid;
   grid-template-columns: minmax(0, 48%) minmax(0, 52%);
   background: #fff;
@@ -1540,14 +1540,14 @@ body.home-redesign :focus-visible {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 72px 40px 72px max(40px, calc((100vw - 1440px) / 2));
+  padding: 52px 40px 52px max(40px, calc((100vw - 1440px) / 2));
 }
 
 .home-hero h1 {
   max-width: 720px;
-  margin: 0 0 1.6rem;
-  font-size: clamp(3.4rem, 4.55vw, 4.3rem);
-  line-height: 0.98;
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.9rem, 4vw, 3.75rem);
+  line-height: 1;
 }
 
 .home-hero h1 span {
@@ -1556,15 +1556,15 @@ body.home-redesign :focus-visible {
 
 .home-lede {
   max-width: 650px;
-  margin-bottom: 1.55rem;
-  font-size: clamp(1.04rem, 1.4vw, 1.22rem);
-  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  line-height: 1.62;
 }
 
 .home-price-proof {
   max-width: 650px;
-  margin-bottom: 1.65rem;
-  padding: 1.05rem 0 1rem;
+  margin-bottom: 1.3rem;
+  padding: 0.8rem 0;
   border-top: 1px solid var(--home-line);
   border-bottom: 1px solid var(--home-line);
 }
@@ -1575,7 +1575,7 @@ body.home-redesign :focus-visible {
 
 .home-price-line {
   color: var(--home-ink) !important;
-  font-size: clamp(1.12rem, 1.5vw, 1.32rem);
+  font-size: clamp(1.04rem, 1.3vw, 1.18rem);
   font-weight: 750;
   letter-spacing: -0.025em;
 }
@@ -1592,7 +1592,7 @@ body.home-redesign :focus-visible {
 .home-price-claim {
   margin-top: 0.35rem !important;
   color: var(--home-ink) !important;
-  font-size: 0.9rem;
+  font-size: 0.84rem;
   font-weight: 700;
   line-height: 1.45;
 }
@@ -1608,12 +1608,12 @@ body.home-redesign :focus-visible {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1.1rem;
 }
 
 .home-hero-note {
-  margin: 1.35rem 0 0;
-  font-size: 0.88rem;
+  margin: 1rem 0 0;
+  font-size: 0.82rem;
   font-weight: 600;
 }
 
@@ -1624,7 +1624,7 @@ body.home-redesign :focus-visible {
 
 .home-hero-media {
   position: relative;
-  min-height: clamp(720px, calc(100svh - 95px), 800px);
+  min-height: clamp(640px, calc(100svh - 79px), 700px);
   background: #e8e7e2;
   overflow: hidden;
 }
@@ -1642,8 +1642,8 @@ body.home-redesign :focus-visible {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: min(520px, calc(100% - 48px));
-  padding: 1.6rem 1.75rem 1.5rem;
+  width: min(490px, calc(100% - 48px));
+  padding: 1.3rem 1.45rem 1.25rem;
   border: 1px solid rgba(13, 27, 51, 0.18);
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.98);
@@ -1661,13 +1661,13 @@ body.home-redesign :focus-visible {
 .claim-card h2 {
   margin-bottom: 0.3rem;
   font-family: var(--font-body);
-  font-size: 1.32rem;
+  font-size: 1.22rem;
   font-weight: 800;
   letter-spacing: -0.035em;
 }
 
 .claim-card-intro {
-  margin: 0 0 1rem;
+  margin: 0 0 0.8rem;
   color: var(--home-ink-soft);
   font-size: 0.82rem;
   line-height: 1.45;
@@ -1681,7 +1681,7 @@ body.home-redesign :focus-visible {
 
 .claim-card .form-group {
   min-width: 0;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.62rem;
 }
 
 .claim-card .form-group label {
@@ -1742,7 +1742,7 @@ body.home-redesign :focus-visible {
 
 .claim-card .btn {
   margin-top: 0.25rem;
-  min-height: 49px;
+  min-height: 46px;
 }
 
 .claim-card .btn span,
@@ -1789,7 +1789,7 @@ body.home-redesign :focus-visible {
 }
 
 .home-assurance {
-  padding: 2.4rem 0;
+  padding: 1.5rem 0;
   background: #fff;
   border-bottom: 1px solid var(--home-line);
 }
@@ -1803,7 +1803,7 @@ body.home-redesign :focus-visible {
   display: flex;
   align-items: center;
   gap: 1rem;
-  min-height: 70px;
+  min-height: 58px;
   padding: 0 1.8rem;
   border-right: 1px solid var(--home-line);
 }
@@ -1817,10 +1817,10 @@ body.home-redesign :focus-visible {
 }
 
 .assurance-item svg {
-  width: 46px;
-  height: 46px;
-  flex: 0 0 46px;
-  padding: 10px;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  padding: 9px;
   border-radius: 50%;
   background: var(--home-sage-light);
   fill: none;
@@ -1839,27 +1839,27 @@ body.home-redesign :focus-visible {
 
 /* Evidence section */
 .home-section {
-  padding: clamp(5.5rem, 9vw, 9rem) 0;
+  padding: clamp(4rem, 6vw, 6.5rem) 0;
 }
 
 .evidence-section {
-  padding-bottom: clamp(4rem, 7vw, 7rem);
+  padding-bottom: clamp(3.5rem, 5vw, 5.5rem);
   background: #fff;
 }
 
 .evidence-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(4rem, 9vw, 9.5rem);
+  gap: clamp(3rem, 6vw, 6.5rem);
   align-items: start;
 }
 
 
 .evidence-intro h2 {
   max-width: 620px;
-  margin-bottom: 1.5rem;
-  font-size: clamp(3rem, 5.2vw, 5.3rem);
-  line-height: 0.99;
+  margin-bottom: 1.2rem;
+  font-size: clamp(2.6rem, 4.1vw, 4.2rem);
+  line-height: 1;
 }
 
 .evidence-intro h2 em {
@@ -1868,14 +1868,14 @@ body.home-redesign :focus-visible {
 
 .evidence-intro > p {
   max-width: 560px;
-  margin-bottom: 2.1rem;
-  font-size: 1.08rem;
-  line-height: 1.8;
+  margin-bottom: 1.6rem;
+  font-size: 1rem;
+  line-height: 1.68;
 }
 
 .evidence-intro img {
   width: 100%;
-  height: clamp(260px, 28vw, 390px);
+  height: clamp(240px, 24vw, 340px);
   border-radius: 8px;
   object-fit: cover;
 }
@@ -1886,31 +1886,31 @@ body.home-redesign :focus-visible {
 
 .evidence-list article {
   display: grid;
-  grid-template-columns: 84px 1fr;
-  gap: 1.6rem;
-  padding: 2rem 0;
+  grid-template-columns: 70px 1fr;
+  gap: 1.3rem;
+  padding: 1.5rem 0;
   border-top: 1px solid #aeb5bc;
 }
 
 .evidence-list article > span {
   color: var(--home-accent);
   font-family: var(--home-serif);
-  font-size: 3.4rem;
+  font-size: 2.8rem;
   line-height: 1;
 }
 
 .evidence-list h3 {
   margin-bottom: 0.55rem;
   font-family: var(--home-serif);
-  font-size: clamp(1.55rem, 2.3vw, 2.15rem);
+  font-size: clamp(1.4rem, 1.8vw, 1.8rem);
   font-weight: 400;
 }
 
 .evidence-list p {
   max-width: 430px;
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.75;
+  font-size: 0.94rem;
+  line-height: 1.65;
 }
 
 .evidence-list > .home-text-link {
@@ -1921,9 +1921,9 @@ body.home-redesign :focus-visible {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: start;
-  gap: 1.7rem;
-  margin: clamp(4rem, 7vw, 6.5rem) 0 0;
-  padding: clamp(2.2rem, 4vw, 3.2rem);
+  gap: 1.35rem;
+  margin: clamp(3rem, 4.5vw, 4.5rem) 0 0;
+  padding: clamp(1.75rem, 3vw, 2.4rem);
   border-radius: 10px;
   background: var(--home-sage-light);
 }
@@ -1931,7 +1931,7 @@ body.home-redesign :focus-visible {
 .honesty-quote > span {
   color: var(--home-sage-dark);
   font-family: var(--home-serif);
-  font-size: 6.5rem;
+  font-size: 5rem;
   line-height: 0.75;
 }
 
@@ -1939,7 +1939,7 @@ body.home-redesign :focus-visible {
   margin: 0;
   color: var(--home-sage-dark);
   font-family: var(--home-serif);
-  font-size: clamp(2.15rem, 4.4vw, 4rem);
+  font-size: clamp(1.8rem, 3.4vw, 3rem);
   font-style: italic;
   line-height: 1.1;
 }
@@ -1966,25 +1966,25 @@ body.home-redesign :focus-visible {
   grid-template-columns: 1.2fr 0.8fr;
   gap: 3rem;
   align-items: end;
-  margin-bottom: 4.3rem;
+  margin-bottom: 3.2rem;
 }
 
 .process-head h2 {
-  font-size: clamp(3rem, 5.2vw, 5rem);
+  font-size: clamp(2.6rem, 4.1vw, 4.1rem);
   line-height: 1;
 }
 
 .process-head p {
   margin: 0 0 0.65rem;
-  font-size: 1.08rem;
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .process-rail {
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(2rem, 7vw, 7rem);
+  gap: clamp(2rem, 5vw, 5rem);
 }
 
 .process-rail::before {
@@ -2025,14 +2025,14 @@ body.home-redesign :focus-visible {
 .process-rail h3 {
   margin-bottom: 0.65rem;
   font-family: var(--home-serif);
-  font-size: clamp(1.45rem, 2.2vw, 2rem);
+  font-size: clamp(1.35rem, 1.8vw, 1.7rem);
   font-weight: 400;
 }
 
 .process-rail p {
   margin: 0;
-  font-size: 0.96rem;
-  line-height: 1.7;
+  font-size: 0.92rem;
+  line-height: 1.62;
 }
 
 .process-lower {
@@ -2040,7 +2040,7 @@ body.home-redesign :focus-visible {
   grid-template-columns: 0.38fr 0.62fr;
   gap: clamp(3rem, 7vw, 7rem);
   align-items: center;
-  margin-top: 3.5rem;
+  margin-top: 2.5rem;
 }
 
 .process-action .btn {
@@ -2069,7 +2069,7 @@ body.home-redesign :focus-visible {
   position: relative;
   display: grid;
   grid-template-columns: 18px 1fr;
-  min-height: 390px;
+  min-height: 320px;
   border: 1px solid #cfd3d7;
   border-bottom: 0;
   background: #fff;
@@ -2081,18 +2081,18 @@ body.home-redesign :focus-visible {
 }
 
 .report-content {
-  padding: clamp(2rem, 4vw, 3.7rem);
+  padding: clamp(1.6rem, 3vw, 2.8rem);
 }
 
 .report-content h3 {
   padding-bottom: 1rem;
   border-bottom: 1px solid #9199a1;
-  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-size: clamp(1.65rem, 2.5vw, 2.5rem);
 }
 
 .report-content h4 {
   margin: 1.2rem 0 1rem;
-  font-size: clamp(1.3rem, 2.1vw, 2rem);
+  font-size: clamp(1.2rem, 1.8vw, 1.7rem);
 }
 
 .report-row {
@@ -2100,7 +2100,7 @@ body.home-redesign :focus-visible {
   grid-template-columns: 0.8fr 1.3fr 1fr 1fr 1fr;
   gap: 1rem;
   align-items: center;
-  min-height: 55px;
+  min-height: 46px;
   border-bottom: 1px solid var(--home-line);
 }
 
@@ -2139,8 +2139,8 @@ body.home-redesign :focus-visible {
 
 /* Customer outcomes widget */
 .outcomes-section {
-  padding-top: clamp(4.5rem, 7vw, 6.5rem);
-  padding-bottom: clamp(4rem, 6vw, 5.5rem);
+  padding-top: clamp(3.5rem, 5vw, 5rem);
+  padding-bottom: clamp(3.25rem, 4.5vw, 4.5rem);
   background: #fff;
   border-bottom: 1px solid var(--home-line);
 }
@@ -2150,19 +2150,19 @@ body.home-redesign :focus-visible {
 }
 
 .outcomes-heading {
-  margin-bottom: 2.2rem;
+  margin-bottom: 1.7rem;
 }
 
 .outcomes-heading h2 {
   max-width: none;
   margin-bottom: 0.65rem;
-  font-size: clamp(3rem, 4.25vw, 4rem);
+  font-size: clamp(2.6rem, 3.6vw, 3.5rem);
   line-height: 1;
 }
 
 .outcomes-heading p {
   margin: 0;
-  font-size: 1.08rem;
+  font-size: 1rem;
 }
 
 .outcome-tabs {
@@ -2173,8 +2173,8 @@ body.home-redesign :focus-visible {
 
 .outcome-tab {
   position: relative;
-  min-height: 64px;
-  padding: 0.8rem 1rem 1.2rem;
+  min-height: 54px;
+  padding: 0.7rem 1rem 0.9rem;
   color: var(--home-ink-soft);
   background: transparent;
   border: 0;
@@ -2217,7 +2217,7 @@ body.home-redesign :focus-visible {
   grid-template-columns: minmax(0, 1fr) minmax(410px, 1fr);
   gap: clamp(2.5rem, 4vw, 4rem);
   align-items: stretch;
-  padding-top: 2.2rem;
+  padding-top: 1.7rem;
 }
 
 .outcome-photo {
@@ -2272,9 +2272,9 @@ body.home-redesign :focus-visible {
 }
 
 .outcome-details h3 {
-  margin-bottom: 1.35rem;
+  margin-bottom: 1rem;
   font-family: var(--home-serif);
-  font-size: clamp(2.2rem, 3.2vw, 3rem);
+  font-size: clamp(1.9rem, 2.7vw, 2.5rem);
   font-weight: 400;
   line-height: 1.02;
 }
@@ -2288,7 +2288,7 @@ body.home-redesign :focus-visible {
   grid-template-columns: minmax(175px, 1fr) auto;
   gap: 1.5rem;
   align-items: center;
-  min-height: 82px;
+  min-height: 70px;
   border-bottom: 1px solid var(--home-line);
 }
 
@@ -2316,7 +2316,7 @@ body.home-redesign :focus-visible {
   margin: 0;
   color: var(--home-ink);
   font-family: var(--home-serif);
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
   line-height: 1;
   text-align: right;
 }
@@ -2339,7 +2339,7 @@ body.home-redesign :focus-visible {
   align-items: end;
   justify-content: space-between;
   gap: 1.5rem;
-  padding: 1.2rem 0 1.35rem;
+  padding: 1rem 0 1.1rem;
 }
 
 .outcome-gain p {
@@ -2351,7 +2351,7 @@ body.home-redesign :focus-visible {
 .outcome-gain strong {
   color: var(--home-accent);
   font-family: var(--home-serif);
-  font-size: clamp(2.7rem, 4vw, 4rem);
+  font-size: clamp(2.3rem, 3.3vw, 3.25rem);
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 0.9;
@@ -2363,7 +2363,7 @@ body.home-redesign :focus-visible {
 }
 
 .outcomes-disclaimer {
-  margin: 2.7rem 0 0;
+  margin: 2rem 0 0;
   font-size: 0.78rem;
   line-height: 1.55;
   text-align: center;
@@ -2388,38 +2388,38 @@ body.home-redesign :focus-visible {
 .founder-heading h2 {
   grid-column: 1 / 3;
   max-width: 870px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2.3rem;
   text-align: left;
-  font-size: clamp(3rem, 5.2vw, 5rem);
+  font-size: clamp(2.6rem, 4.1vw, 4.1rem);
   line-height: 1;
 }
 
 .founder-story {
   display: grid;
-  grid-template-columns: 150px minmax(0, 650px);
-  gap: 2.2rem;
+  grid-template-columns: 120px minmax(0, 650px);
+  gap: 1.8rem;
   align-items: start;
   max-width: 1030px;
-  margin: 0 auto 4.5rem;
+  margin: 0 auto 3rem;
 }
 
 .founder-mark {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 142px;
+  width: 112px;
   aspect-ratio: 1;
   background: var(--home-sage);
   color: #fff;
   font-family: var(--home-serif);
-  font-size: 3.3rem;
+  font-size: 2.7rem;
 }
 
 .founder-story blockquote p {
   margin-bottom: 1rem;
   color: var(--home-ink);
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
-  line-height: 1.7;
+  font-size: clamp(1.05rem, 1.6vw, 1.28rem);
+  line-height: 1.62;
 }
 
 .founder-story cite {
@@ -2437,16 +2437,16 @@ body.home-redesign :focus-visible {
 
 .founder-points article {
   display: grid;
-  grid-template-columns: 58px 1fr;
-  gap: 1.4rem;
-  min-height: 115px;
-  padding: 0 3rem;
+  grid-template-columns: 50px 1fr;
+  gap: 1.15rem;
+  min-height: 92px;
+  padding: 0 2.25rem;
   border-right: 1px solid var(--home-sage);
 }
 
 .founder-points article > svg {
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
   fill: none;
   stroke: var(--home-sage);
   stroke-width: 1.8;
@@ -2466,7 +2466,7 @@ body.home-redesign :focus-visible {
 .founder-points h3 {
   margin-bottom: 0.5rem;
   font-family: var(--home-serif);
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
@@ -2484,7 +2484,7 @@ body.home-redesign :focus-visible {
 .home-faq .container {
   display: grid;
   grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1.3fr);
-  gap: clamp(3rem, 8vw, 8rem);
+  gap: clamp(3rem, 6vw, 6rem);
   align-items: start;
 }
 
@@ -2495,14 +2495,14 @@ body.home-redesign :focus-visible {
 
 .home-faq-heading h2 {
   margin-bottom: 1rem;
-  font-size: clamp(3rem, 5vw, 4.8rem);
+  font-size: clamp(2.6rem, 4vw, 3.8rem);
   line-height: 1;
 }
 
 .home-faq-heading p {
   max-width: 430px;
-  font-size: 1.02rem;
-  line-height: 1.7;
+  font-size: 0.96rem;
+  line-height: 1.62;
 }
 
 .home-faq-list {
@@ -2515,10 +2515,10 @@ body.home-redesign :focus-visible {
 
 .home-faq-list summary {
   position: relative;
-  padding: 1.45rem 3rem 1.45rem 0;
+  padding: 1.1rem 3rem 1.1rem 0;
   color: var(--home-ink);
   cursor: pointer;
-  font-size: 1.04rem;
+  font-size: 0.98rem;
   font-weight: 750;
   line-height: 1.45;
   list-style: none;
@@ -2546,14 +2546,15 @@ body.home-redesign :focus-visible {
 
 .home-faq-list details p {
   max-width: 720px;
-  margin: -0.25rem 0 1.5rem;
+  margin: -0.15rem 0 1.2rem;
   padding-right: 2rem;
-  line-height: 1.75;
+  font-size: 0.94rem;
+  line-height: 1.65;
 }
 
 /* Closing conversion section */
 .home-final-cta {
-  padding: clamp(4.5rem, 8vw, 7rem) 0;
+  padding: clamp(3.5rem, 5.5vw, 5rem) 0;
   background: var(--home-ink);
   text-align: center;
 }
@@ -2561,14 +2562,14 @@ body.home-redesign :focus-visible {
 .home-final-cta h2 {
   margin-bottom: 1rem;
   color: #fff;
-  font-size: clamp(2.7rem, 5.1vw, 4.8rem);
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
   line-height: 1.05;
 }
 
 .home-final-cta p {
-  margin: 0 auto 2rem;
+  margin: 0 auto 1.6rem;
   color: rgba(255, 255, 255, 0.76);
-  font-size: 1.08rem;
+  font-size: 1rem;
 }
 
 .final-actions {
@@ -2586,7 +2587,7 @@ body.home-redesign :focus-visible {
 
 /* Homepage footer */
 .home-footer {
-  padding: 4.5rem 0 2rem;
+  padding: 3.5rem 0 1.75rem;
   border-top: 0;
   background: #fff;
   color: var(--home-ink-soft);
@@ -2595,8 +2596,8 @@ body.home-redesign :focus-visible {
 .home-footer-top {
   display: grid;
   grid-template-columns: 1fr 1.35fr;
-  gap: 5rem;
-  padding-bottom: 3.2rem;
+  gap: 3.5rem;
+  padding-bottom: 2.5rem;
   border-bottom: 1px solid var(--home-line);
 }
 
@@ -2672,11 +2673,11 @@ body.home-redesign :focus-visible {
   }
 
   .home-hero-copy {
-    padding: 58px 36px 58px max(24px, calc((100vw - 1100px) / 2));
+    padding: 44px 36px 44px max(24px, calc((100vw - 1100px) / 2));
   }
 
   .home-hero h1 {
-    font-size: clamp(3.1rem, 5.6vw, 4.2rem);
+    font-size: clamp(2.8rem, 4.8vw, 3.6rem);
   }
 
   .claim-card {
@@ -2716,7 +2717,7 @@ body.home-redesign :focus-visible {
   }
 
   .home-hero-copy {
-    padding: 70px 24px;
+    padding: 52px 24px;
   }
 
   .home-hero-copy > * {
@@ -2732,7 +2733,7 @@ body.home-redesign :focus-visible {
   }
 
   .home-hero-media {
-    min-height: 780px;
+    min-height: 650px;
   }
 
   .home-assurance-grid {
@@ -2762,7 +2763,7 @@ body.home-redesign :focus-visible {
   }
 
   .evidence-layout {
-    gap: 4rem;
+    gap: 3rem;
   }
 
   .evidence-intro img {
@@ -2778,7 +2779,7 @@ body.home-redesign :focus-visible {
   }
 
   .process-lower {
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
 
   .outcome-panel {
@@ -2851,12 +2852,12 @@ body.home-redesign :focus-visible {
   }
 
   .home-hero-copy {
-    padding: 54px 16px 48px;
+    padding: 42px 16px 40px;
   }
 
   .home-hero h1 {
-    font-size: clamp(3rem, 13.2vw, 4.15rem);
-    line-height: 0.98;
+    font-size: clamp(2.45rem, 11vw, 3rem);
+    line-height: 1;
   }
 
   .home-lede {
@@ -2952,18 +2953,18 @@ body.home-redesign :focus-visible {
   }
 
   .home-section {
-    padding: 5.5rem 0;
+    padding: 4.25rem 0;
   }
 
   .evidence-intro h2,
   .process-head h2,
   .outcomes-heading h2,
   .founder-heading h2 {
-    font-size: clamp(2.8rem, 13vw, 4rem);
+    font-size: clamp(2.35rem, 10.5vw, 3.2rem);
   }
 
   .outcomes-heading {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .outcome-tabs {
@@ -3049,12 +3050,12 @@ body.home-redesign :focus-visible {
   }
 
   .honesty-quote p {
-    font-size: clamp(2rem, 9vw, 3rem);
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
   }
 
   .process-rail {
     grid-template-columns: 1fr;
-    gap: 2.6rem;
+    gap: 2.1rem;
     padding-left: 8px;
   }
 
@@ -3082,7 +3083,7 @@ body.home-redesign :focus-visible {
   }
 
   .process-lower {
-    gap: 3rem;
+    gap: 2.4rem;
   }
 
   .process-action {
@@ -3113,13 +3114,13 @@ body.home-redesign :focus-visible {
 
   .founder-heading h2 {
     grid-column: 1;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
   }
 
   .founder-story {
     grid-template-columns: 92px 1fr;
     gap: 1.25rem;
-    margin-bottom: 3.5rem;
+    margin-bottom: 2.75rem;
   }
 
   .founder-mark {
@@ -3136,7 +3137,7 @@ body.home-redesign :focus-visible {
   }
 
   .home-faq-heading h2 {
-    font-size: clamp(2.8rem, 13vw, 4rem);
+    font-size: clamp(2.35rem, 10.5vw, 3.2rem);
   }
 
   .founder-points article,
@@ -3157,7 +3158,7 @@ body.home-redesign :focus-visible {
   }
 
   .home-final-cta h2 {
-    font-size: clamp(2.65rem, 12vw, 3.8rem);
+    font-size: clamp(2.3rem, 10.5vw, 3.1rem);
   }
 
   .final-actions {
@@ -3200,7 +3201,7 @@ body.home-redesign :focus-visible {
 
 @media (max-width: 430px) {
   .home-hero h1 {
-    font-size: 3.1rem;
+    font-size: 2.7rem;
   }
 
   .claim-card {
@@ -5842,14 +5843,14 @@ body.site-redesign :focus-visible {
   }
 
   .home-redesign .home-hero-copy {
-    padding-top: 2.75rem;
-    padding-bottom: 3rem;
+    padding-top: 2.25rem;
+    padding-bottom: 2.5rem;
   }
 
   .home-redesign .home-hero h1 {
     order: 1;
     margin-bottom: 1.15rem;
-    font-size: clamp(2.65rem, 12vw, 3.2rem);
+    font-size: clamp(2.4rem, 10.5vw, 2.85rem);
     line-height: 1;
   }
 
@@ -5857,7 +5858,7 @@ body.site-redesign :focus-visible {
     order: 2;
     margin-bottom: 1.25rem;
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.55;
   }
 
   .home-redesign .home-hero-actions {
@@ -5873,7 +5874,7 @@ body.site-redesign :focus-visible {
 
   .home-redesign .home-price-proof {
     order: 5;
-    margin: 1.25rem 0 0;
+    margin: 1rem 0 0;
   }
 
   .home-redesign .home-price-claim {
@@ -6097,7 +6098,7 @@ body.site-redesign :focus-visible {
 
   .home-redesign .home-hero h1,
   .site-redesign .hero h1 {
-    font-size: 2.45rem;
+    font-size: 2.3rem;
   }
 }
 
@@ -6277,6 +6278,79 @@ body.site-redesign :focus-visible {
   .comparison-page .hero .fine-print {
     order: 5;
     margin-top: 0;
+  }
+}
+
+/* Legacy Texas city pages: keep the review form in a dedicated hero column. */
+@media (min-width: 981px) {
+  .site-redesign.location-page .hero .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.72fr);
+    grid-template-areas:
+      "heading form"
+      "lede form"
+      "actions form"
+      "note form";
+    column-gap: clamp(2rem, 4vw, 4.5rem);
+    align-items: center;
+  }
+
+  .site-redesign.location-page .hero h1 {
+    grid-area: heading;
+    max-width: none;
+  }
+
+  .site-redesign.location-page .hero .lede {
+    grid-area: lede;
+    max-width: none;
+  }
+
+  .site-redesign.location-page .hero .hero-ctas {
+    grid-area: actions;
+  }
+
+  .site-redesign.location-page .hero .hero-note {
+    grid-area: note;
+    max-width: none;
+  }
+
+  .site-redesign.location-page .hero .claim-card {
+    position: static;
+    grid-area: form;
+    align-self: center;
+    width: 100%;
+    max-width: 520px;
+    margin-left: auto;
+    transform: none;
+  }
+
+  .site-redesign.location-page .hero .claim-card:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 980px) {
+  .site-redesign.location-page .hero .container {
+    display: block;
+  }
+
+  .site-redesign.location-page .hero h1,
+  .site-redesign.location-page .hero .lede,
+  .site-redesign.location-page .hero .hero-note {
+    max-width: 780px;
+  }
+
+  .site-redesign.location-page .hero .claim-card {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    max-width: 620px;
+    margin: 2.5rem auto 0;
+    transform: none;
+  }
+
+  .site-redesign.location-page .hero .claim-card:hover {
+    transform: none;
   }
 }
 
