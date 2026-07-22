@@ -235,7 +235,7 @@ a:hover {
   white-space: nowrap;
 }
 .logo::before {
-  content: "";
+  content: none;
   display: none;
   width: 2rem;
   height: 2rem;
@@ -243,8 +243,10 @@ a:hover {
   background: url("../assets/brand/spur-auto-mark.png") center / contain no-repeat;
 }
 .logo-image {
-  width: min(210px, 52vw);
+  width: 154px;
+  max-width: 38vw;
   height: auto;
+  flex: 0 0 auto;
   border-radius: 0;
 }
 .logo span {
