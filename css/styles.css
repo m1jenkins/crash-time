@@ -2414,13 +2414,6 @@ body.home-redesign :focus-visible {
   background-size: 238.86% auto;
 }
 
-.client-case-file figcaption {
-  margin-top: 0.75rem;
-  color: var(--home-ink-soft);
-  font-size: 0.7rem;
-  line-height: 1.5;
-}
-
 @media (max-width: 1080px) {
   .client-case-layout {
     grid-template-columns: 1fr;
@@ -2510,9 +2503,6 @@ body.home-redesign :focus-visible {
     font-size: 2.6rem;
   }
 
-  .client-case-file figcaption {
-    font-size: 0.68rem;
-  }
 }
 
 /* Claim-value advocacy bridge */
