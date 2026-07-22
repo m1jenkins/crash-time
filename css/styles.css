@@ -3505,6 +3505,13 @@ body.site-redesign :focus-visible {
   max-width: min(720px, calc(64% - 2rem));
 }
 
+/* Keep long hero notes inside the copy column while the image sits beside it. */
+@media (min-width: 961px) {
+  .site-redesign .hero-note-copy {
+    max-width: min(720px, calc(64% - 2rem));
+  }
+}
+
 /* Keep the long locations qualifier inside the hero copy column. */
 @media (min-width: 961px) {
   .locations-page .hero-note {
