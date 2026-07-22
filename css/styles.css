@@ -2527,28 +2527,9 @@ body.home-redesign :focus-visible {
   width: min(1380px, calc(100% - 64px));
 }
 
-.claim-value-kicker {
-  margin: 0;
-  color: var(--home-accent-dark) !important;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.2em;
-  line-height: 1.35;
-  text-transform: uppercase;
-}
-
-.claim-value-kicker::after {
-  content: "";
-  display: block;
-  width: 78px;
-  height: 2px;
-  margin-top: 1.15rem;
-  background: var(--home-accent-dark);
-}
-
 .claim-value-section h2 {
   max-width: 1320px;
-  margin: clamp(2.2rem, 3.4vw, 3.4rem) 0 clamp(3.5rem, 5.5vw, 5.2rem);
+  margin: 0 0 clamp(3.5rem, 5.5vw, 5.2rem);
   color: var(--home-ink);
   font-family: var(--home-serif);
   font-size: clamp(4rem, 7.4vw, 7.2rem);
@@ -2644,15 +2625,6 @@ body.home-redesign :focus-visible {
   transform: translateX(4px);
 }
 
-.claim-value-action p {
-  margin: 0;
-  padding-left: clamp(2rem, 4vw, 3.25rem);
-  color: var(--home-ink) !important;
-  border-left: 1px solid #d8d4ca;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
 @media (max-width: 900px) {
   .claim-value-section h2 {
     max-width: 780px;
@@ -2696,19 +2668,8 @@ body.home-redesign :focus-visible {
     width: min(100% - 32px, 680px);
   }
 
-  .claim-value-kicker {
-    max-width: 270px;
-    font-size: 0.7rem;
-    letter-spacing: 0.16em;
-  }
-
-  .claim-value-kicker::after {
-    width: 62px;
-    margin-top: 0.95rem;
-  }
-
   .claim-value-section h2 {
-    margin: 2rem 0 2.75rem;
+    margin-bottom: 2.75rem;
     font-size: clamp(2.7rem, 13vw, 3.35rem);
     line-height: 0.98;
   }
@@ -2747,12 +2708,6 @@ body.home-redesign :focus-visible {
     min-width: 0;
   }
 
-  .claim-value-action p {
-    padding: 1.2rem 0 0;
-    border-top: 1px solid #d8d4ca;
-    border-left: 0;
-    font-size: 0.95rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
