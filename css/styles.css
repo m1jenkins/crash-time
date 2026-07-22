@@ -1529,7 +1529,7 @@ body.home-redesign :focus-visible {
 
 /* First viewport */
 .home-hero {
-  min-height: 800px;
+  min-height: clamp(720px, calc(100svh - 95px), 800px);
   display: grid;
   grid-template-columns: minmax(0, 48%) minmax(0, 52%);
   background: #fff;
@@ -1624,7 +1624,7 @@ body.home-redesign :focus-visible {
 
 .home-hero-media {
   position: relative;
-  min-height: 800px;
+  min-height: clamp(720px, calc(100svh - 95px), 800px);
   background: #e8e7e2;
   overflow: hidden;
 }
