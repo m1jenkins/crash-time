@@ -236,10 +236,16 @@ a:hover {
 }
 .logo::before {
   content: "";
+  display: none;
   width: 2rem;
   height: 2rem;
   flex: 0 0 2rem;
   background: url("../assets/brand/spur-auto-mark.png") center / contain no-repeat;
+}
+.logo-image {
+  width: min(210px, 52vw);
+  height: auto;
+  border-radius: 0;
 }
 .logo span {
   color: var(--amber);
@@ -1436,14 +1442,13 @@ body.home-redesign :focus-visible {
 .home-header .logo,
 .home-footer .logo {
   color: var(--home-ink);
-  font-size: 2rem;
+  font-size: 0;
   line-height: 1;
 }
 
-.home-header .logo::before {
-  width: 2.45rem;
-  height: 2.45rem;
-  flex-basis: 2.45rem;
+.home-header .logo::before,
+.home-footer .logo::before {
+  display: none;
 }
 
 .home-header .logo span,
@@ -2825,7 +2830,7 @@ body.home-redesign :focus-visible {
 
   .home-header .logo,
   .home-footer .logo {
-    font-size: 1.65rem;
+    font-size: 0;
   }
 
   .home-hero-copy {
