@@ -3505,6 +3505,13 @@ body.site-redesign :focus-visible {
   max-width: min(720px, calc(64% - 2rem));
 }
 
+/* Keep the long locations qualifier inside the hero copy column. */
+@media (min-width: 961px) {
+  .locations-page .hero-note {
+    max-width: min(720px, calc(64% - 2rem));
+  }
+}
+
 /* Content rhythm */
 .site-redesign .section {
   padding: clamp(3.5rem, 6vw, 5.5rem) 0;
@@ -5515,6 +5522,227 @@ body.site-redesign :focus-visible {
   padding-top: 1.5rem;
   border-top: 1px solid var(--home-line, #e3e0da);
   font-size: 0.9rem;
+}
+
+/* CCC valuation guide: visual report map and downloadable dispute kit */
+.site-redesign .ccc-dispute-kit {
+  margin: 0 0 3rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  color: #fff;
+  background: var(--home-ink);
+  border-radius: 8px;
+  box-shadow: 12px 12px 0 var(--home-sage-light);
+}
+
+.site-redesign .ccc-dispute-kit .eyebrow,
+.site-redesign .ccc-email-tool .eyebrow {
+  margin: 0 0 0.55rem;
+  color: var(--home-accent);
+}
+
+.site-redesign .ccc-dispute-kit h2 {
+  max-width: 700px;
+  margin: 0;
+  color: #fff;
+  font-family: var(--home-serif);
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.site-redesign .ccc-dispute-kit ol {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: dispute-step;
+}
+
+.site-redesign .ccc-dispute-kit li {
+  position: relative;
+  padding-top: 2.75rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  counter-increment: dispute-step;
+}
+
+.site-redesign .ccc-dispute-kit li::before {
+  content: counter(dispute-step, decimal-leading-zero);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--home-accent);
+  font-family: var(--home-serif);
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.site-redesign .ccc-dispute-kit li strong {
+  display: block;
+  color: #fff;
+}
+
+.site-redesign .ccc-dispute-kit .text-link {
+  color: #fff;
+  font-weight: 800;
+  text-decoration-color: var(--home-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+.ccc-report-figure {
+  margin: 2rem 0 3rem;
+}
+
+.ccc-report-sheet {
+  padding: clamp(1rem, 3vw, 2rem);
+  color: var(--home-ink);
+  background: #fff;
+  border: 1px solid var(--home-line);
+  box-shadow: 0 18px 55px rgba(13, 27, 51, 0.1);
+}
+
+.ccc-report-sheet-header {
+  display: grid;
+  gap: 0.35rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid var(--home-ink);
+}
+
+.ccc-report-sheet-header span {
+  color: var(--home-accent-dark);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ccc-report-sheet-header strong {
+  font-family: var(--home-serif);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.ccc-report-sheet-header small,
+.ccc-report-row small {
+  color: var(--home-ink-soft);
+}
+
+.ccc-report-row {
+  display: grid;
+  grid-template-columns: 42px minmax(210px, 1fr) minmax(240px, 1.3fr);
+  gap: 1rem;
+  align-items: center;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--home-line);
+}
+
+.ccc-report-row:last-child {
+  border-bottom: 0;
+}
+
+.ccc-report-marker {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  color: #fff;
+  background: var(--home-accent);
+  border-radius: 50%;
+  font-family: var(--home-serif);
+  font-size: 1.2rem;
+}
+
+.ccc-report-row div {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.ccc-report-row div > span,
+.ccc-report-row small {
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.ccc-report-figure figcaption {
+  max-width: 760px;
+  margin-top: 1rem;
+  color: var(--home-ink-soft);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.site-redesign .ccc-email-tool {
+  margin: 3rem 0;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  background: var(--home-paper);
+  border: 1px solid var(--home-line);
+  border-top: 5px solid var(--home-accent);
+}
+
+.ccc-email-tool-heading {
+  display: flex;
+  gap: 1.5rem;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.site-redesign .ccc-email-tool h2 {
+  margin: 0;
+  font-family: var(--home-serif);
+  font-size: clamp(1.65rem, 4vw, 2.35rem);
+  font-weight: 400;
+}
+
+.ccc-copy-button {
+  flex: 0 0 auto;
+}
+
+.ccc-email-tool pre {
+  overflow-x: auto;
+  margin: 0;
+  padding: 1.25rem;
+  color: var(--home-ink);
+  background: #fff;
+  border: 1px solid var(--home-line);
+  font: inherit;
+  font-size: 0.83rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.site-redesign .ccc-email-tool .fine-print {
+  margin: 1rem 0 0;
+}
+
+@media (max-width: 760px) {
+  .site-redesign .ccc-dispute-kit ol {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .ccc-report-row {
+    grid-template-columns: 36px 1fr;
+    align-items: start;
+  }
+
+  .ccc-report-row small {
+    grid-column: 2;
+  }
+
+  .ccc-email-tool-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .ccc-copy-button {
+    width: 100%;
+  }
 }
 
 /* ============================================================

@@ -74,6 +74,43 @@ document.addEventListener("DOMContentLoaded", function () {
     link.href = "free-review.html#free-review-form";
   });
 
+  // --- Copyable guide templates ---
+  document.querySelectorAll("[data-copy-target]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var target = document.querySelector(button.getAttribute("data-copy-target"));
+      if (!target) return;
+
+      var copyText = target.textContent.trim();
+      var originalLabel = button.textContent;
+      var showCopyResult = function (label) {
+        button.textContent = label;
+        window.setTimeout(function () {
+          button.textContent = originalLabel;
+        }, 2000);
+      };
+      var fallbackCopy = function () {
+        var field = document.createElement("textarea");
+        field.value = copyText;
+        field.setAttribute("readonly", "");
+        field.style.position = "fixed";
+        field.style.opacity = "0";
+        document.body.appendChild(field);
+        field.select();
+        var copied = document.execCommand("copy");
+        document.body.removeChild(field);
+        showCopyResult(copied ? "Copied" : "Select and copy below");
+      };
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(copyText).then(function () {
+          showCopyResult("Copied");
+        }).catch(fallbackCopy);
+      } else {
+        fallbackCopy();
+      }
+    });
+  });
+
   // --- Customer outcome selector ---
   var outcomeTabs = Array.prototype.slice.call(document.querySelectorAll(".outcome-tab"));
   var outcomePanel = document.querySelector("#outcome-panel");
