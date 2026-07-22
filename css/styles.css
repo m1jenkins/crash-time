@@ -1611,17 +1611,6 @@ body.home-redesign :focus-visible {
   gap: 1.1rem;
 }
 
-.home-hero-note {
-  margin: 1rem 0 0;
-  font-size: 0.82rem;
-  font-weight: 600;
-}
-
-.home-hero-note span {
-  margin: 0 0.4rem;
-  color: var(--home-sage);
-}
-
 .home-hero-media {
   position: relative;
   min-height: clamp(640px, calc(100svh - 79px), 700px);
@@ -3410,11 +3399,6 @@ body.home-redesign :focus-visible {
 
   .home-hero-actions .home-text-link {
     align-self: flex-start;
-  }
-
-  .home-hero-note {
-    display: flex;
-    flex-wrap: wrap;
   }
 
   .home-hero-media {
@@ -6402,12 +6386,6 @@ body.site-redesign :focus-visible {
   .home-redesign .home-hero-actions {
     order: 3;
     gap: 0.75rem;
-  }
-
-  .home-redesign .home-hero-note {
-    order: 4;
-    margin-top: 1rem;
-    font-size: 0.9rem;
   }
 
   .home-redesign .home-price-proof {
