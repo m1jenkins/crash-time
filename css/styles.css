@@ -1451,6 +1451,17 @@ body.home-redesign :focus-visible {
   display: none;
 }
 
+.home-header .logo::before {
+  content: none;
+}
+
+.home-header .logo-image {
+  width: 154px;
+  max-width: 38vw;
+  height: auto;
+  flex: 0 0 auto;
+}
+
 .home-header .logo span,
 .home-footer .logo span {
   color: var(--home-accent);
@@ -2826,6 +2837,10 @@ body.home-redesign :focus-visible {
 
   .home-header .nav {
     min-height: 74px;
+  }
+
+  .home-header .logo-image {
+    width: 142px;
   }
 
   .home-header .logo,
