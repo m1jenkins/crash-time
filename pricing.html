@@ -36,7 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260721f04">
+  <link rel="stylesheet" href="css/styles.css?v=20260722pricing02">
   <link rel="icon" href="assets/brand/spur-auto-favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/spur-auto-favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/spur-auto-favicon-16.png">
@@ -69,13 +69,117 @@
         Start with a free expert review. If your offer looks low, choose the report depth
         and support that fit your vehicle.
       </p>
-      <a href="free-review.html" class="btn btn-primary pricing-hero-cta">Get My Free Claim Review</a>
+      <div class="pricing-hero-actions">
+        <a href="free-review.html" class="btn btn-primary pricing-hero-cta">Get My Free Claim Review</a>
+        <a href="results.html" class="pricing-sample-link">See a sample report <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <ul class="pricing-hero-assurances" aria-label="Pricing assurances">
+        <li>One-time pricing</li>
+        <li>48-hour delivery after complete documents</li>
+        <li>Money-back guarantee</li>
+      </ul>
     </div>
   </section>
 
   <!-- ================= PRICING TIERS ================= -->
   <section class="section pricing-section" id="plans">
     <div class="container">
+      <section class="pricing-chooser" data-pricing-chooser aria-labelledby="pricing-chooser-heading" aria-describedby="pricing-chooser-intro" hidden>
+        <header class="pricing-chooser-header">
+          <h2 id="pricing-chooser-heading">Choose by vehicle, then support.</h2>
+          <p id="pricing-chooser-intro">Two quick choices show the package and total price that fit your claim.</p>
+        </header>
+
+        <div class="pricing-chooser-grid">
+          <form class="pricing-choice-controls" aria-label="Find a report package">
+            <fieldset class="pricing-choice-group">
+              <legend><span aria-hidden="true">1</span> Your vehicle</legend>
+              <div class="pricing-choice-options">
+                <label class="pricing-choice">
+                  <input type="radio" name="pricing-vehicle" value="standard" checked>
+                  <span class="pricing-choice-body">
+                    <svg viewBox="0 0 48 32" aria-hidden="true" focusable="false">
+                      <path d="M8 23h-3v-8l4-2 5-7h17l6 7 6 2v8h-4m-27 0h20m-17 0a4 4 0 1 0-8 0 4 4 0 0 0 8 0Zm24 0a4 4 0 1 0-8 0 4 4 0 0 0 8 0Z"/>
+                    </svg>
+                    <span>Standard-production</span>
+                    <span class="pricing-choice-check" aria-hidden="true">&#10003;</span>
+                  </span>
+                </label>
+                <label class="pricing-choice">
+                  <input type="radio" name="pricing-vehicle" value="specialty">
+                  <span class="pricing-choice-body">
+                    <svg viewBox="0 0 48 32" aria-hidden="true" focusable="false">
+                      <path d="M8 23h-3v-8l4-2 5-7h17l6 7 6 2v8h-4m-27 0h20m-17 0a4 4 0 1 0-8 0 4 4 0 0 0 8 0Zm24 0a4 4 0 1 0-8 0 4 4 0 0 0 8 0Z"/>
+                      <path d="m39 2 1.2 3.3L44 6.5l-3.8 1.2L39 11l-1.2-3.3L34 6.5l3.8-1.2L39 2Z"/>
+                    </svg>
+                    <span>Rare, modified, or high-value</span>
+                    <span class="pricing-choice-check" aria-hidden="true">&#10003;</span>
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="pricing-choice-group">
+              <legend><span aria-hidden="true">2</span> Support level</legend>
+              <div class="pricing-choice-options">
+                <label class="pricing-choice">
+                  <input type="radio" name="pricing-support" value="report">
+                  <span class="pricing-choice-body">
+                    <svg viewBox="0 0 36 42" aria-hidden="true" focusable="false">
+                      <path d="M8 2h14l8 8v30H8zM22 2v9h8M13 19h12M13 25h12M13 31h9"/>
+                    </svg>
+                    <span>Report only</span>
+                    <span class="pricing-choice-check" aria-hidden="true">&#10003;</span>
+                  </span>
+                </label>
+                <label class="pricing-choice">
+                  <input type="radio" name="pricing-support" value="guided" checked>
+                  <span class="pricing-choice-body">
+                    <svg viewBox="0 0 44 34" aria-hidden="true" focusable="false">
+                      <rect x="2" y="3" width="40" height="28" rx="1"/>
+                      <path d="m3 6 19 15L41 6M3 30l13-13M41 30 28 17"/>
+                    </svg>
+                    <span>Help with insurer replies</span>
+                    <span class="pricing-choice-check" aria-hidden="true">&#10003;</span>
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+          </form>
+
+          <aside class="pricing-choice-result" data-choice-result data-plan="guided" aria-labelledby="pricing-choice-result-title">
+            <span class="pricing-choice-kicker">Your fit</span>
+            <h3 id="pricing-choice-result-title" data-choice-name>Guided</h3>
+            <p class="pricing-choice-price" data-choice-price-wrap aria-label="$299 one time">
+              <sup>$</sup><strong data-choice-price>299</strong><span>One time</span>
+            </p>
+            <p class="pricing-choice-summary" data-choice-summary>Report + help with insurer replies</p>
+            <ul class="pricing-choice-benefits">
+              <li data-choice-benefit>Everything in Essential</li>
+              <li data-choice-benefit>Claim-specific demand package</li>
+              <li data-choice-benefit>Help reviewing insurer emails</li>
+              <li data-choice-benefit>Replies drafted with you</li>
+            </ul>
+            <a href="https://buy.stripe.com/fZu4gyeMq9aodUc9zp9MY02" class="btn btn-primary btn-block" data-choice-cta>Choose Guided - $299</a>
+            <a href="#package-details" class="pricing-choice-compare">Compare every package</a>
+          </aside>
+        </div>
+
+        <ul class="pricing-chooser-assurances" aria-label="Checkout assurances">
+          <li><strong>Secure checkout</strong><span>Processed by Stripe</span></li>
+          <li><strong>No subscription</strong><span>One-time package fee</span></li>
+          <li><strong>48-hour standard delivery</strong><span>After complete documents</span></li>
+          <li><strong>Money-back guarantee</strong><span>If the report does not support a higher value</span></li>
+        </ul>
+        <p class="visually-hidden" role="status" aria-live="polite" data-choice-status></p>
+      </section>
+
+      <div class="pricing-details-heading" id="package-details">
+        <span aria-hidden="true"></span>
+        <h2>See full package details below.</h2>
+        <span aria-hidden="true"></span>
+      </div>
+
       <div class="pricing-layout reveal-on-scroll">
         <article class="price-card">
           <span class="tier-kicker">Complete standard report</span>
@@ -274,9 +378,9 @@
     </div>
   </section>
 
-  <div class="pricing-mobile-cta" aria-label="Request free offer review" aria-hidden="true">
-    <strong>Not sure yet?</strong>
-    <a href="free-review.html" class="btn btn-primary">Request free offer review</a>
+  <div class="pricing-mobile-cta" aria-label="Selected package shortcut" aria-hidden="true">
+    <strong data-mobile-plan-label>Guided &middot; $299</strong>
+    <a href="https://buy.stripe.com/fZu4gyeMq9aodUc9zp9MY02" class="btn btn-primary" data-mobile-plan-cta>Choose Guided</a>
   </div>
 
   </main>
@@ -361,6 +465,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260718a" ></script>
+  <script src="js/main.js?v=20260722pricing01" ></script>
 </body>
 </html>

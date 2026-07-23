@@ -74,6 +74,129 @@ document.addEventListener("DOMContentLoaded", function () {
     link.href = "free-review.html#free-review-form";
   });
 
+  // --- Pricing chooser: map the two customer decisions to the four real packages. ---
+  var pricingChooser = document.querySelector("[data-pricing-chooser]");
+  if (pricingChooser) {
+    var pricingPackages = {
+      "standard:report": {
+        key: "essential",
+        name: "Essential",
+        price: "99",
+        summary: "Complete report for a standard-production vehicle",
+        benefits: [
+          "Independent vehicle value report",
+          "Line-by-line valuation audit",
+          "Verified replacement comparables",
+          "General demand and response templates"
+        ],
+        href: "https://buy.stripe.com/3cIfZg6fUcmA7vO8vl9MY04",
+        cta: "Choose Essential - $99",
+        mobileLabel: "Essential · $99",
+        mobileCta: "Choose Essential"
+      },
+      "standard:guided": {
+        key: "guided",
+        name: "Guided",
+        price: "299",
+        summary: "Report + help with insurer replies",
+        benefits: [
+          "Everything in Essential",
+          "Claim-specific demand package",
+          "Help reviewing insurer emails",
+          "Replies drafted with you"
+        ],
+        href: "https://buy.stripe.com/fZu4gyeMq9aodUc9zp9MY02",
+        cta: "Choose Guided - $299",
+        mobileLabel: "Guided · $299",
+        mobileCta: "Choose Guided"
+      },
+      "specialty:report": {
+        key: "specialty",
+        name: "Specialty",
+        price: "299",
+        summary: "Expanded research for a rare, modified, or high-value vehicle",
+        benefits: [
+          "Everything in Essential",
+          "VIN and factory build-sheet research",
+          "Niche and expanded-market comparables",
+          "Specialty-value appendix"
+        ],
+        href: "https://buy.stripe.com/fZueVcbAe0DS8zS12T9MY03",
+        cta: "Choose Specialty - $299",
+        mobileLabel: "Specialty · $299",
+        mobileCta: "Choose Specialty"
+      },
+      "specialty:guided": {
+        key: "specialty-guided",
+        name: "Specialty + Guided",
+        price: "449",
+        summary: "Expanded research + help with insurer replies",
+        benefits: [
+          "Everything in Specialty",
+          "Guided document support",
+          "Help reviewing insurer emails",
+          "Select Guided support at checkout"
+        ],
+        href: "https://buy.stripe.com/fZueVcbAe0DS8zS12T9MY03",
+        cta: "Choose Specialty + Guided - $449",
+        mobileLabel: "Specialty + Guided · $449",
+        mobileCta: "Choose package"
+      }
+    };
+
+    var pricingChoiceResult = pricingChooser.querySelector("[data-choice-result]");
+    var pricingChoiceName = pricingChooser.querySelector("[data-choice-name]");
+    var pricingChoicePrice = pricingChooser.querySelector("[data-choice-price]");
+    var pricingChoicePriceWrap = pricingChooser.querySelector("[data-choice-price-wrap]");
+    var pricingChoiceSummary = pricingChooser.querySelector("[data-choice-summary]");
+    var pricingChoiceBenefits = pricingChooser.querySelectorAll("[data-choice-benefit]");
+    var pricingChoiceCta = pricingChooser.querySelector("[data-choice-cta]");
+    var pricingChoiceStatus = pricingChooser.querySelector("[data-choice-status]");
+    var pricingMobilePlanLabel = document.querySelector("[data-mobile-plan-label]");
+    var pricingMobilePlanCta = document.querySelector("[data-mobile-plan-cta]");
+
+    var renderPricingChoice = function (announce) {
+      var vehicleInput = pricingChooser.querySelector('input[name="pricing-vehicle"]:checked');
+      var supportInput = pricingChooser.querySelector('input[name="pricing-support"]:checked');
+      if (!vehicleInput || !supportInput) return;
+
+      var selectedPackage = pricingPackages[vehicleInput.value + ":" + supportInput.value];
+      if (!selectedPackage) return;
+
+      pricingChoiceResult.setAttribute("data-plan", selectedPackage.key);
+      pricingChoiceName.textContent = selectedPackage.name;
+      pricingChoicePrice.textContent = selectedPackage.price;
+      pricingChoicePriceWrap.setAttribute("aria-label", "$" + selectedPackage.price + " one time");
+      pricingChoiceSummary.textContent = selectedPackage.summary;
+      pricingChoiceBenefits.forEach(function (benefit, index) {
+        benefit.textContent = selectedPackage.benefits[index];
+      });
+      pricingChoiceCta.href = selectedPackage.href;
+      pricingChoiceCta.textContent = selectedPackage.cta;
+
+      if (pricingMobilePlanLabel) {
+        pricingMobilePlanLabel.textContent = selectedPackage.mobileLabel;
+      }
+      if (pricingMobilePlanCta) {
+        pricingMobilePlanCta.href = selectedPackage.href;
+        pricingMobilePlanCta.textContent = selectedPackage.mobileCta;
+        pricingMobilePlanCta.setAttribute("aria-label", selectedPackage.cta);
+      }
+      if (announce && pricingChoiceStatus) {
+        pricingChoiceStatus.textContent = selectedPackage.name + " selected, $" + selectedPackage.price + " one time.";
+      }
+    };
+
+    pricingChooser.addEventListener("change", function (event) {
+      if (event.target.matches('input[type="radio"]')) {
+        renderPricingChoice(true);
+      }
+    });
+
+    renderPricingChoice(false);
+    pricingChooser.hidden = false;
+  }
+
   // --- Copyable guide templates ---
   document.querySelectorAll("[data-copy-target]").forEach(function (button) {
     button.addEventListener("click", function () {
