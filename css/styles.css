@@ -5402,6 +5402,7 @@ body.site-redesign :focus-visible {
 
 .pricing-choice-controls {
   display: grid;
+  align-content: start;
   gap: 1rem;
 }
 
@@ -5449,6 +5450,7 @@ body.site-redesign :focus-visible {
 .pricing-choice {
   position: relative;
   min-width: 0;
+  display: grid;
   cursor: pointer;
 }
 
@@ -5487,6 +5489,19 @@ body.site-redesign :focus-visible {
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.pricing-choice-copy {
+  display: grid;
+  gap: 0.25rem;
+  justify-items: center;
+}
+
+.pricing-choice-description {
+  color: var(--home-ink-soft);
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 .pricing-choice-check {
@@ -6470,6 +6485,14 @@ body.site-redesign :focus-visible {
 
   .pricing-choice-body svg {
     width: 42px;
+  }
+
+  .pricing-choice-copy {
+    justify-items: start;
+  }
+
+  .pricing-choice-description {
+    font-size: 0.78rem;
   }
 
   .pricing-choice-check {
